@@ -1,0 +1,111 @@
+#include <Rte_Internal.h>
+#include <Rte_Calprms.h>
+#include <Rte_Assert.h>
+#include <Rte_Fifo.h>
+#include <Com.h>
+#include <Os.h>
+#include <Ioc.h>
+#include <Rte_Buffers.h>
+
+/*lint -e522 lint does not understand that low level calls to void operator are needed */
+/*lint -e160 warning only viable if in c++ */
+/*lint -e950 asm command needs to be used */
+/*lint -e9008 The comma operator is acceptable even with loss of readability */
+/*lint -e451 AUTOSAR API */
+/*lint -e515 Variable amount of Arguments for SYS_CALLS */
+/*lint -e970 Use of types and modifiers acceptable outside of typedefs */
+/*lint -e843 AUTOSAR API for memory wrapping */
+/*lint -e838 all values must have an assigned value on initialization even if unused */
+/*lint -e9018 AUTOSAR API for Union types */
+/*lint -e516 Variable argument types for SYS_CALLS */
+/*lint -e545 Sending pointer address is legal in ANSI C */
+
+/*lint -e957 Should be fixed, most functions are missing these prototypes */
+/** --- SERVER ACTIVATIONS ------------------------------------------------------------------ */
+
+/** --- FUNCTIONS --------------------------------------------------------------------------- */
+//lint -save -e715 Ignore unconnected functions
+#define Rte_START_SEC_CODE
+#include <Rte_MemMap.h> /*lint !e415 Autosar specified way to group code into memory sections, Req SWS_MemMap_00003 */
+/** ------ globalMode */
+Std_ReturnType Rte_Switch_WdgM_wdgm_globalMode_currentMode(/*IN*/uint8 mode) {
+    if (WdgM_ModeMachines.wdgm.globalMode_currentMode.nextMode == RTE_TRANSITION_WdgM_wdgm_globalMode_currentMode) {
+        {
+            SYS_CALL_SuspendOSInterrupts();
+            WdgM_ModeMachines.wdgm.globalMode_currentMode.nextMode = mode;
+            SYS_CALL_ResumeOSInterrupts();
+        }
+        // Activate runnables
+        // No runnables to activate
+        SYS_CALL_SuspendOSInterrupts();
+        WdgM_ModeMachines.wdgm.globalMode_currentMode.currentMode = WdgM_ModeMachines.wdgm.globalMode_currentMode.nextMode;
+        WdgM_ModeMachines.wdgm.globalMode_currentMode.nextMode = RTE_TRANSITION_WdgM_wdgm_globalMode_currentMode;
+        SYS_CALL_ResumeOSInterrupts();
+
+        return RTE_E_OK;
+    } else {
+        return RTE_E_LIMIT;
+    }
+}
+
+/** ------ globalSuperVision */
+/*lint -e621 MISRA:OTHER:Ignore misidentified symbol clash [MISRA 2012 Rule 5.5, required]*/
+Std_ReturnType Rte_Call_WdgM_wdgm_globalSuperVision_GetFirstExpiredSEID(/*OUT*/WdgM_SupervisedEntityIdType * SEID) {
+    return Rte_wdgm_GetFirstExpiredSEID(SEID);
+}
+
+/*lint -e621 MISRA:OTHER:Ignore misidentified symbol clash [MISRA 2012 Rule 5.5, required]*/
+Std_ReturnType Rte_Call_WdgM_wdgm_globalSuperVision_GetGlobalStatus(/*OUT*/WdgM_GlobalStatusType * Status) {
+    return Rte_wdgm_GetGlobalStatus(Status);
+}
+
+/*lint -e621 MISRA:OTHER:Ignore misidentified symbol clash [MISRA 2012 Rule 5.5, required]*/
+Std_ReturnType Rte_Call_WdgM_wdgm_globalSuperVision_GetMode(/*OUT*/WdgM_ModeType * Mode) {
+    return Rte_wdgm_GetMode(Mode);
+}
+
+/*lint -e621 MISRA:OTHER:Ignore misidentified symbol clash [MISRA 2012 Rule 5.5, required]*/
+Std_ReturnType Rte_Call_WdgM_wdgm_globalSuperVision_PerformReset(void) {
+    Rte_wdgm_PerformReset();
+    return E_OK;
+}
+
+/*lint -e621 MISRA:OTHER:Ignore misidentified symbol clash [MISRA 2012 Rule 5.5, required]*/
+Std_ReturnType Rte_Call_WdgM_wdgm_globalSuperVision_SetMode(/*IN*/WdgM_ModeType Mode) {
+    return Rte_wdgm_SetMode(Mode);
+}
+
+/** ------ localMode_Supervised100msTask */
+Std_ReturnType Rte_Switch_WdgM_wdgm_localMode_Supervised100msTask_currentMode(/*IN*/uint8 mode) {
+    if (WdgM_ModeMachines.wdgm.localMode_Supervised100msTask_currentMode.nextMode
+            == RTE_TRANSITION_WdgM_wdgm_localMode_Supervised100msTask_currentMode) {
+        {
+            SYS_CALL_SuspendOSInterrupts();
+            WdgM_ModeMachines.wdgm.localMode_Supervised100msTask_currentMode.nextMode = mode;
+            SYS_CALL_ResumeOSInterrupts();
+        }
+        // Activate runnables
+        SYS_CALL_SetEvent(TASK_ID_OsRteTask, EVENT_MASK_WatchdogModeSwitchEvent); /*lint !e534 RTE Requirement */
+
+        return RTE_E_OK;
+    } else {
+        return RTE_E_LIMIT;
+    }
+}
+
+/** ------ localSupervisionStatus_Supervised100msTask */
+/*lint -e621 MISRA:OTHER:Ignore misidentified symbol clash [MISRA 2012 Rule 5.5, required]*/
+Std_ReturnType Rte_Call_WdgM_wdgm_localSupervisionStatus_Supervised100msTask_GetLocalStatus(/*OUT*/WdgM_LocalStatusType * Status) {
+    return Rte_wdgm_GetLocalStatus(0, Status);
+}
+
+/** ------ localSupervision_Supervised100msTask */
+/*lint -e621 MISRA:OTHER:Ignore misidentified symbol clash [MISRA 2012 Rule 5.5, required]*/
+Std_ReturnType Rte_Call_WdgM_wdgm_localSupervision_Supervised100msTask_CheckpointReached(/*IN*/WdgM_CheckpointIdType CheckpointID) {
+    return Rte_wdgm_CheckpointReached(0, CheckpointID);
+}
+
+#define Rte_STOP_SEC_CODE
+#include <Rte_MemMap.h> /*lint !e415 Autosar specified way to group code into memory sections, Req SWS_MemMap_00003 */
+
+//lint -restore

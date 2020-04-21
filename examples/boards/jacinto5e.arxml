@@ -1,0 +1,1463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  
+<AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ArcCore</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>Boards</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="0abcda98-55d5-4143-9f31-5e10470051e2">
+              <SHORT-NAME>jacinto5e</SHORT-NAME>
+              <ELEMENTS>
+                <ECUC-VALUE-COLLECTION>
+                  <SHORT-NAME>MyEcu</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">GENERATOR_OUTPUT_SERVICE_DIRECTORY</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value" />
+                      </SDG>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">JACINTO5</SD>
+                      </SDG>
+                      <SDG>
+                        <SD GID="_ExtensionKey">GENERATOR_OUTPUT_DIRECTORY</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value" />
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <ECU-EXTRACT-REF DEST="SYSTEM">/Jac5/Jac5</ECU-EXTRACT-REF>
+                  <ECUC-VALUES>
+                    <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                      <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/ArcCore/Boards/jacinto5e/Can</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                    </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                    <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                      <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/ArcCore/Boards/jacinto5e/Mcu</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                    </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                    <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                      <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/ArcCore/Boards/jacinto5e/Dio</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                    </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                    <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                      <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/ArcCore/Boards/jacinto5e/Port</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                    </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                    <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                      <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/ArcCore/Boards/jacinto5e/Pwm</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                    </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                    <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                      <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/ArcCore/Boards/jacinto5e/Adc</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                    </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                  </ECUC-VALUES>
+                </ECUC-VALUE-COLLECTION>
+                <ECUC-MODULE-CONFIGURATION-VALUES UUID="0d59fcf3-c7be-41c0-9255-4b35db7400b4">
+                  <SHORT-NAME>Can</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">GENERATE_AND_VALIDATE</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">TRUE</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/jacinto/Can</DEFINITION-REF>
+                  <ECUC-DEF-EDITION />
+                  <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+                  <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/ArcCore/Implementations/jacinto5/Can</MODULE-DESCRIPTION-REF>
+                  <CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="5a9cc739-1c7d-413c-b00d-82f460583357">
+                      <SHORT-NAME>CanConfigSet</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="a2ee2ea3-db03-4803-a935-f94138d1b502">
+                          <SHORT-NAME>CanController0</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanBusoffProcessing</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerActivation</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaseAddress</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerId</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanRxProcessing</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanTxProcessing</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanWakeupFunctionalityAPI</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanWakeupProcessing</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanWakeupSupport</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerDefaultBaudrate</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ArcCore/Boards/jacinto5e/Can/CanConfigSet/CanController0/Ctrl_0_Baudrate_500</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanCpuClockRef</DEFINITION-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="e834cd64-3368-4c44-90ef-a58bda9628dd">
+                              <SHORT-NAME>Ctrl_0_Baudrate_500</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerBaudRate</DEFINITION-REF>
+                                  <VALUE>500</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerBaudRateConfigID</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerPropSeg</DEFINITION-REF>
+                                  <VALUE>5</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSeg1</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSeg2</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSyncJumpWidth</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="a51f99e9-4e27-4e5c-a8d0-71813ba6c15e">
+                          <SHORT-NAME>Ctrl_0_Tx_0</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                              <VALUE>BASIC</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                              <VALUE>STANDARD</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                              <VALUE>TRANSMIT</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/ArcCanFifoEnable</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ArcCore/Boards/jacinto5e/Can/CanConfigSet/CanController0</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="9122afe1-33f2-4b76-b93f-086b81697896">
+                          <SHORT-NAME>Ctrl_0_Rx_0</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                              <VALUE>BASIC</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                              <VALUE>STANDARD</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                              <VALUE>RECEIVE</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/ArcCanFifoEnable</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ArcCore/Boards/jacinto5e/Can/CanConfigSet/CanController0</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="dcc108fb-f205-4b9d-be89-c0e778986947">
+                              <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="ee657c4a-e916-4e8d-be64-163c72a7213b">
+                          <SHORT-NAME>CanController1</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanBusoffProcessing</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerActivation</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaseAddress</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerId</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanRxProcessing</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanTxProcessing</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanWakeupFunctionalityAPI</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanWakeupProcessing</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanWakeupSupport</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerDefaultBaudrate</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ArcCore/Boards/jacinto5e/Can/CanConfigSet/CanController1/Ctrl_1_Baudrate_500</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanCpuClockRef</DEFINITION-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="332ea029-d950-41cf-9330-1b7fe6276e49">
+                              <SHORT-NAME>Ctrl_1_Baudrate_500</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerBaudRate</DEFINITION-REF>
+                                  <VALUE>500</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerBaudRateConfigID</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerPropSeg</DEFINITION-REF>
+                                  <VALUE>5</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSeg1</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSeg2</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSyncJumpWidth</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="94bf7297-93bf-4f86-86ef-c14c95448a0b">
+                          <SHORT-NAME>Ctrl_0_Rx_1</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                              <VALUE>BASIC</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                              <VALUE>STANDARD</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                              <VALUE>RECEIVE</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/ArcCanFifoEnable</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ArcCore/Boards/jacinto5e/Can/CanConfigSet/CanController1</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="55ce806e-410e-4c82-b45f-63f6906fb125">
+                              <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="dfc2281a-bb1c-42f0-bc9f-ec268151314d">
+                          <SHORT-NAME>Ctrl_0_Tx_1</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                              <VALUE>BASIC</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                              <VALUE>STANDARD</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                              <VALUE>TRANSMIT</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/ArcCanFifoEnable</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/jacinto/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ArcCore/Boards/jacinto5e/Can/CanConfigSet/CanController1</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="b38f4d87-95bf-428b-9513-6d79966f0101">
+                      <SHORT-NAME>CanGeneral</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanGeneral</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanGeneral/CanDevErrorDetection</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanGeneral/CanHardwareCancellation</DEFINITION-REF>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanGeneral/CanIdenticalIdCancellation</DEFINITION-REF>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanGeneral/CanIndex</DEFINITION-REF>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanGeneral/CanMainFunctionModePeriod</DEFINITION-REF>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanGeneral/CanMultiplexedTransmission</DEFINITION-REF>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanGeneral/CanTimeoutDuration</DEFINITION-REF>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Can/CanGeneral/CanVersionInfoApi</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/jacinto/Can/CanGeneral/CanCounterRef</DEFINITION-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/jacinto/Can/CanGeneral/CanSupportTTCANRef</DEFINITION-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="5e9f122b-d50f-48d4-8bec-c4b6e877875f">
+                          <SHORT-NAME>CanMainFunctionRWPeriods</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Can/CanGeneral/CanMainFunctionRWPeriods</DEFINITION-REF>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </CONTAINERS>
+                </ECUC-MODULE-CONFIGURATION-VALUES>
+                <ECUC-MODULE-CONFIGURATION-VALUES UUID="dc44fa90-fc61-49a3-adaf-9525a27a3c19">
+                  <SHORT-NAME>Mcu</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">GENERATE_AND_VALIDATE</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">TRUE</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/jacinto/Mcu</DEFINITION-REF>
+                  <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+                  <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/ArcCore/Implementations/jacinto5/Mcu</MODULE-DESCRIPTION-REF>
+                  <CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="a3b179cc-3681-4b4d-8821-f7c13277cc6e">
+                      <SHORT-NAME>McuGeneralConfiguration</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuGeneralConfiguration</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuGeneralConfiguration/McuDevErrorDetect</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuGeneralConfiguration/McuGetRamStateApi</DEFINITION-REF>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuGeneralConfiguration/McuInitClock</DEFINITION-REF>
+                          <VALUE>true</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuGeneralConfiguration/McuNoPll</DEFINITION-REF>
+                          <VALUE>true</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuGeneralConfiguration/McuPerformResetApi</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuGeneralConfiguration/McuVersionInfoApi</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="cd37aa88-322f-47d7-9630-82fdbba84a32">
+                      <SHORT-NAME>McuModuleConfiguration</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSrcFailureNotification</DEFINITION-REF>
+                          <VALUE />
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuNumberOfMcuModes</DEFINITION-REF>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuRamSectors</DEFINITION-REF>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/ArcDefaultClockRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ArcCore/Boards/jacinto5e/Mcu/McuModuleConfiguration/McuClockSettingConfig</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="9c360910-25be-42ab-ade5-0ef3c825ec46">
+                          <SHORT-NAME>McuClockSettingConfig</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockSettingId</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="f3c99874-7871-497a-a9fb-c06234b99099">
+                              <SHORT-NAME>McuClockReferencePoint</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockReferencePointFrequency</DEFINITION-REF>
+                                  <VALUE>200000000</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="e1ec5d7e-b87d-456a-b045-56272ca3e544">
+                              <SHORT-NAME>ArcClockSettings</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_1</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_2</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_3</DEFINITION-REF>
+                                  <VALUE>true</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_4</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_5</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_6</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_7</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_8</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_9</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_10</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_11</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_12</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_13</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_14</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_15</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_Timer_16</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_CAN0</DEFINITION-REF>
+                                  <VALUE>true</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcClockSettings/Enable_CAN1</DEFINITION-REF>
+                                  <VALUE>true</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="95648333-8889-4154-9e6a-d8ec8ff81710">
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuModeSettingConf</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuModeSettingConf/McuMode</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="58bf6cd8-0145-4074-9dfa-d3a789bcbd6b">
+                          <SHORT-NAME>SLEEP</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuModeSettingConf</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuModeSettingConf/McuMode</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="4edb6ded-f004-445f-9a4d-1aa2c2e2ab24">
+                          <SHORT-NAME>RUN</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuModeSettingConf</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuModuleConfiguration/McuModeSettingConf/McuMode</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="3adafc46-c0c0-4dff-a1d3-049961dc4335">
+                      <SHORT-NAME>McuPublishedInformation</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuPublishedInformation</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="21605123-1a79-4db2-9f05-66aece744cc5">
+                          <SHORT-NAME>McuResetReasonConf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </CONTAINERS>
+                </ECUC-MODULE-CONFIGURATION-VALUES>
+                <ECUC-MODULE-CONFIGURATION-VALUES UUID="0f88bedc-a66b-4988-8851-606e80a61ae3">
+                  <SHORT-NAME>Dio</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">GENERATE_AND_VALIDATE</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">TRUE</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/jacinto/Dio</DEFINITION-REF>
+                  <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+                  <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/ArcCore/Implementations/jacinto5/Dio</MODULE-DESCRIPTION-REF>
+                  <CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="ff15cd44-bfd2-44a8-a257-a32e875d7b16">
+                      <SHORT-NAME>DioConfig</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="f5d3e024-2df8-49f4-abb9-761bf5a436c6">
+                          <SHORT-NAME>PC</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort/DioPortId</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="44eddd9b-b044-49c4-84b1-b791ed81bfba">
+                              <SHORT-NAME>DioChannel_gp0_17</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                                  <VALUE>17</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="3d745f68-fc0d-431b-b5fe-2f0d878d5958">
+                              <SHORT-NAME>DioChannel_gp0_14</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                                  <VALUE>14</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="ca84dfec-7226-41ae-aa40-869e977a3579">
+                              <SHORT-NAME>DioChannel_gp0_15</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                                  <VALUE>15</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="70e3ddbd-72cb-4d5c-97e3-14eaa77d3093">
+                          <SHORT-NAME>PE</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort/DioPortId</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="790706ae-fb3a-4db9-ad13-26780354a5f9">
+                              <SHORT-NAME>LED1</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                                  <VALUE>32</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="bd38bf63-13e9-40e4-8bef-3f522a4214da">
+                              <SHORT-NAME>LED2</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                                  <VALUE>48</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="18822292-a7fc-42ec-bfc8-8148021fd659">
+                      <SHORT-NAME>DioGeneral</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioGeneral</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioGeneral/DioDevErrorDetect</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioGeneral/DioFlipChannelApi</DEFINITION-REF>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Dio/DioGeneral/DioVersionInfoApi</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </CONTAINERS>
+                </ECUC-MODULE-CONFIGURATION-VALUES>
+                <ECUC-MODULE-CONFIGURATION-VALUES UUID="f550ed8c-226f-4c9f-818f-e5ded9d58351">
+                  <SHORT-NAME>Port</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">GENERATE_AND_VALIDATE</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">TRUE</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/jacinto/Port</DEFINITION-REF>
+                  <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+                  <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/ArcCore/Implementations/jacinto5/Port</MODULE-DESCRIPTION-REF>
+                  <CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="82f44653-1857-4239-91e4-37ba807d05d0">
+                      <SHORT-NAME>PortConfigSet</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="c516d1ae-3297-44fc-904e-53e497414507">
+                          <SHORT-NAME>CAN</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortNumberOfPortPins</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="16a189ff-9d13-4a11-bdd0-7c1fad1935ec">
+                              <SHORT-NAME>PortPin_dcan1_af25</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirection</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_OUT</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirectionChangeable</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinId</DEFINITION-REF>
+                                  <VALUE>724</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinInitialMode</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_MODE_CAN</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinLevelValue</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_LEVEL_LOW</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinMode</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinModeChangeable</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinPull</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_PULL_NONE</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinSlewRate</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_SLEW_FAST</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="2e33baf8-72fd-4688-a5d3-ac2937c9ff1d">
+                              <SHORT-NAME>PortPin_dcan1_ae25</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirection</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_IN</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirectionChangeable</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinId</DEFINITION-REF>
+                                  <VALUE>696</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinInitialMode</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_MODE_CAN</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinLevelValue</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_LEVEL_LOW</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinMode</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinModeChangeable</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinPull</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_PULL_NONE</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinSlewRate</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_SLEW_FAST</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="40c6df7c-8bef-4bdc-89de-5eeff254f526">
+                              <SHORT-NAME>PortPin_dcan0_ad24</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirection</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_IN</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirectionChangeable</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinId</DEFINITION-REF>
+                                  <VALUE>667</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinInitialMode</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_MODE_CAN</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinLevelValue</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_LEVEL_LOW</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinMode</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinModeChangeable</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinPull</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_PULL_NONE</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinSlewRate</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_SLEW_FAST</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="95330e7d-852a-4011-b41a-baa8d2102407">
+                              <SHORT-NAME>PortPin_dcan0_ae24</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirection</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_OUT</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirectionChangeable</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinId</DEFINITION-REF>
+                                  <VALUE>695</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinInitialMode</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_MODE_CAN</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinLevelValue</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_LEVEL_LOW</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinMode</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinModeChangeable</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinPull</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_PULL_NONE</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinSlewRate</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_SLEW_FAST</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="50ac1f46-1dbe-4e96-813e-fe79d7881fd6">
+                          <SHORT-NAME>PWM</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortNumberOfPortPins</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="d192c6c4-402a-4d1e-8473-6f3eb1953d58">
+                              <SHORT-NAME>Portpin_pwm7_e14</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirection</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_OUT</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirectionChangeable</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinId</DEFINITION-REF>
+                                  <VALUE>125</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinInitialMode</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_MODE_PWM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinLevelValue</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_LEVEL_HIGH</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinMode</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinModeChangeable</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinPull</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_PULL_NONE</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinSlewRate</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_SLEW_FAST</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="5151f0d8-94a1-482a-afe6-ae289f86df9f">
+                          <SHORT-NAME>GPIOS</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortNumberOfPortPins</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="38a31315-8aa1-405f-9a06-b41d4b2d529b">
+                              <SHORT-NAME>PortPin_j26</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirection</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_OUT</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirectionChangeable</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinId</DEFINITION-REF>
+                                  <VALUE>249</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinInitialMode</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_MODE_DIO</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinLevelValue</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_LEVEL_LOW</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinMode</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinModeChangeable</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinPull</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_PULL_NONE</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinSlewRate</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_SLEW_FAST</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="aed54ef5-4db9-4c80-87e4-c45fcb923663">
+                              <SHORT-NAME>PortPin_k26</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirection</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_IN</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirectionChangeable</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinId</DEFINITION-REF>
+                                  <VALUE>277</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinInitialMode</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_MODE_DIO</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinLevelValue</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_LEVEL_LOW</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinMode</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinModeChangeable</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinPull</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_PULL_NONE</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinSlewRate</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_SLEW_FAST</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="02767e17-d622-4d57-83bd-5964b2de57e7">
+                              <SHORT-NAME>PortPin_k27</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirection</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_OUT</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinDirectionChangeable</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinId</DEFINITION-REF>
+                                  <VALUE>278</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinInitialMode</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_MODE_DIO</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinLevelValue</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_LEVEL_LOW</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinMode</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/PortPinModeChangeable</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinPull</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_PULL_NONE</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortConfigSet/PortContainer/PortPin/ArcPortPinSlewRate</DEFINITION-REF>
+                                  <VALUE>PORT_PIN_SLEW_FAST</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="b2889d6e-bedc-4675-99dd-fab53e3df678">
+                      <SHORT-NAME>PortGeneral</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Port/PortGeneral</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortGeneral/PortDevErrorDetect</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortGeneral/PortSetPinDirectionApi</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortGeneral/PortSetPinModeApi</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortGeneral/PortVersionInfoApi</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Port/PortGeneral/ArcPortGpioReset</DEFINITION-REF>
+                          <VALUE>true</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </CONTAINERS>
+                </ECUC-MODULE-CONFIGURATION-VALUES>
+                <ECUC-MODULE-CONFIGURATION-VALUES UUID="eb600583-3744-48af-9139-c66e18a64947">
+                  <SHORT-NAME>Pwm</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">GENERATE_AND_VALIDATE</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">TRUE</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/jacinto/Pwm</DEFINITION-REF>
+                  <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+                  <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/ArcCore/Implementations/jacinto5/Pwm</MODULE-DESCRIPTION-REF>
+                  <CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="4906a3cd-14d9-4afe-ad9b-ec7508c5c1f8">
+                      <SHORT-NAME>PwmChannelConfigSet</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmChannelConfigSet</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="230afb0e-0bc4-46ef-825b-16cb91203eff">
+                          <SHORT-NAME>Channel_LED_3</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmChannelConfigSet/PwmChannel</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmChannelConfigSet/PwmChannel/PwmChannelId</DEFINITION-REF>
+                              <VALUE>6</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmChannelConfigSet/PwmChannel/PwmDutycycleDefault</DEFINITION-REF>
+                              <VALUE>8192</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmChannelConfigSet/PwmChannel/PwmIdleState</DEFINITION-REF>
+                              <VALUE>PWM_HIGH</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmChannelConfigSet/PwmChannel/PwmPeriodDefault</DEFINITION-REF>
+                              <VALUE>0.001</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmChannelConfigSet/PwmChannel/PwmPolarity</DEFINITION-REF>
+                              <VALUE>PWM_LOW</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmChannelConfigSet/PwmChannel/PwmChannelClass</DEFINITION-REF>
+                              <VALUE>PWM_VARIABLE_PERIOD</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="46c33214-9571-4b6e-8259-d148b142a624">
+                      <SHORT-NAME>PwmConfigurationOfOptApiServices</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmConfigurationOfOptApiServices</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmConfigurationOfOptApiServices/PwmDeInitApi</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmConfigurationOfOptApiServices/PwmGetOutputState</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmConfigurationOfOptApiServices/PwmSetDutyCycle</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmConfigurationOfOptApiServices/PwmSetOutputToIdle</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmConfigurationOfOptApiServices/PwmSetPeriodAndDuty</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmConfigurationOfOptApiServices/PwmVersionInfoApi</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="9906fbbc-44f0-43a2-bb28-1a20a94821a1">
+                      <SHORT-NAME>PwmGeneral</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmGeneral</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmGeneral/PwmDevErrorDetect</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmGeneral/PwmDutycycleUpdatedEndperiod</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmGeneral/PwmIndex</DEFINITION-REF>
+                          <VALUE />
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmGeneral/PwmNotificationSupported</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Pwm/PwmGeneral/PwmPeriodUpdatedEndperiod</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </CONTAINERS>
+                </ECUC-MODULE-CONFIGURATION-VALUES>
+                <ECUC-MODULE-CONFIGURATION-VALUES UUID="a4140976-c9db-4f81-a0fe-e6f66fc87d28">
+                  <SHORT-NAME>Adc</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">GENERATE_AND_VALIDATE</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">TRUE</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/jacinto/Adc</DEFINITION-REF>
+                  <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+                  <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/ArcCore/Implementations/jacinto5/Adc</MODULE-DESCRIPTION-REF>
+                  <CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="a3a6f11a-b9c0-4a86-a8bb-e6fae0d2b2fa">
+                      <SHORT-NAME>AdcConfigSet</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="08a296ed-500a-4959-b324-10d4f38c2f68">
+                          <SHORT-NAME>AdcHwUnit</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcHwUnitId</DEFINITION-REF>
+                              <VALUE>TSC_ADC</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcPrescale</DEFINITION-REF>
+                              <VALUE>7</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="575970e9-e553-4348-a4e3-5b60336f372a">
+                              <SHORT-NAME>AdcGroup1</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcGroup</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupAccessMode</DEFINITION-REF>
+                                  <VALUE>ADC_ACCESS_MODE_SINGLE</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionMode</DEFINITION-REF>
+                                  <VALUE>ADC_CONV_MODE_ONESHOT</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupId</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupTriggSrc</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingBufferMode</DEFINITION-REF>
+                                  <VALUE>ADC_STREAM_BUFFER_LINEAR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingNumSamples</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcNotification</DEFINITION-REF>
+                                  <VALUE>IoHwAb_AdcConversionComplete</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ArcCore/Boards/jacinto5e/Adc/AdcConfigSet/AdcHwUnit/AdcChannel1</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="b4d643b7-d546-4ce6-b7d4-72a9b78a54cd">
+                              <SHORT-NAME>AdcChannel1</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                                  <VALUE>5</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/ArcAdcChannelDiffCNTRL</DEFINITION-REF>
+                                  <VALUE>SINGLE_ENDED</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/ArcAdcChannelSELRFM</DEFINITION-REF>
+                                  <VALUE>VREFN</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/ArcAdcChannelSELRFP</DEFINITION-REF>
+                                  <VALUE>VREFP</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="28632790-0468-4ab2-83c4-d6c451a41526">
+                      <SHORT-NAME>AdcGeneral</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcGeneral</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcGeneral/AdcDeInitApi</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcGeneral/AdcDevErrorDetect</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcGeneral/AdcEnableLimitCheck</DEFINITION-REF>
+                          <VALUE />
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcGeneral/AdcEnableQueuing</DEFINITION-REF>
+                          <VALUE />
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcGeneral/AdcEnableStartStopGroupApi</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcGeneral/AdcGrpNotifCapability</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcGeneral/AdcHwTriggerApi</DEFINITION-REF>
+                          <VALUE />
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcGeneral/AdcPriorityImplementation</DEFINITION-REF>
+                          <VALUE />
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcGeneral/AdcReadGroupApi</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcGeneral/AdcResultAlignment</DEFINITION-REF>
+                          <VALUE />
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcGeneral/AdcVersionInfoApi</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="ace78c52-cfbf-4e82-9869-ffbcc61d0487">
+                      <SHORT-NAME>AdcPublishedInformation</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcPublishedInformation</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcPublishedInformation/AdcChannelValueSigned</DEFINITION-REF>
+                          <VALUE />
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcPublishedInformation/AdcGroupFirstChannelFixed</DEFINITION-REF>
+                          <VALUE />
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/jacinto/Adc/AdcPublishedInformation/AdcMaxChannelResolution</DEFINITION-REF>
+                          <VALUE />
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </CONTAINERS>
+                </ECUC-MODULE-CONFIGURATION-VALUES>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES></AUTOSAR>

@@ -1,0 +1,2893 @@
+Archive member included to satisfy reference by file (symbol)
+
+d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a(eabivle.o)
+                              os_init.o (__eabi)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-abort.o)
+                              clib_port.o (abort)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-errno.o)
+                              clib_port.o (__errno)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-exit.o)
+                              crt0.o (exit)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fopen.o)
+                              ramlog.o (fopen)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseek.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fopen.o) (_fseek_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseeko.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseek.o) (_fseeko_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fstatr.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseeko.o) (_fstat_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-impure.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-exit.o) (_global_impure_ptr)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-makebuf.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseeko.o) (__smakebuf_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-malloc.o)
+                              cirq_buffer.o (malloc)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-makebuf.o) (_malloc_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memcpy.o)
+                              init.o (memcpy)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memset.o)
+                              init.o (memset)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mlock.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o) (__malloc_lock)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-openr.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fopen.o) (_open_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-reent.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fstatr.o) (errno)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-refill.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseeko.o) (__srefill_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-sbrkr.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o) (_sbrk_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-abort.o) (raise)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signalr.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o) (_kill_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fopen.o) (__sread)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcmp.o)
+                              clib_port.o (strcmp)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcpy.o)
+                              os_resource.o (strcpy)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strlen.o)
+                              printf.o (strlen)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strncpy.o)
+                              os_task.o (strncpy)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strtoul.o)
+                              printf.o (strtoul)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-writer.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o) (_write_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__call_atexit.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-exit.o) (__call_exitprocs)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-closer.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o) (_close_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-ctype_.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strtoul.o) (__ctype_ptr__)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fflush.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-refill.o) (__sflush_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-makebuf.o) (_cleanup_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fini.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__call_atexit.o) (__libc_fini_array)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-flags.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fopen.o) (__sflags)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-freer.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseeko.o) (_free_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fwalk.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-refill.o) (_fwalk)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-isattyr.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-makebuf.o) (_isatty_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-lseekr.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o) (_lseek_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-readr.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o) (_read_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-atexit.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__call_atexit.o) (atexit)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fclose.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o) (_fclose_r)
+D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__atexit.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-atexit.o) (__register_exitproc)
+d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a(e200crtresxgpr.o)
+                              D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o) (_restgpr_22_x)
+
+Allocating common symbols
+Common symbol       size              file
+
+stack_eTask1        0x800             Os_Cfg.o
+stack_bTask3        0x800             Os_Cfg.o
+LogBadType          0x18              system_hooks.o
+os_error            0x10              os_init.o
+Os_TaskVarList      0x240             os_task.o
+errno               0x4               D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-reent.o)
+test_bss_array      0xc               init.o
+EcuM_World_ComM_NVM
+                    0x4               EcuM.o
+resScheduler        0x34              os_resource.o
+Os_AppVar           0x4c              os_application.o
+Os_IsrVarList       0xc8              os_isr.o
+Os_IntSuspendAllCnt
+                    0x1               os_init.o
+EcuM_World          0x30              EcuM.o
+Os_IntDisableAllCnt
+                    0x1               os_init.o
+test_sbss2          0x4               init.o
+Os_Sys              0x5c              os_init.o
+stack_OsIdle        0x200             Os_Cfg.o
+Os_IntSuspendOsCnt  0x1               os_init.o
+Os_IsrStack         0x800             os_isr.o
+stack_eTask2        0x800             Os_Cfg.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 crt0.o
+ .bss           0x00000000        0x0 crt0.o
+ .text          0x00000000        0x0 os_simple.o
+ .data          0x00000000        0x0 os_simple.o
+ .text          0x00000000        0x0 system_hooks.o
+ .data          0x00000000        0x0 system_hooks.o
+ COMMON         0x00000000       0x18 system_hooks.o
+ .text          0x00000000        0x0 init.o
+ .text          0x00000000        0x0 Os_Cfg.o
+ .text          0x00000000        0x0 arc_assert.o
+ .data          0x00000000        0x0 arc_assert.o
+ .bss           0x00000000        0x0 arc_assert.o
+ .text.Arc_Config_Assert
+                0x00000000       0x2a arc_assert.o
+ .text          0x00000000        0x0 EcuM.o
+ .data          0x00000000        0x0 EcuM.o
+ .text.EcuM_Shutdown
+                0x00000000       0x68 EcuM.o
+ .text.EcuM_GetShutdownTarget
+                0x00000000       0x42 EcuM.o
+ .text.EcuM_SelectBootTarget
+                0x00000000       0x1c EcuM.o
+ .text.EcuM_GetBootTarget
+                0x00000000       0x1a EcuM.o
+ .text.EcuM_GetLastShutdownTarget
+                0x00000000       0x1c EcuM.o
+ .text.EcuM_SetWakeupEvent
+                0x00000000       0x9e EcuM.o
+ .sbss          0x00000000        0x4 EcuM.o
+ .text          0x00000000        0x0 EcuM_Fixed.o
+ .data          0x00000000        0x0 EcuM_Fixed.o
+ .bss           0x00000000        0x0 EcuM_Fixed.o
+ .text.EcuM_StartupTwo
+                0x00000000       0x90 EcuM_Fixed.o
+ .text.EcuM_RequestRUN
+                0x00000000       0x60 EcuM_Fixed.o
+ .text.EcuM_ReleaseRUN
+                0x00000000       0x3e EcuM_Fixed.o
+ .text.EcuM_KillAllRUNRequests
+                0x00000000       0x2e EcuM_Fixed.o
+ .text.EcuM_KillAllPostRUNRequests
+                0x00000000       0x2e EcuM_Fixed.o
+ .text.EcuM_RequestPOST_RUN
+                0x00000000       0x60 EcuM_Fixed.o
+ .text.EcuM_ReleasePOST_RUN
+                0x00000000       0x3e EcuM_Fixed.o
+ .text.EcuM_GetStatusOfWakeupSource
+                0x00000000       0x7c EcuM_Fixed.o
+ .text          0x00000000        0x0 EcuM_Main.o
+ .text          0x00000000        0x0 EcuM_PBcfg.o
+ .data          0x00000000        0x0 EcuM_PBcfg.o
+ .bss           0x00000000        0x0 EcuM_PBcfg.o
+ .text          0x00000000        0x0 EcuM_PBHeader.o
+ .data          0x00000000        0x0 EcuM_PBHeader.o
+ .bss           0x00000000        0x0 EcuM_PBHeader.o
+ .rodata        0x00000000       0x20 EcuM_PBHeader.o
+ .debug_info    0x00000000      0x13d EcuM_PBHeader.o
+ .debug_abbrev  0x00000000       0x6e EcuM_PBHeader.o
+ .debug_aranges
+                0x00000000       0x18 EcuM_PBHeader.o
+ .debug_line    0x00000000      0x243 EcuM_PBHeader.o
+ .debug_str     0x00000000      0x31a EcuM_PBHeader.o
+ .comment       0x00000000       0x8f EcuM_PBHeader.o
+ .text          0x00000000        0x0 EcuM_GeneratedCallouts.o
+ .data          0x00000000        0x0 EcuM_GeneratedCallouts.o
+ .bss           0x00000000        0x0 EcuM_GeneratedCallouts.o
+ .debug_line    0x00000000        0x0 EcuM_GeneratedCallouts.o
+ .debug_str     0x00000000      0x1fd EcuM_GeneratedCallouts.o
+ .comment       0x00000000       0x8f EcuM_GeneratedCallouts.o
+ .text          0x00000000        0x0 EcuM_Callout_Stubs.o
+ .data          0x00000000        0x0 EcuM_Callout_Stubs.o
+ .text.EcuM_ErrorHook
+                0x00000000       0x3a EcuM_Callout_Stubs.o
+ .text.EcuM_AL_DriverInitThree
+                0x00000000       0x16 EcuM_Callout_Stubs.o
+ .text.EcuM_OnGoOffTwo
+                0x00000000       0x14 EcuM_Callout_Stubs.o
+ .text.EcuM_LoopDetection
+                0x00000000       0x14 EcuM_Callout_Stubs.o
+ .text.EcuM_AL_SwitchOff
+                0x00000000       0x14 EcuM_Callout_Stubs.o
+ .text.EcuM_AL_Reset
+                0x00000000       0x18 EcuM_Callout_Stubs.o
+ .text.EcuM_CheckWakeup
+                0x00000000       0x16 EcuM_Callout_Stubs.o
+ .text.EcuM_SleepActivity
+                0x00000000       0x14 EcuM_Callout_Stubs.o
+ .text          0x00000000        0x0 Mcu.o
+ .bss           0x00000000        0x0 Mcu.o
+ .text.Mcu_Arc_GetResetReason
+                0x00000000       0x20 Mcu.o
+ .text.Mcu_Arc_DeInit
+                0x00000000       0x20 Mcu.o
+ .text.Mcu_InitRamSection
+                0x00000000      0x148 Mcu.o
+ .text.Mcu_GetResetRawValue
+                0x00000000       0x7e Mcu.o
+ .text.Mcu_Arc_GetClockReferencePointFrequency
+                0x00000000       0x36 Mcu.o
+ .text          0x00000000        0x0 Mcu_LCfg.o
+ .data          0x00000000        0x0 Mcu_LCfg.o
+ .bss           0x00000000        0x0 Mcu_LCfg.o
+ .debug_info    0x00000000       0x79 Mcu_LCfg.o
+ .debug_abbrev  0x00000000       0x26 Mcu_LCfg.o
+ .debug_aranges
+                0x00000000       0x18 Mcu_LCfg.o
+ .debug_line    0x00000000       0x1d Mcu_LCfg.o
+ .debug_str     0x00000000      0x2f0 Mcu_LCfg.o
+ .comment       0x00000000       0x8f Mcu_LCfg.o
+ .text          0x00000000        0x0 Mcu_PBcfg.o
+ .data          0x00000000        0x0 Mcu_PBcfg.o
+ .bss           0x00000000        0x0 Mcu_PBcfg.o
+ .text          0x00000000        0x0 mpc5xxx_handlers.o
+ .data          0x00000000        0x0 mpc5xxx_handlers.o
+ .bss           0x00000000        0x0 mpc5xxx_handlers.o
+ .data          0x00000000        0x0 mpc5xxx_handlers_asm.o
+ .bss           0x00000000        0x0 mpc5xxx_handlers_asm.o
+ .text          0x00000000        0x0 mpc5xxx_callout_stubs.o
+ .data          0x00000000        0x0 mpc5xxx_callout_stubs.o
+ .bss           0x00000000        0x0 mpc5xxx_callout_stubs.o
+ .text.Mpc5xxx_Panic
+                0x00000000       0x2a mpc5xxx_callout_stubs.o
+ .text.Mcu_Arc_SafeMode
+                0x00000000       0x26 mpc5xxx_callout_stubs.o
+ .text          0x00000000        0x0 Cpu.o
+ .data          0x00000000        0x0 Cpu.o
+ .bss           0x00000000        0x0 Cpu.o
+ .text.Cache_Invalidate
+                0x00000000       0x62 Cpu.o
+ .text.Cache_EnableU
+                0x00000000       0x3c Cpu.o
+ .text.Cache_EnableD
+                0x00000000       0x22 Cpu.o
+ .text          0x00000000        0x0 mm.o
+ .data          0x00000000        0x0 mm.o
+ .bss           0x00000000        0x0 mm.o
+ .text.MM_TlbSetup
+                0x00000000       0xac mm.o
+ .data          0x00000000        0x0 arch_krn.o
+ .bss           0x00000000        0x0 arch_krn.o
+ .text          0x00000000        0x0 os_event.o
+ .data          0x00000000        0x0 os_event.o
+ .bss           0x00000000        0x0 os_event.o
+ .text.GetEvent
+                0x00000000      0x218 os_event.o
+ .text          0x00000000        0x0 os_init.o
+ .data          0x00000000        0x0 os_init.o
+ .bss           0x00000000        0x0 os_init.o
+ .text          0x00000000        0x0 arch.o
+ .data          0x00000000        0x0 arch.o
+ .bss           0x00000000        0x0 arch.o
+ .text.Os_MMSetSupervisorMode
+                0x00000000       0x14 arch.o
+ .text          0x00000000        0x0 os_task.o
+ .data          0x00000000        0x0 os_task.o
+ .bss           0x00000000        0x0 os_task.o
+ .text.Os_TaskSetupAndSwap
+                0x00000000       0x32 os_task.o
+ .text.ChainTask
+                0x00000000      0x296 os_task.o
+ .text.Schedule
+                0x00000000      0x184 os_task.o
+ .text.Os_Arc_GetTaskInfo
+                0x00000000       0xe6 os_task.o
+ .text          0x00000000        0x0 os_resource.o
+ .data          0x00000000        0x0 os_resource.o
+ .bss           0x00000000        0x0 os_resource.o
+ .text          0x00000000        0x0 os_alarm.o
+ .data          0x00000000        0x0 os_alarm.o
+ .bss           0x00000000        0x0 os_alarm.o
+ .text.Os_CounterDiff
+                0x00000000       0x4c os_alarm.o
+ .text.Os_AlarmGetBase
+                0x00000000       0x72 os_alarm.o
+ .text.GetAlarmBase
+                0x00000000      0x19a os_alarm.o
+ .text.GetAlarm
+                0x00000000      0x1e4 os_alarm.o
+ .text.SetRelAlarm
+                0x00000000       0x3a os_alarm.o
+ .text.SetAbsAlarm
+                0x00000000       0x3a os_alarm.o
+ .text.CancelAlarm
+                0x00000000      0x142 os_alarm.o
+ .text          0x00000000        0x0 os_sched_table.o
+ .data          0x00000000        0x0 os_sched_table.o
+ .bss           0x00000000        0x0 os_sched_table.o
+ .text.Os_SysIntAnyDisabled
+                0x00000000       0x38 os_sched_table.o
+ .text.Os_CounterGetMaxValue
+                0x00000000       0x1c os_sched_table.o
+ .text.Os_CounterGetValue
+                0x00000000       0x1c os_sched_table.o
+ .text.Os_CounterAdd
+                0x00000000       0x5e os_sched_table.o
+ .text.Os_SchTblGetInitialOffset
+                0x00000000       0x1e os_sched_table.o
+ .text.Os_SchTblGetFinalOffset
+                0x00000000       0x32 os_sched_table.o
+ .text.Os_CallErrorHook
+                0x00000000       0x7a os_sched_table.o
+ .rodata        0x00000000       0xc1 os_sched_table.o
+ .text.Os_SchTblUpdateState
+                0x00000000      0x2e0 os_sched_table.o
+ .text.StartScheduleTableRel
+                0x00000000       0xbe os_sched_table.o
+ .text.StartScheduleTableAbs
+                0x00000000       0xbe os_sched_table.o
+ .text.StopScheduleTable
+                0x00000000       0xa4 os_sched_table.o
+ .text.NextScheduleTable
+                0x00000000       0xc8 os_sched_table.o
+ .text.GetScheduleTableStatus
+                0x00000000       0xbe os_sched_table.o
+ .text.Os_SchTblCheck
+                0x00000000      0x184 os_sched_table.o
+ .text.Os_SchTblInit
+                0x00000000       0x14 os_sched_table.o
+ .text.Os_SchTblAutostart
+                0x00000000       0x14 os_sched_table.o
+ .text          0x00000000        0x0 os_counter.o
+ .data          0x00000000        0x0 os_counter.o
+ .bss           0x00000000        0x0 os_counter.o
+ .text.Os_CounterDiff
+                0x00000000       0x4c os_counter.o
+ .text.GetCounterValue
+                0x00000000      0x194 os_counter.o
+ .text.GetElapsedValue
+                0x00000000      0x2aa os_counter.o
+ .text          0x00000000        0x0 sys_tick.o
+ .data          0x00000000        0x0 sys_tick.o
+ .text          0x00000000        0x0 os_isr.o
+ .data          0x00000000        0x0 os_isr.o
+ .text.Os_SysIsrGetCurr
+                0x00000000       0x20 os_isr.o
+ .text.Os_IsrResourceAdd
+                0x00000000       0x60 os_isr.o
+ .text.Os_IsrRemove
+                0x00000000       0x30 os_isr.o
+ .text.Os_IsrGet
+                0x00000000       0x5a os_isr.o
+ .text.Os_IsrGetApplicationOwner
+                0x00000000       0x5e os_isr.o
+ .text.Os_Arc_GetIsrInfo
+                0x00000000       0x66 os_isr.o
+ .text.Os_Arc_GetIsrCount
+                0x00000000       0x20 os_isr.o
+ .text.GetISRID
+                0x00000000       0x84 os_isr.o
+ .text          0x00000000        0x0 os_application.o
+ .data          0x00000000        0x0 os_application.o
+ .bss           0x00000000        0x0 os_application.o
+ .text.Os_ResourceGetApplicationOwner
+                0x00000000       0x22 os_application.o
+ .text.Os_TaskGetApplicationOwner
+                0x00000000       0x56 os_application.o
+ .text.Os_CounterGet
+                0x00000000       0x32 os_application.o
+ .text.Os_CounterGetApplicationOwner
+                0x00000000       0x50 os_application.o
+ .text.Os_AlarmGet
+                0x00000000       0x30 os_application.o
+ .text.Os_AlarmGetApplicationOwner
+                0x00000000       0x56 os_application.o
+ .text.Os_SchTblGetApplicationOwner
+                0x00000000       0x20 os_application.o
+ .text.CheckObjectOwnership
+                0x00000000       0xc8 os_application.o
+ .rodata        0x00000000       0x18 os_application.o
+ .text.GetActiveApplicationMode
+                0x00000000       0x28 os_application.o
+ .text          0x00000000        0x0 os_panic.o
+ .data          0x00000000        0x0 os_panic.o
+ .bss           0x00000000        0x0 os_panic.o
+ .text          0x00000000        0x0 os_trap.o
+ .data          0x00000000        0x0 os_trap.o
+ .bss           0x00000000        0x0 os_trap.o
+ .debug_info    0x00000000      0x2a8 os_trap.o
+ .debug_abbrev  0x00000000       0x85 os_trap.o
+ .debug_aranges
+                0x00000000       0x18 os_trap.o
+ .debug_line    0x00000000      0x1d4 os_trap.o
+ .debug_str     0x00000000      0x964 os_trap.o
+ .comment       0x00000000       0x8f os_trap.o
+ .text          0x00000000        0x0 os_peripheral.o
+ .data          0x00000000        0x0 os_peripheral.o
+ .bss           0x00000000        0x0 os_peripheral.o
+ .text.Os_ReadPeripheral8
+                0x00000000       0x2c os_peripheral.o
+ .text.Os_ReadPeripheral16
+                0x00000000       0x2c os_peripheral.o
+ .text.Os_ReadPeripheral32
+                0x00000000       0x28 os_peripheral.o
+ .text.Os_WritePeripheral8
+                0x00000000       0x28 os_peripheral.o
+ .text.Os_WritePeripheral16
+                0x00000000       0x28 os_peripheral.o
+ .text.Os_WritePeripheral32
+                0x00000000       0x26 os_peripheral.o
+ .text.Os_ModifyPeripheral8
+                0x00000000       0x3e os_peripheral.o
+ .text.Os_ModifyPeripheral16
+                0x00000000       0x3e os_peripheral.o
+ .text.Os_ModifyPeripheral32
+                0x00000000       0x32 os_peripheral.o
+ .text          0x00000000        0x0 irq.o
+ .data          0x00000000        0x0 irq.o
+ .bss           0x00000000        0x0 irq.o
+ .text.Irq_GenerateSoftInt
+                0x00000000       0x6c irq.o
+ .text.Irq_GetCurrentPriority
+                0x00000000       0x36 irq.o
+ .text          0x00000000        0x0 Det.o
+ .data          0x00000000        0x0 Det.o
+ .text          0x00000000        0x0 Det_Cfg.o
+ .data          0x00000000        0x0 Det_Cfg.o
+ .bss           0x00000000        0x0 Det_Cfg.o
+ .debug_info    0x00000000       0x75 Det_Cfg.o
+ .debug_abbrev  0x00000000       0x24 Det_Cfg.o
+ .debug_aranges
+                0x00000000       0x18 Det_Cfg.o
+ .debug_line    0x00000000       0x1d Det_Cfg.o
+ .debug_str     0x00000000      0x284 Det_Cfg.o
+ .comment       0x00000000       0x8f Det_Cfg.o
+ .text          0x00000000        0x0 ramlog.o
+ .text.ramlog_fputs
+                0x00000000       0x52 ramlog.o
+ .text.ramlog_puts
+                0x00000000       0x2c ramlog.o
+ .text.ramlog_printf
+                0x00000000       0xa0 ramlog.o
+ .text.ramlog_init
+                0x00000000       0x46 ramlog.o
+ .text          0x00000000        0x0 cirq_buffer.o
+ .data          0x00000000        0x0 cirq_buffer.o
+ .bss           0x00000000        0x0 cirq_buffer.o
+ .text.SuspendOSInterrupts
+                0x00000000       0x34 cirq_buffer.o
+ .text.ResumeOSInterrupts
+                0x00000000       0x76 cirq_buffer.o
+ .text.CirqBuff_Init
+                0x00000000       0x54 cirq_buffer.o
+ .text.CirqBuffStatCreate
+                0x00000000       0x62 cirq_buffer.o
+ .text.CirqBuffDynCreate
+                0x00000000       0x90 cirq_buffer.o
+ .text.CirqBuffDynDestroy
+                0x00000000       0x34 cirq_buffer.o
+ .text.CirqBuffPush
+                0x00000000       0xbe cirq_buffer.o
+ .text.CirqBuffPop
+                0x00000000       0xbc cirq_buffer.o
+ .text.CirqBuff_PushLock
+                0x00000000       0x8c cirq_buffer.o
+ .text.CirqBuff_PopLock
+                0x00000000       0x8a cirq_buffer.o
+ .text.CirqBuff_Peek
+                0x00000000       0xc6 cirq_buffer.o
+ .text          0x00000000        0x0 version.o
+ .data          0x00000000        0x0 version.o
+ .bss           0x00000000        0x0 version.o
+ .rodata        0x00000000      0x120 version.o
+ .debug_info    0x00000000       0x93 version.o
+ .debug_abbrev  0x00000000       0x65 version.o
+ .debug_aranges
+                0x00000000       0x18 version.o
+ .debug_line    0x00000000       0xd0 version.o
+ .debug_str     0x00000000      0x217 version.o
+ .comment       0x00000000       0x8f version.o
+ .text          0x00000000        0x0 clib_port.o
+ .bss           0x00000000        0x0 clib_port.o
+ .text.newFileNo
+                0x00000000       0x8e clib_port.o
+ .text.findDeviceByName
+                0x00000000       0xc4 clib_port.o
+ .text.open     0x00000000       0xba clib_port.o
+ .text.fstat    0x00000000       0x22 clib_port.o
+ .text.close    0x00000000       0xf0 clib_port.o
+ .text.isatty   0x00000000       0x1a clib_port.o
+ .text.read     0x00000000      0x1a2 clib_port.o
+ .text.lseek    0x00000000      0x142 clib_port.o
+ .text          0x00000000        0x0 printf.o
+ .data          0x00000000        0x0 printf.o
+ .bss           0x00000000        0x0 printf.o
+ .text.fgetc    0x00000000       0x3c printf.o
+ .text.fgets    0x00000000       0x3c printf.o
+ .text.fprintf  0x00000000       0x5e printf.o
+ .text.sprintf  0x00000000       0x60 printf.o
+ .text.snprintf
+                0x00000000       0x62 printf.o
+ .text.vprintf  0x00000000       0x3a printf.o
+ .text.vsprintf
+                0x00000000       0x34 printf.o
+ .text.vsnprintf
+                0x00000000       0x3e printf.o
+ .text          0x00000000        0x0 xtoa.o
+ .data          0x00000000        0x0 xtoa.o
+ .bss           0x00000000        0x0 xtoa.o
+ .text.ultoa    0x00000000       0x30 xtoa.o
+ .text.itoa     0x00000000       0x3c xtoa.o
+ .text          0x00000000        0x0 Mcu_Arc_Common_ppc.o
+ .data          0x00000000        0x0 Mcu_Arc_Common_ppc.o
+ .bss           0x00000000        0x1 Mcu_Arc_Common_ppc.o
+ .text.Mcu_Arc_PrintInfo
+                0x00000000       0x90 Mcu_Arc_Common_ppc.o
+ .text.Mcu_Arc_GetECCError
+                0x00000000       0x30 Mcu_Arc_Common_ppc.o
+ .text.Mcu_Arc_GetMode
+                0x00000000       0x20 Mcu_Arc_Common_ppc.o
+ .text.Identify_ResetReason
+                0x00000000       0x9e Mcu_Arc_Common_ppc.o
+ .text          0x00000000        0x0 Mcu_Hw_mpc57xx.o
+ .data          0x00000000        0x0 Mcu_Hw_mpc57xx.o
+ .bss           0x00000000        0x0 Mcu_Hw_mpc57xx.o
+ .text          0x00000000        0x0 Mcu_Arc_mpc5748g.o
+ .data          0x00000000        0x0 Mcu_Arc_mpc5748g.o
+ .bss           0x00000000        0x0 Mcu_Arc_mpc5748g.o
+ .text.Mcu_Arc_InitPre
+                0x00000000       0x16 Mcu_Arc_mpc5748g.o
+ .text.Mcu_Arc_SetModePre
+                0x00000000       0x18 Mcu_Arc_mpc5748g.o
+ .text.Mcu_Arc_SetModePost
+                0x00000000       0x18 Mcu_Arc_mpc5748g.o
+ .bss           0x00000000        0x0 d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a(eabivle.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-abort.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-abort.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-abort.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-errno.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-errno.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-exit.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-exit.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fopen.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fopen.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fopen.o)
+ .text._fopen_r
+                0x00000000       0x98 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fopen.o)
+ .text.fopen    0x00000000       0x12 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fopen.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseek.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseek.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseek.o)
+ .text._fseek_r
+                0x00000000        0x4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseek.o)
+ .text.fseek    0x00000000       0x16 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseek.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseeko.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseeko.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseeko.o)
+ .text._fseeko_r
+                0x00000000      0x2ea D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseeko.o)
+ .text.fseeko   0x00000000       0x16 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseeko.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fstatr.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fstatr.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fstatr.o)
+ .text._fstat_r
+                0x00000000       0x3c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fstatr.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-impure.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-impure.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-makebuf.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-makebuf.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-makebuf.o)
+ .text.__smakebuf_r
+                0x00000000      0x102 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-makebuf.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-malloc.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-malloc.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-malloc.o)
+ .text.malloc   0x00000000        0xe D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-malloc.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+ .text._malloc_r
+                0x00000000      0x4dc D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+ .sbss.__malloc_max_sbrked_mem
+                0x00000000        0x4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+ .sbss.__malloc_max_total_mem
+                0x00000000        0x4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memcpy.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memset.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mlock.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mlock.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mlock.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-openr.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-openr.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-openr.o)
+ .text._open_r  0x00000000       0x3e D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-openr.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-reent.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-reent.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x00000000       0x2e D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x00000000       0xd0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-reent.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-refill.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-refill.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-refill.o)
+ .text.lflush   0x00000000       0x12 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-refill.o)
+ .text.__srefill_r
+                0x00000000      0x142 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-refill.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-sbrkr.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-sbrkr.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-sbrkr.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+ .text._init_signal_r
+                0x00000000       0x52 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+ .text._signal_r
+                0x00000000       0x52 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+ .text.__sigtramp_r
+                0x00000000       0x74 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+ .text.signal   0x00000000       0x12 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+ .text._init_signal
+                0x00000000        0xc D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+ .text.__sigtramp
+                0x00000000        0xe D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signalr.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signalr.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signalr.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o)
+ .text.__sread  0x00000000       0x36 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o)
+ .text.__seofread
+                0x00000000        0x4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o)
+ .text.__swrite
+                0x00000000       0x46 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o)
+ .text.__sseek  0x00000000       0x36 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o)
+ .text.__sclose
+                0x00000000        0x8 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcmp.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcmp.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcmp.o)
+ .text.strcmp   0x00000000       0x22 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcmp.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcpy.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcpy.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcpy.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strlen.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strlen.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strlen.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strncpy.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strncpy.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strncpy.o)
+ .text.strncpy  0x00000000       0x3c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strncpy.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strtoul.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strtoul.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strtoul.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-writer.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-writer.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-writer.o)
+ .text._write_r
+                0x00000000       0x3e D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-writer.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__call_atexit.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__call_atexit.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__call_atexit.o)
+ .text.startup.register_fini
+                0x00000000       0x1c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__call_atexit.o)
+ .ctors.65535   0x00000000        0x4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__call_atexit.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-closer.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-closer.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-closer.o)
+ .text._close_r
+                0x00000000       0x3a D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-closer.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-ctype_.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-ctype_.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-ctype_.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fflush.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fflush.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fflush.o)
+ .text.__sflush_r
+                0x00000000      0x15e D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fflush.o)
+ .text._fflush_r
+                0x00000000       0x44 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fflush.o)
+ .text.fflush   0x00000000       0x28 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fflush.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o)
+ .text._cleanup_r
+                0x00000000        0xc D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o)
+ .text.std.isra.0
+                0x00000000       0x6e D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o)
+ .text.__sfmoreglue
+                0x00000000       0x46 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o)
+ .text._cleanup
+                0x00000000        0xc D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o)
+ .text.__sinit  0x00000000       0x5a D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o)
+ .text.__sfp    0x00000000       0xbc D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fini.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fini.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fini.o)
+ .text.__libc_fini_array
+                0x00000000       0x52 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fini.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-flags.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-flags.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-flags.o)
+ .text.__sflags
+                0x00000000       0x7e D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-flags.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-freer.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-freer.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-freer.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fwalk.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fwalk.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fwalk.o)
+ .text._fwalk   0x00000000       0x5c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fwalk.o)
+ .text._fwalk_reent
+                0x00000000       0x60 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fwalk.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-isattyr.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-isattyr.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-isattyr.o)
+ .text._isatty_r
+                0x00000000       0x3a D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-isattyr.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-lseekr.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-lseekr.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-lseekr.o)
+ .text._lseek_r
+                0x00000000       0x3e D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-lseekr.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-readr.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-readr.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-readr.o)
+ .text._read_r  0x00000000       0x3e D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-readr.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-atexit.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-atexit.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-atexit.o)
+ .text.atexit   0x00000000        0xc D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-atexit.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fclose.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fclose.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fclose.o)
+ .text._fclose_r
+                0x00000000       0xaa D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fclose.o)
+ .text.fclose   0x00000000        0xe D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fclose.o)
+ .text          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__atexit.o)
+ .data          0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__atexit.o)
+ .bss           0x00000000        0x0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__atexit.o)
+ .text.__register_exitproc
+                0x00000000       0xbc D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__atexit.o)
+ .data          0x00000000        0x0 d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a(e200crtresxgpr.o)
+ .bss           0x00000000        0x0 d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a(e200crtresxgpr.o)
+ .eh_frame      0x00000000       0x7c d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a(e200crtresxgpr.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+L_FLASH_CODE_0   0x00fd0000         0x003c0000
+L_SRAM_0         0x40000000         0x000c0000
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.calibration    0x00fd0000        0x0
+ *(.calibration .calib_component .calib_shared)
+                0x00000001                ASSERT ((SIZEOF (.calibration) == 0x0), .calibration section used but CALIBRATION_ENABLED is undefined)
+                0x00fd8000                __FLS_PROG_START__ = 0xfd8000
+
+.rcw            0x00fd8000       0x60
+ *(.rcw)
+ .rcw           0x00fd8000       0x60 crt0.o
+                0x00fd8000                _resetconfiguration
+
+.text           0x00fd8060     0xa706
+ crt0.o(.text)
+ .text          0x00fd8060       0xd2 crt0.o
+                0x00fd8060                _start_z0
+                0x00fd8080                _start
+                0x00fd80ea                _exit
+                0x00fd80ee                badAlignment
+                0x00fd80f2                memset_uint64
+                0x00fd811c                initECC_128bytesAligned
+ *(.text .text.* .init .fini* .eini* .gnu.linkonce* .gnu.warning)
+ *fill*         0x00fd8132        0x2 
+ .text.TestPass
+                0x00fd8134       0x2a os_simple.o
+ *fill*         0x00fd815e        0x2 
+ .text.bTask3   0x00fd8160       0x90 os_simple.o
+                0x00fd8160                bTask3
+ .text.eTask1   0x00fd81f0       0xd8 os_simple.o
+                0x00fd81f0                eTask1
+ .text.eTask2   0x00fd82c8       0x80 os_simple.o
+                0x00fd82c8                eTask2
+ .text.OsIdle   0x00fd8348        0xc os_simple.o
+                0x00fd8348                OsIdle
+ .text.OSErrorGetServiceId
+                0x00fd8354       0x20 system_hooks.o
+ .text.StartupHook
+                0x00fd8374       0x14 system_hooks.o
+                0x00fd8374                StartupHook
+ .text.ShutdownHook
+                0x00fd8388       0x2c system_hooks.o
+                0x00fd8388                ShutdownHook
+ .text.ErrorHook
+                0x00fd83b4      0x1ae system_hooks.o
+                0x00fd83b4                ErrorHook
+ *fill*         0x00fd8562        0x2 
+ .text.PreTaskHook
+                0x00fd8564       0xae system_hooks.o
+                0x00fd8564                PreTaskHook
+ *fill*         0x00fd8612        0x2 
+ .text.PostTaskHook
+                0x00fd8614       0xae system_hooks.o
+                0x00fd8614                PostTaskHook
+ *fill*         0x00fd86c2        0x2 
+ .text.init     0x00fd86c4      0x1a2 init.o
+                0x00fd86c4                init
+ *fill*         0x00fd8866        0x2 
+ .text.Arc_Assert
+                0x00fd8868       0x2a arc_assert.o
+                0x00fd8868                Arc_Assert
+ *fill*         0x00fd8892        0x2 
+ .text.EcuM_Init
+                0x00fd8894      0x158 EcuM.o
+                0x00fd8894                EcuM_Init
+ .text.EcuM_SelectShutdownTarget
+                0x00fd89ec       0x66 EcuM.o
+                0x00fd89ec                EcuM_SelectShutdownTarget
+ *fill*         0x00fd8a52        0x2 
+ .text.EcuM_ClearWakeupEvent
+                0x00fd8a54       0x4a EcuM.o
+                0x00fd8a54                EcuM_ClearWakeupEvent
+ *fill*         0x00fd8a9e        0x2 
+ .text.EcuM_GetPendingWakeupEvents
+                0x00fd8aa0       0x20 EcuM.o
+                0x00fd8aa0                EcuM_GetPendingWakeupEvents
+ .text.EcuM_GetValidatedWakeupEvents
+                0x00fd8ac0       0x20 EcuM.o
+                0x00fd8ac0                EcuM_GetValidatedWakeupEvents
+ .text.EcuM_ValidateWakeupEvent
+                0x00fd8ae0       0x2e EcuM.o
+                0x00fd8ae0                EcuM_ValidateWakeupEvent
+ *fill*         0x00fd8b0e        0x2 
+ .text.EcuM_GetState
+                0x00fd8b10       0x2e EcuM_Fixed.o
+                0x00fd8b10                EcuM_GetState
+ *fill*         0x00fd8b3e        0x2 
+ .text.cntlzw   0x00fd8b40       0x22 EcuM_Main.o
+ *fill*         0x00fd8b62        0x2 
+ .text.ilog2    0x00fd8b64       0x32 EcuM_Main.o
+ *fill*         0x00fd8b96        0x2 
+ .text.SuspendOSInterrupts
+                0x00fd8b98       0x34 EcuM_Main.o
+ .text.ResumeOSInterrupts
+                0x00fd8bcc       0x76 EcuM_Main.o
+ *fill*         0x00fd8c42        0x2 
+ .text.hasRunRequests
+                0x00fd8c44       0x38 EcuM_Main.o
+ .text.hasPostRunRequests
+                0x00fd8c7c       0x34 EcuM_Main.o
+ .text.GetMainStateAsString
+                0x00fd8cb0      0x1ae EcuM_Main.o
+                0x00fd8cb0                GetMainStateAsString
+ *fill*         0x00fd8e5e        0x2 
+ .text.GetWakeupReactionAsString
+                0x00fd8e60       0x3e EcuM_Main.o
+                0x00fd8e60                GetWakeupReactionAsString
+ *fill*         0x00fd8e9e        0x2 
+ .text.SetCurrentState
+                0x00fd8ea0       0x78 EcuM_Main.o
+                0x00fd8ea0                SetCurrentState
+ .text.SetComMCommunicationAllowed
+                0x00fd8f18       0x1a EcuM_Main.o
+                0x00fd8f18                SetComMCommunicationAllowed
+ *fill*         0x00fd8f32        0x2 
+ .text.EcuM_enter_run_mode
+                0x00fd8f34       0x30 EcuM_Main.o
+                0x00fd8f34                EcuM_enter_run_mode
+ .text.enter_go_sleep_mode
+                0x00fd8f64       0x40 EcuM_Main.o
+ .text.in_state_goSleep
+                0x00fd8fa4       0xfe EcuM_Main.o
+ *fill*         0x00fd90a2        0x2 
+ .text.in_state_sleep
+                0x00fd90a4       0x8e EcuM_Main.o
+ *fill*         0x00fd9132        0x2 
+ .text.go_off_one_module_deinit
+                0x00fd9134       0x14 EcuM_Main.o
+ .text.enter_go_off_one_mode
+                0x00fd9148       0x34 EcuM_Main.o
+ .text.in_state_appRun
+                0x00fd917c       0xca EcuM_Main.o
+ *fill*         0x00fd9246        0x2 
+ .text.in_state_appPostRun
+                0x00fd9248       0x98 EcuM_Main.o
+ .text.in_state_prepShutdown
+                0x00fd92e0       0xa6 EcuM_Main.o
+ *fill*         0x00fd9386        0x2 
+ .text.in_state_goOffOne
+                0x00fd9388       0x24 EcuM_Main.o
+ .text.EcuM_MainFunction
+                0x00fd93ac      0x572 EcuM_Main.o
+                0x00fd93ac                EcuM_MainFunction
+ *fill*         0x00fd991e        0x2 
+ .text._dummy   0x00fd9920       0x14 EcuM_Callout_Stubs.o
+ .text.EcuM_DeterminePbConfiguration
+                0x00fd9934       0x4c EcuM_Callout_Stubs.o
+                0x00fd9934                EcuM_DeterminePbConfiguration
+ .text.EcuM_AL_DriverInitZero
+                0x00fd9980       0x26 EcuM_Callout_Stubs.o
+                0x00fd9980                EcuM_AL_DriverInitZero
+ *fill*         0x00fd99a6        0x2 
+ .text.EcuM_AL_DriverInitOne
+                0x00fd99a8       0x5a EcuM_Callout_Stubs.o
+                0x00fd99a8                EcuM_AL_DriverInitOne
+ *fill*         0x00fd9a02        0x2 
+ .text.EcuM_AL_DriverInitTwo
+                0x00fd9a04       0x16 EcuM_Callout_Stubs.o
+                0x00fd9a04                EcuM_AL_DriverInitTwo
+ *fill*         0x00fd9a1a        0x2 
+ .text.EcuM_OnEnterRun
+                0x00fd9a1c       0x14 EcuM_Callout_Stubs.o
+                0x00fd9a1c                EcuM_OnEnterRun
+ .text.EcuM_OnExitRun
+                0x00fd9a30       0x14 EcuM_Callout_Stubs.o
+                0x00fd9a30                EcuM_OnExitRun
+ .text.EcuM_OnExitPostRun
+                0x00fd9a44       0x14 EcuM_Callout_Stubs.o
+                0x00fd9a44                EcuM_OnExitPostRun
+ .text.EcuM_OnPrepShutdown
+                0x00fd9a58       0x14 EcuM_Callout_Stubs.o
+                0x00fd9a58                EcuM_OnPrepShutdown
+ .text.EcuM_OnGoSleep
+                0x00fd9a6c       0x14 EcuM_Callout_Stubs.o
+                0x00fd9a6c                EcuM_OnGoSleep
+ .text.EcuM_OnGoOffOne
+                0x00fd9a80       0x14 EcuM_Callout_Stubs.o
+                0x00fd9a80                EcuM_OnGoOffOne
+ .text.EcuM_EnableWakeupSources
+                0x00fd9a94       0x16 EcuM_Callout_Stubs.o
+                0x00fd9a94                EcuM_EnableWakeupSources
+ *fill*         0x00fd9aaa        0x2 
+ .text.EcuM_DisableWakeupSources
+                0x00fd9aac       0x16 EcuM_Callout_Stubs.o
+                0x00fd9aac                EcuM_DisableWakeupSources
+ *fill*         0x00fd9ac2        0x2 
+ .text.EcuM_StartWakeupSources
+                0x00fd9ac4       0x8e EcuM_Callout_Stubs.o
+                0x00fd9ac4                EcuM_StartWakeupSources
+ *fill*         0x00fd9b52        0x2 
+ .text.EcuM_StopWakeupSources
+                0x00fd9b54       0x8e EcuM_Callout_Stubs.o
+                0x00fd9b54                EcuM_StopWakeupSources
+ *fill*         0x00fd9be2        0x2 
+ .text.EcuM_CheckValidation
+                0x00fd9be4       0x8e EcuM_Callout_Stubs.o
+                0x00fd9be4                EcuM_CheckValidation
+ *fill*         0x00fd9c72        0x2 
+ .text.EcuM_AL_DriverRestart
+                0x00fd9c74       0xae EcuM_Callout_Stubs.o
+                0x00fd9c74                EcuM_AL_DriverRestart
+ *fill*         0x00fd9d22        0x2 
+ .text.EcuM_OnWakeupReaction
+                0x00fd9d24       0x92 EcuM_Callout_Stubs.o
+                0x00fd9d24                EcuM_OnWakeupReaction
+ *fill*         0x00fd9db6        0x2 
+ .text.EcuM_GenerateRamHash
+                0x00fd9db8       0x8c EcuM_Callout_Stubs.o
+                0x00fd9db8                EcuM_GenerateRamHash
+ .text.EcuM_CheckRamHash
+                0x00fd9e44       0x90 EcuM_Callout_Stubs.o
+                0x00fd9e44                EcuM_CheckRamHash
+ .text.EcuM_Arc_RememberWakeupEvent
+                0x00fd9ed4       0x28 EcuM_Callout_Stubs.o
+                0x00fd9ed4                EcuM_Arc_RememberWakeupEvent
+ .text.validateMcuParameter
+                0x00fd9efc       0x7a Mcu.o
+ *fill*         0x00fd9f76        0x2 
+ .text.Mcu_Init
+                0x00fd9f78       0x82 Mcu.o
+                0x00fd9f78                Mcu_Init
+ *fill*         0x00fd9ffa        0x2 
+ .text.Mcu_InitClock
+                0x00fd9ffc       0xe2 Mcu.o
+                0x00fd9ffc                Mcu_InitClock
+ *fill*         0x00fda0de        0x2 
+ .text.Mcu_DistributePllClock
+                0x00fda0e0       0x9c Mcu.o
+                0x00fda0e0                Mcu_DistributePllClock
+ .text.Mcu_GetPllStatus
+                0x00fda17c       0x80 Mcu.o
+                0x00fda17c                Mcu_GetPllStatus
+ .text.Mcu_GetResetReason
+                0x00fda1fc       0x7e Mcu.o
+                0x00fda1fc                Mcu_GetResetReason
+ *fill*         0x00fda27a        0x2 
+ .text.Mcu_SetMode
+                0x00fda27c       0xaa Mcu.o
+                0x00fda27c                Mcu_SetMode
+ *fill*         0x00fda326        0x2 
+ .text.adjustReturnAddr
+                0x00fda328       0x72 mpc5xxx_handlers.o
+ *fill*         0x00fda39a        0x2 
+ .text.handleException
+                0x00fda39c       0xd2 mpc5xxx_handlers.o
+ *fill*         0x00fda46e        0x2 
+ .text.Mpc5xxx_Exception_IVOR0
+                0x00fda470       0x2a mpc5xxx_handlers.o
+                0x00fda470                Mpc5xxx_Exception_IVOR0
+ *fill*         0x00fda49a        0x2 
+ .text.Mpc5xxx_Exception_IVOR1
+                0x00fda49c       0x2c mpc5xxx_handlers.o
+                0x00fda49c                Mpc5xxx_Exception_IVOR1
+ .text.Mpc5xxx_Exception_IVOR2
+                0x00fda4c8       0x2a mpc5xxx_handlers.o
+                0x00fda4c8                Mpc5xxx_Exception_IVOR2
+ *fill*         0x00fda4f2        0x2 
+ .text.Mpc5xxx_Exception_IVOR3
+                0x00fda4f4       0x2a mpc5xxx_handlers.o
+                0x00fda4f4                Mpc5xxx_Exception_IVOR3
+ *fill*         0x00fda51e        0x2 
+ .text.Mpc5xxx_Exception_IVOR5
+                0x00fda520       0x2a mpc5xxx_handlers.o
+                0x00fda520                Mpc5xxx_Exception_IVOR5
+ *fill*         0x00fda54a        0x2 
+ .text.Mpc5xxx_Exception_IVOR6
+                0x00fda54c       0x2a mpc5xxx_handlers.o
+                0x00fda54c                Mpc5xxx_Exception_IVOR6
+ *fill*         0x00fda576        0x2 
+ .text.Mpc5xxx_Exception_IVOR7
+                0x00fda578       0x2a mpc5xxx_handlers.o
+                0x00fda578                Mpc5xxx_Exception_IVOR7
+ *fill*         0x00fda5a2        0x2 
+ .text.Mpc5xxx_Exception_IVOR8
+                0x00fda5a4       0x2a mpc5xxx_handlers.o
+                0x00fda5a4                Mpc5xxx_Exception_IVOR8
+ *fill*         0x00fda5ce        0x2 
+ .text.Mpc5xxx_Exception_IVOR11
+                0x00fda5d0       0x2a mpc5xxx_handlers.o
+                0x00fda5d0                Mpc5xxx_Exception_IVOR11
+ *fill*         0x00fda5fa        0x2 
+ .text.Mpc5xxx_Exception_IVOR12
+                0x00fda5fc       0x2a mpc5xxx_handlers.o
+                0x00fda5fc                Mpc5xxx_Exception_IVOR12
+ *fill*         0x00fda626        0x2 
+ .text.Mpc5xxx_Exception_IVOR13
+                0x00fda628       0x2a mpc5xxx_handlers.o
+                0x00fda628                Mpc5xxx_Exception_IVOR13
+ *fill*         0x00fda652        0x2 
+ .text.Mpc5xxx_Exception_IVOR14
+                0x00fda654       0x2a mpc5xxx_handlers.o
+                0x00fda654                Mpc5xxx_Exception_IVOR14
+ .text          0x00fda67e      0x862 mpc5xxx_handlers_asm.o
+                0x00fda67e                exception_IVOR0
+                0x00fda730                exception_IVOR1
+                0x00fda7e2                exception_IVOR2
+                0x00fda894                exception_IVOR3
+                0x00fda946                exception_IVOR5
+                0x00fda9f8                exception_IVOR6
+                0x00fdaaaa                exception_IVOR7
+                0x00fdab5c                exception_IVOR8
+                0x00fdac0e                exception_IVOR9
+                0x00fdac10                exception_IVOR11
+                0x00fdacc2                exception_IVOR12
+                0x00fdad74                exception_IVOR13
+                0x00fdae26                exception_IVOR14
+                0x00fdaed8                exception_IVOR15
+ .text.checkEcc
+                0x00fdaee0       0x1c mpc5xxx_callout_stubs.o
+ .text.Mpc5xxx_ExceptionHandler
+                0x00fdaefc       0x8c mpc5xxx_callout_stubs.o
+                0x00fdaefc                Mpc5xxx_ExceptionHandler
+ .text.Cache_EnableI
+                0x00fdaf88       0x7c Cpu.o
+                0x00fdaf88                Cache_EnableI
+ *fill*         0x00fdb004        0xc 
+ .text          0x00fdb010      0x2f8 arch_krn.o
+                0x00fdb010                Os_ArchGetStackPtr
+                0x00fdb014                Os_ArchSetStackPointer
+                0x00fdb018                Os_ArchSetSpAndCall
+                0x00fdb020                Os_ArchSwapContext
+                0x00fdb088                Os_ArchSwapContextTo
+                0x00fdb120                exception_IVOR4
+                0x00fdb230                restoreIsrContext
+                0x00fdb2de                exception_IVOR10
+ .text.get_msr  0x00fdb308       0x1e os_event.o
+ *fill*         0x00fdb326        0x2 
+ .text._Irq_Disable_save
+                0x00fdb328       0x2c os_event.o
+ .text._Irq_Disable_restore
+                0x00fdb354       0x1c os_event.o
+ .text.Os_SysTaskGetCurr
+                0x00fdb370       0x20 os_event.o
+ .text.Os_SysIntAnyDisabled
+                0x00fdb390       0x38 os_event.o
+ .text.Os_SchedulerResourceIsFree
+                0x00fdb3c8       0x38 os_event.o
+ .text.Os_TaskGet
+                0x00fdb400       0x30 os_event.o
+ .text.Os_TaskOccupiesResources
+                0x00fdb430       0x30 os_event.o
+ .text.Os_CallErrorHook
+                0x00fdb460       0x7a os_event.o
+ *fill*         0x00fdb4da        0x2 
+ .text.WaitEvent
+                0x00fdb4dc      0x20e os_event.o
+                0x00fdb4dc                WaitEvent
+ *fill*         0x00fdb6ea        0x2 
+ .text.SetEvent
+                0x00fdb6ec      0x2b0 os_event.o
+                0x00fdb6ec                SetEvent
+ .text.ClearEvent
+                0x00fdb99c      0x14a os_event.o
+                0x00fdb99c                ClearEvent
+ *fill*         0x00fdbae6        0x2 
+ .text.Os_SysIntClearAll
+                0x00fdbae8       0x28 os_init.o
+ .text.Os_TaskGet
+                0x00fdbb10       0x30 os_init.o
+ .text.copyPcbParts
+                0x00fdbb40       0x38 os_init.o
+ .text.InitOS   0x00fdbb78      0x156 os_init.o
+                0x00fdbb78                InitOS
+ *fill*         0x00fdbcce        0x2 
+ .text.os_start
+                0x00fdbcd0      0x20c os_init.o
+ .text.main     0x00fdbedc       0x2a os_init.o
+                0x00fdbedc                main
+ *fill*         0x00fdbf06        0x2 
+ .text.StartOS  0x00fdbf08       0x56 os_init.o
+                0x00fdbf08                StartOS
+ *fill*         0x00fdbf5e        0x2 
+ .text.ShutdownOS
+                0x00fdbf60       0x70 os_init.o
+                0x00fdbf60                ShutdownOS
+ .text.get_msr  0x00fdbfd0       0x1e arch.o
+ *fill*         0x00fdbfee        0x2 
+ .text.set_msr  0x00fdbff0       0x1e arch.o
+ *fill*         0x00fdc00e        0x2 
+ .text.Os_ArchGetProtectionType
+                0x00fdc010       0x90 arch.o
+                0x00fdc010                Os_ArchGetProtectionType
+ .text.Os_ArchGetScSize
+                0x00fdc0a0       0x1a arch.o
+                0x00fdc0a0                Os_ArchGetScSize
+ *fill*         0x00fdc0ba        0x2 
+ .text.Os_ArchSetupContext
+                0x00fdc0bc       0x5c arch.o
+                0x00fdc0bc                Os_ArchSetupContext
+ .text.Os_ArchInit
+                0x00fdc118       0x30 arch.o
+                0x00fdc118                Os_ArchInit
+ .text.get_msr  0x00fdc148       0x1e os_task.o
+ *fill*         0x00fdc166        0x2 
+ .text._Irq_Disable_save
+                0x00fdc168       0x2c os_task.o
+ .text._Irq_Disable_restore
+                0x00fdc194       0x1c os_task.o
+ .text.Os_SysTaskSetCurr
+                0x00fdc1b0       0x22 os_task.o
+ *fill*         0x00fdc1d2        0x2 
+ .text.Os_SysTaskGetCurr
+                0x00fdc1d4       0x20 os_task.o
+ .text.Os_SysIntAnyDisabled
+                0x00fdc1f4       0x38 os_task.o
+ .text.Os_SysIntClearAll
+                0x00fdc22c       0x28 os_task.o
+ .text.Os_SchedulerResourceIsFree
+                0x00fdc254       0x38 os_task.o
+ .text.Os_TaskMakeRunning
+                0x00fdc28c       0x1c os_task.o
+ .text.Os_TaskGet
+                0x00fdc2a8       0x30 os_task.o
+ .text.Os_TaskResourceRemove
+                0x00fdc2d8      0x12a os_task.o
+ *fill*         0x00fdc402        0x2 
+ .text.Os_TaskResourceFreeAll
+                0x00fdc404       0x50 os_task.o
+ .text.Os_StackGetUsage
+                0x00fdc454       0x66 os_task.o
+ *fill*         0x00fdc4ba        0x2 
+ .text.Os_StackSetStartmark
+                0x00fdc4bc       0x2e os_task.o
+ *fill*         0x00fdc4ea        0x2 
+ .text.Os_StackSetEndmark
+                0x00fdc4ec       0x22 os_task.o
+ *fill*         0x00fdc50e        0x2 
+ .text.Os_StackIsEndmarkOk
+                0x00fdc510       0x40 os_task.o
+ .text.Os_StackIsStartmarkOk
+                0x00fdc550       0x4c os_task.o
+ .text.Os_StackPerformCheck
+                0x00fdc59c       0x62 os_task.o
+ *fill*         0x00fdc5fe        0x2 
+ .text.Os_TaskOccupiesResources
+                0x00fdc600       0x30 os_task.o
+ .text.Os_CallErrorHook
+                0x00fdc630       0x7a os_task.o
+ *fill*         0x00fdc6aa        0x2 
+ .text.Os_TaskRunningToReady
+                0x00fdc6ac       0x58 os_task.o
+ .text.Os_ReadyQRemove
+                0x00fdc704       0x66 os_task.o
+ *fill*         0x00fdc76a        0x2 
+ .text.Os_ReadyQEnqueue
+                0x00fdc76c       0x52 os_task.o
+ *fill*         0x00fdc7be        0x2 
+ .text.Os_TaskMakeSuspended
+                0x00fdc7c0       0x60 os_task.o
+ .text.Os_Arc_SetCleanContext
+                0x00fdc820       0x68 os_task.o
+ .text.Os_TaskMakeReady
+                0x00fdc888       0x4a os_task.o
+                0x00fdc888                Os_TaskMakeReady
+ *fill*         0x00fdc8d2        0x2 
+ .text.Os_TaskMakeWaiting
+                0x00fdc8d4       0x62 os_task.o
+                0x00fdc8d4                Os_TaskMakeWaiting
+ *fill*         0x00fdc936        0x2 
+ .text.Os_StackFill
+                0x00fdc938       0x70 os_task.o
+ .text.Os_TaskPost
+                0x00fdc9a8       0x7c os_task.o
+                0x00fdc9a8                Os_TaskPost
+ .text.Os_StackSetup
+                0x00fdca24       0x8a os_task.o
+                0x00fdca24                Os_StackSetup
+ *fill*         0x00fdcaae        0x2 
+ .text.Os_TaskContextInit
+                0x00fdcab0       0x76 os_task.o
+                0x00fdcab0                Os_TaskContextInit
+ *fill*         0x00fdcb26        0x2 
+ .text.Os_TaskGetTop
+                0x00fdcb28      0x120 os_task.o
+                0x00fdcb28                Os_TaskGetTop
+ .text.Os_TaskStartFromBeginning
+                0x00fdcc48      0x102 os_task.o
+                0x00fdcc48                Os_TaskStartFromBeginning
+ *fill*         0x00fdcd4a        0x2 
+ .text.Os_Dispatch
+                0x00fdcd4c      0x43c os_task.o
+                0x00fdcd4c                Os_Dispatch
+ .text.Os_TaskSwapContext
+                0x00fdd188      0x11e os_task.o
+                0x00fdd188                Os_TaskSwapContext
+ *fill*         0x00fdd2a6        0x2 
+ .text.Os_TaskSwapContextTo
+                0x00fdd2a8      0x11e os_task.o
+                0x00fdd2a8                Os_TaskSwapContextTo
+ *fill*         0x00fdd3c6        0x2 
+ .text.Os_Arc_GetStackInfo
+                0x00fdd3c8       0xa0 os_task.o
+                0x00fdd3c8                Os_Arc_GetStackInfo
+ .text.GetTaskState
+                0x00fdd468      0x1cc os_task.o
+                0x00fdd468                GetTaskState
+ .text.GetTaskID
+                0x00fdd634       0xd6 os_task.o
+                0x00fdd634                GetTaskID
+ *fill*         0x00fdd70a        0x2 
+ .text.ActivateTask
+                0x00fdd70c      0x250 os_task.o
+                0x00fdd70c                ActivateTask
+ .text.TerminateTask
+                0x00fdd95c      0x110 os_task.o
+                0x00fdd95c                TerminateTask
+ .text.get_msr  0x00fdda6c       0x1e os_resource.o
+ *fill*         0x00fdda8a        0x2 
+ .text._Irq_Disable_save
+                0x00fdda8c       0x2c os_resource.o
+ .text._Irq_Disable_restore
+                0x00fddab8       0x1c os_resource.o
+ .text.Os_SysTaskGetCurr
+                0x00fddad4       0x20 os_resource.o
+ .text.Os_SysIntAnyDisabled
+                0x00fddaf4       0x38 os_resource.o
+ .text.Os_ResourceGet
+                0x00fddb2c       0x1c os_resource.o
+ .text.Os_SchedulerResourceIsFree
+                0x00fddb48       0x38 os_resource.o
+ .text.Os_TaskResourceAdd
+                0x00fddb80       0x72 os_resource.o
+ *fill*         0x00fddbf2        0x2 
+ .text.Os_TaskResourceRemove
+                0x00fddbf4      0x12a os_resource.o
+ *fill*         0x00fddd1e        0x2 
+ .text.Os_CallErrorHook
+                0x00fddd20       0x7a os_resource.o
+ *fill*         0x00fddd9a        0x2 
+ .text.GetResource
+                0x00fddd9c      0x21c os_resource.o
+                0x00fddd9c                GetResource
+ .text.ReleaseResource
+                0x00fddfb8      0x2f4 os_resource.o
+                0x00fddfb8                ReleaseResource
+ .text.Os_ResourceGetInternal
+                0x00fde2ac       0x4e os_resource.o
+                0x00fde2ac                Os_ResourceGetInternal
+ *fill*         0x00fde2fa        0x2 
+ .text.Os_ResourceReleaseInternal
+                0x00fde2fc       0x4e os_resource.o
+                0x00fde2fc                Os_ResourceReleaseInternal
+ *fill*         0x00fde34a        0x2 
+ .text.Os_ResourceInit
+                0x00fde34c       0x68 os_resource.o
+                0x00fde34c                Os_ResourceInit
+ .text.get_msr  0x00fde3b4       0x1e os_alarm.o
+ *fill*         0x00fde3d2        0x2 
+ .text._Irq_Disable_save
+                0x00fde3d4       0x2c os_alarm.o
+ .text._Irq_Disable_restore
+                0x00fde400       0x1c os_alarm.o
+ .text.Os_SysIntAnyDisabled
+                0x00fde41c       0x38 os_alarm.o
+ .text.Os_CounterGetMaxValue
+                0x00fde454       0x1c os_alarm.o
+ .text.Os_CounterGetValue
+                0x00fde470       0x1c os_alarm.o
+ .text.Os_CounterAdd
+                0x00fde48c       0x5e os_alarm.o
+ *fill*         0x00fde4ea        0x2 
+ .text.Os_AlarmGet
+                0x00fde4ec       0x30 os_alarm.o
+ .text.Os_CallErrorHook
+                0x00fde51c       0x7a os_alarm.o
+ *fill*         0x00fde596        0x2 
+ .text.Os_AlarmCheckCycle
+                0x00fde598       0x76 os_alarm.o
+ *fill*         0x00fde60e        0x2 
+ .text.AlarmProcess
+                0x00fde610       0x74 os_alarm.o
+ .text.Os_internalSetRelAlarm
+                0x00fde684      0x2b8 os_alarm.o
+ .text.Os_internalSetAbsAlarm
+                0x00fde93c      0x284 os_alarm.o
+ .text.Os_AlarmCheck
+                0x00fdebc0      0x156 os_alarm.o
+                0x00fdebc0                Os_AlarmCheck
+ *fill*         0x00fded16        0x2 
+ .text.Os_AlarmAutostart
+                0x00fded18       0xec os_alarm.o
+                0x00fded18                Os_AlarmAutostart
+ .text.get_msr  0x00fdee04       0x1e os_counter.o
+ *fill*         0x00fdee22        0x2 
+ .text._Irq_Disable_save
+                0x00fdee24       0x2c os_counter.o
+ .text._Irq_Disable_restore
+                0x00fdee50       0x1c os_counter.o
+ .text.Os_SysIntAnyDisabled
+                0x00fdee6c       0x38 os_counter.o
+ .text.Os_CounterGetMaxValue
+                0x00fdeea4       0x1c os_counter.o
+ .text.Os_CounterGet
+                0x00fdeec0       0x32 os_counter.o
+ *fill*         0x00fdeef2        0x2 
+ .text.Os_CounterAdd
+                0x00fdeef4       0x5e os_counter.o
+ *fill*         0x00fdef52        0x2 
+ .text.Os_AlarmGet
+                0x00fdef54       0x30 os_counter.o
+ .text.Os_CallErrorHook
+                0x00fdef84       0x7a os_counter.o
+ *fill*         0x00fdeffe        0x2 
+ .text.IsCounterValid
+                0x00fdf000       0x2a os_counter.o
+ *fill*         0x00fdf02a        0x2 
+ .text.IncrementCounter
+                0x00fdf02c      0x14a os_counter.o
+                0x00fdf02c                IncrementCounter
+ *fill*         0x00fdf176        0x2 
+ .text.OsTick   0x00fdf178       0x6a os_counter.o
+                0x00fdf178                OsTick
+ *fill*         0x00fdf1e2        0x2 
+ .text.GetOsTick
+                0x00fdf1e4       0x20 os_counter.o
+                0x00fdf1e4                GetOsTick
+ .text.Os_CounterInit
+                0x00fdf204       0x7e os_counter.o
+                0x00fdf204                Os_CounterInit
+ *fill*         0x00fdf282        0x2 
+ .text.reloadTimer
+                0x00fdf284      0x102 sys_tick.o
+ *fill*         0x00fdf386        0x2 
+ .text.Os_SysTick_Stm
+                0x00fdf388       0x26 sys_tick.o
+                0x00fdf388                Os_SysTick_Stm
+ *fill*         0x00fdf3ae        0x2 
+ .text.Os_SysTickInit
+                0x00fdf3b0       0x2a sys_tick.o
+                0x00fdf3b0                Os_SysTickInit
+ *fill*         0x00fdf3da        0x2 
+ .text.Os_SysTickStart2
+                0x00fdf3dc       0xa0 sys_tick.o
+                0x00fdf3dc                Os_SysTickStart2
+ .text.Os_SysTaskGetCurr
+                0x00fdf47c       0x20 os_isr.o
+ .text.Os_SysIntAnyDisabled
+                0x00fdf49c       0x38 os_isr.o
+ .text.Os_SysIntClearAll
+                0x00fdf4d4       0x28 os_isr.o
+ .text.Os_SchedulerResourceIsFree
+                0x00fdf4fc       0x38 os_isr.o
+ .text.Os_ApplGetCore
+                0x00fdf534       0x38 os_isr.o
+ .text.Os_StackIsEndmarkOk
+                0x00fdf56c       0x40 os_isr.o
+ .text.Os_StackIsStartmarkOk
+                0x00fdf5ac       0x4c os_isr.o
+ .text.Os_StackPerformCheck
+                0x00fdf5f8       0x62 os_isr.o
+ *fill*         0x00fdf65a        0x2 
+ .text.Os_CallErrorHook
+                0x00fdf65c       0x7a os_isr.o
+ *fill*         0x00fdf6d6        0x2 
+ .text.Os_IsrResourceFreeAll
+                0x00fdf6d8       0x50 os_isr.o
+ .text.Os_IsrOccupiesResources
+                0x00fdf728       0x30 os_isr.o
+ .text.Os_CheckISRinstalled
+                0x00fdf758       0x34 os_isr.o
+ .text.Os_GetIsrVarType
+                0x00fdf78c       0x8a os_isr.o
+ *fill*         0x00fdf816        0x2 
+ .text.Os_IsrResourceRemove
+                0x00fdf818      0x11e os_isr.o
+                0x00fdf818                Os_IsrResourceRemove
+ *fill*         0x00fdf936        0x2 
+ .text.Os_IsrAddWithId
+                0x00fdf938       0xa6 os_isr.o
+                0x00fdf938                Os_IsrAddWithId
+ *fill*         0x00fdf9de        0x2 
+ .text.Os_IsrInit
+                0x00fdf9e0       0x3e os_isr.o
+                0x00fdf9e0                Os_IsrInit
+ *fill*         0x00fdfa1e        0x2 
+ .text.Os_IsrAdd
+                0x00fdfa20      0x11e os_isr.o
+                0x00fdfa20                Os_IsrAdd
+ *fill*         0x00fdfb3e        0x2 
+ .text.Os_IsrGetStackInfo
+                0x00fdfb40       0x28 os_isr.o
+                0x00fdfb40                Os_IsrGetStackInfo
+ .text.Os_Isr   0x00fdfb68      0x4b4 os_isr.o
+                0x00fdfb68                Os_Isr
+ .text.Os_ApplStart
+                0x00fe001c       0xca os_application.o
+                0x00fe001c                Os_ApplStart
+ *fill*         0x00fe00e6        0x2 
+ .text.Os_Arc_Panic
+                0x00fe00e8       0xc8 os_panic.o
+                0x00fe00e8                Os_Arc_Panic
+ .text.Irq_Init
+                0x00fe01b0       0xa4 irq.o
+                0x00fe01b0                Irq_Init
+ .text.Irq_EOI  0x00fe0254       0x20 irq.o
+                0x00fe0254                Irq_EOI
+ .text.osPrioToCpuPio
+                0x00fe0274       0x90 irq.o
+ .text.Irq_SetPriority
+                0x00fe0304       0x82 irq.o
+                0x00fe0304                Irq_SetPriority
+ *fill*         0x00fe0386        0x2 
+ .text.Irq_EnableVector
+                0x00fe0388       0x80 irq.o
+                0x00fe0388                Irq_EnableVector
+ .text.SuspendOSInterrupts
+                0x00fe0408       0x34 Det.o
+ .text.ResumeOSInterrupts
+                0x00fe043c       0x76 Det.o
+ *fill*         0x00fe04b2        0x2 
+ .text.Det_Init
+                0x00fe04b4       0xce Det.o
+                0x00fe04b4                Det_Init
+ *fill*         0x00fe0582        0x2 
+ .text.Det_ReportError
+                0x00fe0584      0x14e Det.o
+                0x00fe0584                Det_ReportError
+ *fill*         0x00fe06d2        0x2 
+ .text.Det_Start
+                0x00fe06d4       0x1e Det.o
+                0x00fe06d4                Det_Start
+ *fill*         0x00fe06f2        0x2 
+ .text.ramlog_chr
+                0x00fe06f4       0x64 ramlog.o
+                0x00fe06f4                ramlog_chr
+ .text.Ramlog_Write
+                0x00fe0758       0x5e ramlog.o
+ *fill*         0x00fe07b6        0x2 
+ .text.Ramlog_Open
+                0x00fe07b8       0x1e ramlog.o
+ *fill*         0x00fe07d6        0x2 
+ .text.validFileNo
+                0x00fe07d8       0x66 clib_port.o
+ *fill*         0x00fe083e        0x2 
+ .text.fileno   0x00fe0840       0x1c clib_port.o
+                0x00fe0840                fileno
+ .text.getpid   0x00fe085c       0x18 clib_port.o
+                0x00fe085c                getpid
+ .text.kill     0x00fe0874       0x30 clib_port.o
+                0x00fe0874                kill
+ .text.sbrk     0x00fe08a4       0x88 clib_port.o
+                0x00fe08a4                sbrk
+ .text.write    0x00fe092c      0x12c clib_port.o
+                0x00fe092c                write
+ .text.__init   0x00fe0a58       0x14 clib_port.o
+                0x00fe0a58                __init
+ .text.fputc    0x00fe0a6c       0x42 printf.o
+                0x00fe0a6c                fputc
+ *fill*         0x00fe0aae        0x2 
+ .text.fputs    0x00fe0ab0       0x5a printf.o
+                0x00fe0ab0                fputs
+ *fill*         0x00fe0b0a        0x2 
+ .text.printf   0x00fe0b0c       0x6a printf.o
+                0x00fe0b0c                printf
+ *fill*         0x00fe0b76        0x2 
+ .text.vfprintf
+                0x00fe0b78       0x38 printf.o
+                0x00fe0b78                vfprintf
+ .text.emitChar
+                0x00fe0bb0       0xa6 printf.o
+ *fill*         0x00fe0c56        0x2 
+ .text.emitString
+                0x00fe0c58      0x18e printf.o
+ *fill*         0x00fe0de6        0x2 
+ .text.emitInt  0x00fe0de8       0x8c printf.o
+                0x00fe0de8                emitInt
+ .text.print    0x00fe0e74      0x626 printf.o
+                0x00fe0e74                print
+ *fill*         0x00fe149a        0x2 
+ .text.xtoa     0x00fe149c      0x150 xtoa.o
+                0x00fe149c                xtoa
+ .text.destructiveReset
+                0x00fe15ec       0x64 Mcu_Arc_Common_ppc.o
+ .text.Mcu_Arc_InitECC
+                0x00fe1650       0x64 Mcu_Arc_Common_ppc.o
+ .text.Mcu_IdentifyCpu
+                0x00fe16b4       0x7c Mcu_Arc_Common_ppc.o
+ .text.Mcu_IdentifyCore
+                0x00fe1730       0x7c Mcu_Arc_Common_ppc.o
+ .text.Mcu_CheckCpu
+                0x00fe17ac       0x70 Mcu_Arc_Common_ppc.o
+ .text.Mcu_Arc_InitZero
+                0x00fe181c       0x36 Mcu_Arc_Common_ppc.o
+                0x00fe181c                Mcu_Arc_InitZero
+ *fill*         0x00fe1852        0x2 
+ .text.Mcu_Arc_SwitchMode
+                0x00fe1854       0x7a Mcu_Arc_Common_ppc.o
+                0x00fe1854                Mcu_Arc_SwitchMode
+ *fill*         0x00fe18ce        0x2 
+ .text.GetAndClearResetCause
+                0x00fe18d0       0xa4 Mcu_Hw_mpc57xx.o
+ .text.Mcu_Arc_GetCpuInfoList
+                0x00fe1974       0x26 Mcu_Hw_mpc57xx.o
+                0x00fe1974                Mcu_Arc_GetCpuInfoList
+ *fill*         0x00fe199a        0x2 
+ .text.Mcu_Arc_GetCoreInfoList
+                0x00fe199c       0x26 Mcu_Hw_mpc57xx.o
+                0x00fe199c                Mcu_Arc_GetCoreInfoList
+ *fill*         0x00fe19c2        0x2 
+ .text.Mcu_Hw_Init
+                0x00fe19c4       0x2a Mcu_Hw_mpc57xx.o
+                0x00fe19c4                Mcu_Hw_Init
+ *fill*         0x00fe19ee        0x2 
+ .text.Mcu_Hw_InitClock
+                0x00fe19f0       0x30 Mcu_Hw_mpc57xx.o
+                0x00fe19f0                Mcu_Hw_InitClock
+ .text.Mcu_Hw_GetPllStatus
+                0x00fe1a20       0x46 Mcu_Hw_mpc57xx.o
+                0x00fe1a20                Mcu_Hw_GetPllStatus
+ *fill*         0x00fe1a66        0x2 
+ .text.Mcu_Hw_DistributePllClock
+                0x00fe1a68       0x18 Mcu_Hw_mpc57xx.o
+                0x00fe1a68                Mcu_Hw_DistributePllClock
+ .text.Mcu_Hw_SetMode
+                0x00fe1a80       0x18 Mcu_Hw_mpc57xx.o
+                0x00fe1a80                Mcu_Hw_SetMode
+ .text.Mcu_Arc_PlatformInit
+                0x00fe1a98       0xd2 Mcu_Hw_mpc57xx.o
+                0x00fe1a98                Mcu_Arc_PlatformInit
+ *fill*         0x00fe1b6a        0x2 
+ .text.Mcu_Arc_WdgExtendTimeout
+                0x00fe1b6c       0x36 Mcu_Hw_mpc57xx.o
+                0x00fe1b6c                Mcu_Arc_WdgExtendTimeout
+ *fill*         0x00fe1ba2        0x2 
+ .text.getPllClock
+                0x00fe1ba4       0xaa Mcu_Hw_mpc57xx.o
+ *fill*         0x00fe1c4e        0x2 
+ .text.Mcu_Arc_GetSystemClock
+                0x00fe1c50       0x28 Mcu_Hw_mpc57xx.o
+                0x00fe1c50                Mcu_Arc_GetSystemClock
+ .text.Mcu_Arc_GetPeripheralClock
+                0x00fe1c78      0x140 Mcu_Hw_mpc57xx.o
+                0x00fe1c78                Mcu_Arc_GetPeripheralClock
+ .text.Mcu_Arc_InitPost
+                0x00fe1db8       0x16 Mcu_Arc_mpc5748g.o
+                0x00fe1db8                Mcu_Arc_InitPost
+ *fill*         0x00fe1dce        0x2 
+ .text.Mcu_Arc_InitClockPre
+                0x00fe1dd0       0x16 Mcu_Arc_mpc5748g.o
+                0x00fe1dd0                Mcu_Arc_InitClockPre
+ *fill*         0x00fe1de6        0x2 
+ .text.Mcu_Arc_InitClockPost
+                0x00fe1de8      0x1f2 Mcu_Arc_mpc5748g.o
+                0x00fe1de8                Mcu_Arc_InitClockPost
+ .text          0x00fe1fda       0x4a d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a(eabivle.o)
+                0x00fe1fda                __eabi
+ .text.abort    0x00fe2024       0x14 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-abort.o)
+                0x00fe2024                abort
+ .text.__errno  0x00fe2038        0xa D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-errno.o)
+                0x00fe2038                __errno
+ .text.exit     0x00fe2042       0x2c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-exit.o)
+                0x00fe2042                exit
+ .text.free     0x00fe206e        0xe D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-malloc.o)
+                0x00fe206e                free
+ .text.memcpy   0x00fe207c       0x1a D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memcpy.o)
+                0x00fe207c                memcpy
+                0x00fe207c                largememcpy
+ .text.memset   0x00fe2096       0x16 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memset.o)
+                0x00fe2096                memset
+ .text.__malloc_lock
+                0x00fe20ac        0x2 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mlock.o)
+                0x00fe20ac                __malloc_lock
+ .text.__malloc_unlock
+                0x00fe20ae        0x2 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mlock.o)
+                0x00fe20ae                __malloc_unlock
+ .text._sbrk_r  0x00fe20b0       0x3a D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-sbrkr.o)
+                0x00fe20b0                _sbrk_r
+ .text._raise_r
+                0x00fe20ea       0x82 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+                0x00fe20ea                _raise_r
+ .text.raise    0x00fe216c        0xe D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+                0x00fe216c                raise
+ .text._kill_r  0x00fe217a       0x3c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signalr.o)
+                0x00fe217a                _kill_r
+ .text._getpid_r
+                0x00fe21b6        0x4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signalr.o)
+                0x00fe21b6                _getpid_r
+ .text.strcpy   0x00fe21ba       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcpy.o)
+                0x00fe21ba                strcpy
+ .text.strlen   0x00fe21d2       0x14 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strlen.o)
+                0x00fe21d2                strlen
+ .text._strtoul_r
+                0x00fe21e6      0x15a D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strtoul.o)
+                0x00fe21e6                _strtoul_r
+ .text.strtoul  0x00fe2340       0x16 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strtoul.o)
+                0x00fe2340                strtoul
+ .text.__call_exitprocs
+                0x00fe2356      0x118 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__call_atexit.o)
+                0x00fe2356                __call_exitprocs
+ .text._malloc_trim_r
+                0x00fe246e       0xbe D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-freer.o)
+                0x00fe246e                _malloc_trim_r
+ .text._free_r  0x00fe252c      0x1e8 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-freer.o)
+                0x00fe252c                _free_r
+ .text          0x00fe2714       0x52 d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a(e200crtresxgpr.o)
+                0x00fe2714                _restgpr_14_x
+                0x00fe2718                _restgpr_15_x
+                0x00fe271c                _restgpr_16_x
+                0x00fe2720                _restgpr_17_x
+                0x00fe2724                _restgpr_18_x
+                0x00fe2728                _restgpr_19_x
+                0x00fe272c                _restgpr_20_x
+                0x00fe2730                _restgpr_21_x
+                0x00fe2734                _restgpr_22_x
+                0x00fe2738                _restgpr_23_x
+                0x00fe273c                _restgpr_24_x
+                0x00fe2740                _restgpr_25_x
+                0x00fe2744                _restgpr_26_x
+                0x00fe2748                _restgpr_27_x
+                0x00fe274c                _restgpr_28_x
+                0x00fe2750                _restgpr_29_x
+                0x00fe2754                _restgpr_30_x
+                0x00fe2758                _restgpr_31_x
+
+.glink          0x00fe2766        0x0
+ .glink         0x00fe2766        0x0 crt0.o
+
+.exception_tbl  0x00fe3000       0xf4
+ *(.exception_tbl)
+ .exception_tbl
+                0x00fe3000       0xf4 mpc5xxx_handlers_asm.o
+                0x00fe3000                exception_tbl
+
+.rodata         0x00fe30f8     0x1b91
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x00fe30f8       0x9a os_simple.o
+ *fill*         0x00fe3192        0x2 
+ .rodata        0x00fe3194       0x60 system_hooks.o
+ *fill*         0x00fe31f4        0x4 
+ .rodata        0x00fe31f8      0x170 Os_Cfg.o
+                0x00fe31f8                OsTickFreq
+                0x00fe320c                Os_AppConst
+                0x00fe3218                Os_AlarmAutoStart_ALARM_ID_Alarm1
+                0x00fe3250                Os_TaskConstList
+                0x00fe3350                os_conf_global_hooks
+ .rodata        0x00fe3368       0x78 EcuM.o
+ .rodata        0x00fe33e0      0x864 EcuM_Main.o
+ *fill*         0x00fe3c44        0x4 
+ .rodata        0x00fe3c48       0x58 EcuM_PBcfg.o
+                0x00fe3c48                EcuM_SleepModeConfig
+                0x00fe3c54                EcuM_WakeupSourceConfig
+                0x00fe3c60                EcuMConfig
+ .rodata        0x00fe3ca0       0xbf EcuM_Callout_Stubs.o
+ *fill*         0x00fe3d5f        0x1 
+ .rodata        0x00fe3d60       0x20 Mcu_PBcfg.o
+                0x00fe3d60                Mcu_Hw_ClockSettingConfig
+                0x00fe3d6c                Mcu_ClockSettingConfigData
+                0x00fe3d74                McuConfigData
+ .rodata        0x00fe3d80       0x8a os_event.o
+ *fill*         0x00fe3e0a        0x2 
+ .rodata        0x00fe3e0c       0xe6 os_init.o
+ *fill*         0x00fe3ef2        0x2 
+ .rodata        0x00fe3ef4      0x4ea os_task.o
+ *fill*         0x00fe43de        0x2 
+ .rodata        0x00fe43e0      0x11e os_resource.o
+ *fill*         0x00fe44fe        0x2 
+ .rodata        0x00fe4500       0x78 os_alarm.o
+ .rodata        0x00fe4578       0x20 sys_tick.o
+ .rodata        0x00fe4598      0x1e6 os_isr.o
+ *fill*         0x00fe477e        0x2 
+ .rodata        0x00fe4780       0xb4 irq.o
+ .rodata        0x00fe4834       0x88 ramlog.o
+ .rodata        0x00fe48bc       0x1a clib_port.o
+ *fill*         0x00fe48d6        0x2 
+ .rodata        0x00fe48d8        0x7 printf.o
+ *fill*         0x00fe48df        0x1 
+ .rodata        0x00fe48e0       0x11 xtoa.o
+ *fill*         0x00fe48f1        0x7 
+ .rodata        0x00fe48f8       0x30 Mcu_Arc_Common_ppc.o
+ .rodata        0x00fe4928      0x25c Mcu_Hw_mpc57xx.o
+                0x00fe494c                cpu_info_list
+                0x00fe4a1c                core_info_list
+ .rodata.str1.4
+                0x00fe4b84        0x4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-impure.o)
+                                  0x2 (size before relaxing)
+ .rodata._ctype_
+                0x00fe4b88      0x101 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-ctype_.o)
+                0x00fe4b88                _ctype_
+ *(.got.plt)
+ *(.got)
+
+.sdata2         0x00fe4c89        0x7
+                0x00fe4c89                _SDA2_BASE_ = .
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+ .sdata2        0x00fe4c89        0x0 crt0.o
+ *(PPC.EMB.sdata2 .PPC.EMB.sbss2)
+                0x00fe4c90                . = ALIGN (0x10)
+ *fill*         0x00fe4c89        0x7 
+
+.rela.dyn       0x00fe4c90        0x0
+ .rela.iplt     0x00fe4c90        0x0 crt0.o
+ .rela.text     0x00fe4c90        0x0 crt0.o
+ .rela.text.eTask1
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.eTask2
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.OSErrorGetServiceId
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.ShutdownHook
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.ErrorHook
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.init
+                0x00fe4c90        0x0 crt0.o
+ .rela.rodata   0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_Init
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_Shutdown
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_SelectShutdownTarget
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_GetShutdownTarget
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_SetWakeupEvent
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_ClearWakeupEvent
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_GetPendingWakeupEvents
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_GetValidatedWakeupEvents
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_ValidateWakeupEvent
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_StartupTwo
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_GetState
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_RequestRUN
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_ReleaseRUN
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_KillAllRUNRequests
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_KillAllPostRUNRequests
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_RequestPOST_RUN
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_ReleasePOST_RUN
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.SuspendOSInterrupts
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.ResumeOSInterrupts
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.hasRunRequests
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.hasPostRunRequests
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.SetCurrentState
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.enter_go_sleep_mode
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.in_state_goSleep
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.in_state_sleep
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.in_state_appRun
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.in_state_appPostRun
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.in_state_prepShutdown
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.EcuM_MainFunction
+                0x00fe4c90        0x0 crt0.o
+ .rela.data     0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_SysTaskGetCurr
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_SysIntAnyDisabled
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_SchedulerResourceIsFree
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_TaskGet
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_CallErrorHook
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.WaitEvent
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.SetEvent
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.GetEvent
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.ClearEvent
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_SysIntClearAll
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.InitOS
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.os_start
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.StartOS
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.ShutdownOS
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_ArchSetupContext
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_SysTaskSetCurr
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_ReadyQRemove
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_ReadyQEnqueue
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_TaskPost
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_TaskGetTop
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_TaskStartFromBeginning
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_Dispatch
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_TaskSwapContext
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_TaskSwapContextTo
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.GetTaskState
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.GetTaskID
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.ActivateTask
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.TerminateTask
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.ChainTask
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Schedule
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.GetResource
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.ReleaseResource
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_ResourceInit
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_internalSetRelAlarm
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_internalSetAbsAlarm
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.GetAlarmBase
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.GetAlarm
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.CancelAlarm
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_AlarmAutostart
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.StartScheduleTableRel
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.StartScheduleTableAbs
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.StopScheduleTable
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.NextScheduleTable
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.GetScheduleTableStatus
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.IncrementCounter
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.GetCounterValue
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.GetElapsedValue
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.OsTick
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.GetOsTick
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_SysIsrGetCurr
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_GetIsrVarType
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_IsrAddWithId
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_IsrGetStackInfo
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_IsrGet
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_Isr
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.GetISRID
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.GetActiveApplicationMode
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_ApplStart
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Os_Arc_Panic
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.sbrk
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.Mcu_Arc_InitECC
+                0x00fe4c90        0x0 crt0.o
+ .rela.got2     0x00fe4c90        0x0 crt0.o
+ .rela.text.__errno
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.exit
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._fopen_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.fopen
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.fseek
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._fseeko_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.fseeko
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._fstat_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.__smakebuf_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._open_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._sbrk_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._kill_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._strtoul_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._write_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.startup.register_fini
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._close_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._cleanup_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text.__libc_fini_array
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._isatty_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._lseek_r
+                0x00fe4c90        0x0 crt0.o
+ .rela.text._read_r
+                0x00fe4c90        0x0 crt0.o
+
+.sbss2          0x00fe4c90        0x0
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+                0x00fe4c90                __TEXT_END = .
+
+.lowpower_text  0x40000000        0x0 load address 0x00fe4c90
+                0x40000000                __LP_TEXT_START = .
+ *(.lowpower_text)
+                0x40000000                __LP_TEXT_END = .
+
+.lowpower_bss
+
+.data           0x40000000      0xa30 load address 0x00fe4c90
+                0x40000000                __ram_start = .
+                0x40000000                __DATA_RAM = .
+ *(.data .data.* .gnu.linkonce.d.* .gnu.linkonce.r.* .eh_frame)
+ .eh_frame      0x40000000        0x0 crt0.o
+ .data          0x40000000       0x14 init.o
+                0x40000000                test_data
+                0x40000004                test_data_array
+                0x40000010                test_sdata2
+ *fill*         0x40000014        0x4 
+ .data          0x40000018       0x80 Os_Cfg.o
+                0x40000018                counter_list
+                0x40000050                alarm_list
+ .data          0x40000098        0x1 EcuM_Main.o
+ *fill*         0x40000099        0x3 
+ .data          0x4000009c       0x14 Mcu.o
+                0x4000009c                Mcu_Global
+ .data          0x400000b0       0x34 ramlog.o
+                0x400000b0                Ramlog_Device
+ .data          0x400000e4      0x11c clib_port.o
+                0x400000e4                Dummy_Device
+                0x40000118                openFiles
+                0x400001e0                __Env
+                0x400001ec                _EnvPtr
+                0x400001f0                deviceList
+ .data          0x40000200        0x4 d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a(eabivle.o)
+ *fill*         0x40000204        0x4 
+ .data.impure_data
+                0x40000208      0x418 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-impure.o)
+ .data.__malloc_av_
+                0x40000620      0x408 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+                0x40000620                __malloc_av_
+ *(.ram_no_cache_data)
+                0x40000a30                . = ALIGN (0x10)
+ *fill*         0x40000a28        0x8 
+
+.sdata          0x40000a30       0x14 load address 0x00fe56c0
+                0x40000a30                __SDATA_START__ = .
+                0x40000a30                _SDA_BASE_ = .
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x40000a30        0x0 crt0.o
+ .sdata         0x40000a30        0x8 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-impure.o)
+                0x40000a30                _global_impure_ptr
+                0x40000a34                _impure_ptr
+ .sdata.__malloc_trim_threshold
+                0x40000a38        0x4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+                0x40000a38                __malloc_trim_threshold
+ .sdata.__malloc_sbrk_base
+                0x40000a3c        0x4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+                0x40000a3c                __malloc_sbrk_base
+ .sdata.__ctype_ptr__
+                0x40000a40        0x4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-ctype_.o)
+                0x40000a40                __ctype_ptr__
+ *(PPC.EMB.sdata2 .PPC.EMB.sbss2)
+                0x40000a44                __DATA_END = .
+
+.sbss           0x40000a44       0x10 load address 0x00fe56d4
+                0x40000a44                __SBSS_START__ = .
+ *(.sbss .sbss.* .scommon .gnu.linkonce.sb.* .t32_outport)
+ .sbss          0x40000a44        0x0 crt0.o
+ .sbss          0x40000a44        0x4 init.o
+                0x40000a44                test_sbss2
+ .sbss          0x40000a48        0x3 os_init.o
+                0x40000a48                Os_IntSuspendAllCnt
+                0x40000a49                Os_IntDisableAllCnt
+                0x40000a4a                Os_IntSuspendOsCnt
+ *fill*         0x40000a4b        0x1 
+ .sbss.__malloc_top_pad
+                0x40000a4c        0x4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+                0x40000a4c                __malloc_top_pad
+ .sbss          0x40000a50        0x4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-reent.o)
+                0x40000a50                errno
+                0x40000a54                __SBSS_END__ = .
+                0x40000a54                _end = .
+
+.t32_outport
+ *(.t32_outport)
+
+.bss            0x40000a60     0x29e0
+ *(.got2)
+ .got2          0x40000a60       0x1c d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a(eabivle.o)
+ *(.fixup)
+ *(.bss .bss.* COMMON .gnu.linkonce.b.*)
+ .bss           0x40000a7c        0x8 os_simple.o
+ .bss           0x40000a84       0x1c system_hooks.o
+ .bss           0x40000aa0        0x4 init.o
+                0x40000aa0                test_bss
+ COMMON         0x40000aa4        0xc init.o
+                0x40000aa4                test_bss_array
+ .bss           0x40000ab0      0x2fa Os_Cfg.o
+                0x40000ab0                os_dbg_mask
+                0x40000ab4                Os_Arc_OsTickCounter
+                0x40000ab8                Os_VectorToIsr
+ *fill*         0x40000daa        0x6 
+ COMMON         0x40000db0     0x1a00 Os_Cfg.o
+                0x40000db0                stack_eTask1
+                0x400015b0                stack_bTask3
+                0x40001db0                stack_OsIdle
+                0x40001fb0                stack_eTask2
+ .bss           0x400027b0        0x4 EcuM.o
+                0x400027b0                EcuM_World_run_state_timeout
+ COMMON         0x400027b4       0x30 EcuM.o
+                0x400027b4                EcuM_World
+ .bss           0x400027e4       0x10 EcuM_Main.o
+                0x400027e4                EcuM_World_go_sleep_state_timeout
+ .bss           0x400027f4        0x1 EcuM_Callout_Stubs.o
+ *fill*         0x400027f5        0x3 
+ COMMON         0x400027f8       0x6c os_init.o
+                0x400027f8                os_error
+                0x40002808                Os_Sys
+ *fill*         0x40002864        0x4 
+ COMMON         0x40002868      0x240 os_task.o
+                0x40002868                Os_TaskVarList
+ COMMON         0x40002aa8       0x34 os_resource.o
+                0x40002aa8                resScheduler
+ .bss           0x40002adc        0x4 sys_tick.o
+                0x40002adc                ticks
+ .bss           0x40002ae0        0x2 os_isr.o
+                0x40002ae0                isrCnt
+ *fill*         0x40002ae2        0xe 
+ COMMON         0x40002af0      0x8d0 os_isr.o
+                0x40002af0                Os_IsrVarList
+                0x40002bc0                Os_IsrStack
+ COMMON         0x400033c0       0x4c os_application.o
+                0x400033c0                Os_AppVar
+ .bss           0x4000340c        0x4 Det.o
+ .bss           0x40003410        0x8 ramlog.o
+ .bss.__malloc_current_mallinfo
+                0x40003418       0x28 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+                0x40003418                __malloc_current_mallinfo
+                0x40003440                __BSS_END = .
+
+.iplt           0x40003440        0x0
+ .iplt          0x40003440        0x0 crt0.o
+
+.ram_no_cache_bss
+ *(.ram_no_cache_bss)
+
+.uninit         0x40003440      0x834
+ *(.winidea_port .ramlog .dem_eventmemory_pri .uninit_ram)
+ .ramlog        0x40003440       0x64 Det.o
+                0x40003440                Det_RamlogIndex
+                0x40003444                Det_RamLog
+ .ramlog        0x400034a4      0x7d0 ramlog.o
+
+.heap           0x40003c74        0x0
+                0x40003c74                PROVIDE (_heap_start, .)
+                0x400c0000                _heap_end = (ORIGIN (L_SRAM_0) + LENGTH (L_SRAM_0))
+                0x00fd8060                __TEXT_START = ADDR (.text)
+                0x40000a30                __RAM_START = ADDR (.sdata)
+                0x40000000                __DATA_RAM = ADDR (.data)
+                0x00fe4c90                __DATA_ROM = LOADADDR (.data)
+                0x00fe4c90                __LP_TEXT_ROM = LOADADDR (.lowpower_text)
+                0x40000a44                __BSS_START = ADDR (.sbss)
+                0x00fe4c89                __SDATA2_START__ = ADDR (.sdata2)
+                0x00fe4c90                __SBSS2_END__ = (ADDR (.sbss2) + SIZEOF (.sbss2))
+                0x00000000                __EXCEPT_START__ = 0x0
+                0x00000000                __EXCEPT_END__ = 0x0
+                0x400c0000                __SP_INIT = _heap_end
+                0x400bfc00                __SP_END = (__SP_INIT - 0x400)
+                0x400bfc00                __SP_INIT_Z0 = __SP_END
+START GROUP
+LOAD os_simple.o
+LOAD system_hooks.o
+LOAD crt0.o
+LOAD init.o
+LOAD Os_Cfg.o
+LOAD arc_assert.o
+LOAD EcuM.o
+LOAD EcuM_Fixed.o
+LOAD EcuM_Main.o
+LOAD EcuM_PBcfg.o
+LOAD EcuM_PBHeader.o
+LOAD EcuM_GeneratedCallouts.o
+LOAD EcuM_Callout_Stubs.o
+LOAD Mcu.o
+LOAD Mcu_LCfg.o
+LOAD Mcu_PBcfg.o
+LOAD mpc5xxx_handlers.o
+LOAD mpc5xxx_handlers_asm.o
+LOAD mpc5xxx_callout_stubs.o
+LOAD Cpu.o
+LOAD mm.o
+LOAD arch_krn.o
+LOAD os_event.o
+LOAD os_init.o
+LOAD arch.o
+LOAD os_task.o
+LOAD os_resource.o
+LOAD os_alarm.o
+LOAD os_sched_table.o
+LOAD os_counter.o
+LOAD sys_tick.o
+LOAD os_isr.o
+LOAD os_application.o
+LOAD os_panic.o
+LOAD os_trap.o
+LOAD os_peripheral.o
+LOAD irq.o
+LOAD Det.o
+LOAD Det_Cfg.o
+LOAD ramlog.o
+LOAD cirq_buffer.o
+LOAD version.o
+LOAD clib_port.o
+LOAD printf.o
+LOAD xtoa.o
+LOAD Mcu_Arc_Common_ppc.o
+LOAD Mcu_Hw_mpc57xx.o
+LOAD Mcu_Arc_mpc5748g.o
+LOAD d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a
+LOAD D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a
+LOAD D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libm.a
+END GROUP
+OUTPUT(OsSimple.elf elf32-powerpc)
+
+.PPC.EMB.apuinfo
+                0x00000000       0x20
+ .PPC.EMB.apuinfo
+                0x00000000       0x18 crt0.o
+ .PPC.EMB.apuinfo
+                0x00000018       0x18 os_simple.o
+ .PPC.EMB.apuinfo
+                0x00000030       0x18 system_hooks.o
+ .PPC.EMB.apuinfo
+                0x00000048       0x18 init.o
+ .PPC.EMB.apuinfo
+                0x00000060       0x18 arc_assert.o
+ .PPC.EMB.apuinfo
+                0x00000078       0x18 EcuM.o
+ .PPC.EMB.apuinfo
+                0x00000090       0x18 EcuM_Fixed.o
+ .PPC.EMB.apuinfo
+                0x000000a8       0x1c EcuM_Main.o
+ .PPC.EMB.apuinfo
+                0x000000c4       0x18 EcuM_Callout_Stubs.o
+ .PPC.EMB.apuinfo
+                0x000000dc       0x1c Mcu.o
+ .PPC.EMB.apuinfo
+                0x000000f8       0x18 mpc5xxx_handlers.o
+ .PPC.EMB.apuinfo
+                0x00000110       0x1c mpc5xxx_handlers_asm.o
+ .PPC.EMB.apuinfo
+                0x0000012c       0x18 mpc5xxx_callout_stubs.o
+ .PPC.EMB.apuinfo
+                0x00000144       0x18 Cpu.o
+ .PPC.EMB.apuinfo
+                0x0000015c       0x18 mm.o
+ .PPC.EMB.apuinfo
+                0x00000174       0x18 arch_krn.o
+ .PPC.EMB.apuinfo
+                0x0000018c       0x1c os_event.o
+ .PPC.EMB.apuinfo
+                0x000001a8       0x18 os_init.o
+ .PPC.EMB.apuinfo
+                0x000001c0       0x18 arch.o
+ .PPC.EMB.apuinfo
+                0x000001d8       0x1c os_task.o
+ .PPC.EMB.apuinfo
+                0x000001f4       0x1c os_resource.o
+ .PPC.EMB.apuinfo
+                0x00000210       0x18 os_alarm.o
+ .PPC.EMB.apuinfo
+                0x00000228       0x18 os_sched_table.o
+ .PPC.EMB.apuinfo
+                0x00000240       0x1c os_counter.o
+ .PPC.EMB.apuinfo
+                0x0000025c       0x18 sys_tick.o
+ .PPC.EMB.apuinfo
+                0x00000274       0x1c os_isr.o
+ .PPC.EMB.apuinfo
+                0x00000290       0x18 os_application.o
+ .PPC.EMB.apuinfo
+                0x000002a8       0x18 os_panic.o
+ .PPC.EMB.apuinfo
+                0x000002c0       0x18 os_peripheral.o
+ .PPC.EMB.apuinfo
+                0x000002d8       0x18 irq.o
+ .PPC.EMB.apuinfo
+                0x000002f0       0x18 Det.o
+ .PPC.EMB.apuinfo
+                0x00000308       0x18 ramlog.o
+ .PPC.EMB.apuinfo
+                0x00000320       0x18 cirq_buffer.o
+ .PPC.EMB.apuinfo
+                0x00000338       0x1c clib_port.o
+ .PPC.EMB.apuinfo
+                0x00000354       0x18 printf.o
+ .PPC.EMB.apuinfo
+                0x0000036c       0x18 xtoa.o
+ .PPC.EMB.apuinfo
+                0x00000384       0x18 Mcu_Arc_Common_ppc.o
+ .PPC.EMB.apuinfo
+                0x0000039c       0x18 Mcu_Hw_mpc57xx.o
+ .PPC.EMB.apuinfo
+                0x000003b4       0x18 Mcu_Arc_mpc5748g.o
+ .PPC.EMB.apuinfo
+                0x000003cc       0x18 d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a(eabivle.o)
+ .PPC.EMB.apuinfo
+                0x000003e4       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-abort.o)
+ .PPC.EMB.apuinfo
+                0x000003fc       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-errno.o)
+ .PPC.EMB.apuinfo
+                0x00000414       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-exit.o)
+ .PPC.EMB.apuinfo
+                0x0000042c       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fopen.o)
+ .PPC.EMB.apuinfo
+                0x00000444       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseek.o)
+ .PPC.EMB.apuinfo
+                0x0000045c       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseeko.o)
+ .PPC.EMB.apuinfo
+                0x00000474       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fstatr.o)
+ .PPC.EMB.apuinfo
+                0x0000048c       0x1c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-makebuf.o)
+ .PPC.EMB.apuinfo
+                0x000004a8       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-malloc.o)
+ .PPC.EMB.apuinfo
+                0x000004c0       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+ .PPC.EMB.apuinfo
+                0x000004d8       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memcpy.o)
+ .PPC.EMB.apuinfo
+                0x000004f0       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memset.o)
+ .PPC.EMB.apuinfo
+                0x00000508       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mlock.o)
+ .PPC.EMB.apuinfo
+                0x00000520       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-openr.o)
+ .PPC.EMB.apuinfo
+                0x00000538       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-reent.o)
+ .PPC.EMB.apuinfo
+                0x00000550       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-refill.o)
+ .PPC.EMB.apuinfo
+                0x00000568       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-sbrkr.o)
+ .PPC.EMB.apuinfo
+                0x00000580       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+ .PPC.EMB.apuinfo
+                0x00000598       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signalr.o)
+ .PPC.EMB.apuinfo
+                0x000005b0       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o)
+ .PPC.EMB.apuinfo
+                0x000005c8       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcmp.o)
+ .PPC.EMB.apuinfo
+                0x000005e0       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcpy.o)
+ .PPC.EMB.apuinfo
+                0x000005f8       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strlen.o)
+ .PPC.EMB.apuinfo
+                0x00000610       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strncpy.o)
+ .PPC.EMB.apuinfo
+                0x00000628       0x1c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strtoul.o)
+ .PPC.EMB.apuinfo
+                0x00000644       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-writer.o)
+ .PPC.EMB.apuinfo
+                0x0000065c       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__call_atexit.o)
+ .PPC.EMB.apuinfo
+                0x00000674       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-closer.o)
+ .PPC.EMB.apuinfo
+                0x0000068c       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fflush.o)
+ .PPC.EMB.apuinfo
+                0x000006a4       0x1c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o)
+ .PPC.EMB.apuinfo
+                0x000006c0       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fini.o)
+ .PPC.EMB.apuinfo
+                0x000006d8       0x1c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-flags.o)
+ .PPC.EMB.apuinfo
+                0x000006f4       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-freer.o)
+ .PPC.EMB.apuinfo
+                0x0000070c       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fwalk.o)
+ .PPC.EMB.apuinfo
+                0x00000724       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-isattyr.o)
+ .PPC.EMB.apuinfo
+                0x0000073c       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-lseekr.o)
+ .PPC.EMB.apuinfo
+                0x00000754       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-readr.o)
+ .PPC.EMB.apuinfo
+                0x0000076c       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-atexit.o)
+ .PPC.EMB.apuinfo
+                0x00000784       0x1c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fclose.o)
+ .PPC.EMB.apuinfo
+                0x000007a0       0x18 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__atexit.o)
+ .PPC.EMB.apuinfo
+                0x000007b8       0x18 d:/arcticstudio-21.0.0-win32.win32.x86_64/msys/opt/mingw-powerpc-eabivle-4.9.4/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z3\libgcc.a(e200crtresxgpr.o)
+
+.comment        0x00000000       0x8e
+ .comment       0x00000000       0x8e os_simple.o
+                                 0x8f (size before relaxing)
+ .comment       0x0000008e       0x8f system_hooks.o
+ .comment       0x0000008e       0x8f init.o
+ .comment       0x0000008e       0x8f Os_Cfg.o
+ .comment       0x0000008e       0x8f arc_assert.o
+ .comment       0x0000008e       0x8f EcuM.o
+ .comment       0x0000008e       0x8f EcuM_Fixed.o
+ .comment       0x0000008e       0x8f EcuM_Main.o
+ .comment       0x0000008e       0x8f EcuM_PBcfg.o
+ .comment       0x0000008e       0x8f EcuM_Callout_Stubs.o
+ .comment       0x0000008e       0x8f Mcu.o
+ .comment       0x0000008e       0x8f Mcu_PBcfg.o
+ .comment       0x0000008e       0x8f mpc5xxx_handlers.o
+ .comment       0x0000008e       0x8f mpc5xxx_callout_stubs.o
+ .comment       0x0000008e       0x8f Cpu.o
+ .comment       0x0000008e       0x8f mm.o
+ .comment       0x0000008e       0x8f os_event.o
+ .comment       0x0000008e       0x8f os_init.o
+ .comment       0x0000008e       0x8f arch.o
+ .comment       0x0000008e       0x8f os_task.o
+ .comment       0x0000008e       0x8f os_resource.o
+ .comment       0x0000008e       0x8f os_alarm.o
+ .comment       0x0000008e       0x8f os_sched_table.o
+ .comment       0x0000008e       0x8f os_counter.o
+ .comment       0x0000008e       0x8f sys_tick.o
+ .comment       0x0000008e       0x8f os_isr.o
+ .comment       0x0000008e       0x8f os_application.o
+ .comment       0x0000008e       0x8f os_panic.o
+ .comment       0x0000008e       0x8f os_peripheral.o
+ .comment       0x0000008e       0x8f irq.o
+ .comment       0x0000008e       0x8f Det.o
+ .comment       0x0000008e       0x8f ramlog.o
+ .comment       0x0000008e       0x8f cirq_buffer.o
+ .comment       0x0000008e       0x8f clib_port.o
+ .comment       0x0000008e       0x8f printf.o
+ .comment       0x0000008e       0x8f xtoa.o
+ .comment       0x0000008e       0x8f Mcu_Arc_Common_ppc.o
+ .comment       0x0000008e       0x8f Mcu_Hw_mpc57xx.o
+ .comment       0x0000008e       0x8f Mcu_Arc_mpc5748g.o
+
+.gnu.attributes
+                0x00000000       0x10
+ .gnu.attributes
+                0x00000000       0x10 ramlog.o
+ .gnu.attributes
+                0x00000010       0x10 printf.o
+
+.debug_line     0x00000000     0xac38
+ .debug_line    0x00000000       0x63 crt0.o
+ .debug_line    0x00000063      0x36f os_simple.o
+ .debug_line    0x000003d2      0x37b system_hooks.o
+ .debug_line    0x0000074d      0x226 init.o
+ .debug_line    0x00000973      0x38d Os_Cfg.o
+ .debug_line    0x00000d00      0x252 arc_assert.o
+ .debug_line    0x00000f52      0x4dc EcuM.o
+ .debug_line    0x0000142e      0x489 EcuM_Fixed.o
+ .debug_line    0x000018b7      0x717 EcuM_Main.o
+ .debug_line    0x00001fce      0x411 EcuM_PBcfg.o
+ .debug_line    0x000023df      0x656 EcuM_Callout_Stubs.o
+ .debug_line    0x00002a35      0x40d Mcu.o
+ .debug_line    0x00002e42      0x278 Mcu_PBcfg.o
+ .debug_line    0x000030ba      0x385 mpc5xxx_handlers.o
+ .debug_line    0x0000343f       0xd3 mpc5xxx_handlers_asm.o
+ .debug_line    0x00003512      0x2b4 mpc5xxx_callout_stubs.o
+ .debug_line    0x000037c6      0x24c Cpu.o
+ .debug_line    0x00003a12      0x1a6 mm.o
+ .debug_line    0x00003bb8       0xf8 arch_krn.o
+ .debug_line    0x00003cb0      0x55b os_event.o
+ .debug_line    0x0000420b      0x4d9 os_init.o
+ .debug_line    0x000046e4      0x494 arch.o
+ .debug_line    0x00004b78      0xa98 os_task.o
+ .debug_line    0x00005610      0x568 os_resource.o
+ .debug_line    0x00005b78      0x693 os_alarm.o
+ .debug_line    0x0000620b      0x5db os_sched_table.o
+ .debug_line    0x000067e6      0x5bb os_counter.o
+ .debug_line    0x00006da1      0x4d2 sys_tick.o
+ .debug_line    0x00007273      0x67e os_isr.o
+ .debug_line    0x000078f1      0x440 os_application.o
+ .debug_line    0x00007d31      0x340 os_panic.o
+ .debug_line    0x00008071      0x3e2 os_peripheral.o
+ .debug_line    0x00008453      0x4da irq.o
+ .debug_line    0x0000892d      0x343 Det.o
+ .debug_line    0x00008c70      0x31e ramlog.o
+ .debug_line    0x00008f8e      0x392 cirq_buffer.o
+ .debug_line    0x00009320      0x512 clib_port.o
+ .debug_line    0x00009832      0x545 printf.o
+ .debug_line    0x00009d77      0x13e xtoa.o
+ .debug_line    0x00009eb5      0x467 Mcu_Arc_Common_ppc.o
+ .debug_line    0x0000a31c      0x52f Mcu_Hw_mpc57xx.o
+ .debug_line    0x0000a84b      0x3ed Mcu_Arc_mpc5748g.o
+
+.debug_info     0x00000000    0x264aa
+ .debug_info    0x00000000       0x98 crt0.o
+ .debug_info    0x00000098      0x5e3 os_simple.o
+ .debug_info    0x0000067b      0x698 system_hooks.o
+ .debug_info    0x00000d13      0x1d9 init.o
+ .debug_info    0x00000eec     0x1399 Os_Cfg.o
+ .debug_info    0x00002285      0x370 arc_assert.o
+ .debug_info    0x000025f5      0xa11 EcuM.o
+ .debug_info    0x00003006      0x8c4 EcuM_Fixed.o
+ .debug_info    0x000038ca      0xcb9 EcuM_Main.o
+ .debug_info    0x00004583      0x699 EcuM_PBcfg.o
+ .debug_info    0x00004c1c      0xb51 EcuM_Callout_Stubs.o
+ .debug_info    0x0000576d      0x85f Mcu.o
+ .debug_info    0x00005fcc      0x2d1 Mcu_PBcfg.o
+ .debug_info    0x0000629d      0x4f9 mpc5xxx_handlers.o
+ .debug_info    0x00006796       0xa4 mpc5xxx_handlers_asm.o
+ .debug_info    0x0000683a      0x36d mpc5xxx_callout_stubs.o
+ .debug_info    0x00006ba7      0x1c1 Cpu.o
+ .debug_info    0x00006d68      0x140 mm.o
+ .debug_info    0x00006ea8       0x9c arch_krn.o
+ .debug_info    0x00006f44     0x15d3 os_event.o
+ .debug_info    0x00008517     0x14e0 os_init.o
+ .debug_info    0x000099f7     0x1671 arch.o
+ .debug_info    0x0000b068     0x1dde os_task.o
+ .debug_info    0x0000ce46     0x161d os_resource.o
+ .debug_info    0x0000e463     0x18eb os_alarm.o
+ .debug_info    0x0000fd4e     0x170d os_sched_table.o
+ .debug_info    0x0001145b     0x16ca os_counter.o
+ .debug_info    0x00012b25     0x16bb sys_tick.o
+ .debug_info    0x000141e0     0x19d5 os_isr.o
+ .debug_info    0x00015bb5     0x150e os_application.o
+ .debug_info    0x000170c3     0x12df os_panic.o
+ .debug_info    0x000183a2     0x1581 os_peripheral.o
+ .debug_info    0x00019923     0x17b3 irq.o
+ .debug_info    0x0001b0d6      0x491 Det.o
+ .debug_info    0x0001b567      0x501 ramlog.o
+ .debug_info    0x0001ba68      0x5c5 cirq_buffer.o
+ .debug_info    0x0001c02d      0xdc5 clib_port.o
+ .debug_info    0x0001cdf2      0xb30 printf.o
+ .debug_info    0x0001d922      0x183 xtoa.o
+ .debug_info    0x0001daa5     0x23e1 Mcu_Arc_Common_ppc.o
+ .debug_info    0x0001fe86     0x3c4d Mcu_Hw_mpc57xx.o
+ .debug_info    0x00023ad3     0x29d7 Mcu_Arc_mpc5748g.o
+
+.debug_abbrev   0x00000000     0x4a4c
+ .debug_abbrev  0x00000000       0x14 crt0.o
+ .debug_abbrev  0x00000014      0x15c os_simple.o
+ .debug_abbrev  0x00000170      0x196 system_hooks.o
+ .debug_abbrev  0x00000306       0xbd init.o
+ .debug_abbrev  0x000003c3      0x181 Os_Cfg.o
+ .debug_abbrev  0x00000544       0xd1 arc_assert.o
+ .debug_abbrev  0x00000615      0x1e5 EcuM.o
+ .debug_abbrev  0x000007fa      0x177 EcuM_Fixed.o
+ .debug_abbrev  0x00000971      0x2f1 EcuM_Main.o
+ .debug_abbrev  0x00000c62       0xf5 EcuM_PBcfg.o
+ .debug_abbrev  0x00000d57      0x1ef EcuM_Callout_Stubs.o
+ .debug_abbrev  0x00000f46      0x223 Mcu.o
+ .debug_abbrev  0x00001169       0xba Mcu_PBcfg.o
+ .debug_abbrev  0x00001223      0x129 mpc5xxx_handlers.o
+ .debug_abbrev  0x0000134c       0x12 mpc5xxx_handlers_asm.o
+ .debug_abbrev  0x0000135e      0x127 mpc5xxx_callout_stubs.o
+ .debug_abbrev  0x00001485       0xa6 Cpu.o
+ .debug_abbrev  0x0000152b       0x9d mm.o
+ .debug_abbrev  0x000015c8       0x14 arch_krn.o
+ .debug_abbrev  0x000015dc      0x2a2 os_event.o
+ .debug_abbrev  0x0000187e      0x26f os_init.o
+ .debug_abbrev  0x00001aed      0x26a arch.o
+ .debug_abbrev  0x00001d57      0x31a os_task.o
+ .debug_abbrev  0x00002071      0x2fe os_resource.o
+ .debug_abbrev  0x0000236f      0x2df os_alarm.o
+ .debug_abbrev  0x0000264e      0x2b8 os_sched_table.o
+ .debug_abbrev  0x00002906      0x2b4 os_counter.o
+ .debug_abbrev  0x00002bba      0x223 sys_tick.o
+ .debug_abbrev  0x00002ddd      0x377 os_isr.o
+ .debug_abbrev  0x00003154      0x23e os_application.o
+ .debug_abbrev  0x00003392      0x1ac os_panic.o
+ .debug_abbrev  0x0000353e      0x1b2 os_peripheral.o
+ .debug_abbrev  0x000036f0      0x27d irq.o
+ .debug_abbrev  0x0000396d      0x171 Det.o
+ .debug_abbrev  0x00003ade      0x1b5 ramlog.o
+ .debug_abbrev  0x00003c93      0x153 cirq_buffer.o
+ .debug_abbrev  0x00003de6      0x25d clib_port.o
+ .debug_abbrev  0x00004043      0x207 printf.o
+ .debug_abbrev  0x0000424a       0xbd xtoa.o
+ .debug_abbrev  0x00004307      0x2ba Mcu_Arc_Common_ppc.o
+ .debug_abbrev  0x000045c1      0x2d3 Mcu_Hw_mpc57xx.o
+ .debug_abbrev  0x00004894      0x1b8 Mcu_Arc_mpc5748g.o
+
+.debug_aranges  0x00000000     0x10d0
+ .debug_aranges
+                0x00000000       0x20 crt0.o
+ .debug_aranges
+                0x00000020       0x40 os_simple.o
+ .debug_aranges
+                0x00000060       0x48 system_hooks.o
+ .debug_aranges
+                0x000000a8       0x20 init.o
+ .debug_aranges
+                0x000000c8       0x18 Os_Cfg.o
+ .debug_aranges
+                0x000000e0       0x28 arc_assert.o
+ .debug_aranges
+                0x00000108       0x78 EcuM.o
+ .debug_aranges
+                0x00000180       0x60 EcuM_Fixed.o
+ .debug_aranges
+                0x000001e0       0xc0 EcuM_Main.o
+ .debug_aranges
+                0x000002a0       0x18 EcuM_PBcfg.o
+ .debug_aranges
+                0x000002b8      0x100 EcuM_Callout_Stubs.o
+ .debug_aranges
+                0x000003b8       0x78 Mcu.o
+ .debug_aranges
+                0x00000430       0x18 Mcu_PBcfg.o
+ .debug_aranges
+                0x00000448       0x88 mpc5xxx_handlers.o
+ .debug_aranges
+                0x000004d0       0x28 mpc5xxx_handlers_asm.o
+ .debug_aranges
+                0x000004f8       0x38 mpc5xxx_callout_stubs.o
+ .debug_aranges
+                0x00000530       0x38 Cpu.o
+ .debug_aranges
+                0x00000568       0x20 mm.o
+ .debug_aranges
+                0x00000588       0x20 arch_krn.o
+ .debug_aranges
+                0x000005a8       0x80 os_event.o
+ .debug_aranges
+                0x00000628       0x58 os_init.o
+ .debug_aranges
+                0x00000680       0x50 arch.o
+ .debug_aranges
+                0x000006d0      0x180 os_task.o
+ .debug_aranges
+                0x00000850       0x90 os_resource.o
+ .debug_aranges
+                0x000008e0       0xc8 os_alarm.o
+ .debug_aranges
+                0x000009a8       0x98 os_sched_table.o
+ .debug_aranges
+                0x00000a40       0xa0 os_counter.o
+ .debug_aranges
+                0x00000ae0       0x38 sys_tick.o
+ .debug_aranges
+                0x00000b18       0xf0 os_isr.o
+ .debug_aranges
+                0x00000c08       0x68 os_application.o
+ .debug_aranges
+                0x00000c70       0x20 os_panic.o
+ .debug_aranges
+                0x00000c90       0x60 os_peripheral.o
+ .debug_aranges
+                0x00000cf0       0x50 irq.o
+ .debug_aranges
+                0x00000d40       0x40 Det.o
+ .debug_aranges
+                0x00000d80       0x50 ramlog.o
+ .debug_aranges
+                0x00000dd0       0x70 cirq_buffer.o
+ .debug_aranges
+                0x00000e40       0x90 clib_port.o
+ .debug_aranges
+                0x00000ed0       0x98 printf.o
+ .debug_aranges
+                0x00000f68       0x30 xtoa.o
+ .debug_aranges
+                0x00000f98       0x70 Mcu_Arc_Common_ppc.o
+ .debug_aranges
+                0x00001008       0x80 Mcu_Hw_mpc57xx.o
+ .debug_aranges
+                0x00001088       0x48 Mcu_Arc_mpc5748g.o
+
+.debug_loc      0x00000000     0x6c10
+ .debug_loc     0x00000000      0x10c os_simple.o
+ .debug_loc     0x0000010c      0x182 system_hooks.o
+ .debug_loc     0x0000028e       0x44 init.o
+ .debug_loc     0x000002d2       0x88 arc_assert.o
+ .debug_loc     0x0000035a      0x330 EcuM.o
+ .debug_loc     0x0000068a      0x264 EcuM_Fixed.o
+ .debug_loc     0x000008ee      0x594 EcuM_Main.o
+ .debug_loc     0x00000e82      0x7b4 EcuM_Callout_Stubs.o
+ .debug_loc     0x00001636      0x330 Mcu.o
+ .debug_loc     0x00001966      0x3ba mpc5xxx_handlers.o
+ .debug_loc     0x00001d20      0x110 mpc5xxx_callout_stubs.o
+ .debug_loc     0x00001e30      0x110 Cpu.o
+ .debug_loc     0x00001f40       0x44 mm.o
+ .debug_loc     0x00001f84      0x378 os_event.o
+ .debug_loc     0x000022fc      0x208 os_init.o
+ .debug_loc     0x00002504      0x1dc arch.o
+ .debug_loc     0x000026e0      0xbf4 os_task.o
+ .debug_loc     0x000032d4      0x3fe os_resource.o
+ .debug_loc     0x000036d2      0x5d8 os_alarm.o
+ .debug_loc     0x00003caa      0x442 os_sched_table.o
+ .debug_loc     0x000040ec      0x484 os_counter.o
+ .debug_loc     0x00004570      0x110 sys_tick.o
+ .debug_loc     0x00004680      0x72e os_isr.o
+ .debug_loc     0x00004dae      0x2a8 os_application.o
+ .debug_loc     0x00005056       0x44 os_panic.o
+ .debug_loc     0x0000509a      0x264 os_peripheral.o
+ .debug_loc     0x000052fe      0x1dc irq.o
+ .debug_loc     0x000054da      0x154 Det.o
+ .debug_loc     0x0000562e      0x1de ramlog.o
+ .debug_loc     0x0000580c      0x2ee cirq_buffer.o
+ .debug_loc     0x00005afa      0x402 clib_port.o
+ .debug_loc     0x00005efc      0x44e printf.o
+ .debug_loc     0x0000634a       0xcc xtoa.o
+ .debug_loc     0x00006416      0x2ec Mcu_Arc_Common_ppc.o
+ .debug_loc     0x00006702      0x374 Mcu_Hw_mpc57xx.o
+ .debug_loc     0x00006a76      0x19a Mcu_Arc_mpc5748g.o
+
+.debug_ranges   0x00000000      0xe18
+ .debug_ranges  0x00000000       0x30 os_simple.o
+ .debug_ranges  0x00000030       0x38 system_hooks.o
+ .debug_ranges  0x00000068       0x10 init.o
+ .debug_ranges  0x00000078       0x18 arc_assert.o
+ .debug_ranges  0x00000090       0x68 EcuM.o
+ .debug_ranges  0x000000f8       0x50 EcuM_Fixed.o
+ .debug_ranges  0x00000148       0xb0 EcuM_Main.o
+ .debug_ranges  0x000001f8       0xf0 EcuM_Callout_Stubs.o
+ .debug_ranges  0x000002e8       0x68 Mcu.o
+ .debug_ranges  0x00000350       0x78 mpc5xxx_handlers.o
+ .debug_ranges  0x000003c8       0x20 mpc5xxx_handlers_asm.o
+ .debug_ranges  0x000003e8       0x28 mpc5xxx_callout_stubs.o
+ .debug_ranges  0x00000410       0x28 Cpu.o
+ .debug_ranges  0x00000438       0x10 mm.o
+ .debug_ranges  0x00000448       0x70 os_event.o
+ .debug_ranges  0x000004b8       0x48 os_init.o
+ .debug_ranges  0x00000500       0x40 arch.o
+ .debug_ranges  0x00000540      0x170 os_task.o
+ .debug_ranges  0x000006b0       0x80 os_resource.o
+ .debug_ranges  0x00000730       0xb8 os_alarm.o
+ .debug_ranges  0x000007e8       0x88 os_sched_table.o
+ .debug_ranges  0x00000870       0x90 os_counter.o
+ .debug_ranges  0x00000900       0x28 sys_tick.o
+ .debug_ranges  0x00000928       0xe0 os_isr.o
+ .debug_ranges  0x00000a08       0x58 os_application.o
+ .debug_ranges  0x00000a60       0x10 os_panic.o
+ .debug_ranges  0x00000a70       0x50 os_peripheral.o
+ .debug_ranges  0x00000ac0       0x40 irq.o
+ .debug_ranges  0x00000b00       0x30 Det.o
+ .debug_ranges  0x00000b30       0x40 ramlog.o
+ .debug_ranges  0x00000b70       0x60 cirq_buffer.o
+ .debug_ranges  0x00000bd0       0x98 clib_port.o
+ .debug_ranges  0x00000c68       0x88 printf.o
+ .debug_ranges  0x00000cf0       0x20 xtoa.o
+ .debug_ranges  0x00000d10       0x60 Mcu_Arc_Common_ppc.o
+ .debug_ranges  0x00000d70       0x70 Mcu_Hw_mpc57xx.o
+ .debug_ranges  0x00000de0       0x38 Mcu_Arc_mpc5748g.o
+
+.debug_str      0x00000000     0x669c
+ .debug_str     0x00000000      0xa42 os_simple.o
+                                0xadb (size before relaxing)
+ .debug_str     0x00000a42      0x12e system_hooks.o
+                                0xb4e (size before relaxing)
+ .debug_str     0x00000b70       0xd3 init.o
+                                0x373 (size before relaxing)
+ .debug_str     0x00000c43      0xb40 Os_Cfg.o
+                               0x1566 (size before relaxing)
+ .debug_str     0x00001783       0x80 arc_assert.o
+                                0x929 (size before relaxing)
+ .debug_str     0x00001803      0x747 EcuM.o
+                               0x10d8 (size before relaxing)
+ .debug_str     0x00001f4a      0x1b2 EcuM_Fixed.o
+                                0xfd1 (size before relaxing)
+ .debug_str     0x000020fc      0x31c EcuM_Main.o
+                               0x11de (size before relaxing)
+ .debug_str     0x00002418       0xa9 EcuM_PBcfg.o
+                                0xdc6 (size before relaxing)
+ .debug_str     0x000024c1      0x330 EcuM_Callout_Stubs.o
+                               0x10dc (size before relaxing)
+ .debug_str     0x000027f1      0x234 Mcu.o
+                                0xe2e (size before relaxing)
+ .debug_str     0x00002a25       0xaf Mcu_PBcfg.o
+                                0x528 (size before relaxing)
+ .debug_str     0x00002ad4      0x1e6 mpc5xxx_handlers.o
+                                0xaf4 (size before relaxing)
+ .debug_str     0x00002cba       0xd6 mpc5xxx_callout_stubs.o
+                                0x9d6 (size before relaxing)
+ .debug_str     0x00002d90       0xaa Cpu.o
+                                0x2d7 (size before relaxing)
+ .debug_str     0x00002e3a       0x9a mm.o
+                                0x2d2 (size before relaxing)
+ .debug_str     0x00002ed4      0x1e3 os_event.o
+                               0x164c (size before relaxing)
+ .debug_str     0x000030b7       0xea os_init.o
+                               0x1574 (size before relaxing)
+ .debug_str     0x000031a1      0x136 arch.o
+                               0x1576 (size before relaxing)
+ .debug_str     0x000032d7      0x321 os_task.o
+                               0x19ee (size before relaxing)
+ .debug_str     0x000035f8       0xe1 os_resource.o
+                               0x169e (size before relaxing)
+ .debug_str     0x000036d9      0x17e os_alarm.o
+                               0x1699 (size before relaxing)
+ .debug_str     0x00003857      0x1b3 os_sched_table.o
+                               0x16ca (size before relaxing)
+ .debug_str     0x00003a0a       0xc3 os_counter.o
+                               0x161f (size before relaxing)
+ .debug_str     0x00003acd      0x608 sys_tick.o
+                               0x1a31 (size before relaxing)
+ .debug_str     0x000040d5      0x209 os_isr.o
+                               0x178f (size before relaxing)
+ .debug_str     0x000042de      0x1aa os_application.o
+                               0x1639 (size before relaxing)
+ .debug_str     0x00004488       0x78 os_panic.o
+                               0x14b1 (size before relaxing)
+ .debug_str     0x00004500      0x159 os_peripheral.o
+                               0x158a (size before relaxing)
+ .debug_str     0x00004659      0x1b2 irq.o
+                               0x15e5 (size before relaxing)
+ .debug_str     0x0000480b      0x138 Det.o
+                                0xa9b (size before relaxing)
+ .debug_str     0x00004943      0x174 ramlog.o
+                                0x491 (size before relaxing)
+ .debug_str     0x00004ab7      0x139 cirq_buffer.o
+                                0xa0c (size before relaxing)
+ .debug_str     0x00004bf0      0x23c clib_port.o
+                                0xc7f (size before relaxing)
+ .debug_str     0x00004e2c       0xcf printf.o
+                                0xaf1 (size before relaxing)
+ .debug_str     0x00004efb       0x71 xtoa.o
+                                0x284 (size before relaxing)
+ .debug_str     0x00004f6c      0xade Mcu_Arc_Common_ppc.o
+                               0x1548 (size before relaxing)
+ .debug_str     0x00005a4a      0xb38 Mcu_Hw_mpc57xx.o
+                               0x2257 (size before relaxing)
+ .debug_str     0x00006582      0x11a Mcu_Arc_mpc5748g.o
+                               0x1465 (size before relaxing)
+
+.debug_frame    0x00000000     0x47a0
+ .debug_frame   0x00000000       0xb0 os_simple.o
+ .debug_frame   0x000000b0       0xec system_hooks.o
+ .debug_frame   0x0000019c       0x38 init.o
+ .debug_frame   0x000001d4       0x58 arc_assert.o
+ .debug_frame   0x0000022c      0x1c8 EcuM.o
+ .debug_frame   0x000003f4      0x158 EcuM_Fixed.o
+ .debug_frame   0x0000054c      0x31c EcuM_Main.o
+ .debug_frame   0x00000868      0x430 EcuM_Callout_Stubs.o
+ .debug_frame   0x00000c98      0x1d0 Mcu.o
+ .debug_frame   0x00000e68      0x20c mpc5xxx_handlers.o
+ .debug_frame   0x00001074       0xa0 mpc5xxx_callout_stubs.o
+ .debug_frame   0x00001114       0xa0 Cpu.o
+ .debug_frame   0x000011b4       0x34 mm.o
+ .debug_frame   0x000011e8      0x210 os_event.o
+ .debug_frame   0x000013f8      0x130 os_init.o
+ .debug_frame   0x00001528      0x10c arch.o
+ .debug_frame   0x00001634      0x6a0 os_task.o
+ .debug_frame   0x00001cd4      0x23c os_resource.o
+ .debug_frame   0x00001f10      0x34c os_alarm.o
+ .debug_frame   0x0000225c      0x270 os_sched_table.o
+ .debug_frame   0x000024cc      0x284 os_counter.o
+ .debug_frame   0x00002750       0xa4 sys_tick.o
+ .debug_frame   0x000027f4      0x3f4 os_isr.o
+ .debug_frame   0x00002be8      0x17c os_application.o
+ .debug_frame   0x00002d64       0x38 os_panic.o
+ .debug_frame   0x00002d9c      0x154 os_peripheral.o
+ .debug_frame   0x00002ef0      0x11c irq.o
+ .debug_frame   0x0000300c       0xc8 Det.o
+ .debug_frame   0x000030d4      0x110 ramlog.o
+ .debug_frame   0x000031e4      0x1a8 cirq_buffer.o
+ .debug_frame   0x0000338c      0x244 clib_port.o
+ .debug_frame   0x000035d0      0x25c printf.o
+ .debug_frame   0x0000382c       0x7c xtoa.o
+ .debug_frame   0x000038a8      0x1a0 Mcu_Arc_Common_ppc.o
+ .debug_frame   0x00003a48      0x1ec Mcu_Hw_mpc57xx.o
+ .debug_frame   0x00003c34       0xec Mcu_Arc_mpc5748g.o
+ .debug_frame   0x00003d20       0x28 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-abort.o)
+ .debug_frame   0x00003d48       0x20 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-errno.o)
+ .debug_frame   0x00003d68       0x2c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-exit.o)
+ .debug_frame   0x00003d94       0x48 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fopen.o)
+ .debug_frame   0x00003ddc       0x30 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseek.o)
+ .debug_frame   0x00003e0c       0x54 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fseeko.o)
+ .debug_frame   0x00003e60       0x30 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fstatr.o)
+ .debug_frame   0x00003e90       0x38 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-makebuf.o)
+ .debug_frame   0x00003ec8       0x30 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-malloc.o)
+ .debug_frame   0x00003ef8       0x4c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mallocr.o)
+ .debug_frame   0x00003f44       0x20 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x00003f64       0x20 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-memset.o)
+ .debug_frame   0x00003f84       0x30 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-mlock.o)
+ .debug_frame   0x00003fb4       0x30 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-openr.o)
+ .debug_frame   0x00003fe4       0x64 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-reent.o)
+ .debug_frame   0x00004048       0x48 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-refill.o)
+ .debug_frame   0x00004090       0x30 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x000040c0       0xe0 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signal.o)
+ .debug_frame   0x000041a0       0x40 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-signalr.o)
+ .debug_frame   0x000041e0       0x9c D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-stdio.o)
+ .debug_frame   0x0000427c       0x20 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcmp.o)
+ .debug_frame   0x0000429c       0x20 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strcpy.o)
+ .debug_frame   0x000042bc       0x20 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strlen.o)
+ .debug_frame   0x000042dc       0x20 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strncpy.o)
+ .debug_frame   0x000042fc       0x48 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-strtoul.o)
+ .debug_frame   0x00004344       0x30 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-writer.o)
+ .debug_frame   0x00004374       0x64 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x000043d8       0x30 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-closer.o)
+ .debug_frame   0x00004408       0x70 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fflush.o)
+ .debug_frame   0x00004478       0xc4 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-findfp.o)
+ .debug_frame   0x0000453c       0x40 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fini.o)
+ .debug_frame   0x0000457c       0x20 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-flags.o)
+ .debug_frame   0x0000459c       0x68 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-freer.o)
+ .debug_frame   0x00004604       0x68 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fwalk.o)
+ .debug_frame   0x0000466c       0x30 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-isattyr.o)
+ .debug_frame   0x0000469c       0x30 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-lseekr.o)
+ .debug_frame   0x000046cc       0x30 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-readr.o)
+ .debug_frame   0x000046fc       0x20 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000471c       0x44 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-fclose.o)
+ .debug_frame   0x00004760       0x40 D:/ArcticStudio-21.0.0-win32.win32.x86_64/msys/opt/MinGW-powerpc-eabivle-4.9.4/powerpc-eabivle/newlib/lib/e200z3\libc.a(lib_a-__atexit.o)

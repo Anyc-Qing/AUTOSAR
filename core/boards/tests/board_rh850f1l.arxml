@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="00cec1eb-ea65-457b-9f7c-ffffb13bd319">
+      <SHORT-NAME>Tests</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>Boards</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>rh850f1l</SHORT-NAME>
+              <ELEMENTS>
+                <ECUC-VALUE-COLLECTION>
+                  <SHORT-NAME>board_rh850f1l</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">GENERATOR_OUTPUT_DIRECTORY</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">PROJECT_LOC/config</SD>
+                      </SDG>
+                      <SDG>
+                        <SD GID="_ExtensionKey">GENERATOR_OUTPUT_SERVICE_DIRECTORY</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">PROJECT_LOC</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <ECUC-VALUES>
+                    <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                      <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/Tests/Boards/rh850f1l/Mcu</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                    </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                    <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                      <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/Tests/Boards/rh850f1l/EcuM</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                    </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                  </ECUC-VALUES>
+                </ECUC-VALUE-COLLECTION>
+                <ECUC-MODULE-CONFIGURATION-VALUES UUID="c0d33ce5-3a6a-4333-ac57-6c0554c0655e">
+                  <SHORT-NAME>Mcu</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">GENERATE_AND_VALIDATE</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">TRUE</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu</DEFINITION-REF>
+                  <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+                  <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/ArcCore/Implementations/rh850f1l/Mcu</MODULE-DESCRIPTION-REF>
+                  <CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="850c32cc-a41d-4d3c-871b-18da7ecdb749">
+                      <SHORT-NAME>McuGeneralConfiguration</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuGeneralConfiguration</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuGeneralConfiguration/McuDevErrorDetect</DEFINITION-REF>
+                          <VALUE>true</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuGeneralConfiguration/McuGetRamStateApi</DEFINITION-REF>
+                          <VALUE>false</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuGeneralConfiguration/McuInitClock</DEFINITION-REF>
+                          <VALUE>true</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuGeneralConfiguration/McuNoPll</DEFINITION-REF>
+                          <VALUE>false</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuGeneralConfiguration/McuPerformResetApi</DEFINITION-REF>
+                          <VALUE>true</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuGeneralConfiguration/McuVersionInfoApi</DEFINITION-REF>
+                          <VALUE>false</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="e9c82659-f853-461d-b688-afd28da58577">
+                      <SHORT-NAME>McuModuleConfiguration</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuClockSrcFailureNotification</DEFINITION-REF>
+                          <VALUE>DISABLED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuNumberOfMcuModes</DEFINITION-REF>
+                          <VALUE />
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuRamSectors</DEFINITION-REF>
+                          <VALUE />
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/ArcDefaultClockRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Boards/rh850f1l/Mcu/McuModuleConfiguration/McuClockSettingConfig</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="53ce941d-421b-4707-ae41-f67c1686e4fd">
+                          <SHORT-NAME>McuClockSettingConfig</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuClockSettingConfig</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockSettingId</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="2857525a-efb4-4c23-93e2-0b39b0c3e62c">
+                              <SHORT-NAME>ArcPLLSettings</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcPLLSettings</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcPLLSettings/PLLN</DEFINITION-REF>
+                                  <VALUE>39</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcPLLSettings/PLLP</DEFINITION-REF>
+                                  <VALUE>2</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuClockSettingConfig/ArcPLLSettings/PLLM</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="e5856e04-e544-4b65-b222-125631cc8d27">
+                              <SHORT-NAME>Cpu80MhzCrystal16Mhz</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockReferencePointFrequency</DEFINITION-REF>
+                                  <VALUE>16000000.0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="61ffdc0e-5b8e-4b77-aa81-2cf3a4126a15">
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuModeSettingConf</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuModeSettingConf/McuMode</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="f57c0007-2c6d-4472-9af4-998a4b11be54">
+                          <SHORT-NAME>RUN</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuModeSettingConf</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuModuleConfiguration/McuModeSettingConf/McuMode</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="a268d12b-0d93-4a8f-ad40-8d2698969eb3">
+                      <SHORT-NAME>McuPublishedInformation</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuPublishedInformation</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="71e0773e-10e7-4681-a56b-56a2c2615bc6">
+                          <SHORT-NAME>McuResetReasonConf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/rh850f1l/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                              <VALUE />
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </CONTAINERS>
+                </ECUC-MODULE-CONFIGURATION-VALUES>
+                <ECUC-MODULE-CONFIGURATION-VALUES UUID="e562ca1d-2d24-4c37-aaa8-7734ec72c15b">
+                  <SHORT-NAME>EcuM</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">GENERATE_AND_VALIDATE</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">TRUE</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/Generic/EcuM</DEFINITION-REF>
+                  <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+                  <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/ArcCore/EcucDefs/Generic/Implementations/EcuM</MODULE-DESCRIPTION-REF>
+                  <CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="48d2dabe-c748-4639-8c91-96f839dea7bf">
+                      <SHORT-NAME>EcuMConfiguration</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="f0b7b1b9-1cf3-4ce0-a873-76471359e3bb">
+                          <SHORT-NAME>EcuMCommonConfiguration</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMConfigConsistencyHash</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDefaultAppMode</DEFINITION-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMOSResource</DEFINITION-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="41d394bc-b520-4c89-97b7-1207567572de">
+                              <SHORT-NAME>EcuMDefaultShutdownTarget</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDefaultShutdownTarget</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDefaultShutdownTarget/EcuMDefaultState</DEFINITION-REF>
+                                  <VALUE>EcuMStateOff</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="1174d0ef-bb6b-445a-b5a2-a2335a9a0866">
+                              <SHORT-NAME>EcuMSleepMode</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMSleepMode</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMSleepMode/EcuMSleepModeId</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMSleepMode/EcuMSleepModeSuspend</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMSleepMode/EcuMSleepModeMcuModeRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Boards/rh850f1l/Mcu/McuModuleConfiguration/RUN</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMSleepMode/EcuMWakeupSourceMask</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Boards/rh850f1l/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="4d93f998-3d07-4bca-b6ef-19bb4ac634cd">
+                              <SHORT-NAME>EcuMWakeupSource</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource/EcuMWakeupSourceId</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource/EcuMWakeupSourcePolling</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource/EcuMResetReasonRef</DEFINITION-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="143277af-dc94-4785-9272-5853510c0322">
+                          <SHORT-NAME>EcuMFixedConfiguration</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMFixedConfiguration</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMFixedConfiguration/EcuMNvramReadallTimeout</DEFINITION-REF>
+                              <VALUE>0.01</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMFixedConfiguration/EcuMNvramWriteallTimeout</DEFINITION-REF>
+                              <VALUE>0.01</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMFixedConfiguration/EcuMRunMinimumDuration</DEFINITION-REF>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMFixedConfiguration/EcuMNormalMcuModeRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Boards/rh850f1l/Mcu/McuModuleConfiguration/NORMAL</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="9693f9ed-5665-4709-a84c-29d52782c6b0">
+                              <SHORT-NAME>User_1</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMFixedConfiguration/EcuMFixedUserConfig</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMConfiguration/EcuMFixedConfiguration/EcuMFixedUserConfig/EcuMFixedUser</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="d6a8440a-d9f0-475c-865a-d2ed53ce4373">
+                      <SHORT-NAME>EcuMGeneral</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMGeneral</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMGeneral/EcuMDevErrorDetect</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMGeneral/EcuMIncludeDem</DEFINITION-REF>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMGeneral/EcuMIncludeDet</DEFINITION-REF>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMGeneral/EcuMMainFunctionPeriod</DEFINITION-REF>
+                          <VALUE>0.01</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/EcuM/EcuMGeneral/EcuMVersionInfoApi</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </CONTAINERS>
+                </ECUC-MODULE-CONFIGURATION-VALUES>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

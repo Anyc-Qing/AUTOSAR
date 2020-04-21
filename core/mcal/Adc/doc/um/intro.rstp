@@ -1,0 +1,88 @@
+Document History
+===================
+
+
+History
+----------------------
+
+.. list-table:: Document History
+  :widths: 10 30 15 40
+  :header-rows: 1
+  :align: left
+
+  * - Version
+    - Author
+    - Date
+    - Description
+#if defined(CFG_MPC5XXX)
+  * - 0.1
+    - Afshin 
+    - 2017-10-15
+    - First draft
+#endif    
+
+#if defined(CFG_TMS570)
+  * - 0.1
+    - 
+    - 
+    - First draft
+#endif    
+#if defined(CFG_MPC5XXX)
+  * - 0.2
+    -  
+    - 
+    - 
+#endif    
+
+#if defined(CFG_TMS570)
+  * - 0.2
+    - 
+    - 
+    - 
+#endif  
+#if defined(CFG_MPC5XXX)
+  * - 0.3
+    - 
+    - 
+    - 
+#endif    
+
+#if defined(CFG_TMS570)
+  * - 0.3
+    - 
+    - 
+    - 
+#endif    
+
+
+Document References
+===================
+
+.. list-table:: Document References
+  :widths: 5 45 50
+  :header-rows: 1
+  :align: left
+
+  * - #
+    - Title
+    - Description 
+  * - gen-1
+    - AUTOSAR SWS PlatformTypes, Release: 4.3.0
+    - AUTOSAR requirements, Specification of Platform Types, ID: 048
+  * - gen-2
+    - AUTOSAR SRS ADC Driver, Release: 4.3.0
+    - AUTOSAR requirements, Requirements on ADC Driver, ID: 111
+  * - gen-3
+    - AUTOSAR SWS ADC Driver, Release: 4.3.0
+    - AUTOSAR requirements, Specifications of ADC Driver, ID: 010
+  * - gen-4
+    - AUTOSAR SWS StandardTypes, Release: 4.3.0
+    - AUTOSAR requirements, Specification of Standard Types, ID: 049
+  * - gen-5
+    - ISO26262 First edition
+    - Road Vehicles Functional Safety. Parts 1-9:2011 and part 10:2012 (Guideline)
+
+
+
+.. include:: arch/docref_arch.rst
+	

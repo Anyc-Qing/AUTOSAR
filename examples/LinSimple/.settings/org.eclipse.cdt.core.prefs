@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/BDIR/delimiter=;
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/BDIR/operation=replace
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/BDIR/value=${ProjDirPath}
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/BOARDDIR/delimiter=;
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/BOARDDIR/operation=replace
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/BOARDDIR/value=mpc5604b_xpc560b
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/CW_COMPILE/delimiter=;
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/CW_COMPILE/operation=replace
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/CW_COMPILE/value=/c/devtools/Freescale/cw_mpc5xxx_2.10
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/PATH/delimiter=;
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/PATH/operation=replace
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/PATH/value=${eclipse_home}/msys/bin
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/PCLINT/delimiter=;
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/PCLINT/operation=remove
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/append=true
+environment/project/com.arccore.corebuilder.powerpc.codewarrior.toolchain.1986068358/appendContributed=true

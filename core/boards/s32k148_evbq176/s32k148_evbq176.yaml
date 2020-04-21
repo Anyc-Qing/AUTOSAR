@@ -1,0 +1,10 @@
+# 1.0
+# com.arccore.board
+
+- !!com.arccore.corebuilder.templates.yaml.BoardSettings
+  label: s32k148_evbq176
+  description: 
+  environment: {
+    BOARDDIR: s32k148_evbq176
+  }
+  

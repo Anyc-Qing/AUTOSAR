@@ -1,0 +1,51 @@
+package HelloWorld.Communication
+
+
+
+
+systemSignal Rx01data1SSig
+systemSignal Rx01CmdSSig
+systemSignal Tx01data1SSig
+systemSignal TxAdcdata1SSig
+systemSignal MemRxCmdSSig
+systemSignal MemRxPayloadSSig
+systemSignal MemRxBlockIdSSig
+systemSignal MemTxResSSig
+systemSignal MemTxPayloadSSig
+systemSignal MemTxBlockIdSSig
+
+iSignal for Rx01data1SSig as Rx01data1ISig
+iSignal for Rx01CmdSSig as Rx01CmdIsig
+iSignal for Tx01data1SSig as Tx01data1ISig
+iSignal for TxAdcdata1SSig as TxAdcdata1ISig
+iSignal for MemRxCmdSSig as MemRxCmdISig
+iSignal for MemRxPayloadSSig as MemRxPayloadISig
+iSignal for MemRxBlockIdSSig as MemRxBlockIdISig
+iSignal for MemTxResSSig as MemTxResISig
+iSignal for MemTxPayloadSSig as MemTxPayloadISig
+iSignal for MemTxBlockIdSSig as MemTxBlockIdISig
+
+iSignalPdu Rx01data1IPdu {
+	iSignalIPduMapping for Rx01data1ISig as Rx01data1Mapping
+	iSignalIPduMapping for Rx01CmdIsig as Rx01CmdMapping
+}
+
+iSignalPdu Tx01data1IPdu {
+	iSignalIPduMapping for Tx01data1ISig as Tx01data1Mapping
+}
+
+iSignalPdu TxAdcdata1IPdu {
+	iSignalIPduMapping for TxAdcdata1ISig as TxAdcdata1Mapping
+}
+
+iSignalPdu SwcMemRx {
+	iSignalIPduMapping for MemRxCmdISig as MemRxCmdMapping
+	iSignalIPduMapping for MemRxPayloadISig as MemRxPayloadMapping
+	iSignalIPduMapping for MemRxBlockIdISig as MemRxBlockIdMapping
+}
+
+iSignalPdu SwcMemTx {
+	iSignalIPduMapping for MemTxResISig as MemTxResMapping
+	iSignalIPduMapping for MemTxPayloadISig as MemTxPayloadMapping
+	iSignalIPduMapping for MemTxBlockIdISig as MemTxBlockIdMapping
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Tests</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>Os</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>OsSchTbl</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>Boards</SHORT-NAME>
+                  <AR-PACKAGES>
+                    <AR-PACKAGE>
+                      <SHORT-NAME>mpc5744p_mmb</SHORT-NAME>
+                      <ELEMENTS>
+                        <ECUC-VALUE-COLLECTION>
+                          <SHORT-NAME>OsSchTbl_mpc5744p_mmb</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG>
+                                <SD GID="_ExtensionKey">MCAL</SD>
+                                <SD GID="_Type">java.lang.String</SD>
+                                <SD GID="_Value">TMS570</SD>
+                              </SDG>
+                              <SDG>
+                                <SD GID="_ExtensionKey">GENERATOR_OUTPUT_DIRECTORY</SD>
+                                <SD GID="_Type">java.lang.String</SD>
+                                <SD GID="_Value">PROJECT_LOC/system/Os/utest/os_schtbl/config/tmdx570ls12hdk</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <ECUC-VALUES>
+                            <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                              <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/Tests/Os/OsSchTbl/Os</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                            </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                            <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                              <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/Tests/Boards/mpc5744p_mmb/EcuM</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                            </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                            <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                              <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/Tests/Boards/mpc5744p_mmb/Mcu</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                            </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                          </ECUC-VALUES>
+                        </ECUC-VALUE-COLLECTION>
+                      </ELEMENTS>
+                    </AR-PACKAGE>
+                  </AR-PACKAGES>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

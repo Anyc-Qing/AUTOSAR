@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/com.arccore.corebuilder.arm.toolchain.893408837/BOARDDIR/delimiter=;
+environment/project/com.arccore.corebuilder.arm.toolchain.893408837/BOARDDIR/operation=replace
+environment/project/com.arccore.corebuilder.arm.toolchain.893408837/BOARDDIR/value=stm32_stm3210c
+environment/project/com.arccore.corebuilder.arm.toolchain.893408837/append=true
+environment/project/com.arccore.corebuilder.arm.toolchain.893408837/appendContributed=true

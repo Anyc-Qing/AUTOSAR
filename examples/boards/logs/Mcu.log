@@ -1,0 +1,11 @@
+
+=== Mcu ===
+
+-Validating module Mcu...
+
+-Generating module Mcu...
+		Mcu_Cfg.h
+		Mcu_LCfg.c
+		Mcu_PBcfg.c
+		Mcu.mk
+Mcu done.

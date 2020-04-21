@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/com.arccore.corebuilder.arm.toolchain.1476280299/BOARDDIR/delimiter=;
+environment/project/com.arccore.corebuilder.arm.toolchain.1476280299/BOARDDIR/operation=remove
+environment/project/com.arccore.corebuilder.arm.toolchain.1476280299/BOARDDIR/value=stm32_stm3210c
+environment/project/com.arccore.corebuilder.arm.toolchain.1476280299/CW_COMPILE/delimiter=;
+environment/project/com.arccore.corebuilder.arm.toolchain.1476280299/CW_COMPILE/operation=append
+environment/project/com.arccore.corebuilder.arm.toolchain.1476280299/CW_COMPILE/value=/c/devtools/Freescale/cw_mpc5xxx_2.10
+environment/project/com.arccore.corebuilder.arm.toolchain.1476280299/append=true
+environment/project/com.arccore.corebuilder.arm.toolchain.1476280299/appendContributed=true

@@ -1,0 +1,14 @@
+// create package with the SWC interfaces
+package Interfaces
+
+// imported elements
+import ArcCore.Platform.ImplementationDataTypes.*
+
+// port declarations
+interface senderReceiver BasicSRInterface1 {
+	data uint32 data1
+} 
+
+interface senderReceiver BasicSRInterface2 {
+	data sint32 data2
+}

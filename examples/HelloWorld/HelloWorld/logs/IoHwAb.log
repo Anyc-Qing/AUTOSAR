@@ -1,0 +1,16 @@
+
+=== IoHwAb ===
+
+-Validating module IoHwAb...
+
+-Generating module IoHwAb...
+		IoHwAb_Cfg.h
+		IoHwAb_Dcm.h
+		IoHwAb_Digital.c
+		IoHwAb_Digital.h
+		IoHwAb_Analog.c
+		IoHwAb_Analog.h
+		IoHwAb_Pwm.c
+		IoHwAb_Pwm.h
+		IoHwAb.mk
+IoHwAb done.

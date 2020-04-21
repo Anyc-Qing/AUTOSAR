@@ -1,0 +1,86 @@
+package HelloWorld
+
+import SwcReader.SwcReaderType
+import SwcWriter.SwcWriterType
+import HelloWorld_Generic.Services.IoHwAb.*
+import HelloWorld_Generic.Services.EcuM.*
+import HelloWorld_Generic.Services.ComM.*
+import HelloWorld_Generic.Services.Dcm.Dcm
+import HelloWorld_Generic.Services.Det.Det
+import HelloWorld_Generic.Services.Dlt.Dlt
+import HelloWorld_Generic.Services.Dem.Dem
+import HelloWorld_Generic.Services.Os.Os
+import HelloWorld_Generic.Services.NvM.NvM
+import HelloWorld_Generic.Services.BswM.BswM
+import HelloWorld_Generic.Services.WdgM.WdgM
+import SwcMem.SwcMemType
+import SwcReader.SwcReaderType.OsCounter
+import HelloWorld_Generic.Services.Dcm.Dcm.DataServices_SRRead1_Data
+import HelloWorld_Generic.Services.FiM.*
+import SwcReader.SwcReaderType.FiM_FID1_Inhibition
+
+composition TopLevelComposition {
+	
+	prototype SwcReaderType SwcReader
+	prototype SwcWriterType SwcWriter
+	prototype SwcMemType SwcMem
+	prototype EcuM ecuM
+	prototype IoHwAb ioHwAb
+	prototype ComM comM
+	prototype Dcm dcm
+	prototype Det det
+	prototype Dlt dlt
+	prototype Dem dem
+	prototype BswM bswm
+	prototype WdgM wdgm
+	prototype NvM nvm
+	prototype Os os
+	prototype FiM fim
+	
+	// External ports
+	ports {
+		provides SwcWriter.SenderPort Tx01
+		provides SwcReader.AdcResult TxAdc
+		requires SwcReader.ReceiverPort Rx01
+		requires SwcWriter.CommandPort Rx01
+		
+		provides SwcMem.SwcMemTx MemTx
+		requires SwcMem.SwcMemRx MemRx
+	}
+	
+	// Internal connections
+	connect ioHwAb.Digital_DigitalSignal_LED1 to SwcReader.Blinker as SR2
+	connect SwcReader.ResultPort to SwcWriter.InputPort as SR3
+	connect ioHwAb.Digital_DigitalSignal_LED2 to SwcWriter.Blinker as SR4
+	
+	connect ioHwAb.Analog_AnalogSignal to SwcReader.AnalogReader as SR5
+	connect ioHwAb.Pwm_PwmSignal_LED3Duty to SwcReader.PWMWriter as SR6
+	
+	connect ecuM.SR_HelloWorldUser to SwcReader.RunControl
+	connect ecuM.currentMode to SwcReader.Mode
+	connect ecuM.currentMode to SwcWriter.Mode
+	connect comM.UM_ComMUser to SwcWriter.CommMode
+	connect ecuM.currentMode to SwcMem.Mode
+	connect SwcWriter.ComMControl to bswm.modeRequestPort_SwcStartCommunication
+	connect det.Det_DetPortReader_Inst to SwcReader.Det
+	connect dlt.Dlt_service to SwcReader.Dlt
+	connect dem.Event_TestEvent to SwcReader.Dem_TestEvent
+	connect wdgm.localSupervision_Supervised100msTask to SwcReader.WdgM_LocalSup
+	connect wdgm.localMode_Supervised100msTask to SwcReader.WdgM_LocalMode
+	connect nvm.PS_SwcMem_Block1 to SwcMem.ServicePIM1
+	connect nvm.PS_SwcMem_Block2 to SwcMem.ServicePIM2
+	connect SwcMem.JobFinishedPIM1 to nvm.PNJobFinished_SwcMem_Block1
+	connect SwcMem.JobFinishedPIM2 to nvm.PNJobFinished_SwcMem_Block2
+	
+	connect SwcReader.WdgM_StateReq to bswm.modeRequestPort_WdgMMode
+	
+	connect os.OsService_OsCounter to SwcReader.OsCounter
+	
+	connect dcm.DataServices_SRWrite1_Data_Write to dcm.DataServices_SRRead1_Data
+	connect dcm.DataServices_SRWrite2_Data_Write to dcm.DataServices_SRRead2_Data
+	connect fim.Func_FiMFID1 to SwcReader.FiM_FID1_Inhibition
+	
+	
+
+}
+

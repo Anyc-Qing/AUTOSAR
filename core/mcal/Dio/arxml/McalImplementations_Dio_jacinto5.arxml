@@ -1,0 +1,38 @@
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="91711d98-5456-4bbc-a0e7-af57676f6a89">
+      <SHORT-NAME>ArcCore</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>Implementations</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>jacinto5</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-IMPLEMENTATION S="" UUID="">
+                  <SHORT-NAME>Dio</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">JACINTO5</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>5.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>mcal::Dio::gen::Dio_jacinto::main</USED-CODE-GENERATOR>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/jacinto/Dio</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

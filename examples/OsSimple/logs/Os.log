@@ -1,0 +1,16 @@
+
+=== Os ===
+
+-Validating module Os...
+	 -ShortName is not unique [ /OsSimple/Os/OsScheduleTable/OsScheduleTableExpiryPoint ]
+	 -ShortName is not unique [ /OsSimple/Os/OsScheduleTable/OsScheduleTableExpiryPoint ]
+	 -Value for OsScheduleTableDuration is invalid [ /OsSimple/Os/OsScheduleTable/@parameterValues.0 ]
+	 -Value for OsScheduleTableCounterRef is invalid [ /OsSimple/Os/OsScheduleTable/@referenceValues.0 ]
+	 -Value for OsScheduleTblExpPointOffset is invalid [ /OsSimple/Os/OsScheduleTable/OsScheduleTableExpiryPoint/@parameterValues.0 ]
+	 -Value for OsScheduleTableAutostartType is invalid [ /OsSimple/Os/OsScheduleTable/OsScheduleTableAutostart/@parameterValues.0 ]
+	 -OsScheduleTableAutostart should have a configured OsScheduleTableStartValue [ /OsSimple/Os/OsScheduleTable/OsScheduleTableAutostart ]
+	 -No owning OsApplication defined for task OsTask [ /OsSimple/Os/OsTask ]
+
+-Generating module Os...
+	No license to generate module Os: No license found for feature "com.arccore.product.feature.a4.core.os" (21) 
+Os done.

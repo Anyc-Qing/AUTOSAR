@@ -1,0 +1,29 @@
+Com_PbCfg.o: \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/examples/LedBlinker/LedBlinker/config/Com_PbCfg.c \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/communication/PduR/inc/PduR.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/communication/PduR/inc/PduR_Types.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/include/ComStack_Types.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/include/Std_Types.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/include/Platform_Types.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/base/compiler/Compiler.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/base/compiler/Compiler_Arc.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/base/compiler/Compiler_Cfg.h \
+ ../config/PduR_Cfg.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/communication/PduR/inc/PduR_Types.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/communication/PduR/inc/PduR_If.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/communication/PduR/inc/PduR.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/diagnostic/Det/inc/Det.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/include/Std_Types.h \
+ ../config/Det_Cfg.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/communication/PduR/inc/PduR_Com.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/examples/LedBlinker/LedBlinker/config/PduR_PbCfg.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/communication/Com/inc/Com.h \
+ ../config/Com_Cfg.h ../config/Com_PbCfg.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/communication/Com/inc/Com_Types.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/communication/Com/inc/Com_Types.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/communication/Com/inc/Com_Com.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/communication/Com/inc/Com_Sched.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/communication/Com/inc/Com.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/examples/LedBlinker/LedBlinker/config/Com_PbCfg.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/integration/MemMap.h \
+ d:/ArcticStudio-21.0.0-win32.win32.x86_64/workspace/core-21.0.0/core/integration/Arc_MemMap.h

@@ -1,0 +1,34 @@
+package ApplicationLayer.Interface
+
+import ArcCore.Platform.BaseTypes.*
+
+// The impl, app and SR Interface for communicating LightStatus
+enum impl LightStatusImpl extends uint32 {OFF = 1, ON = 2} 
+enum app LightStatus {OFF = 1, ON = 2}
+
+interface senderReceiver LightInterface {
+	data LightStatus status
+}
+
+// The impl, app and SR Interface for communicating DoorStatus
+boolean impl DoorStatusImpl extends ^boolean
+boolean app DoorStatus
+
+interface senderReceiver DoorInterface {
+	data DoorStatus status
+}
+
+// The impl, app and SR Interface for communicating Int (uint32)
+int impl IntImpl extends uint32
+int app Int
+
+interface senderReceiver DataInterface {
+	data Int message
+}
+
+// DataTypeMappings for the impl:s and app:s defined above
+dataTypeMappingSet TypeMappings {
+	map IntImpl Int
+	map LightStatusImpl LightStatus
+	map DoorStatusImpl DoorStatus
+}

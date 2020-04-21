@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+environment/project/com.arccore.corebuilder.arm.toolchain.977912000/BOARDDIR/delimiter=;
+environment/project/com.arccore.corebuilder.arm.toolchain.977912000/BOARDDIR/operation=remove
+environment/project/com.arccore.corebuilder.arm.toolchain.977912000/CROSS_COMPILE/delimiter=;
+environment/project/com.arccore.corebuilder.arm.toolchain.977912000/CROSS_COMPILE/operation=remove
+environment/project/com.arccore.corebuilder.arm.toolchain.977912000/append=true
+environment/project/com.arccore.corebuilder.arm.toolchain.977912000/appendContributed=true

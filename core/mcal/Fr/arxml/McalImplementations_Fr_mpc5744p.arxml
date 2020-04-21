@@ -1,0 +1,39 @@
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="">
+      <SHORT-NAME>ArcCore</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="">
+          <SHORT-NAME>Implementations</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>mpc5744p</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-IMPLEMENTATION>
+                  <SHORT-NAME>Fr</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">MPC5744P</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>1.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>mcal::Fr::gen::Fr_mpc560x::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.0.3</AR-RELEASE-VERSION>
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc5xxx/Fr</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

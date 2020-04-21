@@ -1,0 +1,11 @@
+package LedBlinkerApplicationLayer.CompositionPackage
+
+import LedBlinkerBSWConfiguration.Services.IoHwAb.IoHwAb
+import LedBlinkerApplicationLayer.ApplicationPackage.LedBlinkerSWC
+
+composition RootComposition {
+	prototype LedBlinkerSWC ledBlinkerSWC
+	prototype IoHwAb serviceIoHwAb
+	
+	connect serviceIoHwAb.Digital_LED1 to ledBlinkerSWC.Digital_LED1 as DIO1
+}

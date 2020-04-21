@@ -1,0 +1,102 @@
+OUTPUT_FORMAT("elf32-powerpc", "elf32-powerpc", "elf32-powerpc")
+OUTPUT_ARCH(powerpc)
+ENTRY(_start)
+MEMORY
+{
+L_FLASH_CODE_0 : ORIGIN = 0x00F98000, LENGTH = 0x00268000
+L_FLASH_DATA_0 : ORIGIN = 0x00800000, LENGTH = 0x00018000
+L_SRAM_DATA_CORE_0 : ORIGIN = 0x40000000, LENGTH = 0x00060000
+L_SRAM_0 : ORIGIN = 0x50800000, LENGTH = 0x00010000
+}
+SECTIONS
+{
+ .calibration : {
+   *(.calibration .calib_component .calib_shared)
+ } > L_FLASH_CODE_0
+ ASSERT(SIZEOF(.calibration) == 0, ".calibration section used but CALIBRATION_ENABLED is undefined")
+    __FLS_PROG_START__ = 0x8000 + 0x00F98000;
+ .rcw __FLS_PROG_START__ : {
+  KEEP(*(.rcw))
+ } > L_FLASH_CODE_0
+    .text :
+ {
+     crt0.o(.text);
+     *(.text .text.* .init .fini* .eini* .gnu.linkonce* .gnu.warning);
+ } > L_FLASH_CODE_0
+    .exception_tbl : {
+     KEEP(*(.exception_tbl))
+    } > L_FLASH_CODE_0
+ .rodata : {
+  *(.rodata .rodata.* .gnu.linkonce.r.*);
+  *(.got.plt) *(.got)
+ } > L_FLASH_CODE_0
+ .sdata2 : {
+  _SDA2_BASE_ = .;
+  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*);
+  *(PPC.EMB.sdata2 .PPC.EMB.sbss2)
+  . = ALIGN(0x10);
+ } > L_FLASH_CODE_0
+ .sbss2 : {
+  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*);
+  __TEXT_END = .;
+ } > L_FLASH_CODE_0
+ .lowpower_text : {
+  __LP_TEXT_START = .;
+  *(.lowpower_text)
+  __LP_TEXT_END = .;
+ } > L_SRAM_0 AT> L_FLASH_CODE_0
+ .lowpower_bss : {} > L_SRAM_0
+ .data : {
+  __ram_start = .;
+  __DATA_RAM = .;
+  *(.data .data.* .gnu.linkonce.d.* .gnu.linkonce.r.* .eh_frame)
+  *(.ram_no_cache_data)
+  . = ALIGN(0x10);
+ } > L_SRAM_0 AT> L_FLASH_CODE_0
+ .sdata : {
+  __SDATA_START__ = .;
+  _SDA_BASE_ = .;
+  *(.sdata .sdata.* .gnu.linkonce.s.*)
+  *(PPC.EMB.sdata2 .PPC.EMB.sbss2)
+  __DATA_END = .;
+ } > L_SRAM_0 AT> L_FLASH_CODE_0
+    .sbss :
+ {
+  __SBSS_START__ = .;
+  *(.sbss .sbss.* .scommon .gnu.linkonce.sb.* .t32_outport);
+  __SBSS_END__ = .;
+  _end = .;
+ } > L_SRAM_0
+ .t32_outport ALIGN(0x10):
+ {
+  *(.t32_outport);
+ } > L_SRAM_0
+ .bss (NOLOAD) :
+ {
+  *(.got2);
+  *(.fixup);
+  *(.bss .bss.* COMMON .gnu.linkonce.b.*);
+  __BSS_END = .;
+ } > L_SRAM_0
+ .ram_no_cache_bss (NOLOAD) : {
+  *(.ram_no_cache_bss)
+ } > L_SRAM_0
+.uninit ALIGN(0x10) (NOLOAD) : { *(.winidea_port .ramlog .dem_eventmemory_pri .uninit_ram) ; } > L_SRAM_0
+ .heap ALIGN(0x4): {
+  PROVIDE(_heap_start = .);
+ } > L_SRAM_0
+}
+_heap_end = ORIGIN(L_SRAM_0) + LENGTH(L_SRAM_0);
+__TEXT_START = ADDR(.text);
+__RAM_START = ADDR(.sdata);
+__DATA_RAM = ADDR(.data);
+__DATA_ROM = LOADADDR(.data);
+__LP_TEXT_ROM = LOADADDR(.lowpower_text);
+__BSS_START = ADDR(.sbss);
+ __SDATA2_START__ = ADDR(.sdata2);
+ __SBSS2_END__ = ADDR(.sbss2) + SIZEOF(.sbss2);
+__EXCEPT_START__ = 0x0;
+__EXCEPT_END__ = 0x0;
+__SP_INIT = _heap_end;
+__SP_END = __SP_INIT - 1024;
+__SP_INIT_Z0 = __SP_END;

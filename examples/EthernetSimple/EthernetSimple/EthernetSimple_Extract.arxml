@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-3.xsd">
+  
+<AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>EthernetSimple_Generic</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>Services</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>BswM</SHORT-NAME>
+              <ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE UUID="65522d42-39b6-37ab-8b32-eda46c370987">
+                  <SHORT-NAME>ComMModeEnum</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/EthernetSimple_Generic/Services/BswM/ComMModeEnum_def</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ArcCore/Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <COMPU-METHOD UUID="b69e7b15-7219-3ab2-83cb-e924cab3e3f3">
+                  <SHORT-NAME>ComMModeEnum_def</SHORT-NAME>
+                  <CATEGORY>TEXTTABLE</CATEGORY>
+                  <COMPU-INTERNAL-TO-PHYS>
+                    <COMPU-SCALES>
+                      <COMPU-SCALE>
+                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                        <COMPU-CONST>
+                          <VT>COMM_NO_COMMUNICATION</VT>
+                        </COMPU-CONST>
+                      </COMPU-SCALE>
+                      <COMPU-SCALE>
+                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                        <COMPU-CONST>
+                          <VT>COMM_SILENT_COMMUNICATION</VT>
+                        </COMPU-CONST>
+                      </COMPU-SCALE>
+                      <COMPU-SCALE>
+                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                        <COMPU-CONST>
+                          <VT>COMM_FULL_COMMUNICATION</VT>
+                        </COMPU-CONST>
+                      </COMPU-SCALE>
+                    </COMPU-SCALES>
+                  </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <SENDER-RECEIVER-INTERFACE UUID="20bf8ef4-a357-32fb-97f8-c672670419b5">
+                  <SHORT-NAME>ComMModeRequestInterface</SHORT-NAME>
+                  <IS-SERVICE>false</IS-SERVICE>
+                  <DATA-ELEMENTS>
+                    <VARIABLE-DATA-PROTOTYPE UUID="888c14e1-0431-3fa4-b050-991584dce46e">
+                      <SHORT-NAME>requestedMode</SHORT-NAME>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/EthernetSimple_Generic/Services/BswM/ComMModeEnum</TYPE-TREF>
+                    </VARIABLE-DATA-PROTOTYPE>
+                  </DATA-ELEMENTS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SERVICE-SW-COMPONENT-TYPE UUID="062b1cdc-a26d-303e-9fa3-3118a904b6b4">
+                  <SHORT-NAME>BswM</SHORT-NAME>
+                  <PORTS>
+                    <R-PORT-PROTOTYPE UUID="08f29a94-8c42-318a-9e9b-758e1a97549a">
+                      <SHORT-NAME>modeRequestPort_SwcStartCommunication</SHORT-NAME>
+                      <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/EthernetSimple_Generic/Services/BswM/ComMModeRequestInterface</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="2577fd3d-3461-36c9-af00-6f1ae417e587">
+                      <SHORT-NAME>BswMInternalBehavior</SHORT-NAME>
+                      <EVENTS>
+                        <TIMING-EVENT UUID="0cd1c1f5-3ca1-48d2-b869-dac5ffd7d48f">
+                          <SHORT-NAME>BswMRunnableEvent</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_Generic/Services/BswM/BswM/BswMInternalBehavior/BswMRunnable</START-ON-EVENT-REF>
+                          <PERIOD>0.0</PERIOD>
+                        </TIMING-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="4f3d004d-472b-3a07-a5ee-6f6f1a45d623">
+                          <SHORT-NAME>BswMRunnable</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                            <VARIABLE-ACCESS UUID="b599295b-70c1-338b-b2dd-e0dc43827c12">
+                              <SHORT-NAME>dataReceivePoint_BswMRunnable_modeRequestPort_SwcStartCommunication_requestedMode</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/BswM/BswM/modeRequestPort_SwcStartCommunication</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/EthernetSimple_Generic/Services/BswM/ComMModeRequestInterface/requestedMode</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                          <SYMBOL>BswM_MainFunction</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="c0185398-89ac-30a5-aa58-61d669576e87">
+                  <SHORT-NAME>BswMComponentImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="fc646f41-35fb-33e3-909a-7094865d49a1">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="077750fa-ae41-31fd-a3c0-3eea4e11e1fe">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/EthernetSimple_Generic/Services/BswM/BswM/BswMInternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>Os</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="511a4178-69a8-371d-b533-6de320ab6aa1">
+                  <SHORT-NAME>Os</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="2225dce0-3d03-3ef1-8dc1-967f8ec78ceb">
+                      <SHORT-NAME>OsService_OsCounter</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/Os/OsService</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="a5306d99-41f1-37aa-aceb-885c4563e86a">
+                      <SHORT-NAME>OsBehavior</SHORT-NAME>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="3ff33774-ef13-4ee4-90dd-271b26a73ef9">
+                          <SHORT-NAME>GetCounterValue_OsService_OsCounter_GetCounterValue</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_Generic/Services/Os/Os/OsBehavior/GetCounterValue</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/Os/Os/OsService_OsCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/Os/OsService/GetCounterValue</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="3ef025f3-8574-4c13-890d-770fc35345c1">
+                          <SHORT-NAME>GetElapsedValue_OsService_OsCounter_GetElapsedValue</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_Generic/Services/Os/Os/OsBehavior/GetElapsedValue</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/Os/Os/OsService_OsCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/Os/OsService/GetElapsedValue</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>CounterType</SHORT-LABEL>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Services/Os/CounterType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/Os/Os/OsService_OsCounter</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="f7ca8060-1d54-3f50-a9fe-8b72cf7c8ace">
+                          <SHORT-NAME>GetCounterValue</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Os_GetCounterValue</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="792152e0-418c-3f2b-b7a3-7b4bdeceff4b">
+                          <SHORT-NAME>GetElapsedValue</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Os_GetElapsedValue</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="69d050b2-6457-3efc-ab31-2dab57d0e174">
+                  <SHORT-NAME>OsImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="6cc97720-708e-36f4-88ce-5ea14b27f864">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="d44ea42c-26f6-3ac5-9d71-a3b8e387b2d2">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/EthernetSimple_Generic/Services/Os/Os/OsBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>Det</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="b468aa58-e17a-3665-a96e-9c9ae81e77e8">
+                  <SHORT-NAME>Det</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="8f999cbf-b589-39d2-b768-1521627be51a">
+                      <SHORT-NAME>DetBehavior</SHORT-NAME>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="4b077da2-e4de-371f-8ff3-c8c3458a6f75">
+                          <SHORT-NAME>ReportError</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Det_ReportError</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="40bc8a6d-4e5f-3333-89ce-74e5a23f9594">
+                  <SHORT-NAME>DetImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="b62f568c-b222-3684-9182-91f00510cf3d">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="b90d0759-a1bd-3cc8-8831-8aecdc7955bf">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/EthernetSimple_Generic/Services/Det/Det/DetBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>ComM</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="9243d932-a4ae-3b56-b660-dfbfb3c559af">
+                  <SHORT-NAME>ComM</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="cc0bc5a3-5b49-3e3c-929c-1337f37e50f4">
+                      <SHORT-NAME>UR_ComMUser</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/ComM/ComM_UserRequest</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="9425c989-e06c-382f-a06e-fa4783e1c728">
+                      <SHORT-NAME>UM_ComMUser</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/AUTOSAR/Services/ComM/ComM_CurrentMode</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="e530d383-1555-3185-b3cf-da12323aede3">
+                      <SHORT-NAME>ComMBehavior</SHORT-NAME>
+                      <DATA-TYPE-MAPPING-REFS>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR/Services/ComM/ComMTypeMappings</DATA-TYPE-MAPPING-REF>
+                      </DATA-TYPE-MAPPING-REFS>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="ddcc4315-4fbd-4228-9f48-ad33b2fe1c71">
+                          <SHORT-NAME>RequestComMode_UR_ComMUser_RequestComMode</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_Generic/Services/ComM/ComM/ComMBehavior/RequestComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/ComM/ComM/UR_ComMUser</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/ComM/ComM_UserRequest/RequestComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="173abb73-5b7d-48b7-af3f-4a72831886e6">
+                          <SHORT-NAME>GetMaxComMode_UR_ComMUser_GetMaxComMode</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_Generic/Services/ComM/ComM/ComMBehavior/GetMaxComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/ComM/ComM/UR_ComMUser</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/ComM/ComM_UserRequest/GetMaxComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="573e61d9-e6d0-444a-8125-48abf634e661">
+                          <SHORT-NAME>GetRequestedComMode_UR_ComMUser_GetRequestedComMode</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_Generic/Services/ComM/ComM/ComMBehavior/GetRequestedComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/ComM/ComM/UR_ComMUser</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/ComM/ComM_UserRequest/GetRequestedComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="587bc5e3-c39f-4d30-9089-255a8825ee61">
+                          <SHORT-NAME>GetCurrentComMode_UR_ComMUser_GetCurrentComMode</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_Generic/Services/ComM/ComM/ComMBehavior/GetCurrentComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/ComM/ComM/UR_ComMUser</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/ComM/ComM_UserRequest/GetCurrentComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>ComM_UserHandleType</SHORT-LABEL>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Services/ComM/ComM_UserHandleType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/ComM/ComM/UR_ComMUser</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="82ffed6a-2741-30d5-bfd5-615608ea971f">
+                          <SHORT-NAME>ComM_MainFunction</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <MODE-SWITCH-POINTS>
+                            <MODE-SWITCH-POINT UUID="6f25f2b7-df9b-3f85-90c6-803f4fcc4c04">
+                              <SHORT-NAME>modeSwitchPoint_ComM_MainFunction_UM_ComMUser_currentMode</SHORT-NAME>
+                              <MODE-GROUP-IREF>
+                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/ComM/ComM/UM_ComMUser</CONTEXT-P-PORT-REF>
+                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR/Services/ComM/ComM_CurrentMode/currentMode</TARGET-MODE-GROUP-REF>
+                              </MODE-GROUP-IREF>
+                            </MODE-SWITCH-POINT>
+                          </MODE-SWITCH-POINTS>
+                          <SYMBOL>ComM_MainFunction</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="40bd3326-de62-3628-8ed5-fdb98ea3d2bd">
+                          <SHORT-NAME>RequestComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_RequestComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="1e9b0fbc-98b1-3d60-8ac7-d527824bdc8f">
+                          <SHORT-NAME>GetMaxComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_GetMaxComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="83f64172-7b8f-3294-b8a4-27936d14d314">
+                          <SHORT-NAME>GetRequestedComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_GetRequestedComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="cfb551f0-420b-316c-866a-158308de290d">
+                          <SHORT-NAME>GetCurrentComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_GetCurrentComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="0004092d-e5e7-3b79-8c49-6472d722f1a9">
+                  <SHORT-NAME>ComMImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="c6554bf9-d25f-31f9-8eed-5766617d6904">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="15d6b3df-7b99-3047-bf66-c8b46e124ffd">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/EthernetSimple_Generic/Services/ComM/ComM/ComMBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>Dlt</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="658bbf0d-9c71-3976-ba65-877a5be58b1c">
+                  <SHORT-NAME>Dlt</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="afb3ffb0-f5f5-3f4d-9535-156bf79f3459">
+                      <SHORT-NAME>Dlt_service</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/Dlt/DLTService</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="b76c7ac1-b843-3c1a-96d8-17eba6306628">
+                      <SHORT-NAME>DltBehavior</SHORT-NAME>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="16d23b7c-559f-4b8d-b9c3-ba1235464967">
+                          <SHORT-NAME>Dlt_SendLogMessage_Dlt_service_SendLogMessage</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_Generic/Services/Dlt/Dlt/DltBehavior/Dlt_SendLogMessage</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/Dlt/Dlt/Dlt_service</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/Dlt/DLTService/SendLogMessage</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="5f57b4e0-f9b7-41e5-bbb7-baef2d9fea5b">
+                          <SHORT-NAME>Dlt_SendTraceMessage_Dlt_service_SendTraceMessage</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_Generic/Services/Dlt/Dlt/DltBehavior/Dlt_SendTraceMessage</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/Dlt/Dlt/Dlt_service</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/Dlt/DLTService/SendTraceMessage</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="89fa23ad-80f7-4cae-9543-f36c09cc7267">
+                          <SHORT-NAME>Dlt_RegisterContext_Dlt_service_RegisterContext</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_Generic/Services/Dlt/Dlt/DltBehavior/Dlt_RegisterContext</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/Dlt/Dlt/Dlt_service</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/Dlt/DLTService/RegisterContext</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>Dlt_SessionIDType</SHORT-LABEL>
+                                  <VALUE>4096</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Services/Dlt/Dlt_SessionIDType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/Dlt/Dlt/Dlt_service</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="bd1634d3-3d59-3445-a2f6-63bdb3fb31af">
+                          <SHORT-NAME>Dlt_SendLogMessage</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Dlt_SendLogMessage</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="e3d8c875-1a3a-3bf1-b033-99f4b5225d62">
+                          <SHORT-NAME>Dlt_SendTraceMessage</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Dlt_SendTraceMessage</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="99a86f6c-e8d5-324d-b048-7f2f7b7d1c5e">
+                          <SHORT-NAME>Dlt_RegisterContext</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Dlt_RegisterContext</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="35752488-d6b3-3165-b517-f8fa5b973b46">
+                  <SHORT-NAME>DltImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="86ed8616-c8dc-3f46-8ea0-1c9555ba85cf">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="d27bce9b-b0ba-3c02-93cc-c30ba5a149fb">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/EthernetSimple_Generic/Services/Dlt/Dlt/DltBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>EthernetSimple_mpc5748g_mpc574xg_mb_Ecu</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>Services</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>EcuM</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="efd966f5-bfd0-3dd9-8f72-87efefa957f2">
+                  <SHORT-NAME>EcuM</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="c44913d6-4b25-3fe0-90f0-cb3403d3e463">
+                      <SHORT-NAME>SR_EthernetUser</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_StateRequest</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="c76f56ee-f462-3ddb-80c9-e715093820b2">
+                      <SHORT-NAME>currentMode</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_CurrentMode</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="833d7e3e-7369-30f3-bb61-73234b505cbb">
+                      <SHORT-NAME>shutdownTarget</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_ShutdownTarget</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="73bfee2f-ff8d-3de8-99f2-81e5e4cda03d">
+                      <SHORT-NAME>bootTarget</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_BootTarget</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="594442a1-fd37-38f0-812a-aa59854280a0">
+                      <SHORT-NAME>EcuMFixedBehavior</SHORT-NAME>
+                      <DATA-TYPE-MAPPING-REFS>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR/Services/EcuM/EcuMFixedTypeMappings</DATA-TYPE-MAPPING-REF>
+                      </DATA-TYPE-MAPPING-REFS>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="bad89c20-8a49-4cbe-8206-63cace7ba6da">
+                          <SHORT-NAME>RequestRUN_SR_EthernetUser_RequestRUN</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/EcuMFixedBehavior/RequestRUN</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/SR_EthernetUser</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/RequestRUN</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="319c04a6-92f2-4c62-897e-9e2b85edbd98">
+                          <SHORT-NAME>ReleaseRUN_SR_EthernetUser_ReleaseRUN</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/EcuMFixedBehavior/ReleaseRUN</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/SR_EthernetUser</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/ReleaseRUN</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="d02970a3-b322-4230-bb7c-a713941a3484">
+                          <SHORT-NAME>RequestPOSTRUN_SR_EthernetUser_RequestPOSTRUN</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/EcuMFixedBehavior/RequestPOSTRUN</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/SR_EthernetUser</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/RequestPOSTRUN</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="0232aca7-5141-4762-9881-208b210a7e7c">
+                          <SHORT-NAME>ReleasePOSTRUN_SR_EthernetUser_ReleasePOSTRUN</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/EcuMFixedBehavior/ReleasePOSTRUN</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/SR_EthernetUser</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/ReleasePOSTRUN</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="4ed3a1ad-4f93-4fc9-8dae-3308ac5cc7fe">
+                          <SHORT-NAME>SelectShutdownTarget_shutdownTarget_SelectShutdownTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/EcuMFixedBehavior/SelectShutdownTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_ShutdownTarget/SelectShutdownTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="c1c01d6b-a7eb-4887-9126-7055e9daa8ee">
+                          <SHORT-NAME>GetShutdownTarget_shutdownTarget_GetShutdownTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/EcuMFixedBehavior/GetShutdownTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_ShutdownTarget/GetShutdownTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="c126ca22-d0e9-4f4d-bf3b-85eba5790b2e">
+                          <SHORT-NAME>GetLastShutdownTarget_shutdownTarget_GetLastShutdownTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/EcuMFixedBehavior/GetLastShutdownTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_ShutdownTarget/GetLastShutdownTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="e45c2887-fdf2-4e50-bc4f-1923a459ce47">
+                          <SHORT-NAME>SelectBootTarget_bootTarget_SelectBootTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/EcuMFixedBehavior/SelectBootTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/bootTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_BootTarget/SelectBootTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="ffd41a78-5825-4af7-9e26-a4d5fc1b12b9">
+                          <SHORT-NAME>GetBootTarget_bootTarget_GetBootTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/EcuMFixedBehavior/GetBootTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/bootTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_BootTarget/GetBootTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>EcuM_UserType</SHORT-LABEL>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Services/EcuM/EcuM_UserType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/SR_EthernetUser</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="4f1bef12-c174-3dd7-8d03-f96978adb383">
+                          <SHORT-NAME>EcuM_MainFunction</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <MODE-SWITCH-POINTS>
+                            <MODE-SWITCH-POINT UUID="50c88f60-57ac-3f00-a404-eb32e7afc487">
+                              <SHORT-NAME>modeSwitchPoint_EcuM_MainFunction_currentMode_currentMode</SHORT-NAME>
+                              <MODE-GROUP-IREF>
+                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/currentMode</CONTEXT-P-PORT-REF>
+                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR/Services/EcuM/EcuM_CurrentMode/currentMode</TARGET-MODE-GROUP-REF>
+                              </MODE-GROUP-IREF>
+                            </MODE-SWITCH-POINT>
+                          </MODE-SWITCH-POINTS>
+                          <SYMBOL>EcuM_MainFunction</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="c68ee774-f219-3d40-a895-7c6e0f0c30a8">
+                          <SHORT-NAME>RequestRUN</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_RequestRUN</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="81e90134-5446-3684-aa53-f4e6e189a92c">
+                          <SHORT-NAME>ReleaseRUN</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_ReleaseRUN</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="170fd77d-df5c-39cd-b3aa-bae9adce8993">
+                          <SHORT-NAME>RequestPOSTRUN</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_RequestPOST_RUN</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="6bad7f91-8a15-30d2-a7c5-20c056ef60ce">
+                          <SHORT-NAME>ReleasePOSTRUN</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_ReleasePOST_RUN</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="9e1bc5a1-3cf3-399d-8b3d-51773582a3a5">
+                          <SHORT-NAME>SelectShutdownTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_SelectShutdownTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="5aa03a84-048e-3cba-8bd2-e02c5d64624d">
+                          <SHORT-NAME>GetShutdownTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_GetShutdownTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="bf578ad7-b848-3e67-8f9d-efd0ed780f91">
+                          <SHORT-NAME>GetLastShutdownTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_GetLastShutdownTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="4bbc58a4-1cfc-3ed4-9654-86c380d8dc83">
+                          <SHORT-NAME>SelectBootTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_SelectBootTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="8fbabefd-6eae-33b3-ba51-7599aaace35a">
+                          <SHORT-NAME>GetBootTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_GetBootTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="6fc5cf9c-0847-3792-9ea2-c683d7c16601">
+                  <SHORT-NAME>EcuMFixedImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="160208fa-f36f-3894-b97d-da48364b07f0">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="b2206990-d1fd-325b-af5c-7065f4e508c0">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/EcuMFixedBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>IoHwAb</SHORT-NAME>
+              <ELEMENTS>
+                <ECU-ABSTRACTION-SW-COMPONENT-TYPE UUID="708e564a-9e55-3d7f-9581-f522b8d57e5e">
+                  <SHORT-NAME>IoHwAb</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="9aba0544-2f32-3250-9c66-c96574f840ae">
+                      <SHORT-NAME>Digital_DigitalSignal_LED1</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ArcCore/Services/IoHwAb/DigitalServiceWrite</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="d9404748-a4a0-3f3f-81e7-a46847d493c8">
+                      <SHORT-NAME>Digital_DigitalSignal_LED2</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ArcCore/Services/IoHwAb/DigitalServiceWrite</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="9366e36f-5f17-324e-a113-b1eee3ddf6b8">
+                      <SHORT-NAME>IoHwAbBehavior</SHORT-NAME>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="783130aa-3193-48aa-9fb5-8fefe8c0b92a">
+                          <SHORT-NAME>DigitalWrite_Digital_DigitalSignal_LED1_Write</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/IoHwAb/IoHwAb/IoHwAbBehavior/DigitalWrite</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/IoHwAb/IoHwAb/Digital_DigitalSignal_LED1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ArcCore/Services/IoHwAb/DigitalServiceWrite/Write</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="8492261c-c4c1-48c3-9632-5b692bd1b75c">
+                          <SHORT-NAME>DigitalWrite_Digital_DigitalSignal_LED2_Write</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/IoHwAb/IoHwAb/IoHwAbBehavior/DigitalWrite</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/IoHwAb/IoHwAb/Digital_DigitalSignal_LED2</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ArcCore/Services/IoHwAb/DigitalServiceWrite/Write</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>IoHwAb_SignalType_</SHORT-LABEL>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ArcCore/Services/IoHwAb/IoHwAb_SignalType_</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/IoHwAb/IoHwAb/Digital_DigitalSignal_LED1</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>IoHwAb_SignalType_</SHORT-LABEL>
+                                  <VALUE>1</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ArcCore/Services/IoHwAb/IoHwAb_SignalType_</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/IoHwAb/IoHwAb/Digital_DigitalSignal_LED2</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="f47bb2dd-7ef0-3993-b677-d23c19e223b7">
+                          <SHORT-NAME>DigitalWrite</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_Digital_Write</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </ECU-ABSTRACTION-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="f5374934-263a-35d2-89f5-5e5b125154fa">
+                  <SHORT-NAME>IoHwAbImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="fea4b518-88d5-3a8f-ae6c-b09a6141552a">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="a3c6b9a1-bb70-3ca2-b7f3-3bd34d87ad39">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/IoHwAb/IoHwAb/IoHwAbBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>EthernetSimple</SHORT-NAME>
+      <ELEMENTS>
+        <SYSTEM UUID="ab8b28b1-a6c6-4d33-9321-07e28690a1a9">
+          <SHORT-NAME>EthernetSimple</SHORT-NAME>
+          <CATEGORY>ECU_EXTRACT</CATEGORY>
+          <MAPPINGS>
+            <SYSTEM-MAPPING UUID="3c5a0dc8-3b60-4614-9586-3dd4d0ec9cd4">
+              <SHORT-NAME>ImplementationMappings</SHORT-NAME>
+              <SW-IMPL-MAPPINGS>
+                <SWC-TO-IMPL-MAPPING UUID="694c77b2-039e-4836-8f8d-5cf941a3bb87">
+                  <SHORT-NAME>comMMapping</SHORT-NAME>
+                  <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/EthernetSimple_Generic/Services/ComM/ComMImpl</COMPONENT-IMPLEMENTATION-REF>
+                  <COMPONENT-IREFS>
+                    <COMPONENT-IREF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/EthernetSimple/EthernetSimple/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/comM</TARGET-COMPONENT-REF>
+                    </COMPONENT-IREF>
+                  </COMPONENT-IREFS>
+                </SWC-TO-IMPL-MAPPING>
+                <SWC-TO-IMPL-MAPPING UUID="b479802d-d392-4a11-b030-b9eb1b6dcbe8">
+                  <SHORT-NAME>dltMapping</SHORT-NAME>
+                  <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/EthernetSimple_Generic/Services/Dlt/DltImpl</COMPONENT-IMPLEMENTATION-REF>
+                  <COMPONENT-IREFS>
+                    <COMPONENT-IREF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/EthernetSimple/EthernetSimple/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/dlt</TARGET-COMPONENT-REF>
+                    </COMPONENT-IREF>
+                  </COMPONENT-IREFS>
+                </SWC-TO-IMPL-MAPPING>
+                <SWC-TO-IMPL-MAPPING UUID="40ce1d2d-b371-43d0-b033-9434f0cdb52e">
+                  <SHORT-NAME>bswMMapping</SHORT-NAME>
+                  <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/EthernetSimple_Generic/Services/BswM/BswMComponentImpl</COMPONENT-IMPLEMENTATION-REF>
+                  <COMPONENT-IREFS>
+                    <COMPONENT-IREF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/EthernetSimple/EthernetSimple/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/bswm</TARGET-COMPONENT-REF>
+                    </COMPONENT-IREF>
+                  </COMPONENT-IREFS>
+                </SWC-TO-IMPL-MAPPING>
+                <SWC-TO-IMPL-MAPPING UUID="9e61e639-143d-44f2-b64d-c182f740f8c7">
+                  <SHORT-NAME>ecuMMapping</SHORT-NAME>
+                  <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuMFixedImpl</COMPONENT-IMPLEMENTATION-REF>
+                  <COMPONENT-IREFS>
+                    <COMPONENT-IREF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/EthernetSimple/EthernetSimple/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/ecuM</TARGET-COMPONENT-REF>
+                    </COMPONENT-IREF>
+                  </COMPONENT-IREFS>
+                </SWC-TO-IMPL-MAPPING>
+                <SWC-TO-IMPL-MAPPING UUID="72217de2-a6f3-453c-b2f2-639935379e00">
+                  <SHORT-NAME>ioHwAbMapping</SHORT-NAME>
+                  <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/IoHwAb/IoHwAbImpl</COMPONENT-IMPLEMENTATION-REF>
+                  <COMPONENT-IREFS>
+                    <COMPONENT-IREF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/EthernetSimple/EthernetSimple/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/ioHwAb</TARGET-COMPONENT-REF>
+                    </COMPONENT-IREF>
+                  </COMPONENT-IREFS>
+                </SWC-TO-IMPL-MAPPING>
+                <SWC-TO-IMPL-MAPPING UUID="91d904c6-295f-4fbc-b09a-1df9d0f4ad14">
+                  <SHORT-NAME>SwcReaderMapping</SHORT-NAME>
+                  <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/SwcReader/SwcReaderImpl</COMPONENT-IMPLEMENTATION-REF>
+                  <COMPONENT-IREFS>
+                    <COMPONENT-IREF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/EthernetSimple/EthernetSimple/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcReader</TARGET-COMPONENT-REF>
+                    </COMPONENT-IREF>
+                  </COMPONENT-IREFS>
+                </SWC-TO-IMPL-MAPPING>
+                <SWC-TO-IMPL-MAPPING UUID="2fbef2c9-b3b7-457d-b9a2-373ff88c4393">
+                  <SHORT-NAME>SwcWriterMapping</SHORT-NAME>
+                  <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/SwcWriter/SwcWriterImpl</COMPONENT-IMPLEMENTATION-REF>
+                  <COMPONENT-IREFS>
+                    <COMPONENT-IREF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/EthernetSimple/EthernetSimple/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcWriter</TARGET-COMPONENT-REF>
+                    </COMPONENT-IREF>
+                  </COMPONENT-IREFS>
+                </SWC-TO-IMPL-MAPPING>
+              </SW-IMPL-MAPPINGS>
+            </SYSTEM-MAPPING>
+            <SYSTEM-MAPPING UUID="52be26fd-68b4-429b-9487-95abb28d3dea">
+              <SHORT-NAME>SignalMappings</SHORT-NAME>
+              <DATA-MAPPINGS>
+                <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                  <DATA-ELEMENT-IREF>
+                    <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/EthernetSimple/EthernetSimple/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                    <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple/TopLevelComposition/Tx01</CONTEXT-PORT-REF>
+                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Interfaces/BasicSRInterface2/data2</TARGET-DATA-PROTOTYPE-REF>
+                  </DATA-ELEMENT-IREF>
+                  <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/EthernetSimple/Communication/Tx01dataSSig</SYSTEM-SIGNAL-REF>
+                </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                  <DATA-ELEMENT-IREF>
+                    <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/EthernetSimple/EthernetSimple/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                    <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/EthernetSimple/TopLevelComposition/Rx01</CONTEXT-PORT-REF>
+                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Interfaces/BasicSRInterface1/data1</TARGET-DATA-PROTOTYPE-REF>
+                  </DATA-ELEMENT-IREF>
+                  <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/EthernetSimple/Communication/Rx01dataSSig</SYSTEM-SIGNAL-REF>
+                </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+              </DATA-MAPPINGS>
+            </SYSTEM-MAPPING>
+          </MAPPINGS>
+          <ROOT-SOFTWARE-COMPOSITIONS>
+            <ROOT-SW-COMPOSITION-PROTOTYPE UUID="4cb72922-a969-4e35-b234-977bdd9cb893">
+              <SHORT-NAME>RootSwComposition</SHORT-NAME>
+              <SOFTWARE-COMPOSITION-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/EthernetSimple/TopLevelComposition</SOFTWARE-COMPOSITION-TREF>
+            </ROOT-SW-COMPOSITION-PROTOTYPE>
+          </ROOT-SOFTWARE-COMPOSITIONS>
+          <SYSTEM-VERSION>1</SYSTEM-VERSION>
+        </SYSTEM>
+        <COMPOSITION-SW-COMPONENT-TYPE UUID="93921710-f2d1-39d4-b287-aa8a76a5413d">
+          <SHORT-NAME>TopLevelComposition</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="12d266fa-82d4-32dc-acf2-a7dfdd20bc62">
+              <SHORT-NAME>Tx01</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/BasicSRInterface2</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6d506c3a-5e85-35b8-b6d7-84ef054bbfb8">
+              <SHORT-NAME>Rx01</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/BasicSRInterface1</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <COMPONENTS>
+            <SW-COMPONENT-PROTOTYPE UUID="0e9e6897-8688-3fbd-a317-cd66ceddc556">
+              <SHORT-NAME>SwcReader</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/SwcReader/SwcReaderType</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="0085006c-8118-32c9-a531-ef793b5e2c62">
+              <SHORT-NAME>SwcWriter</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/SwcWriter/SwcWriterType</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="a972fdb3-e73c-32b8-bb9c-eee824b31b1f">
+              <SHORT-NAME>ecuM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="64134d70-519a-34ec-a322-ac2b7d920802">
+              <SHORT-NAME>ioHwAb</SHORT-NAME>
+              <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/IoHwAb/IoHwAb</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="a5d6a14b-9b00-3a30-9c5a-c6778a87db31">
+              <SHORT-NAME>comM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/EthernetSimple_Generic/Services/ComM/ComM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="f3ac890d-2af9-3a23-a835-f2422de52991">
+              <SHORT-NAME>dlt</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/EthernetSimple_Generic/Services/Dlt/Dlt</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="d862562e-b5e7-3270-a1ea-5d1cdbacbc3e">
+              <SHORT-NAME>bswm</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/EthernetSimple_Generic/Services/BswM/BswM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+          </COMPONENTS>
+          <CONNECTORS>
+            <ASSEMBLY-SW-CONNECTOR UUID="74ce11b1-d2e6-3072-8eb8-283c92900d77">
+              <SHORT-NAME>SR2</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/ioHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/IoHwAb/IoHwAb/Digital_DigitalSignal_LED1</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcReader</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcReader/SwcReaderType/Blinker</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="82f4f481-a0cb-33db-9ad8-23be9515c885">
+              <SHORT-NAME>SR5</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/ioHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/IoHwAb/IoHwAb/Digital_DigitalSignal_LED2</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcWriter</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcWriter/SwcWriterType/Blinker</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="4b282fe2-22be-3373-8ca0-efbd7fbb9b20">
+              <SHORT-NAME>ecuM_SR_EthernetUser_to_SwcReader_RunControl</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/ecuM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/SR_EthernetUser</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcReader</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcReader/SwcReaderType/RunControl</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="cb073e35-87b5-3d22-8053-2531a32eba36">
+              <SHORT-NAME>ecuM_currentMode_to_SwcReader_Mode</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/ecuM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/currentMode</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcReader</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcReader/SwcReaderType/Mode</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="85a6b31a-0800-3c25-a83c-42db7395c46b">
+              <SHORT-NAME>ecuM_currentMode_to_SwcWriter_Mode</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/ecuM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_mpc5748g_mpc574xg_mb_Ecu/Services/EcuM/EcuM/currentMode</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcWriter</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcWriter/SwcWriterType/Mode</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="5281ba28-3cfb-3320-85f4-1d9281d41f5e">
+              <SHORT-NAME>SR3</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcReader</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/SwcReader/SwcReaderType/ResultPort</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcWriter</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcWriter/SwcWriterType/InputPort</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="d2dbed18-1f03-3a36-af16-7f5307597512">
+              <SHORT-NAME>SwcWriter_ComMControl_to_bswm_modeRequestPort_SwcStartCommunication</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcWriter</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/SwcWriter/SwcWriterType/ComMControl</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/bswm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/BswM/BswM/modeRequestPort_SwcStartCommunication</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="05fe8f98-73db-3881-90b1-b1661a356a79">
+              <SHORT-NAME>dlt_Dlt_service_to_SwcReader_Dlt</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/dlt</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple_Generic/Services/Dlt/Dlt/Dlt_service</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcReader</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcReader/SwcReaderType/Dlt</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <DELEGATION-SW-CONNECTOR UUID="45908807-f568-31d0-94e2-137bdaae2235">
+              <SHORT-NAME>Tx01_delegate_connector0</SHORT-NAME>
+              <INNER-PORT-IREF>
+                <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                  <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcWriter</CONTEXT-COMPONENT-REF>
+                  <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/SwcWriter/SwcWriterType/SenderPort</TARGET-P-PORT-REF>
+                </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+              </INNER-PORT-IREF>
+              <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/EthernetSimple/TopLevelComposition/Tx01</OUTER-PORT-REF>
+            </DELEGATION-SW-CONNECTOR>
+            <DELEGATION-SW-CONNECTOR UUID="e09298e1-49eb-3f65-8513-7a1f23609285">
+              <SHORT-NAME>Rx01_delegate_connector0</SHORT-NAME>
+              <INNER-PORT-IREF>
+                <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                  <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EthernetSimple/TopLevelComposition/SwcReader</CONTEXT-COMPONENT-REF>
+                  <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcReader/SwcReaderType/ReceiverPort</TARGET-R-PORT-REF>
+                </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+              </INNER-PORT-IREF>
+              <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/EthernetSimple/TopLevelComposition/Rx01</OUTER-PORT-REF>
+            </DELEGATION-SW-CONNECTOR>
+          </CONNECTORS>
+        </COMPOSITION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>Communication</SHORT-NAME>
+          <ELEMENTS>
+            <SYSTEM-SIGNAL UUID="149bf993-b3f4-4e76-a37a-dc6cb5691691">
+              <SHORT-NAME>Rx01dataSSig</SHORT-NAME>
+            </SYSTEM-SIGNAL>
+            <SYSTEM-SIGNAL UUID="8758bbce-83eb-4e14-ab48-8e413c420778">
+              <SHORT-NAME>Tx01dataSSig</SHORT-NAME>
+            </SYSTEM-SIGNAL>
+            <I-SIGNAL UUID="2c41aed9-819c-46fc-a9fe-d3f929901176">
+              <SHORT-NAME>Rx01dataISig</SHORT-NAME>
+              <DATA-TYPE-POLICY>NETWORK-REPRESENTATION-FROM-COM-SPEC</DATA-TYPE-POLICY>
+              <LENGTH>0</LENGTH>
+              <NETWORK-REPRESENTATION-PROPS />
+              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/EthernetSimple/Communication/Rx01dataSSig</SYSTEM-SIGNAL-REF>
+            </I-SIGNAL>
+            <I-SIGNAL UUID="635ae3f7-cc4a-42bb-b56c-7dfc9c76c46f">
+              <SHORT-NAME>Tx01dataISig</SHORT-NAME>
+              <DATA-TYPE-POLICY>NETWORK-REPRESENTATION-FROM-COM-SPEC</DATA-TYPE-POLICY>
+              <LENGTH>0</LENGTH>
+              <NETWORK-REPRESENTATION-PROPS />
+              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/EthernetSimple/Communication/Tx01dataSSig</SYSTEM-SIGNAL-REF>
+            </I-SIGNAL>
+            <I-SIGNAL-I-PDU UUID="17b53786-74ca-43ac-b8c3-ea91eb380818">
+              <SHORT-NAME>Rx01dataIPdu</SHORT-NAME>
+              <I-SIGNAL-TO-PDU-MAPPINGS>
+                <I-SIGNAL-TO-I-PDU-MAPPING UUID="46763dc2-9beb-4f0e-a29b-f23ac21e4152">
+                  <SHORT-NAME>Rx01dataMapping</SHORT-NAME>
+                  <I-SIGNAL-REF DEST="I-SIGNAL">/EthernetSimple/Communication/Rx01dataISig</I-SIGNAL-REF>
+                </I-SIGNAL-TO-I-PDU-MAPPING>
+              </I-SIGNAL-TO-PDU-MAPPINGS>
+              <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+            </I-SIGNAL-I-PDU>
+            <I-SIGNAL-I-PDU UUID="276cd97c-3dcf-4e74-a517-0183dce4da9e">
+              <SHORT-NAME>Tx01dataIPdu</SHORT-NAME>
+              <I-SIGNAL-TO-PDU-MAPPINGS>
+                <I-SIGNAL-TO-I-PDU-MAPPING UUID="da2c06c5-56e9-4de6-b87f-0f37232b59a5">
+                  <SHORT-NAME>Tx01dataMapping</SHORT-NAME>
+                  <I-SIGNAL-REF DEST="I-SIGNAL">/EthernetSimple/Communication/Tx01dataISig</I-SIGNAL-REF>
+                </I-SIGNAL-TO-I-PDU-MAPPING>
+              </I-SIGNAL-TO-PDU-MAPPINGS>
+              <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+            </I-SIGNAL-I-PDU>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>Interfaces</SHORT-NAME>
+      <ELEMENTS>
+        <SENDER-RECEIVER-INTERFACE UUID="706722f9-1749-3c99-b6e4-49c4d116c2a9">
+          <SHORT-NAME>BasicSRInterface1</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <VARIABLE-DATA-PROTOTYPE UUID="95f9efae-82c3-379a-bc1d-e043439b15ab">
+              <SHORT-NAME>data1</SHORT-NAME>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ArcCore/Platform/ImplementationDataTypes/uint32</TYPE-TREF>
+            </VARIABLE-DATA-PROTOTYPE>
+          </DATA-ELEMENTS>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="5334f77f-7c30-371b-befa-64032c268201">
+          <SHORT-NAME>BasicSRInterface2</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <VARIABLE-DATA-PROTOTYPE UUID="693d4d3e-53bf-3028-bf2f-8a6014f264b2">
+              <SHORT-NAME>data2</SHORT-NAME>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ArcCore/Platform/ImplementationDataTypes/sint32</TYPE-TREF>
+            </VARIABLE-DATA-PROTOTYPE>
+          </DATA-ELEMENTS>
+        </SENDER-RECEIVER-INTERFACE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>SwcReader</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="4f30590f-9710-3956-9768-cb0971cde5ed">
+          <SHORT-NAME>SwcReaderType</SHORT-NAME>
+          <PORTS>
+            <R-PORT-PROTOTYPE UUID="fb4d701f-702d-34cb-8e1a-34cd4e7aae4b">
+              <SHORT-NAME>ReceiverPort</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/BasicSRInterface1</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="241cc1a1-633f-3dc4-b75a-2cba7e8ebba6">
+              <SHORT-NAME>ResultPort</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/BasicSRInterface1</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="c6767318-8df7-3507-b0bb-042e532d5fc0">
+              <SHORT-NAME>Mode</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_CurrentMode</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6bd6a4a6-b2e9-39ed-b366-a9dd72df482d">
+              <SHORT-NAME>RunControl</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_StateRequest</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="651d7ffa-e759-3253-9df6-2d4bd33a14f7">
+              <SHORT-NAME>Blinker</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ArcCore/Services/IoHwAb/DigitalServiceWrite</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="43917efa-a1b4-3478-bfdf-2851a2f22b86">
+              <SHORT-NAME>Det</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/Det/DETService</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="89a93b0f-fdf8-3f36-984f-b32a8f440d4c">
+              <SHORT-NAME>Dlt</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/Dlt/DLTService</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="e12f82f4-4daa-35e6-81be-52ae220f9b7c">
+              <SHORT-NAME>SwcReaderBehavior</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR/Services/EcuM/EcuMFixedTypeMappings</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EVENTS>
+                <TIMING-EVENT UUID="73c2e594-dde6-49b9-9a15-bb670c7abae2">
+                  <SHORT-NAME>SwcReaderRunnable_timingEvent_0_1</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/SwcReader/SwcReaderType/SwcReaderBehavior/SwcReaderRunnable</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="a9b0f9f5-b85b-4477-ac7e-7e5c3d9d8ccc">
+                  <SHORT-NAME>InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/SwcReader/SwcReaderType/SwcReaderBehavior/Init</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-EXIT</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcReader/SwcReaderType/Mode</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR/Services/EcuM/EcuM_CurrentMode/currentMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/AUTOSAR/Services/EcuM/EcuM_Mode/STARTUP</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+              </EVENTS>
+              <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="2bf4c537-3d4a-32a1-8aef-40b871ed79dd">
+                  <SHORT-NAME>SwcReaderRunnable</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-READ-ACCESSS>
+                    <VARIABLE-ACCESS UUID="dc1261ae-3801-3e5e-976e-ee288ae12d92">
+                      <SHORT-NAME>dataReadAccess_SwcReaderRunnable_ReceiverPort_data1</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/SwcReader/SwcReaderType/ReceiverPort</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Interfaces/BasicSRInterface1/data1</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-READ-ACCESSS>
+                  <DATA-WRITE-ACCESSS>
+                    <VARIABLE-ACCESS UUID="9b662726-be3c-384d-9121-3233798c40a1">
+                      <SHORT-NAME>dataWriteAccess_SwcReaderRunnable_ResultPort_data1</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/SwcReader/SwcReaderType/ResultPort</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Interfaces/BasicSRInterface1/data1</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-WRITE-ACCESSS>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="787f5dc0-78b3-35f5-a8ff-ef5fb252db3a">
+                      <SHORT-NAME>Blinker1CallPoint</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcReader/SwcReaderType/Blinker</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ArcCore/Services/IoHwAb/DigitalServiceWrite/Write</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="9671eba1-bcb1-3f3f-8315-d3ed26c2de2b">
+                      <SHORT-NAME>Det_ReportError</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcReader/SwcReaderType/Det</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/Det/DETService/ReportError</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="fdd7c2a0-87a4-370d-b134-a083d0785f39">
+                      <SHORT-NAME>Dlt_SendLogMessage</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcReader/SwcReaderType/Dlt</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/Dlt/DLTService/SendLogMessage</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>swcReaderRunnable</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="b4e0e2d3-a7d5-3a6c-b3a5-7a84f9acd384">
+                  <SHORT-NAME>Init</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6eeaf67f-d9b8-3027-a563-cf073bd9373c">
+                      <SHORT-NAME>RunControl_RequestRUN</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcReader/SwcReaderType/RunControl</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/RequestRUN</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>swcReaderInit</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="46e820fa-5bfe-3308-9c17-aeaeeba05d6f">
+          <SHORT-NAME>SwcReaderImpl</SHORT-NAME>
+          <CODE-DESCRIPTORS>
+            <CODE UUID="3094cbdf-54c4-3cea-bd0b-7cd5030429fb">
+              <SHORT-NAME>src</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                  <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+            </CODE>
+          </CODE-DESCRIPTORS>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <RESOURCE-CONSUMPTION UUID="cb70fea1-eeac-3dd0-b700-2e5448d1d8eb">
+            <SHORT-NAME>resourceConsumption</SHORT-NAME>
+          </RESOURCE-CONSUMPTION>
+          <VENDOR-ID>0</VENDOR-ID>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/SwcReader/SwcReaderType/SwcReaderBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>SwcWriter</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="50ae7e62-c73a-3ee3-8f66-9a669f1230a6">
+          <SHORT-NAME>SwcWriterType</SHORT-NAME>
+          <PORTS>
+            <R-PORT-PROTOTYPE UUID="cfe182d6-6cec-317f-a3e2-8ce425a5c1d4">
+              <SHORT-NAME>InputPort</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/BasicSRInterface1</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="a376a4cc-6161-3aed-a7d1-c6fe542d3bd2">
+              <SHORT-NAME>SenderPort</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/BasicSRInterface2</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="624dfe22-95c9-3051-8fb4-8c531117428c">
+              <SHORT-NAME>Blinker</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ArcCore/Services/IoHwAb/DigitalServiceWrite</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="d1be4a07-f2f2-30c5-82dd-8e88b61be371">
+              <SHORT-NAME>ComMControl</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/EthernetSimple_Generic/Services/BswM/ComMModeRequestInterface</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="e8a75cf1-20a9-342f-824a-c88ab82f6a81">
+              <SHORT-NAME>Mode</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_CurrentMode</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="1d62aaf1-2ce9-356e-965b-68fd90d40e24">
+              <SHORT-NAME>SwcWriterBehavior</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR/Services/EcuM/EcuMFixedTypeMappings</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EVENTS>
+                <TIMING-EVENT UUID="aeaf5503-d5db-4496-b3a1-a492e15c0fae">
+                  <SHORT-NAME>SwcWriterRunnable_timingEvent_1_0</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/SwcWriter/SwcWriterType/SwcWriterBehavior/SwcWriterRunnable</START-ON-EVENT-REF>
+                  <PERIOD>1.0</PERIOD>
+                </TIMING-EVENT>
+                <SWC-MODE-SWITCH-EVENT UUID="892e5e37-8dd8-4e40-92a7-f3f874fe14cd">
+                  <SHORT-NAME>InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/SwcWriter/SwcWriterType/SwcWriterBehavior/Init</START-ON-EVENT-REF>
+                  <ACTIVATION>ON-EXIT</ACTIVATION>
+                  <MODE-IREFS>
+                    <MODE-IREF>
+                      <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcWriter/SwcWriterType/Mode</CONTEXT-PORT-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR/Services/EcuM/EcuM_CurrentMode/currentMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/AUTOSAR/Services/EcuM/EcuM_Mode/STARTUP</TARGET-MODE-DECLARATION-REF>
+                    </MODE-IREF>
+                  </MODE-IREFS>
+                </SWC-MODE-SWITCH-EVENT>
+              </EVENTS>
+              <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="39a98ca6-b5a8-329c-82be-4f9f26241370">
+                  <SHORT-NAME>SwcWriterRunnable</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-READ-ACCESSS>
+                    <VARIABLE-ACCESS UUID="9965204a-ee10-3159-944a-929a63308e9e">
+                      <SHORT-NAME>dataReadAccess_SwcWriterRunnable_InputPort_data1</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/SwcWriter/SwcWriterType/InputPort</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Interfaces/BasicSRInterface1/data1</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-READ-ACCESSS>
+                  <DATA-WRITE-ACCESSS>
+                    <VARIABLE-ACCESS UUID="522e7be7-c8f7-3f59-b924-f4f17c3e805c">
+                      <SHORT-NAME>dataWriteAccess_SwcWriterRunnable_SenderPort_data2</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/SwcWriter/SwcWriterType/SenderPort</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Interfaces/BasicSRInterface2/data2</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-WRITE-ACCESSS>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="fcd294c1-c0c5-3682-bcc1-fc46271702d1">
+                      <SHORT-NAME>Blinker2CallPoint</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SwcWriter/SwcWriterType/Blinker</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ArcCore/Services/IoHwAb/DigitalServiceWrite/Write</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>swcWriterRunnable</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="469c2092-d5d3-3c61-95d4-68b27712c52a">
+                  <SHORT-NAME>Init</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-WRITE-ACCESSS>
+                    <VARIABLE-ACCESS UUID="fea20d5f-0d69-3afe-a777-11cb37593f9d">
+                      <SHORT-NAME>dataWriteAccess_Init_ComMControl_requestedMode</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/SwcWriter/SwcWriterType/ComMControl</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/EthernetSimple_Generic/Services/BswM/ComMModeRequestInterface/requestedMode</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-WRITE-ACCESSS>
+                  <SYMBOL>SwcWriterInit</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="eb56536c-e1ff-309e-a2c5-2fd446025e64">
+          <SHORT-NAME>SwcWriterImpl</SHORT-NAME>
+          <CODE-DESCRIPTORS>
+            <CODE UUID="a15c4441-963e-3919-8ef0-f05ee8c68ed4">
+              <SHORT-NAME>src</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                  <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+            </CODE>
+          </CODE-DESCRIPTORS>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <RESOURCE-CONSUMPTION UUID="b3b36421-1c3e-3ce5-87ef-66ba2a4ce9f6">
+            <SHORT-NAME>resourceConsumption</SHORT-NAME>
+          </RESOURCE-CONSUMPTION>
+          <VENDOR-ID>0</VENDOR-ID>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/SwcWriter/SwcWriterType/SwcWriterBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES></AUTOSAR>

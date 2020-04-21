@@ -1,0 +1,11 @@
+
+=== Can ===
+
+-Validating module Can...
+	 -Can controller is not referenced by a CanIf controller [ /ArcCore/Boards/stm32_stm3210c/Can/CanConfigSet/CanController0 ]
+
+-Generating module Can...
+		Can.mk
+		Can_PBcfg.c
+		Can_Cfg.h
+Can done.

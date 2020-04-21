@@ -1,0 +1,48 @@
+// create package for SWC Reader
+package SwcReader
+import Interfaces.*
+import EthernetSimple_Generic.Services.IoHwAb.*
+import AUTOSAR.Services.EcuM.*
+import AUTOSAR.Services.Det.*
+import ArcCore.Services.IoHwAb.*
+import AUTOSAR.Services.Dlt.*
+
+component application SwcReaderType {
+	ports {
+		receiver ReceiverPort requires BasicSRInterface1		
+		sender ResultPort provides BasicSRInterface1		
+		receiver Mode requires EcuM_CurrentMode
+		client RunControl requires EcuM_StateRequest
+		client Blinker requires DigitalServiceWrite
+		client Det requires DETService
+		client Dlt requires DLTService
+	}
+}
+
+// define component internal behavior for the RTE. It is a part of the component type hand must therefore extend the ComponentTypes package
+internalBehavior SwcReaderBehavior for SwcReaderType {
+ 	dataTypeMappings {
+		EcuMFixedTypeMappings
+	}
+	runnable SwcReaderRunnable [0.0] {
+		symbol "swcReaderRunnable"
+		dataReadAccess  ReceiverPort.data1 
+		dataWriteAccess ResultPort.data1		
+		serverCallPoint synchronous Blinker.Write as Blinker1CallPoint
+		serverCallPoint synchronous Det.ReportError
+		serverCallPoint synchronous Dlt.SendLogMessage
+		timingEvent 0.1
+	}
+	runnable Init [0.0] {
+		symbol "swcReaderInit"
+		serverCallPoint synchronous RunControl.RequestRUN
+		modeSwitchEvent exit Mode.currentMode.STARTUP as InitEvent
+	}
+}
+
+// component implementation describes how the SWC is implemented.
+// It may be located in a separate package if there exists more than one type of implementation
+implementation SwcReaderImpl for SwcReaderType.SwcReaderBehavior {
+	language c
+	codeDescriptor "src"
+}

@@ -1,0 +1,56 @@
+// extend the already existing ComponentTypes package
+package SwcWriter
+import Interfaces.*
+import HelloWorld_Generic.Services.IoHwAb.*
+import HelloWorld_Generic.Services.BswM.ComMModeRequestInterface
+import ArcCore.Services.IoHwAb.DigitalServiceWrite
+import AUTOSAR.Services.ComM.*
+import AUTOSAR.Services.EcuM.EcuM_CurrentMode
+import AUTOSAR.Services.EcuM.EcuMFixedTypeMappings
+
+component application SwcWriterType {
+	ports {
+		receiver CommandPort requires BasicSRInterface
+		receiver InputPort requires BasicSRInterface
+		sender SenderPort provides BasicSRInterface
+		client Blinker requires DigitalServiceWrite
+		sender ComMControl provides ComMModeRequestInterface
+		receiver Mode requires EcuM_CurrentMode 
+		receiver CommMode requires ComM_CurrentMode
+	}
+}
+
+// define component internal behavior for the RTE. It is a part of the component type hand must therefore extend the ComponentTypes package
+internalBehavior SwcWriterBehavior for SwcWriterType {
+	dataTypeMappings {
+		EcuMFixedTypeMappings
+		ComMTypeMappings
+	}
+	runnable SwcWriterRunnable [0.0] {
+		symbol "swcWriterRunnable"
+		dataReadAccess CommandPort.cmd
+		dataWriteAccess SenderPort.data1
+		dataReadAccess InputPort.data1
+		serverCallPoint synchronous Blinker.Write as Blinker2CallPoint
+		timingEvent 1.0
+	}
+	runnable Init [0.0] {
+		symbol "SwcWriterInit"	
+		dataWriteAccess ComMControl.requestedMode
+		modeSwitchEvent exit Mode.currentMode.STARTUP as InitEvent
+	}
+	runnable FullCommunication [0.0] {
+		symbol "SwcWriterCommunication"	
+		modeSwitchEvent entry CommMode.currentMode.COMM_FULL_COMMUNICATION as FullCommEvent
+	}
+
+
+}
+
+// component implementation describes how the SWC is implemented.
+// It may be located in a separate package if there exists more than one type of implementation
+implementation SwcWriterImpl for SwcWriterType.SwcWriterBehavior {
+	language c
+	codeDescriptor "src"
+}
+

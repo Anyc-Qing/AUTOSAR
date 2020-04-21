@@ -1,0 +1,42 @@
+package EthernetSimple
+
+import SwcReader.SwcReaderType
+import SwcWriter.SwcWriterType
+import EthernetSimple_mpc5748g_mpc574xg_mb_Ecu.Services.IoHwAb.*
+import EthernetSimple_mpc5748g_mpc574xg_mb_Ecu.Services.EcuM.*
+import EthernetSimple_Generic.Services.ComM.*
+import EthernetSimple_Generic.Services.Det.Det
+import EthernetSimple_Generic.Services.Dlt.Dlt
+import EthernetSimple_Generic.Services.BswM.BswM
+
+composition TopLevelComposition {
+	
+	prototype SwcReaderType SwcReader
+	prototype SwcWriterType SwcWriter
+	prototype EcuM ecuM
+	prototype IoHwAb ioHwAb
+	prototype ComM comM
+	prototype Dlt dlt
+	prototype BswM bswm
+	
+	// External ports
+	ports {
+		provides SwcWriter.SenderPort Tx01
+		requires SwcReader.ReceiverPort Rx01
+	}
+	
+	// Internal connections
+	connect ioHwAb.Digital_DigitalSignal_LED1 to SwcReader.Blinker as SR2
+	connect ioHwAb.Digital_DigitalSignal_LED2 to SwcWriter.Blinker as SR5	
+
+	connect ecuM.SR_EthernetUser to SwcReader.RunControl
+	connect ecuM.currentMode to SwcReader.Mode
+	connect ecuM.currentMode to SwcWriter.Mode
+
+	connect SwcReader.ResultPort to SwcWriter.InputPort as SR3
+
+	connect SwcWriter.ComMControl to bswm.modeRequestPort_SwcStartCommunication
+
+	connect dlt.Dlt_service to SwcReader.Dlt
+}
+

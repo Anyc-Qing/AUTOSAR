@@ -1,0 +1,101 @@
+Document History
+===================
+
+
+History
+----------------------
+
+.. list-table:: Document History
+  :widths: 10 30 15 40
+  :header-rows: 1
+  :align: left
+
+  * - Version
+    - Author
+    - Date
+    - Description
+#if defined(CFG_MPC5XXX)
+  * - 0.1
+    - Afshin 
+    - 2017-11-14
+    - First draft
+#endif    
+
+#if defined(CFG_TMS570)
+  * - 0.1
+    - 
+    - 
+    - First draft
+#endif    
+#if defined(CFG_MPC5XXX)
+  * - 0.2
+    -  
+    - 
+    - 
+#endif    
+
+#if defined(CFG_TMS570)
+  * - 0.2
+    - 
+    - 
+    - 
+#endif  
+#if defined(CFG_MPC5XXX)
+  * - 0.3
+    - 
+    - 
+    - 
+#endif    
+
+#if defined(CFG_TMS570)
+  * - 0.3
+    - 
+    - 
+    - 
+#endif    
+
+
+Document References
+===================
+
+.. list-table:: Document References
+  :widths: 5 45 50
+  :header-rows: 1
+  :align: left
+
+  * - #
+    - Title
+    - Description 
+  * - gen-1
+    - AUTOSAR SWS PlatformTypes, Release: 4.3.0
+    - AUTOSAR requirements, Specification of Platform Types, ID: 048
+  * - gen-2
+    - AUTOSAR SRS MCU Driver, Release: 4.3.0
+    - AUTOSAR requirements, Requirements on MCU Driver, ID: 195
+  * - gen-3
+    - AUTOSAR SWS MCU Driver, Release: 4.3.0
+    - AUTOSAR requirements, Specifications of MCU Driver, ID: 031
+  * - gen-4
+    - AUTOSAR SWS StandardTypes, Release: 4.3.0
+    - AUTOSAR requirements, Specification of Standard Types, ID: 049
+  * - gen-5
+    - ISO26262 First edition
+    - Road Vehicles Functional Safety. Parts 1-9:2011 and part 10:2012 (Guideline)
+  * - gen-6
+    - MCU for PPC
+    - User Documentation: MCU for PPC
+  * - gen-7
+    - 531 - MCAL Folder Structure Description
+    - Description about the MCAL folder structure and list of files in each module.
+  * - gen-8
+    - 531 - Appendix A
+    - Nomenclature, contains all abbreviations and definitions used in the project.
+  * - gen-9
+    - Safety Manual for MPC5744P
+    - MPC5744PSM Rev 3, 06/2014
+
+	
+
+
+.. include:: arch/docref_arch.rst
+	

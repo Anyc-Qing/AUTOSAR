@@ -1,0 +1,112 @@
+/* 
+ * Copyright (C) ArcCore AB <contact@arccore.com>
+ *
+ * CM3 startup variables: 
+ * _sidata - Start of .data in flash 
+ * _sdata  - start address of .data in RAM
+ * _edata  - end address of .data  in RAM
+ * _sbss   - start address of .bss
+ * _ebss   - end address of .bss
+ * _etext  - ?
+ */
+define memory Mem with size = 4G;
+
+define exported symbol L_INTERRUPTS_ORIGIN    	=	0x00000000;
+define exported symbol L_INTERRUPTS_LENGTH 		=	0x00000400;
+define exported symbol L_FLASH_CODE_0_ORIGIN 	=	0x00000410;
+define exported symbol L_FLASH_CODE_0_LENGTH 	=	0x00030000;
+define exported symbol L_FLASH_CODE_1_LENGTH	=	0x00030000;
+define exported symbol L_SRAM_0_ORIGIN			=	0x1FFF8000;
+define exported symbol L_SRAM_LENGTH			=	0x0000F000;
+
+define exported symbol L_INIT_STACK_LENGTH		=	0x190;
+define exported symbol L_MSP_STACK_LENGTH		=	0x1000;
+define exported symbol L_FLS_LENGTH				=	0x0;
+define exported symbol L_DATA_LENGTH			=	0x1024;
+define exported symbol L_BSS_LENGTH				=	0x6000;
+
+define region L_INTERRUPTS_0 	= Mem:[from L_INTERRUPTS_ORIGIN 	to L_INTERRUPTS_LENGTH];								/* interrupt */
+define region L_FLASH_CODE_0 	= Mem:[from L_FLASH_CODE_0_ORIGIN 	to L_FLASH_CODE_0_ORIGIN + L_FLASH_CODE_0_LENGTH];	/* Flash */
+define region L_FLASH_CODE_1 	= Mem:[from L_FLASH_CODE_0_ORIGIN + L_FLASH_CODE_0_LENGTH 	to 
+											L_FLASH_CODE_0_ORIGIN + L_FLASH_CODE_0_LENGTH + L_FLASH_CODE_1_LENGTH];	/* Flash */
+define region L_SRAM_0       	= Mem:[from L_SRAM_0_ORIGIN 		to 
+											L_SRAM_0_ORIGIN + L_INIT_STACK_LENGTH];  					/* RAM */
+define region L_SRAM_1			= Mem:[from L_SRAM_0_ORIGIN + L_INIT_STACK_LENGTH to 
+											L_SRAM_0_ORIGIN + L_INIT_STACK_LENGTH + L_MSP_STACK_LENGTH];	
+define region L_SRAM_2			= Mem:[from L_SRAM_0_ORIGIN + L_INIT_STACK_LENGTH + L_MSP_STACK_LENGTH to 
+											L_SRAM_0_ORIGIN + L_INIT_STACK_LENGTH + L_MSP_STACK_LENGTH + L_DATA_LENGTH];
+define region L_SRAM_3			= Mem:[from L_SRAM_0_ORIGIN + L_INIT_STACK_LENGTH + L_MSP_STACK_LENGTH + L_DATA_LENGTH to 
+											L_SRAM_0_ORIGIN + L_INIT_STACK_LENGTH + L_MSP_STACK_LENGTH + L_DATA_LENGTH + L_BSS_LENGTH];
+define region L_SRAM_4			= Mem:[from L_SRAM_0_ORIGIN + L_INIT_STACK_LENGTH + L_MSP_STACK_LENGTH + L_DATA_LENGTH + L_BSS_LENGTH to 
+											L_SRAM_0_ORIGIN + L_SRAM_LENGTH];																																		
+
+initialize manually								{ 	section .data																,
+													section .data.*																};
+
+do not initialize 								{ 	section .bss																,
+													section .bss.*																,
+													section .ram_no_init														,
+													section .ramlog																,
+													section COMMON																};
+
+define block IsrVector                          {	section .isr_vector 														};
+
+define block Text			with alignment = 4	{	section .text															  	,                                                           
+													section .text.*															  	,
+													section .intvec																};
+
+													
+define block Fls_rom							{	section .fls_erase															,
+													section .fls_write															};
+
+define block ARM_exidx		with alignment = 4	{	section .ARM.exidx*															};	
+																									
+define block ROdata			with alignment = 4	{	section .rodata																,
+													section .rodata.*															};
+
+define block Data_init		with alignment = 4	{	section .data_init															};	
+													
+define block Data			with alignment = 4	{	section .data																,
+													section .data.*																,
+													section .ram_no_init														};	
+													
+define block Bss			with alignment = 4	{	section .bss																,
+													section .bss.*																,
+													section COMMON																};	
+																											
+define block Init_stack		with alignment = 4, size = L_INIT_STACK_LENGTH													{ };
+
+define block Msp_stack		with alignment = 4, size = L_MSP_STACK_LENGTH													{ };
+
+define block Fls_ram		with alignment = 4, size = L_FLS_LENGTH															{ };
+
+define block Uninit			with alignment = 4	{	section .winidea_port														,
+													section .ramlog																,
+													section .dem_eventmemory_pri												};
+
+place in L_INTERRUPTS_0 						{ 	block IsrVector																};    
+place in L_FLASH_CODE_0 						{ 	block Text																	,
+													block Fls_rom	 															,
+													block ARM_exidx																,
+													block ROdata																};
+place in L_FLASH_CODE_1							{	block Data_init																};
+place in L_SRAM_0 								{	block Init_stack															};
+place in L_SRAM_1								{	block Msp_stack																};   
+place in L_SRAM_2 								{	block Data																	};  
+place in L_SRAM_3								{	block Bss																	};             
+place in L_SRAM_4								{	block Fls_ram																,
+													block Uninit    															};
+           
+/* define external symbols */
+           
+define exported symbol _smspstack    		= start(L_SRAM_1) + 4 ;
+define exported symbol _emspstack			= start(L_SRAM_1) + size(L_SRAM_1) - 1;
+define exported symbol _estack  			= start(L_SRAM_0) + size(L_SRAM_0) - 1;
+define exported symbol _sdata               = start(L_SRAM_2);
+define exported symbol _edata               = start(L_SRAM_2) + size(L_SRAM_2) - 1;
+define exported symbol _sidata              = start(L_FLASH_CODE_1) + 4 ;
+define exported symbol _sbss                = start(L_SRAM_3) + 4 ;
+define exported symbol _ebss                = start(L_SRAM_3) + size(L_SRAM_3) - 1;
+
+keep { 	section .isr_vector
+	};

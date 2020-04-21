@@ -1,0 +1,37 @@
+package ApplicationLayer.ApplicationPackage
+
+import ApplicationLayer.Interface.*
+import AUTOSAR.Services.EcuM.*
+import BSWConfiguration.Services.BswM.ComMModeRequestInterface
+import ModeManager.ModeManagerBehavior
+
+component application ModeManager {
+	ports {
+		sender ComMControl provides ComMModeRequestInterface
+		client RunControl requires EcuM_StateRequest
+		receiver Mode requires EcuM_CurrentMode
+	}
+}
+
+internalBehavior ModeManagerBehavior for ModeManager {
+	dataTypeMappings {
+		EcuMFixedTypeMappings
+		TypeMappings
+	}
+
+	runnable ModeManagerInit [0.0] {
+		symbol "modeManagerInit"	
+		dataWriteAccess ComMControl.requestedMode
+		serverCallPoint synchronous RunControl.RequestRUN
+		/*
+		 * ModeManagerInit is called when the exit Mode.currentMode.STARTUP 
+		 * (which only happens once in our application)
+		 */
+		modeSwitchEvent exit Mode.currentMode.STARTUP as modeManagerInitEvent
+	}
+}
+
+implementation ModeManagerImpl for ModeManagerBehavior {
+	language c
+	codeDescriptor "src"
+}

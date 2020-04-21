@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Tests</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>Os</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>OsekAl</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>Boards</SHORT-NAME>
+                  <AR-PACKAGES>
+                    <AR-PACKAGE UUID="1ca75f74-d517-45a0-b8be-6ca30156c6f0">
+                      <SHORT-NAME>mpc5744p_mmb</SHORT-NAME>
+                      <ELEMENTS>
+                        <ECUC-VALUE-COLLECTION>
+                          <SHORT-NAME>mpc5744p_mmb</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG>
+                                <SD GID="_ExtensionKey">Origin</SD>
+                                <SD GID="_Type">java.lang.String</SD>
+                                <SD GID="_Value">USER_CONFIGURED</SD>
+                              </SDG>
+                              <SDG>
+                                <SD GID="_ExtensionKey">GENERATOR_OUTPUT_SERVICE_DIRECTORY</SD>
+                                <SD GID="_Type">java.lang.String</SD>
+                                <SD GID="_Value">PROJECT_LOC</SD>
+                              </SDG>
+                              <SDG>
+                                <SD GID="_ExtensionKey">GENERATOR_OUTPUT_DIRECTORY</SD>
+                                <SD GID="_Type">java.lang.String</SD>
+                                <SD GID="_Value">PROJECT_LOCAL/system/Os/utest/osek_05_al/config/mpc5744p_mmb</SD>
+                              </SDG>
+                              <SDG>
+                                <SD GID="_ExtensionKey">MCAL</SD>
+                                <SD GID="_Type">java.lang.String</SD>
+                                <SD GID="_Value">MPC5744P</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <ECUC-VALUES>
+                            <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                              <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/Tests/Boards/mpc5744p_mmb/Mcu</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                            </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                            <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                              <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/Tests/Boards/mpc5744p_mmb/EcuM</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                            </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                            <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                              <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/Tests/Os/OsekAl/Os</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+                            </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+                          </ECUC-VALUES>
+                        </ECUC-VALUE-COLLECTION>
+                        <ECUC-MODULE-CONFIGURATION-VALUES UUID="75fde633-387f-4c69-b878-09859ca306c3">
+                          <SHORT-NAME>Os</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG>
+                                <SD GID="_ExtensionKey">GENERATE_AND_VALIDATE</SD>
+                                <SD GID="_Type">java.lang.String</SD>
+                                <SD GID="_Value">TRUE</SD>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/Generic/Os</DEFINITION-REF>
+                          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+                          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/ArcCore/EcucDefs/Generic/Implementations/Os</MODULE-DESCRIPTION-REF>
+                          <CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="d3f909a7-f528-4919-bf80-84f2a34860e8">
+                              <SHORT-NAME>OsAppMode</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAppMode</DEFINITION-REF>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="fd0f0631-efd4-493e-8e25-1818c8d25880">
+                              <SHORT-NAME>OsOS</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/OsScalabilityClass</DEFINITION-REF>
+                                  <VALUE>SC3</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/OsStackMonitoring</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/OsStatus</DEFINITION-REF>
+                                  <VALUE>EXTENDED</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/OsUseGetServiceId</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/OsUseParameterAccess</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/OsUseResScheduler</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcOsTickFrequency</DEFINITION-REF>
+                                  <VALUE>1000</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcOsInterruptStackSize</DEFINITION-REF>
+                                  <VALUE>2048</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcOsIdleStackSize</DEFINITION-REF>
+                                  <VALUE>512</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcOsMaxIsr</DEFINITION-REF>
+                                  <VALUE>10</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcSafetyPlatform</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcOsIdleApplicationRef</DEFINITION-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE UUID="85a34bcb-8ba4-416e-9221-09f72a20665c">
+                                  <SHORT-NAME>OsHooks</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/OsHooks</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/OsHooks/OsErrorHook</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/OsHooks/OsPostTaskHook</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/OsHooks/OsPreTaskHook</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/OsHooks/OsShutdownHook</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/OsHooks/OsStartupHook</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE UUID="fb4c2462-295b-40c9-81d5-2ee5ba4fd1b9">
+                                  <SHORT-NAME>ArcOsDebug</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcOsDebug</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcOsDebug/OsTaskDebug</DEFINITION-REF>
+                                      <VALUE>0</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcOsDebug/OsAlarmDebug</DEFINITION-REF>
+                                      <VALUE>0</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcOsDebug/OsResourceDebug</DEFINITION-REF>
+                                      <VALUE>0</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcOsDebug/OsScheduleTableDebug</DEFINITION-REF>
+                                      <VALUE>0</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcOsDebug/OsEventDebug</DEFINITION-REF>
+                                      <VALUE>0</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsOS/ArcOsDebug/OsDebugActivated</DEFINITION-REF>
+                                      <VALUE>0</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="476fd74d-1e20-4f91-b8bf-1d3524b23852">
+                              <SHORT-NAME>act_etask_h_full</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm</DEFINITION-REF>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmCounterRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/soft1</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAccessingApplication</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/OsApplication_Sys</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE UUID="a89e7d09-9087-4f62-9439-c15862746c8f">
+                                  <SHORT-NAME>OsAlarmAction</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
+                                  <SUB-CONTAINERS>
+                                    <ECUC-CONTAINER-VALUE UUID="260c306b-d9b2-4a24-800f-cccc32d200aa">
+                                      <SHORT-NAME>OsAlarmActivateTask</SHORT-NAME>
+                                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmActivateTask</DEFINITION-REF>
+                                      <REFERENCE-VALUES>
+                                        <ECUC-REFERENCE-VALUE>
+                                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmActivateTask/OsAlarmActivateTaskRef</DEFINITION-REF>
+                                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/etask_h_full</VALUE-REF>
+                                        </ECUC-REFERENCE-VALUE>
+                                      </REFERENCE-VALUES>
+                                    </ECUC-CONTAINER-VALUE>
+                                  </SUB-CONTAINERS>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="6fe5be46-557f-4c9c-9b10-b06b9c832069">
+                              <SHORT-NAME>act_etask_l_non</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm</DEFINITION-REF>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmCounterRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/soft1</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAccessingApplication</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/OsApplication_Sys</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE UUID="6af88ebf-1867-4f47-962e-bb701e1dd6ef">
+                                  <SHORT-NAME>OsAlarmAction</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
+                                  <SUB-CONTAINERS>
+                                    <ECUC-CONTAINER-VALUE UUID="47f72777-9c95-4787-8956-a0b409eb0cab">
+                                      <SHORT-NAME>OsAlarmActivateTask</SHORT-NAME>
+                                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmActivateTask</DEFINITION-REF>
+                                      <REFERENCE-VALUES>
+                                        <ECUC-REFERENCE-VALUE>
+                                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmActivateTask/OsAlarmActivateTaskRef</DEFINITION-REF>
+                                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/etask_l_non</VALUE-REF>
+                                        </ECUC-REFERENCE-VALUE>
+                                      </REFERENCE-VALUES>
+                                    </ECUC-CONTAINER-VALUE>
+                                  </SUB-CONTAINERS>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="b9da62b6-e3e6-4911-9bc0-fb713c994df5">
+                              <SHORT-NAME>setev_go_etask_h_full</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm</DEFINITION-REF>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmCounterRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/soft1</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAccessingApplication</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/OsApplication_Sys</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE UUID="48b4c12f-9797-4644-b99a-2647370002eb">
+                                  <SHORT-NAME>OsAlarmAction</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
+                                  <SUB-CONTAINERS>
+                                    <ECUC-CONTAINER-VALUE UUID="82c2dac7-c7ab-4b50-88df-70b7c8be284e">
+                                      <SHORT-NAME>OsAlarmSetEvent</SHORT-NAME>
+                                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent</DEFINITION-REF>
+                                      <REFERENCE-VALUES>
+                                        <ECUC-REFERENCE-VALUE>
+                                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventRef</DEFINITION-REF>
+                                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/go</VALUE-REF>
+                                        </ECUC-REFERENCE-VALUE>
+                                        <ECUC-REFERENCE-VALUE>
+                                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventTaskRef</DEFINITION-REF>
+                                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/etask_h_full</VALUE-REF>
+                                        </ECUC-REFERENCE-VALUE>
+                                      </REFERENCE-VALUES>
+                                    </ECUC-CONTAINER-VALUE>
+                                  </SUB-CONTAINERS>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="d4f12616-b6e5-443e-b7d5-199ad837545d">
+                              <SHORT-NAME>sys_tick_act_etask_h_full</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm</DEFINITION-REF>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmCounterRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/system_tick</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAccessingApplication</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/OsApplication_Sys</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE UUID="e3517fef-6dd6-47b8-bf10-4032610f0e2b">
+                                  <SHORT-NAME>OsAlarmAction</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
+                                  <SUB-CONTAINERS>
+                                    <ECUC-CONTAINER-VALUE UUID="7e517256-e9af-419d-ace1-f084c2ac7265">
+                                      <SHORT-NAME>OsAlarmActivateTask</SHORT-NAME>
+                                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmActivateTask</DEFINITION-REF>
+                                      <REFERENCE-VALUES>
+                                        <ECUC-REFERENCE-VALUE>
+                                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmActivateTask/OsAlarmActivateTaskRef</DEFINITION-REF>
+                                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/etask_h_full</VALUE-REF>
+                                        </ECUC-REFERENCE-VALUE>
+                                      </REFERENCE-VALUES>
+                                    </ECUC-CONTAINER-VALUE>
+                                  </SUB-CONTAINERS>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="7c0aad99-aa66-459c-a028-5fb655b701b3">
+                              <SHORT-NAME>OsApplication1</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsTrusted</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppTaskRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/etask_h_full</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppCounterRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/soft1</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppAlarmRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/act_etask_h_full</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppAlarmRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/act_etask_l_non</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppAlarmRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/setev_go_etask_h_full</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppAlarmRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/sys_tick_act_etask_h_full</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppTaskRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/etask_l_non</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppTaskRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/etask_m_full</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppAlarmRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/inc_soft1</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppAlarmRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/autostart_abs</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppAlarmRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/autostart_rel</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppCounterRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/hard1</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppCounterRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/soft3</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE UUID="f0bacd35-0755-46d9-91b2-90d94cc75653">
+                                  <SHORT-NAME>OsApplicationHooks</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsApplicationHooks</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsApplicationHooks/OsAppErrorHook</DEFINITION-REF>
+                                      <VALUE>0</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsApplicationHooks/OsAppShutdownHook</DEFINITION-REF>
+                                      <VALUE>0</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsApplicationHooks/OsAppStartupHook</DEFINITION-REF>
+                                      <VALUE>0</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="383a4ccc-f509-4602-9344-dee9ee553c47">
+                              <SHORT-NAME>soft1</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterMaxAllowedValue</DEFINITION-REF>
+                                  <VALUE>65535</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterMinCycle</DEFINITION-REF>
+                                  <VALUE>2</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterTicksPerBase</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterType</DEFINITION-REF>
+                                  <VALUE>SOFTWARE</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="d772a56d-4a7c-4797-ae6f-316040e530f6">
+                              <SHORT-NAME>system_tick</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterMaxAllowedValue</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterMinCycle</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterTicksPerBase</DEFINITION-REF>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterType</DEFINITION-REF>
+                                  <VALUE>OS_TICK</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="e2fc44cb-caee-42e9-8afa-ad8fbd3774ab">
+                              <SHORT-NAME>etask_h_full</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                                  <VALUE>6</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                                  <VALUE>FULL</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/ArcOsTaskStackSize</DEFINITION-REF>
+                                  <VALUE>2048</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/go</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/go2</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskAccessingApplication</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/OsApplication_Sys</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="3f652561-f08a-4940-81ba-d5a15fb45c6b">
+                              <SHORT-NAME>etask_l_non</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                                  <VALUE>4</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                                  <VALUE>NON</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/ArcOsTaskStackSize</DEFINITION-REF>
+                                  <VALUE>2048</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskAccessingApplication</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/OsApplication_Sys</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="c87c191a-7fac-4097-8827-56924fffd6a6">
+                              <SHORT-NAME>etask_m_full</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                                  <VALUE>5</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                                  <VALUE>FULL</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/ArcOsTaskStackSize</DEFINITION-REF>
+                                  <VALUE>2048</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/go</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskAccessingApplication</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/OsApplication_Sys</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE UUID="4b6a2bf8-213a-44c3-9ee9-f8dcfc22ba36">
+                                  <SHORT-NAME>OsTaskAutostart</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskAutostart</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsTask/OsTaskAutostart/OsTaskAppModeRef</DEFINITION-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="76958401-a0d3-44c2-a211-5ae731a6d3bf">
+                              <SHORT-NAME>go</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsEvent</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsEvent/OsEventMask</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="3a00692b-9224-4e5a-a6c2-16586251851e">
+                              <SHORT-NAME>go2</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsEvent</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsEvent/OsEventMask</DEFINITION-REF>
+                                  <VALUE>2</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="400323b7-7821-4ebb-a27f-f1e20c7e8499">
+                              <SHORT-NAME>inc_soft1</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm</DEFINITION-REF>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmCounterRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/system_tick</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAccessingApplication</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/OsApplication_Sys</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE UUID="831e1cbe-1530-45f9-a684-e418c97040c5">
+                                  <SHORT-NAME>OsAlarmAction</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
+                                  <SUB-CONTAINERS>
+                                    <ECUC-CONTAINER-VALUE UUID="da2a52d2-f524-4998-a5a6-450725744fdd">
+                                      <SHORT-NAME>OsAlarmIncrementCounter</SHORT-NAME>
+                                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmIncrementCounter</DEFINITION-REF>
+                                      <REFERENCE-VALUES>
+                                        <ECUC-REFERENCE-VALUE>
+                                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmIncrementCounter/OsAlarmIncrementCounterRef</DEFINITION-REF>
+                                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/soft1</VALUE-REF>
+                                        </ECUC-REFERENCE-VALUE>
+                                      </REFERENCE-VALUES>
+                                    </ECUC-CONTAINER-VALUE>
+                                  </SUB-CONTAINERS>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="94c0661b-0ffc-4828-9f2e-987d094a120c">
+                              <SHORT-NAME>autostart_abs</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm</DEFINITION-REF>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmCounterRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/system_tick</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAccessingApplication</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/OsApplication_Sys</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE UUID="1e7a9fc3-5829-4f62-8a57-0fecacd08064">
+                                  <SHORT-NAME>OsAlarmAction</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
+                                  <SUB-CONTAINERS>
+                                    <ECUC-CONTAINER-VALUE UUID="6795b737-07d0-4905-8664-228f9e644624">
+                                      <SHORT-NAME>OsAlarmIncrementCounter</SHORT-NAME>
+                                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmIncrementCounter</DEFINITION-REF>
+                                      <REFERENCE-VALUES>
+                                        <ECUC-REFERENCE-VALUE>
+                                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmIncrementCounter/OsAlarmIncrementCounterRef</DEFINITION-REF>
+                                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/soft1</VALUE-REF>
+                                        </ECUC-REFERENCE-VALUE>
+                                      </REFERENCE-VALUES>
+                                    </ECUC-CONTAINER-VALUE>
+                                  </SUB-CONTAINERS>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE UUID="5bf7e0a0-e197-43f8-9423-0e9244bd7cad">
+                                  <SHORT-NAME>OsAlarmAutostart</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAutostart</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAutostart/OsAlarmAlarmTime</DEFINITION-REF>
+                                      <VALUE>10000</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAutostart/OsAlarmAutostartType</DEFINITION-REF>
+                                      <VALUE>ABSOLUTE</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAutostart/OsAlarmCycleTime</DEFINITION-REF>
+                                      <VALUE>20000</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="d81e77a9-59b4-4984-af9a-a4018afeb554">
+                              <SHORT-NAME>autostart_rel</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm</DEFINITION-REF>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmCounterRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/system_tick</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAccessingApplication</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/OsApplication_Sys</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE UUID="582efb2a-0a94-4ceb-bbb3-f1fce0365283">
+                                  <SHORT-NAME>OsAlarmAction</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
+                                  <SUB-CONTAINERS>
+                                    <ECUC-CONTAINER-VALUE UUID="952de79f-358f-48e3-ab2f-afdaaeec7c12">
+                                      <SHORT-NAME>OsAlarmIncrementCounter</SHORT-NAME>
+                                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmIncrementCounter</DEFINITION-REF>
+                                      <REFERENCE-VALUES>
+                                        <ECUC-REFERENCE-VALUE>
+                                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAction/OsAlarmIncrementCounter/OsAlarmIncrementCounterRef</DEFINITION-REF>
+                                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/soft1</VALUE-REF>
+                                        </ECUC-REFERENCE-VALUE>
+                                      </REFERENCE-VALUES>
+                                    </ECUC-CONTAINER-VALUE>
+                                  </SUB-CONTAINERS>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE UUID="88ba3368-c02d-4d1c-b13b-db5ad61a96fc">
+                                  <SHORT-NAME>OsAlarmAutostart</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAutostart</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAutostart/OsAlarmAlarmTime</DEFINITION-REF>
+                                      <VALUE>10000</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAutostart/OsAlarmAutostartType</DEFINITION-REF>
+                                      <VALUE>RELATIVE</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAutostart/OsAlarmCycleTime</DEFINITION-REF>
+                                      <VALUE>20000</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="bc74fde1-2f51-42c8-99a7-bbeb383939e3">
+                              <SHORT-NAME>hard1</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterMaxAllowedValue</DEFINITION-REF>
+                                  <VALUE>65535</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterMinCycle</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterTicksPerBase</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterType</DEFINITION-REF>
+                                  <VALUE>HARDWARE</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="3edfe404-3e3c-4214-a342-79fed7210fd4">
+                              <SHORT-NAME>soft3</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterMaxAllowedValue</DEFINITION-REF>
+                                  <VALUE>255</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterMinCycle</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterTicksPerBase</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsCounter/OsCounterType</DEFINITION-REF>
+                                  <VALUE>SOFTWARE</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="5fc68272-dcd7-476c-a1ce-cbc0cfa3ee4c">
+                              <SHORT-NAME>OsApplication_Sys</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsTrusted</DEFINITION-REF>
+                                  <VALUE>true</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsAppCounterRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Tests/Os/OsekAl/Boards/mpc5744p_mmb/Os/system_tick</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE UUID="661b74f7-67c3-48b2-a050-9c592478e947">
+                                  <SHORT-NAME>OsApplicationHooks</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsApplicationHooks</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsApplicationHooks/OsAppErrorHook</DEFINITION-REF>
+                                      <VALUE>false</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsApplicationHooks/OsAppShutdownHook</DEFINITION-REF>
+                                      <VALUE>false</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsApplicationHooks/OsAppStartupHook</DEFINITION-REF>
+                                      <VALUE>false</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE UUID="e019bbaa-c324-4fa1-8dae-4f6aa44da8ec">
+                              <SHORT-NAME>OsApplication2</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsTrusted</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE UUID="9c414a32-63ae-43fa-ba43-38adcd737df6">
+                                  <SHORT-NAME>OsApplicationHooks</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsApplicationHooks</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsApplicationHooks/OsAppErrorHook</DEFINITION-REF>
+                                      <VALUE>false</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsApplicationHooks/OsAppShutdownHook</DEFINITION-REF>
+                                      <VALUE>false</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ArcCore/EcucDefs/Generic/Os/OsApplication/OsApplicationHooks/OsAppStartupHook</DEFINITION-REF>
+                                      <VALUE>false</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                          </CONTAINERS>
+                        </ECUC-MODULE-CONFIGURATION-VALUES>
+                      </ELEMENTS>
+                    </AR-PACKAGE>
+                  </AR-PACKAGES>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

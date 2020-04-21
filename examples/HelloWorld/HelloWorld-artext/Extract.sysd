@@ -1,0 +1,84 @@
+package HelloWorld
+
+import HelloWorld.TopLevelComposition
+import HelloWorld_Generic.Services.WdgM.WdgMImpl
+import HelloWorld.TopLevelComposition.wdgm
+import HelloWorld_Generic.Services.ComM.ComMImpl
+import HelloWorld.TopLevelComposition.comM
+import HelloWorld_Generic.Services.Dcm.DcmImpl
+import HelloWorld.TopLevelComposition.dcm
+import HelloWorld_Generic.Services.Dem.DemImpl
+import HelloWorld.TopLevelComposition.dem
+import HelloWorld_Generic.Services.Det.DetImpl
+import HelloWorld.TopLevelComposition.det
+import HelloWorld_Generic.Services.Os.OsImpl
+import HelloWorld.TopLevelComposition.os
+import HelloWorld_Generic.Services.Dlt.DltImpl
+import HelloWorld.TopLevelComposition.dlt
+import HelloWorld_Generic.Services.BswM.BswMComponentImpl
+import HelloWorld.TopLevelComposition.bswm
+import HelloWorld_Generic.Services.EcuM.EcuMFixedImpl
+import HelloWorld.TopLevelComposition.ecuM
+import HelloWorld_Generic.Services.IoHwAb.IoHwAbImpl
+import HelloWorld.TopLevelComposition.ioHwAb
+import HelloWorld_Generic.Services.NvM.NvMImpl
+import HelloWorld.TopLevelComposition.nvm
+import SwcReader.SwcReaderImpl
+import HelloWorld.TopLevelComposition.SwcReader
+import SwcWriter.SwcWriterImpl
+import HelloWorld.TopLevelComposition.SwcWriter
+import SwcReader.SwcReaderType.AdcResult
+import Interfaces.BasicSRInterface.data1
+import HelloWorld.Communication.*
+import SwcWriter.SwcWriterType.SenderPort
+import SwcReader.SwcReaderType.ReceiverPort
+import HelloWorld.TopLevelComposition.Tx01
+import HelloWorld.TopLevelComposition.TxAdc
+import HelloWorld.TopLevelComposition.Rx01
+import HelloWorld.TopLevelComposition.MemRx
+import HelloWorld.TopLevelComposition.MemTx
+import SwcMem.SwcMemImpl
+import HelloWorld.TopLevelComposition.SwcMem
+import Interfaces.MemoryCmdIf.command
+import Interfaces.MemoryCmdIf.blockId
+import Interfaces.MemoryCmdIf.payload
+import HelloWorld_Generic.Services.FiM.FiMImpl
+import HelloWorld.TopLevelComposition.fim
+
+system HelloWorld {
+	rootComposition TopLevelComposition
+	
+	mapping as ImplementationMappings {
+		implMap ComMImpl to comM as comMMapping
+		implMap DcmImpl to dcm as dcmMapping
+		implMap DemImpl to dem as demMapping
+		implMap DetImpl to det as detMapping
+		implMap DltImpl to dlt as dltMapping
+		implMap NvMImpl to nvm as nvmMapping
+		implMap OsImpl to os as osMapping
+		implMap BswMComponentImpl to bswm as bswMMapping
+		implMap EcuMFixedImpl to ecuM as ecuMMapping
+		implMap IoHwAbImpl to ioHwAb as ioHwAbMapping
+		implMap SwcReaderImpl to SwcReader as SwcReaderMapping
+		implMap SwcWriterImpl to SwcWriter as SwcWriterMapping
+		implMap SwcMemImpl to SwcMem as SwcMemMapping
+		implMap WdgMImpl to wdgm as wdgMMapping
+		implMap FiMImpl to fim as fimMapping
+	}
+	
+	mapping as SignalMappings {
+		
+		signalMap outerPort Tx01.data1 to Tx01data1SSig
+		signalMap outerPort TxAdc.data1 to TxAdcdata1SSig
+		signalMap outerPort Rx01.data1 to Rx01data1SSig
+		signalMap outerPort Rx01.cmd to Rx01CmdSSig
+
+		signalMap outerPort MemRx.command to MemRxCmdSSig
+		signalMap outerPort MemRx.blockId to MemRxBlockIdSSig
+		signalMap outerPort MemRx.payload to MemRxPayloadSSig
+
+		signalMap outerPort MemTx.result to MemTxResSSig
+		signalMap outerPort MemTx.blockId to MemTxBlockIdSSig
+		signalMap outerPort MemTx.payload to MemTxPayloadSSig		
+	}
+}

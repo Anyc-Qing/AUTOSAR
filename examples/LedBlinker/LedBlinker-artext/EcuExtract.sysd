@@ -1,0 +1,17 @@
+package LedBlinkerApplicationLayer.EcuExtract
+
+import LedBlinkerApplicationLayer.CompositionPackage.RootComposition
+import LedBlinkerApplicationLayer.CompositionPackage.RootComposition.ledBlinkerSWC
+import LedBlinkerApplicationLayer.CompositionPackage.RootComposition.serviceIoHwAb
+
+import LedBlinkerBSWConfiguration.Services.IoHwAb.IoHwAbImpl
+import LedBlinkerApplicationLayer.ApplicationPackage.LedBlinkerSWCImpl
+
+system LedBlinkerEcuExtract {
+	rootComposition RootComposition
+	
+	mapping as ImplementationMappings {
+		implMap LedBlinkerSWCImpl to ledBlinkerSWC as MySWCMap
+		implMap IoHwAbImpl to serviceIoHwAb as IoHwAbMap
+	}
+}

@@ -1,0 +1,30 @@
+
+/* Flash sizes
+ * 5516, 1.0M
+ * 5517, 1.5M
+ */
+
+#if defined(__CWCC__)
+#define ORIGIN	origin
+#define LENGTH	length
+#define RAM	sram
+#define FLASH flash
+#elif defined(__DCC__)
+#define ORIGIN	origin
+#define LENGTH	length
+#define RAM	sram
+#define FLASH flash
+#else
+#define RAM ram(RW)
+#define FLASH flash(R)
+#endif
+ 
+  
+FLASH: ORIGIN = 0x00000000 , LENGTH = 0x100000
+ 
+/* Ram sizes
+ * 5516S, 48K
+ * 5517S,5516G,5516E, 64K RAM
+ * 5517G,E , 80K RAM
+ */
+RAM  : ORIGIN = 0x40000000 , LENGTH = SRAM_SIZE

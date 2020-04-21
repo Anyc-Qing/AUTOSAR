@@ -1,0 +1,23 @@
+package LedBlinkerApplicationLayer.ApplicationPackage
+
+import ArcCore.Services.IoHwAb.*
+import LedBlinkerSWC.LedBlinkerSWCBehaviour
+
+component application LedBlinkerSWC {
+	ports {
+		client Digital_LED1 requires DigitalServiceWrite
+	}
+}
+
+internalBehavior LedBlinkerSWCBehaviour for LedBlinkerSWC {
+	runnable LedBlinkerSWCMain [0.0] {
+		symbol "ledBlinkerSWCMain"
+		timingEvent 0.1
+		serverCallPoint synchronous Digital_LED1.Write as LED1CallPoint
+	}
+}
+
+implementation LedBlinkerSWCImpl for LedBlinkerSWCBehaviour {
+	language c
+	codeDescriptor "src"
+}

@@ -1,0 +1,1670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ApplicationLayer</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>ApplicationPackage</SHORT-NAME>
+          <ELEMENTS>
+            <APPLICATION-SW-COMPONENT-TYPE UUID="d454e1a3-a2be-3fd6-81cf-8cd4119c4b14">
+              <SHORT-NAME>InteriorLightManager</SHORT-NAME>
+              <PORTS>
+                <R-PORT-PROTOTYPE UUID="85b801c8-a5b7-3004-b00d-530544fc9f45">
+                  <SHORT-NAME>RearDoorStatus</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/ApplicationLayer/Interface/DataInterface</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="e3fbdbdb-e416-39ef-977c-d561e2da2b2e">
+                  <SHORT-NAME>RightDoorStatus</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/ApplicationLayer/Interface/DoorInterface</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="581537f1-1c92-3823-926b-3a7a88569f52">
+                  <SHORT-NAME>LeftDoorStatus</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/ApplicationLayer/Interface/DoorInterface</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="dd2cfa77-ada3-339f-b4e0-7aaaf5ac0fbe">
+                  <SHORT-NAME>FrontLightStatus</SHORT-NAME>
+                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/ApplicationLayer/Interface/LightInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="f171365d-ec55-3469-8034-f3bbeccd2935">
+                  <SHORT-NAME>LightStatusOnCommMedia</SHORT-NAME>
+                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/ApplicationLayer/Interface/DataInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="7d954843-b528-32c3-8986-f718468f3226">
+                  <SHORT-NAME>InteriorLightManagerBehaviour</SHORT-NAME>
+                  <DATA-TYPE-MAPPING-REFS>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/ApplicationLayer/Interface/TypeMappings</DATA-TYPE-MAPPING-REF>
+                  </DATA-TYPE-MAPPING-REFS>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="807f4761-0df2-492c-80f3-774430ee2655">
+                      <SHORT-NAME>interiorLightManagerMainEvent</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationLayer/ApplicationPackage/InteriorLightManager/InteriorLightManagerBehaviour/InteriorLightManagerMain</START-ON-EVENT-REF>
+                      <PERIOD>0.1</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="ef34f16a-8972-320a-afd5-9fe5cf995d6a">
+                      <SHORT-NAME>InteriorLightManagerMain</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-READ-ACCESSS>
+                        <VARIABLE-ACCESS UUID="f9f28b3d-01b5-3163-acde-5ad5efec789c">
+                          <SHORT-NAME>dataReadAccess_InteriorLightManagerMain_RearDoorStatus_message</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/InteriorLightManager/RearDoorStatus</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ApplicationLayer/Interface/DataInterface/message</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="e0bc7c4c-7541-3760-a9bf-c972e81f9584">
+                          <SHORT-NAME>dataReadAccess_InteriorLightManagerMain_RightDoorStatus_status</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/InteriorLightManager/RightDoorStatus</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ApplicationLayer/Interface/DoorInterface/status</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="633452b8-e6a7-378d-85ee-ca605bb9b583">
+                          <SHORT-NAME>dataReadAccess_InteriorLightManagerMain_LeftDoorStatus_status</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/InteriorLightManager/LeftDoorStatus</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ApplicationLayer/Interface/DoorInterface/status</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-READ-ACCESSS>
+                      <DATA-WRITE-ACCESSS>
+                        <VARIABLE-ACCESS UUID="51ef9612-138a-3e55-b9a7-21554c792241">
+                          <SHORT-NAME>dataWriteAccess_InteriorLightManagerMain_FrontLightStatus_status</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/InteriorLightManager/FrontLightStatus</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ApplicationLayer/Interface/LightInterface/status</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="5631da0f-f3e7-3983-9deb-2c847e7b3a15">
+                          <SHORT-NAME>dataWriteAccess_InteriorLightManagerMain_LightStatusOnCommMedia_message</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/InteriorLightManager/LightStatusOnCommMedia</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ApplicationLayer/Interface/DataInterface/message</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-WRITE-ACCESSS>
+                      <SYMBOL>interiorLightManagerMain</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </APPLICATION-SW-COMPONENT-TYPE>
+            <SWC-IMPLEMENTATION UUID="cafc76ce-883f-3b20-9228-3f3a1f18f857">
+              <SHORT-NAME>InteriorLightManagerImpl</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE UUID="9fa6a41f-eb20-3f31-8073-3f1c63b290d2">
+                  <SHORT-NAME>src</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                      <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <RESOURCE-CONSUMPTION UUID="63216d74-5c93-38d7-b49a-fa99bbce091c">
+                <SHORT-NAME>resourceConsumption</SHORT-NAME>
+              </RESOURCE-CONSUMPTION>
+              <VENDOR-ID>0</VENDOR-ID>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ApplicationLayer/ApplicationPackage/InteriorLightManager/InteriorLightManagerBehaviour</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+            <SENSOR-ACTUATOR-SW-COMPONENT-TYPE UUID="b6d71ec8-3409-361c-808d-1c664920d683">
+              <SHORT-NAME>LightActuator</SHORT-NAME>
+              <PORTS>
+                <R-PORT-PROTOTYPE UUID="978bd43e-7b55-3d8b-9797-ccc376c9ee16">
+                  <SHORT-NAME>InteriorLightStatus</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/ApplicationLayer/Interface/LightInterface</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="08a2da4d-fbe6-3d19-815f-496baec69444">
+                  <SHORT-NAME>DigitalLight</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ArcCore/Services/IoHwAb/DigitalServiceWrite</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="7868aa2f-178c-3a91-9da5-731ff98cc5ac">
+                  <SHORT-NAME>LightActuatorBehavior</SHORT-NAME>
+                  <DATA-TYPE-MAPPING-REFS>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/ApplicationLayer/Interface/TypeMappings</DATA-TYPE-MAPPING-REF>
+                  </DATA-TYPE-MAPPING-REFS>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="e8417a3c-d81a-4aa6-b8fa-067d48ad7077">
+                      <SHORT-NAME>lightActuatorMainEvent</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationLayer/ApplicationPackage/LightActuator/LightActuatorBehavior/LightActuatorMain</START-ON-EVENT-REF>
+                      <PERIOD>0.1</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="4d264d82-20e2-3f7e-98b2-8c4a88c96572">
+                      <SHORT-NAME>LightActuatorMain</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-READ-ACCESSS>
+                        <VARIABLE-ACCESS UUID="4d774e25-a621-3058-9ea8-026aa777e281">
+                          <SHORT-NAME>dataReadAccess_LightActuatorMain_InteriorLightStatus_status</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/LightActuator/InteriorLightStatus</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ApplicationLayer/Interface/LightInterface/status</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-READ-ACCESSS>
+                      <SERVER-CALL-POINTS>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="3739739e-502c-377e-b302-ecfee60221d0">
+                          <SHORT-NAME>DigitalLight_Write</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/LightActuator/DigitalLight</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ArcCore/Services/IoHwAb/DigitalServiceWrite/Write</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                          <TIMEOUT>0.0</TIMEOUT>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                      </SERVER-CALL-POINTS>
+                      <SYMBOL>lightActuatorMain</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>true</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SENSOR-ACTUATOR-SW-COMPONENT-TYPE>
+            <SWC-IMPLEMENTATION UUID="1042fbf8-31db-3268-ba11-1e6cf14d0d11">
+              <SHORT-NAME>LightActuatorImplementation</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE UUID="0ec5774b-0d1b-3619-ae9f-90b4a8fb3179">
+                  <SHORT-NAME>src</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                      <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <RESOURCE-CONSUMPTION UUID="fa35fbef-a1d2-3cb5-bd4a-d8aff8518ffc">
+                <SHORT-NAME>resourceConsumption</SHORT-NAME>
+              </RESOURCE-CONSUMPTION>
+              <VENDOR-ID>0</VENDOR-ID>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ApplicationLayer/ApplicationPackage/LightActuator/LightActuatorBehavior</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+            <APPLICATION-SW-COMPONENT-TYPE UUID="bee18dcc-4df2-3340-8152-7731b5303feb">
+              <SHORT-NAME>ModeManager</SHORT-NAME>
+              <PORTS>
+                <P-PORT-PROTOTYPE UUID="9b281be9-0f87-386a-ac32-15229cba7a9d">
+                  <SHORT-NAME>ComMControl</SHORT-NAME>
+                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/BSWConfiguration/Services/BswM/ComMModeRequestInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="3b05fb98-bc0d-30eb-8b01-2a5242885cd0">
+                  <SHORT-NAME>RunControl</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_StateRequest</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="2748c076-37f7-3058-aee5-8cd556d78ab6">
+                  <SHORT-NAME>Mode</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_CurrentMode</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="70ca8495-e5a5-3d82-9a28-b95dfbb761fc">
+                  <SHORT-NAME>ModeManagerBehavior</SHORT-NAME>
+                  <DATA-TYPE-MAPPING-REFS>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR/Services/EcuM/EcuMFixedTypeMappings</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/ApplicationLayer/Interface/TypeMappings</DATA-TYPE-MAPPING-REF>
+                  </DATA-TYPE-MAPPING-REFS>
+                  <EVENTS>
+                    <SWC-MODE-SWITCH-EVENT UUID="6893af24-5bfe-4063-9e63-6a2081255c46">
+                      <SHORT-NAME>modeManagerInitEvent</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationLayer/ApplicationPackage/ModeManager/ModeManagerBehavior/ModeManagerInit</START-ON-EVENT-REF>
+                      <ACTIVATION>ON-EXIT</ACTIVATION>
+                      <MODE-IREFS>
+                        <MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/ModeManager/Mode</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR/Services/EcuM/EcuM_CurrentMode/currentMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/AUTOSAR/Services/EcuM/EcuM_Mode/STARTUP</TARGET-MODE-DECLARATION-REF>
+                        </MODE-IREF>
+                      </MODE-IREFS>
+                    </SWC-MODE-SWITCH-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="2f4971e3-7d0e-337a-ba8d-d9569c2d4e64">
+                      <SHORT-NAME>ModeManagerInit</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-WRITE-ACCESSS>
+                        <VARIABLE-ACCESS UUID="19ac3499-b6cd-3f7e-8976-19c97133fe31">
+                          <SHORT-NAME>dataWriteAccess_ModeManagerInit_ComMControl_requestedMode</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/ModeManager/ComMControl</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/BSWConfiguration/Services/BswM/ComMModeRequestInterface/requestedMode</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-WRITE-ACCESSS>
+                      <SERVER-CALL-POINTS>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="78bd5f4d-6898-37a2-aaef-5677e7981a73">
+                          <SHORT-NAME>RunControl_RequestRUN</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/ModeManager/RunControl</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/RequestRUN</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                          <TIMEOUT>0.0</TIMEOUT>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                      </SERVER-CALL-POINTS>
+                      <SYMBOL>modeManagerInit</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </APPLICATION-SW-COMPONENT-TYPE>
+            <SWC-IMPLEMENTATION UUID="ee62a86d-7cb3-3ef2-acea-2aede5c7713c">
+              <SHORT-NAME>ModeManagerImpl</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE UUID="f4ac9835-95ef-3aab-9c90-8349bae32ff9">
+                  <SHORT-NAME>src</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                      <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <RESOURCE-CONSUMPTION UUID="ed63dc8b-45da-3ea1-95c3-f85e932597f3">
+                <SHORT-NAME>resourceConsumption</SHORT-NAME>
+              </RESOURCE-CONSUMPTION>
+              <VENDOR-ID>0</VENDOR-ID>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ApplicationLayer/ApplicationPackage/ModeManager/ModeManagerBehavior</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+            <SENSOR-ACTUATOR-SW-COMPONENT-TYPE UUID="95666d4a-2e4e-37ba-b7d5-c7a6821b408c">
+              <SHORT-NAME>DoorSensor</SHORT-NAME>
+              <PORTS>
+                <R-PORT-PROTOTYPE UUID="c5e30527-5f0c-3c8e-8e7d-9839c3b6d8f4">
+                  <SHORT-NAME>DoorSwitchSignal</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ArcCore/Services/IoHwAb/DigitalServiceRead</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="bb952cfe-23a3-3dc1-9098-d9327a1e4473">
+                  <SHORT-NAME>DoorStatus</SHORT-NAME>
+                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/ApplicationLayer/Interface/DoorInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="fbeb9e2b-02ce-31dd-b8c4-d1cbe99c306d">
+                  <SHORT-NAME>DoorSensorBehavior</SHORT-NAME>
+                  <DATA-TYPE-MAPPING-REFS>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/ApplicationLayer/Interface/TypeMappings</DATA-TYPE-MAPPING-REF>
+                  </DATA-TYPE-MAPPING-REFS>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="8dc27200-1394-41a4-874f-e59165eaace1">
+                      <SHORT-NAME>doorSensorMainEvent</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ApplicationLayer/ApplicationPackage/DoorSensor/DoorSensorBehavior/DoorSensorMain</START-ON-EVENT-REF>
+                      <PERIOD>0.1</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="1e63601a-02a2-3206-b253-8779547b3b43">
+                      <SHORT-NAME>DoorSensorMain</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-WRITE-ACCESSS>
+                        <VARIABLE-ACCESS UUID="a77a0398-4885-30de-b102-5c40c6fb3aa1">
+                          <SHORT-NAME>dataWriteAccess_DoorSensorMain_DoorStatus_status</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/DoorSensor/DoorStatus</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ApplicationLayer/Interface/DoorInterface/status</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-WRITE-ACCESSS>
+                      <SERVER-CALL-POINTS>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="44464650-f15d-3f68-aa83-4f95a69eade7">
+                          <SHORT-NAME>DoorSwitchSignal_Read</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/DoorSensor/DoorSwitchSignal</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ArcCore/Services/IoHwAb/DigitalServiceRead/Read</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                          <TIMEOUT>0.0</TIMEOUT>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                      </SERVER-CALL-POINTS>
+                      <SYMBOL>doorSensorMain</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>true</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SENSOR-ACTUATOR-SW-COMPONENT-TYPE>
+            <SWC-IMPLEMENTATION UUID="f6c6d164-b533-3b3b-92ac-73d8e6c3a61e">
+              <SHORT-NAME>DoorSensorImplementation</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE UUID="da81886e-9173-3d57-899d-cc2517b56eb6">
+                  <SHORT-NAME>src</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                      <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <RESOURCE-CONSUMPTION UUID="426db485-3201-3b51-9ff6-41e068388367">
+                <SHORT-NAME>resourceConsumption</SHORT-NAME>
+              </RESOURCE-CONSUMPTION>
+              <VENDOR-ID>0</VENDOR-ID>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ApplicationLayer/ApplicationPackage/DoorSensor/DoorSensorBehavior</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>Interface</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE UUID="6319757e-f66b-3b99-9cb3-bd437368f879">
+              <SHORT-NAME>LightStatusImpl</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/ArcCore/Platform/BaseTypes/uint32</BASE-TYPE-REF>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/ApplicationLayer/Interface/LightStatusImpl_def</COMPU-METHOD-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <COMPU-METHOD UUID="e84cbbbc-d2b3-344f-beac-0fd58854c3f7">
+              <SHORT-NAME>LightStatusImpl_def</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>OFF</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>ON</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="0a5aa481-125b-3ceb-b20e-e994f0c8cc45">
+              <SHORT-NAME>LightStatus_def</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>OFF</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>ON</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <APPLICATION-PRIMITIVE-DATA-TYPE UUID="3334e82f-eccc-3922-a13c-e095815246e6">
+              <SHORT-NAME>LightStatus</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/ApplicationLayer/Interface/LightStatus_def</COMPU-METHOD-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="c154421d-78a9-3cfa-b4e5-182b2efebbd4">
+              <SHORT-NAME>DoorStatusImpl</SHORT-NAME>
+              <CATEGORY>BOOLEAN</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/ArcCore/Platform/BaseTypes/boolean</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <APPLICATION-PRIMITIVE-DATA-TYPE UUID="aaa985c7-3ac8-31c1-9a3d-3551bea8bc1d">
+              <SHORT-NAME>DoorStatus</SHORT-NAME>
+              <CATEGORY>BOOLEAN</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL />
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="a1d13186-b73c-31d2-99e8-eb80c31abef7">
+              <SHORT-NAME>IntImpl</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/ArcCore/Platform/BaseTypes/uint32</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <APPLICATION-PRIMITIVE-DATA-TYPE UUID="c6af3af6-ed8f-3905-b9b3-048536d5bf20">
+              <SHORT-NAME>Int</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <SENDER-RECEIVER-INTERFACE UUID="a850d091-9693-39c4-bcaa-692f7cc775a1">
+              <SHORT-NAME>LightInterface</SHORT-NAME>
+              <IS-SERVICE>false</IS-SERVICE>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="dc5b1e5c-8a72-32c7-b525-b32fc7034ba4">
+                  <SHORT-NAME>status</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationLayer/Interface/LightStatus</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+            <SENDER-RECEIVER-INTERFACE UUID="040cd52a-1fd8-32af-bc17-63f860e058f5">
+              <SHORT-NAME>DoorInterface</SHORT-NAME>
+              <IS-SERVICE>false</IS-SERVICE>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="c7f5c1c4-f339-3687-bf4e-64dc1ee37af9">
+                  <SHORT-NAME>status</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationLayer/Interface/DoorStatus</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+            <SENDER-RECEIVER-INTERFACE UUID="a9f8c300-e12d-365a-83d4-6573d538dc3d">
+              <SHORT-NAME>DataInterface</SHORT-NAME>
+              <IS-SERVICE>false</IS-SERVICE>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="bbd1357b-d94b-3aa8-9f5a-25c8f02b7413">
+                  <SHORT-NAME>message</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationLayer/Interface/Int</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+            <DATA-TYPE-MAPPING-SET UUID="c9bc86dc-fe58-3792-8ef5-78e8dfa973b0">
+              <SHORT-NAME>TypeMappings</SHORT-NAME>
+              <DATA-TYPE-MAPS>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationLayer/Interface/Int</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ApplicationLayer/Interface/IntImpl</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationLayer/Interface/LightStatus</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ApplicationLayer/Interface/LightStatusImpl</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationLayer/Interface/DoorStatus</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ApplicationLayer/Interface/DoorStatusImpl</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+              </DATA-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>CompositionPackage</SHORT-NAME>
+          <ELEMENTS>
+            <COMPOSITION-SW-COMPONENT-TYPE UUID="2f890a8d-38bf-3b96-8eef-f19524b21845">
+              <SHORT-NAME>RootComposition</SHORT-NAME>
+              <PORTS>
+                <P-PORT-PROTOTYPE UUID="e075517d-2881-3e16-a19f-2c4cf1fc17f7">
+                  <SHORT-NAME>LightStatus</SHORT-NAME>
+                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/ApplicationLayer/Interface/DataInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="390aeba0-af88-3119-82fb-da16c9c37a2f">
+                  <SHORT-NAME>DoorStatus</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/ApplicationLayer/Interface/DataInterface</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+              </PORTS>
+              <COMPONENTS>
+                <SW-COMPONENT-PROTOTYPE UUID="4936c5be-7572-35c6-a4b6-0f13aa77ab12">
+                  <SHORT-NAME>frontLightActuator</SHORT-NAME>
+                  <TYPE-TREF DEST="SENSOR-ACTUATOR-SW-COMPONENT-TYPE">/ApplicationLayer/ApplicationPackage/LightActuator</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="0ac01176-a20d-3a3c-b0ba-37695c30ff76">
+                  <SHORT-NAME>rightDoorSensor</SHORT-NAME>
+                  <TYPE-TREF DEST="SENSOR-ACTUATOR-SW-COMPONENT-TYPE">/ApplicationLayer/ApplicationPackage/DoorSensor</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="a3516a5e-8f4e-3bee-a1df-1b73dc51439c">
+                  <SHORT-NAME>leftDoorSensor</SHORT-NAME>
+                  <TYPE-TREF DEST="SENSOR-ACTUATOR-SW-COMPONENT-TYPE">/ApplicationLayer/ApplicationPackage/DoorSensor</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="ce1a2561-0ce7-3c53-babe-e827719f01f2">
+                  <SHORT-NAME>lightManager</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ApplicationLayer/ApplicationPackage/InteriorLightManager</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="c7e8d1f8-ff1f-3448-b953-c3e0b7eaeae6">
+                  <SHORT-NAME>modeManager</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ApplicationLayer/ApplicationPackage/ModeManager</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="3162f3e1-0da3-3a89-8726-e9385a7b625e">
+                  <SHORT-NAME>ioHwAb</SHORT-NAME>
+                  <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/BSWConfiguration/Services/IoHwAb/IoHwAb</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="086fb3b9-7811-3ea1-82b4-3f225dc7bf47">
+                  <SHORT-NAME>ecuM</SHORT-NAME>
+                  <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/BSWConfiguration/Services/EcuM/EcuM</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="6cc0adfc-96a4-3d35-962e-b0eaa0ee0452">
+                  <SHORT-NAME>bswM</SHORT-NAME>
+                  <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/BSWConfiguration/Services/BswM/BswM</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="fbb12b82-1c27-3c81-930c-58fd4c11532a">
+                  <SHORT-NAME>comM</SHORT-NAME>
+                  <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/BSWConfiguration/Services/ComM/ComM</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+              </COMPONENTS>
+              <CONNECTORS>
+                <ASSEMBLY-SW-CONNECTOR UUID="9ece8211-3694-3e16-a731-16843ab10e99">
+                  <SHORT-NAME>ioHwAb_Digital_FrontLight_to_frontLightActuator_DigitalLight</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/ioHwAb</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/IoHwAb/IoHwAb/Digital_FrontLight</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/frontLightActuator</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/LightActuator/DigitalLight</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR UUID="ae24fb1e-52a2-33ec-ac41-4e55f4fb2d1d">
+                  <SHORT-NAME>ioHwAb_Digital_FrontDoorRight_to_rightDoorSensor_DoorSwitchSignal</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/ioHwAb</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/IoHwAb/IoHwAb/Digital_FrontDoorRight</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/rightDoorSensor</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/DoorSensor/DoorSwitchSignal</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR UUID="b8177c5f-d806-371d-8d73-a8bf3fe89146">
+                  <SHORT-NAME>ioHwAb_Digital_FrontDoorLeft_to_leftDoorSensor_DoorSwitchSignal</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/ioHwAb</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/IoHwAb/IoHwAb/Digital_FrontDoorLeft</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/leftDoorSensor</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/DoorSensor/DoorSwitchSignal</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR UUID="f5b40ae8-31e7-3a04-b49b-a692f8691753">
+                  <SHORT-NAME>lightManager_FrontLightStatus_to_frontLightActuator_InteriorLightStatus</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/lightManager</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/InteriorLightManager/FrontLightStatus</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/frontLightActuator</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/LightActuator/InteriorLightStatus</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR UUID="fa7f0435-2a01-3986-9ba2-7139642344b5">
+                  <SHORT-NAME>rightDoorSensor_DoorStatus_to_lightManager_RightDoorStatus</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/rightDoorSensor</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/DoorSensor/DoorStatus</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/lightManager</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/InteriorLightManager/RightDoorStatus</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR UUID="0b8f44c2-f52d-3f8a-87bd-6d19e78046d4">
+                  <SHORT-NAME>leftDoorSensor_DoorStatus_to_lightManager_LeftDoorStatus</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/leftDoorSensor</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/DoorSensor/DoorStatus</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/lightManager</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/InteriorLightManager/LeftDoorStatus</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR UUID="c54aacce-8877-30c1-882d-c24f9d2d06c0">
+                  <SHORT-NAME>modeManager_ComMControl_to_bswM_modeRequestPort_SwcStartCommunication</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/modeManager</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/ModeManager/ComMControl</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/bswM</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/BSWConfiguration/Services/BswM/BswM/modeRequestPort_SwcStartCommunication</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR UUID="fc4c791d-6561-34c3-a713-b6c30baf815e">
+                  <SHORT-NAME>ecuM_SR_User_to_modeManager_RunControl</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/ecuM</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/SR_User</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/modeManager</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/ModeManager/RunControl</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR UUID="bfbf85df-bf45-3ab3-aa62-5ad9bef393e1">
+                  <SHORT-NAME>ecuM_currentMode_to_modeManager_Mode</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/ecuM</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/currentMode</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/modeManager</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/ModeManager/Mode</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <DELEGATION-SW-CONNECTOR UUID="0220b71b-1e59-3617-b8f4-29a98e8ae662">
+                  <SHORT-NAME>LightStatus_delegate_connector0</SHORT-NAME>
+                  <INNER-PORT-IREF>
+                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/lightManager</CONTEXT-COMPONENT-REF>
+                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/InteriorLightManager/LightStatusOnCommMedia</TARGET-P-PORT-REF>
+                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                  </INNER-PORT-IREF>
+                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/LightStatus</OUTER-PORT-REF>
+                </DELEGATION-SW-CONNECTOR>
+                <DELEGATION-SW-CONNECTOR UUID="f06a287b-075a-38c4-a0b1-0fbf84f13c39">
+                  <SHORT-NAME>DoorStatus_delegate_connector0</SHORT-NAME>
+                  <INNER-PORT-IREF>
+                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/lightManager</CONTEXT-COMPONENT-REF>
+                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/ApplicationPackage/InteriorLightManager/RearDoorStatus</TARGET-R-PORT-REF>
+                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                  </INNER-PORT-IREF>
+                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/DoorStatus</OUTER-PORT-REF>
+                </DELEGATION-SW-CONNECTOR>
+              </CONNECTORS>
+            </COMPOSITION-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcuExtract</SHORT-NAME>
+          <ELEMENTS>
+            <SYSTEM UUID="8f2dba70-da02-41d4-baad-ff942a8e8e6d">
+              <SHORT-NAME>InteriorLightCANEcuExtract</SHORT-NAME>
+              <CATEGORY>ECU_EXTRACT</CATEGORY>
+              <MAPPINGS>
+                <SYSTEM-MAPPING UUID="bc5daa4c-9e00-4523-b7b2-ec03cf7b0310">
+                  <SHORT-NAME>ImplementationMappings</SHORT-NAME>
+                  <SW-IMPL-MAPPINGS>
+                    <SWC-TO-IMPL-MAPPING UUID="f8f9e9cf-f83c-47e4-9133-065ab7a874f2">
+                      <SHORT-NAME>IoHwAbMap</SHORT-NAME>
+                      <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/BSWConfiguration/Services/IoHwAb/IoHwAbImpl</COMPONENT-IMPLEMENTATION-REF>
+                      <COMPONENT-IREFS>
+                        <COMPONENT-IREF>
+                          <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ApplicationLayer/EcuExtract/InteriorLightCANEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                          <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/ioHwAb</TARGET-COMPONENT-REF>
+                        </COMPONENT-IREF>
+                      </COMPONENT-IREFS>
+                    </SWC-TO-IMPL-MAPPING>
+                    <SWC-TO-IMPL-MAPPING UUID="faa8d962-f3d3-41da-95cb-5d6a89d6d259">
+                      <SHORT-NAME>EcuMMap</SHORT-NAME>
+                      <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/BSWConfiguration/Services/EcuM/EcuMFixedImpl</COMPONENT-IMPLEMENTATION-REF>
+                      <COMPONENT-IREFS>
+                        <COMPONENT-IREF>
+                          <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ApplicationLayer/EcuExtract/InteriorLightCANEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                          <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/ecuM</TARGET-COMPONENT-REF>
+                        </COMPONENT-IREF>
+                      </COMPONENT-IREFS>
+                    </SWC-TO-IMPL-MAPPING>
+                    <SWC-TO-IMPL-MAPPING UUID="c515fd4b-a142-4fa0-9dec-eb819848d55b">
+                      <SHORT-NAME>SwcToImplMapping_for_BswMComponentImpl_to_bswM</SHORT-NAME>
+                      <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/BSWConfiguration/Services/BswM/BswMComponentImpl</COMPONENT-IMPLEMENTATION-REF>
+                      <COMPONENT-IREFS>
+                        <COMPONENT-IREF>
+                          <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ApplicationLayer/EcuExtract/InteriorLightCANEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                          <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/bswM</TARGET-COMPONENT-REF>
+                        </COMPONENT-IREF>
+                      </COMPONENT-IREFS>
+                    </SWC-TO-IMPL-MAPPING>
+                    <SWC-TO-IMPL-MAPPING UUID="c90b164c-cdf6-4725-9b13-4e7fb618cdd0">
+                      <SHORT-NAME>SwcToImplMapping_for_ComMImpl_to_comM</SHORT-NAME>
+                      <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/BSWConfiguration/Services/ComM/ComMImpl</COMPONENT-IMPLEMENTATION-REF>
+                      <COMPONENT-IREFS>
+                        <COMPONENT-IREF>
+                          <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ApplicationLayer/EcuExtract/InteriorLightCANEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                          <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/comM</TARGET-COMPONENT-REF>
+                        </COMPONENT-IREF>
+                      </COMPONENT-IREFS>
+                    </SWC-TO-IMPL-MAPPING>
+                    <SWC-TO-IMPL-MAPPING UUID="b196354c-b6a5-45d8-9da0-3680356d624f">
+                      <SHORT-NAME>SwcToImplMapping_for_DoorSensorImplementation_to_leftDoorSensor</SHORT-NAME>
+                      <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/ApplicationLayer/ApplicationPackage/DoorSensorImplementation</COMPONENT-IMPLEMENTATION-REF>
+                      <COMPONENT-IREFS>
+                        <COMPONENT-IREF>
+                          <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ApplicationLayer/EcuExtract/InteriorLightCANEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                          <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/leftDoorSensor</TARGET-COMPONENT-REF>
+                        </COMPONENT-IREF>
+                      </COMPONENT-IREFS>
+                    </SWC-TO-IMPL-MAPPING>
+                    <SWC-TO-IMPL-MAPPING UUID="17f36a21-1b98-479b-904f-7a7314d72946">
+                      <SHORT-NAME>SwcToImplMapping_for_DoorSensorImplementation_to_rightDoorSensor</SHORT-NAME>
+                      <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/ApplicationLayer/ApplicationPackage/DoorSensorImplementation</COMPONENT-IMPLEMENTATION-REF>
+                      <COMPONENT-IREFS>
+                        <COMPONENT-IREF>
+                          <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ApplicationLayer/EcuExtract/InteriorLightCANEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                          <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/rightDoorSensor</TARGET-COMPONENT-REF>
+                        </COMPONENT-IREF>
+                      </COMPONENT-IREFS>
+                    </SWC-TO-IMPL-MAPPING>
+                    <SWC-TO-IMPL-MAPPING UUID="5a8e5857-abd6-47b0-96d2-4dc059e15ef4">
+                      <SHORT-NAME>SwcToImplMapping_for_LightActuatorImplementation_to_frontLightActuator</SHORT-NAME>
+                      <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/ApplicationLayer/ApplicationPackage/LightActuatorImplementation</COMPONENT-IMPLEMENTATION-REF>
+                      <COMPONENT-IREFS>
+                        <COMPONENT-IREF>
+                          <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ApplicationLayer/EcuExtract/InteriorLightCANEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                          <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/frontLightActuator</TARGET-COMPONENT-REF>
+                        </COMPONENT-IREF>
+                      </COMPONENT-IREFS>
+                    </SWC-TO-IMPL-MAPPING>
+                    <SWC-TO-IMPL-MAPPING UUID="d99cbe1e-0ca4-45b9-9331-f4efc970b10b">
+                      <SHORT-NAME>SwcToImplMapping_for_ModeManagerImpl_to_modeManager</SHORT-NAME>
+                      <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/ApplicationLayer/ApplicationPackage/ModeManagerImpl</COMPONENT-IMPLEMENTATION-REF>
+                      <COMPONENT-IREFS>
+                        <COMPONENT-IREF>
+                          <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ApplicationLayer/EcuExtract/InteriorLightCANEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                          <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/modeManager</TARGET-COMPONENT-REF>
+                        </COMPONENT-IREF>
+                      </COMPONENT-IREFS>
+                    </SWC-TO-IMPL-MAPPING>
+                    <SWC-TO-IMPL-MAPPING UUID="f88e2079-366f-45a4-86b2-efa958320ece">
+                      <SHORT-NAME>SwcToImplMapping_for_InteriorLightManagerImpl_to_lightManager</SHORT-NAME>
+                      <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/ApplicationLayer/ApplicationPackage/InteriorLightManagerImpl</COMPONENT-IMPLEMENTATION-REF>
+                      <COMPONENT-IREFS>
+                        <COMPONENT-IREF>
+                          <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ApplicationLayer/EcuExtract/InteriorLightCANEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                          <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/lightManager</TARGET-COMPONENT-REF>
+                        </COMPONENT-IREF>
+                      </COMPONENT-IREFS>
+                    </SWC-TO-IMPL-MAPPING>
+                  </SW-IMPL-MAPPINGS>
+                </SYSTEM-MAPPING>
+                <SYSTEM-MAPPING UUID="97154e4f-ea0e-40e3-840d-024cd34371d3">
+                  <SHORT-NAME>SignalMappings</SHORT-NAME>
+                  <DATA-MAPPINGS>
+                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                      <DATA-ELEMENT-IREF>
+                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ApplicationLayer/EcuExtract/InteriorLightCANEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/LightStatus</CONTEXT-PORT-REF>
+                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ApplicationLayer/Interface/DataInterface/message</TARGET-DATA-PROTOTYPE-REF>
+                      </DATA-ELEMENT-IREF>
+                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/ApplicationLayer/Signals/TxMessageSystemSignal</SYSTEM-SIGNAL-REF>
+                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                      <DATA-ELEMENT-IREF>
+                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ApplicationLayer/EcuExtract/InteriorLightCANEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ApplicationLayer/CompositionPackage/RootComposition/DoorStatus</CONTEXT-PORT-REF>
+                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ApplicationLayer/Interface/DataInterface/message</TARGET-DATA-PROTOTYPE-REF>
+                      </DATA-ELEMENT-IREF>
+                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/ApplicationLayer/Signals/RxMessageSystemSignal</SYSTEM-SIGNAL-REF>
+                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                  </DATA-MAPPINGS>
+                </SYSTEM-MAPPING>
+              </MAPPINGS>
+              <ROOT-SOFTWARE-COMPOSITIONS>
+                <ROOT-SW-COMPOSITION-PROTOTYPE UUID="7928169b-ba59-4f6c-9d61-b6376322d675">
+                  <SHORT-NAME>RootSwComposition</SHORT-NAME>
+                  <SOFTWARE-COMPOSITION-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/ApplicationLayer/CompositionPackage/RootComposition</SOFTWARE-COMPOSITION-TREF>
+                </ROOT-SW-COMPOSITION-PROTOTYPE>
+              </ROOT-SOFTWARE-COMPOSITIONS>
+              <SYSTEM-VERSION>1</SYSTEM-VERSION>
+            </SYSTEM>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>Signals</SHORT-NAME>
+          <ELEMENTS>
+            <SYSTEM-SIGNAL UUID="ad395325-b4c1-40a5-9130-dbecd0edeaa7">
+              <SHORT-NAME>RxMessageSystemSignal</SHORT-NAME>
+            </SYSTEM-SIGNAL>
+            <SYSTEM-SIGNAL UUID="08ae3026-8723-4b98-b9ee-12918db32e81">
+              <SHORT-NAME>TxMessageSystemSignal</SHORT-NAME>
+            </SYSTEM-SIGNAL>
+            <I-SIGNAL UUID="0b8e12bd-a409-4130-97fe-ead940164264">
+              <SHORT-NAME>RxMessageiSignal</SHORT-NAME>
+              <DATA-TYPE-POLICY>NETWORK-REPRESENTATION-FROM-COM-SPEC</DATA-TYPE-POLICY>
+              <LENGTH>0</LENGTH>
+              <NETWORK-REPRESENTATION-PROPS />
+              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/ApplicationLayer/Signals/RxMessageSystemSignal</SYSTEM-SIGNAL-REF>
+            </I-SIGNAL>
+            <I-SIGNAL UUID="4b8780bc-3bfd-4b00-80ba-244979c5b6a3">
+              <SHORT-NAME>TxMessageiSignal</SHORT-NAME>
+              <DATA-TYPE-POLICY>NETWORK-REPRESENTATION-FROM-COM-SPEC</DATA-TYPE-POLICY>
+              <LENGTH>0</LENGTH>
+              <NETWORK-REPRESENTATION-PROPS />
+              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/ApplicationLayer/Signals/TxMessageSystemSignal</SYSTEM-SIGNAL-REF>
+            </I-SIGNAL>
+            <I-SIGNAL-I-PDU UUID="4b5904ef-06ef-4ea5-9141-1cb07ca3b502">
+              <SHORT-NAME>RxMessageiSignalPdu</SHORT-NAME>
+              <I-SIGNAL-TO-PDU-MAPPINGS>
+                <I-SIGNAL-TO-I-PDU-MAPPING UUID="dfb35210-d06e-43c2-a165-72e3afa998b0">
+                  <SHORT-NAME>RxMessageMapping</SHORT-NAME>
+                  <I-SIGNAL-REF DEST="I-SIGNAL">/ApplicationLayer/Signals/RxMessageiSignal</I-SIGNAL-REF>
+                </I-SIGNAL-TO-I-PDU-MAPPING>
+              </I-SIGNAL-TO-PDU-MAPPINGS>
+              <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+            </I-SIGNAL-I-PDU>
+            <I-SIGNAL-I-PDU UUID="8b35db28-cdb7-43fd-a70a-527cd94bd1bc">
+              <SHORT-NAME>TxMessageiSignalPdu</SHORT-NAME>
+              <I-SIGNAL-TO-PDU-MAPPINGS>
+                <I-SIGNAL-TO-I-PDU-MAPPING UUID="5956b478-fcfa-4efe-bad8-4eb4d4e1e2cc">
+                  <SHORT-NAME>TxMessageMapping</SHORT-NAME>
+                  <I-SIGNAL-REF DEST="I-SIGNAL">/ApplicationLayer/Signals/TxMessageiSignal</I-SIGNAL-REF>
+                </I-SIGNAL-TO-I-PDU-MAPPING>
+              </I-SIGNAL-TO-PDU-MAPPINGS>
+              <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+            </I-SIGNAL-I-PDU>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>BSWConfiguration</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>Services</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Os</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="7f1e4f79-bed4-30b5-aeb0-ef34aaa712d6">
+                  <SHORT-NAME>Os</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="d27183b7-037f-36d1-9c7f-42fa59ace16a">
+                      <SHORT-NAME>OsService_OsRteCounter</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/Os/OsService</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="9ff0aebb-b041-3272-8542-90f8bf639500">
+                      <SHORT-NAME>OsBehavior</SHORT-NAME>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="6ca4e969-31e6-45b8-a9df-95a143cd925c">
+                          <SHORT-NAME>GetCounterValue_OsService_OsRteCounter_GetCounterValue</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/Os/Os/OsBehavior/GetCounterValue</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/Os/Os/OsService_OsRteCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/Os/OsService/GetCounterValue</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="12710fbd-611d-4359-a4a6-bd6ed52c10f1">
+                          <SHORT-NAME>GetElapsedValue_OsService_OsRteCounter_GetElapsedValue</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/Os/Os/OsBehavior/GetElapsedValue</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/Os/Os/OsService_OsRteCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/Os/OsService/GetElapsedValue</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>CounterType</SHORT-LABEL>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Services/Os/CounterType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/Os/Os/OsService_OsRteCounter</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="e15d3ca3-da4f-3bcf-9c38-529870d8cda0">
+                          <SHORT-NAME>GetCounterValue</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Os_GetCounterValue</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="426e5a6f-cb0a-3ac2-9d90-e553deefff6c">
+                          <SHORT-NAME>GetElapsedValue</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Os_GetElapsedValue</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="61ab0afd-6719-3e52-86a3-bc4f981a20d4">
+                  <SHORT-NAME>OsImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="41f7e00e-1982-3600-b056-12e20b0ee060">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="cf96fb44-b3be-3984-ab17-7a1c33eb2e27">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/BSWConfiguration/Services/Os/Os/OsBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>BswM</SHORT-NAME>
+              <ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE UUID="83620cfb-683c-3060-a806-6d3dedd1eb37">
+                  <SHORT-NAME>ComMModeEnum</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/BSWConfiguration/Services/BswM/ComMModeEnum_def</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ArcCore/Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <COMPU-METHOD UUID="564e8fa6-e1ff-3157-8cf1-7523bab20888">
+                  <SHORT-NAME>ComMModeEnum_def</SHORT-NAME>
+                  <CATEGORY>TEXTTABLE</CATEGORY>
+                  <COMPU-INTERNAL-TO-PHYS>
+                    <COMPU-SCALES>
+                      <COMPU-SCALE>
+                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                        <COMPU-CONST>
+                          <VT>COMM_NO_COMMUNICATION</VT>
+                        </COMPU-CONST>
+                      </COMPU-SCALE>
+                      <COMPU-SCALE>
+                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                        <COMPU-CONST>
+                          <VT>COMM_SILENT_COMMUNICATION</VT>
+                        </COMPU-CONST>
+                      </COMPU-SCALE>
+                      <COMPU-SCALE>
+                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                        <COMPU-CONST>
+                          <VT>COMM_FULL_COMMUNICATION</VT>
+                        </COMPU-CONST>
+                      </COMPU-SCALE>
+                    </COMPU-SCALES>
+                  </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <SENDER-RECEIVER-INTERFACE UUID="c0bb8ee8-c1c3-36c7-ab1c-bcb6c4655acc">
+                  <SHORT-NAME>ComMModeRequestInterface</SHORT-NAME>
+                  <IS-SERVICE>false</IS-SERVICE>
+                  <DATA-ELEMENTS>
+                    <VARIABLE-DATA-PROTOTYPE UUID="4f02896a-d0cb-3c61-9832-73c22ba63d9f">
+                      <SHORT-NAME>requestedMode</SHORT-NAME>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/BSWConfiguration/Services/BswM/ComMModeEnum</TYPE-TREF>
+                    </VARIABLE-DATA-PROTOTYPE>
+                  </DATA-ELEMENTS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SERVICE-SW-COMPONENT-TYPE UUID="1897bc03-1a0b-35a1-a4d4-e5dee20bd2ff">
+                  <SHORT-NAME>BswM</SHORT-NAME>
+                  <PORTS>
+                    <R-PORT-PROTOTYPE UUID="749bc264-bfaa-3f22-88d5-f9db953bc478">
+                      <SHORT-NAME>modeRequestPort_SwcStartCommunication</SHORT-NAME>
+                      <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/BSWConfiguration/Services/BswM/ComMModeRequestInterface</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="cfb8ced6-e19d-349c-aeb1-8b1f2d12c348">
+                      <SHORT-NAME>BswMInternalBehavior</SHORT-NAME>
+                      <EVENTS>
+                        <TIMING-EVENT UUID="a72c8b6d-b097-4158-8b5c-cae94b438c3c">
+                          <SHORT-NAME>BswMRunnableEvent</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/BswM/BswM/BswMInternalBehavior/BswMRunnable</START-ON-EVENT-REF>
+                          <PERIOD>0.0</PERIOD>
+                        </TIMING-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="28faebaa-2034-36b9-9890-6f9ed5adf9ce">
+                          <SHORT-NAME>BswMRunnable</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                            <VARIABLE-ACCESS UUID="dc8a7aaf-7eef-3001-92f9-3c6df0366b3c">
+                              <SHORT-NAME>dataReceivePoint_BswMRunnable_modeRequestPort_SwcStartCommunication_requestedMode</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/BSWConfiguration/Services/BswM/BswM/modeRequestPort_SwcStartCommunication</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/BSWConfiguration/Services/BswM/ComMModeRequestInterface/requestedMode</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                          <SYMBOL>BswM_MainFunction</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="de4a3f77-b327-3247-a668-ca003c600111">
+                  <SHORT-NAME>BswMComponentImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="d4ac3664-bbea-3758-9c7d-a556cf80a23b">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="9dc1541b-c5fe-33ae-a70e-0d7d90e86785">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/BSWConfiguration/Services/BswM/BswM/BswMInternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>EcuM</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="dae6fec5-341b-3113-a80b-e064cab6eff1">
+                  <SHORT-NAME>EcuM</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="17d027e0-2d8b-3d38-bbc0-a7cc7f404218">
+                      <SHORT-NAME>SR_User</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_StateRequest</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="4595f216-6b98-34a4-8f70-1b5e5b3648ae">
+                      <SHORT-NAME>currentMode</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_CurrentMode</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="0dd3810d-3480-3a65-b236-e9a49ff63f23">
+                      <SHORT-NAME>shutdownTarget</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_ShutdownTarget</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="9bb6b0cc-aab6-3707-95dd-22ce044bf26c">
+                      <SHORT-NAME>bootTarget</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_BootTarget</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="7c4f326b-8599-32eb-9099-468e423755df">
+                      <SHORT-NAME>EcuMFixedBehavior</SHORT-NAME>
+                      <DATA-TYPE-MAPPING-REFS>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR/Services/EcuM/EcuMFixedTypeMappings</DATA-TYPE-MAPPING-REF>
+                      </DATA-TYPE-MAPPING-REFS>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="6593ff51-9df0-4d6b-ab86-ddf796f72e47">
+                          <SHORT-NAME>RequestRUN_SR_User_RequestRUN</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/RequestRUN</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/SR_User</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/RequestRUN</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="fb3f1709-1fc7-4f27-b54f-2d92661a2eb2">
+                          <SHORT-NAME>ReleaseRUN_SR_User_ReleaseRUN</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/ReleaseRUN</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/SR_User</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/ReleaseRUN</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="a141b2ff-2f60-4e73-97f0-db2c8f1d17a1">
+                          <SHORT-NAME>RequestPOSTRUN_SR_User_RequestPOSTRUN</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/RequestPOSTRUN</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/SR_User</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/RequestPOSTRUN</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="29781d23-c28f-41ce-b83d-47266e4aa372">
+                          <SHORT-NAME>ReleasePOSTRUN_SR_User_ReleasePOSTRUN</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/ReleasePOSTRUN</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/SR_User</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/ReleasePOSTRUN</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="02540d7c-4a67-4505-8c8a-1bdb472f4225">
+                          <SHORT-NAME>SelectShutdownTarget_shutdownTarget_SelectShutdownTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/SelectShutdownTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_ShutdownTarget/SelectShutdownTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="7338b7e9-032e-4f2c-bf5d-34d5db3fb1a3">
+                          <SHORT-NAME>GetShutdownTarget_shutdownTarget_GetShutdownTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/GetShutdownTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_ShutdownTarget/GetShutdownTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="21381145-870e-460c-88bc-e17d6a7ee53e">
+                          <SHORT-NAME>GetLastShutdownTarget_shutdownTarget_GetLastShutdownTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/GetLastShutdownTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_ShutdownTarget/GetLastShutdownTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="2f53ab84-7301-42e9-896f-0e870e6c818e">
+                          <SHORT-NAME>SelectBootTarget_bootTarget_SelectBootTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/SelectBootTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/bootTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_BootTarget/SelectBootTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="53788bad-244a-4f64-a8ee-956df8e8cb38">
+                          <SHORT-NAME>GetBootTarget_bootTarget_GetBootTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/GetBootTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/bootTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_BootTarget/GetBootTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>EcuM_UserType</SHORT-LABEL>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Services/EcuM/EcuM_UserType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/SR_User</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="1c537027-1e18-32cf-8c4d-c2007519d7ba">
+                          <SHORT-NAME>EcuM_MainFunction</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <MODE-SWITCH-POINTS>
+                            <MODE-SWITCH-POINT UUID="e24885cb-bbc3-3e58-97c1-826e00621b8d">
+                              <SHORT-NAME>modeSwitchPoint_EcuM_MainFunction_currentMode_currentMode</SHORT-NAME>
+                              <MODE-GROUP-IREF>
+                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/EcuM/EcuM/currentMode</CONTEXT-P-PORT-REF>
+                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR/Services/EcuM/EcuM_CurrentMode/currentMode</TARGET-MODE-GROUP-REF>
+                              </MODE-GROUP-IREF>
+                            </MODE-SWITCH-POINT>
+                          </MODE-SWITCH-POINTS>
+                          <SYMBOL>EcuM_MainFunction</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="0634e11d-7627-32e9-a52b-4abb9d078433">
+                          <SHORT-NAME>RequestRUN</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_RequestRUN</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="9b3707e1-5f01-330f-98d1-9bd26f40fb92">
+                          <SHORT-NAME>ReleaseRUN</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_ReleaseRUN</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="2ee8dd70-4c24-3e3e-8cf8-228552c6f95c">
+                          <SHORT-NAME>RequestPOSTRUN</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_RequestPOST_RUN</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="9f0b7bd4-c09d-3b4c-9bfc-734b45a85241">
+                          <SHORT-NAME>ReleasePOSTRUN</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_ReleasePOST_RUN</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="399aa346-ebc5-39ed-930e-0e5f854ec681">
+                          <SHORT-NAME>SelectShutdownTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_SelectShutdownTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="14fc60ce-8d95-32c4-86ce-3c0da9bd31fb">
+                          <SHORT-NAME>GetShutdownTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_GetShutdownTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="4400b6b0-e706-3eb6-bf8a-69615e6871be">
+                          <SHORT-NAME>GetLastShutdownTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_GetLastShutdownTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="d171f01b-589b-336b-bbf2-2187fed04484">
+                          <SHORT-NAME>SelectBootTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_SelectBootTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="45bbbde2-7bbe-33d7-a141-68389550cd3d">
+                          <SHORT-NAME>GetBootTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_GetBootTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="c73bce53-0bff-3fde-8bac-0431e21f0530">
+                  <SHORT-NAME>EcuMFixedImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="9fe1358e-30d0-3309-97ef-60e259285dca">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="c42298be-c3ef-37a2-ac22-01a8ae7adb78">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/BSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>ComM</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="397cd920-babc-35bc-a227-a742cc1a9ad0">
+                  <SHORT-NAME>ComM</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="2f1adc2e-172c-3249-b66d-23a38ee418bf">
+                      <SHORT-NAME>UR_ComMUser</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/ComM/ComM_UserRequest</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="4d05cb4e-7f4a-3b8d-a591-59dc7ab79103">
+                      <SHORT-NAME>UM_ComMUser</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/AUTOSAR/Services/ComM/ComM_CurrentMode</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="638e6c9e-46ce-30dd-ae52-a196031704d8">
+                      <SHORT-NAME>ComMBehavior</SHORT-NAME>
+                      <DATA-TYPE-MAPPING-REFS>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR/Services/ComM/ComMTypeMappings</DATA-TYPE-MAPPING-REF>
+                      </DATA-TYPE-MAPPING-REFS>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="4185abde-8520-4bb6-b862-d9155237a970">
+                          <SHORT-NAME>RequestComMode_UR_ComMUser_RequestComMode</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/ComM/ComM/ComMBehavior/RequestComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/ComM/ComM/UR_ComMUser</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/ComM/ComM_UserRequest/RequestComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="c50066b7-350f-4a5d-8c94-8e6bed92e97f">
+                          <SHORT-NAME>GetMaxComMode_UR_ComMUser_GetMaxComMode</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/ComM/ComM/ComMBehavior/GetMaxComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/ComM/ComM/UR_ComMUser</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/ComM/ComM_UserRequest/GetMaxComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="da8d4d3b-e059-4cec-ad29-25dd150b24e6">
+                          <SHORT-NAME>GetRequestedComMode_UR_ComMUser_GetRequestedComMode</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/ComM/ComM/ComMBehavior/GetRequestedComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/ComM/ComM/UR_ComMUser</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/ComM/ComM_UserRequest/GetRequestedComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="9e7ac337-85f2-446f-be47-9370441be062">
+                          <SHORT-NAME>GetCurrentComMode_UR_ComMUser_GetCurrentComMode</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/ComM/ComM/ComMBehavior/GetCurrentComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/ComM/ComM/UR_ComMUser</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/ComM/ComM_UserRequest/GetCurrentComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>ComM_UserHandleType</SHORT-LABEL>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Services/ComM/ComM_UserHandleType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/ComM/ComM/UR_ComMUser</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="0afb30c4-1674-3b1a-9881-1718134f4163">
+                          <SHORT-NAME>ComM_MainFunction</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <MODE-SWITCH-POINTS>
+                            <MODE-SWITCH-POINT UUID="ee555dc4-c971-3b1b-ae11-aebe53382a73">
+                              <SHORT-NAME>modeSwitchPoint_ComM_MainFunction_UM_ComMUser_currentMode</SHORT-NAME>
+                              <MODE-GROUP-IREF>
+                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/ComM/ComM/UM_ComMUser</CONTEXT-P-PORT-REF>
+                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR/Services/ComM/ComM_CurrentMode/currentMode</TARGET-MODE-GROUP-REF>
+                              </MODE-GROUP-IREF>
+                            </MODE-SWITCH-POINT>
+                          </MODE-SWITCH-POINTS>
+                          <SYMBOL>ComM_MainFunction</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="7aedd79e-2a3d-3b00-8ba8-417b5b2702df">
+                          <SHORT-NAME>RequestComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_RequestComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="2af57b4a-deee-3f7a-8839-cffeb3913419">
+                          <SHORT-NAME>GetMaxComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_GetMaxComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="1967ead7-778e-3269-8e7d-3eca19a2e9ad">
+                          <SHORT-NAME>GetRequestedComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_GetRequestedComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="ec619a0e-ec2f-3879-bef2-675375f5c6bf">
+                          <SHORT-NAME>GetCurrentComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_GetCurrentComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="50283bef-a07a-3df4-9aac-e6fcdd6a2e3a">
+                  <SHORT-NAME>ComMImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="d335c703-3cc3-3e76-9bf8-c62d02d239fa">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="9c27eee6-e779-35ac-8a20-88d226b589a4">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/BSWConfiguration/Services/ComM/ComM/ComMBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>IoHwAb</SHORT-NAME>
+              <ELEMENTS>
+                <ECU-ABSTRACTION-SW-COMPONENT-TYPE UUID="05c43618-94f7-3fef-9d52-56f56fafb0ce">
+                  <SHORT-NAME>IoHwAb</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="c9fba0e0-649b-33a2-9101-2d43c97445e9">
+                      <SHORT-NAME>Digital_FrontLight</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ArcCore/Services/IoHwAb/DigitalServiceWrite</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="55c812a3-17ac-3e30-8282-d94dd6fd6aaa">
+                      <SHORT-NAME>Digital_FrontDoorRight</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ArcCore/Services/IoHwAb/DigitalServiceRead</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="7880615d-c6bb-32a2-a3c2-6f8b0b62d1a4">
+                      <SHORT-NAME>Digital_FrontDoorLeft</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ArcCore/Services/IoHwAb/DigitalServiceRead</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="a5be6740-ba1a-3635-99c7-25a4a259ac7a">
+                      <SHORT-NAME>IoHwAbBehavior</SHORT-NAME>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="c67c2104-4f2a-43a0-82df-3b301a03bfed">
+                          <SHORT-NAME>DigitalRead_Digital_FrontDoorRight_Read</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/IoHwAb/IoHwAb/IoHwAbBehavior/DigitalRead</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/IoHwAb/IoHwAb/Digital_FrontDoorRight</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ArcCore/Services/IoHwAb/DigitalServiceRead/Read</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="467aa788-e3fc-43d2-9294-a98f97967ff5">
+                          <SHORT-NAME>DigitalRead_Digital_FrontDoorLeft_Read</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/IoHwAb/IoHwAb/IoHwAbBehavior/DigitalRead</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/IoHwAb/IoHwAb/Digital_FrontDoorLeft</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ArcCore/Services/IoHwAb/DigitalServiceRead/Read</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="f29226b9-bf14-40a9-aa52-1e65bfa5d779">
+                          <SHORT-NAME>DigitalWrite_Digital_FrontLight_Write</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BSWConfiguration/Services/IoHwAb/IoHwAb/IoHwAbBehavior/DigitalWrite</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/IoHwAb/IoHwAb/Digital_FrontLight</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ArcCore/Services/IoHwAb/DigitalServiceWrite/Write</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>IoHwAb_SignalType_</SHORT-LABEL>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ArcCore/Services/IoHwAb/IoHwAb_SignalType_</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/IoHwAb/IoHwAb/Digital_FrontLight</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>IoHwAb_SignalType_</SHORT-LABEL>
+                                  <VALUE>1</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ArcCore/Services/IoHwAb/IoHwAb_SignalType_</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/IoHwAb/IoHwAb/Digital_FrontDoorRight</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>IoHwAb_SignalType_</SHORT-LABEL>
+                                  <VALUE>2</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ArcCore/Services/IoHwAb/IoHwAb_SignalType_</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/BSWConfiguration/Services/IoHwAb/IoHwAb/Digital_FrontDoorLeft</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="6483aefd-2176-354b-8344-774680f58165">
+                          <SHORT-NAME>DigitalRead</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_Digital_Read</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="4ce19f33-b166-3a41-8508-ec3209911875">
+                          <SHORT-NAME>DigitalWrite</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_Digital_Write</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </ECU-ABSTRACTION-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="b2dd8920-c0c3-32bc-9805-0923f16d1991">
+                  <SHORT-NAME>IoHwAbImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="6e90d825-f5c4-3cf5-9055-efea57dd5229">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="7ebdde44-045a-32f0-b29e-aaf56a8d880f">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/BSWConfiguration/Services/IoHwAb/IoHwAb/IoHwAbBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>Det</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="d5d14d60-5082-35ae-8885-63dbe43f11a7">
+                  <SHORT-NAME>Det</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="93a96574-8cc6-3a3e-a728-ce6295d271f3">
+                      <SHORT-NAME>DetBehavior</SHORT-NAME>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="37f52ef0-f4cf-32cd-8723-bc9351ecdfdd">
+                          <SHORT-NAME>ReportError</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Det_ReportError</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="9900e88c-ac91-310f-81cf-b533885a8e06">
+                  <SHORT-NAME>DetImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="7cf4d467-362e-352e-ab58-fe66bca9c9c9">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="984a0413-7eda-37f5-9e65-19a0a05cb3c2">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/BSWConfiguration/Services/Det/Det/DetBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

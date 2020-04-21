@@ -1,0 +1,19 @@
+package ApplicationLayer.Signals
+
+/*
+ * Creating SystemSignals that are referenced by the EcuExtract to make outer 
+ * communication available to the top modules of the BSW
+ */
+systemSignal RxMessageSystemSignal
+systemSignal TxMessageSystemSignal
+
+iSignal for RxMessageSystemSignal as RxMessageiSignal
+iSignal for TxMessageSystemSignal as TxMessageiSignal
+
+iSignalPdu RxMessageiSignalPdu {
+	iSignalIPduMapping for RxMessageiSignal as RxMessageMapping
+}
+
+iSignalPdu TxMessageiSignalPdu {
+	iSignalIPduMapping for TxMessageiSignal as TxMessageMapping
+}

@@ -1,0 +1,41 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#######################################################  
+#Parameters excluded from generic validation
+#######################################################
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcSafeIoHwAbDigitalDemEventParameterRef
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcSafeIoHwAbDigitalDiagnosticType  
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcSafeIoHwAbExternalDeviceDriverRef  
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcSafeIoHwAbDioChannelRef
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcSafeIoHwAbPwmChannel
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcSafeIoHwAbAdcChannel
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcSafeIoHwAbAdcGroup
+  
+#########################################################
+# Parameter groups
+#########################################################
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Analog Settings
+  members: [ ArcSafeIoHwAbAnalogSupport ]
+  
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Digital Settings
+  members: [ ArcSafeIoHwAbDigitalSupport ]
+  
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Pwm Settings
+  members: [ ArcSafeIoHwAbPwmSupport ]

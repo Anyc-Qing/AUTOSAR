@@ -1,0 +1,27 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+########################################################
+# Hidden parameters in DetGeneral
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DetReportRuntimeErrorCallout
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DetReportTransientFaultCallout
+
+#########################################################
+# Parameter groups
+#########################################################
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Callbacks
+  members: [ DetEnableCallbacks, DetNumberOfCallbacks ]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: RamLog
+  members: [ DetUseRamlog, DetRamlogSize, DetWrapRamlog ]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Safety Monitor
+  members: [ DetUseSafetyMonitor, DetSafetyMonitorTaskRef, DetSafetyMonitorEventRef ]
+  

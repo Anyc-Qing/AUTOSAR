@@ -1,0 +1,53 @@
+package ApplicationLayer.EcuExtract
+
+import ApplicationLayer.CompositionPackage.RootComposition
+import ApplicationLayer.CompositionPackage.RootComposition.*
+
+import ApplicationLayer.ApplicationPackage.ModeManagerImpl
+import ApplicationLayer.ApplicationPackage.LightActuatorImplementation
+import ApplicationLayer.ApplicationPackage.DoorSensorImplementation
+import ApplicationLayer.ApplicationPackage.InteriorLightManagerImpl
+
+import ApplicationLayer.Signals.RxMessageSystemSignal
+import ApplicationLayer.Signals.TxMessageSystemSignal
+
+import BSWConfiguration.Services.IoHwAb.IoHwAbImpl
+import BSWConfiguration.Services.ComM.ComMImpl
+import BSWConfiguration.Services.EcuM.EcuMFixedImpl
+import BSWConfiguration.Services.Det.DetImpl
+import BSWConfiguration.Services.BswM.BswMComponentImpl
+
+/*
+ * The System Object is extracted to the ECU Project, from where it is 
+ * referenced
+ */
+system InteriorLightCANEcuExtract {
+	rootComposition RootComposition
+	
+	mapping as ImplementationMappings {
+		// Ecu Abstraction
+		implMap IoHwAbImpl to ioHwAb as IoHwAbMap
+		
+		// Service Components
+		implMap EcuMFixedImpl to ecuM as EcuMMap
+		implMap BswMComponentImpl to bswM
+		implMap ComMImpl to comM
+		// Sensors
+		implMap DoorSensorImplementation to leftDoorSensor
+		implMap DoorSensorImplementation to rightDoorSensor
+		
+		// Actuators
+		implMap LightActuatorImplementation to frontLightActuator
+		
+		// Mode Manager
+		implMap ModeManagerImpl to modeManager
+		
+		// Interior Light Manager
+		implMap InteriorLightManagerImpl to lightManager
+	}
+	
+	mapping as SignalMappings {
+		signalMap outerPort LightStatus.message to TxMessageSystemSignal
+		signalMap outerPort DoorStatus.message to RxMessageSystemSignal
+	}
+}

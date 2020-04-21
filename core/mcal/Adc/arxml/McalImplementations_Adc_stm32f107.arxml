@@ -1,0 +1,39 @@
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="">
+      <SHORT-NAME>ArcCore</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="">
+          <SHORT-NAME>Implementations</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>stm32f107</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-IMPLEMENTATION UUID="904fc700-de5e-4e5f-93c1-73e0a90a2af3">
+                  <SHORT-NAME>Adc</SHORT-NAME>
+                  <CATEGORY/>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">STM32F107</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>2.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>mcal::Adc::gen::Adc_stm32f10x::main</USED-CODE-GENERATOR>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/ST/stm32f10x/Adc</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,51 @@
+// create package with the SWC interfaces
+package Interfaces
+
+// imported elements
+import ArcCore.Platform.ImplementationDataTypes.*
+
+enum impl NvmCmdType extends uint8 {
+	SWCMEM_REQ_IDLE = 0,
+    SWCMEM_REQ_WRITE_BLOCK = 1,
+    SWCMEM_REQ_READ_BLOCK = 2
+}
+
+enum impl NvmResType extends uint8 {
+	SWCMEM_RES_NONE = 0,
+    SWCMEM_RES_WRITE_BLOCK_OK = 1,
+    SWCMEM_RES_WRITE_BLOCK_FAILED = 2,
+    SWCMEM_RES_READ_BLOCK_OK = 3,
+    SWCMEM_RES_READ_BLOCK_FAILED = 4,
+    SWCMEM_RES_REQ_BUSY = 5,
+    SWCMEM_RES_REQ_INVALID = 6
+}
+
+enum impl TestCmdType extends uint8 {
+	TESTER_CMD_NONE = 0,
+	TESTER_CMD_SHUTDOWN = 1,
+	TESTER_CMD_ENABLE_WDG = 2,
+	TESTER_CMD_DISABLE_WDG = 3,
+	TESTER_CMD_STOP_WDG_KICK = 4
+}
+
+// port declarations
+interface senderReceiver BasicSRInterface {
+	data uint32 data1
+	data TestCmdType cmd
+} 
+
+interface senderReceiver BasicSRInterface2 {
+	data sint32 data1
+}
+
+interface senderReceiver MemoryCmdIf {
+	data NvmCmdType command
+	data uint8 blockId
+	data uint32 payload
+}
+
+interface senderReceiver MemoryResIf {
+	data NvmResType result
+	data uint8 blockId
+	data uint32 payload
+}

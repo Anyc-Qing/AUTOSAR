@@ -1,0 +1,9 @@
+# 1.0
+# com.arccore.board
+
+- !!com.arccore.corebuilder.templates.yaml.BoardSettings
+  label: tc264_trb
+  description: 
+  environment: {
+    BOARDDIR: tc264_trb
+  }

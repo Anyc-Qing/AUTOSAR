@@ -1,0 +1,62 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+  
+# Container PortGeneral
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortSetPinDirection
+  mcals: [ JACINTO5, JACINTO6]
+  
+# Container PortPin
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortSetPinModeApi
+  mcals: [ JACINTO5, JACINTO6,TMS570, TMS570LS12X, TMS570LC43X]
+  
+# Container PortPin
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortPinModeChangeable
+  mcals: [ JACINTO5, JACINTO6, TMS570LC43X, RH850F1H, zynq, STM32F103, STM32F107 ]
+  
+-  !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcPortPinSlewRate
+  mcals: [ JACINTO5 ] 
+  
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortPinDirectionChangeable
+  mcals: [ JACINTO5, JACINTO6, RH850F1H, zynq, STM32F103, STM32F107 ]
+  
+    # Container PortContainer
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortPinMode
+  
+-  !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortPinInitialMode
+  mcals: [ STM32F103, STM32F107]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcPortPadId
+  mcals: [ TMS570, TMS570LS12X, TMS570LC43X, RH850F1H, RH850F1L]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcPortSignalName
+  mcals: [ TMS570, TMS570LS12X, TMS570LC43X ]
+   
+  # Container PortContainer
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortNumberOfPortPins
+  mcals: [JACINTO5, JACINTO6, MPC560x, MPC5668, MPC551x,  MPC5744P, MPC5567, MPC5748G, MPC5747C, MPC5634M, MPC5746C, MPC5643L, SPC56XL70, MPC5644A, MPC5645S, MPC5646B, SPC560B54, MPC5606B, MPC5606S, MPC5607B, zynq, RH850F1H, RH850F1L, MPC5777M, STM32F103, STM32F107, MPC5777C]
+    
+#######################################################  
+#Parameters excluded from generic validation
+#######################################################
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: PortPinId  
+  
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcPortPinPull
+  mcals: [ TMS570, TMS570LS12X, TMS570LC43X ]
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcPortPinSlewRate
+  mcals: [ TMS570, TMS570LS12X, TMS570LC43X  ]

@@ -1,0 +1,11 @@
+
+=== FiM ===
+
+-Validating module FiM...
+
+-Generating module FiM...
+		FiM.mk
+		FiM_Cfg.h
+		FiM_PBCfg.c
+		FiM_a2lTags.c
+FiM done.

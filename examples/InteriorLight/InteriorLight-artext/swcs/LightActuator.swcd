@@ -1,0 +1,32 @@
+package ApplicationLayer.ApplicationPackage
+
+import ArcCore.Services.IoHwAb.*
+import ApplicationLayer.Interface.*
+import LightActuator.LightActuatorBehavior
+
+component sensorActuator LightActuator {
+	ports {
+		receiver InteriorLightStatus requires LightInterface
+		client DigitalLight requires DigitalServiceWrite
+	}
+}
+
+internalBehavior supportsMultipleInstantiation LightActuatorBehavior for LightActuator {
+	dataTypeMappings {
+		TypeMappings
+	}
+	
+	runnable LightActuatorMain[0.0] {
+		symbol "lightActuatorMain"
+		dataReadAccess InteriorLightStatus.status
+		serverCallPoint synchronous DigitalLight.Write
+		timingEvent 0.1 as lightActuatorMainEvent
+	}
+}
+
+implementation LightActuatorImplementation for LightActuatorBehavior {
+	language c
+	codeDescriptor "src"
+}
+
+

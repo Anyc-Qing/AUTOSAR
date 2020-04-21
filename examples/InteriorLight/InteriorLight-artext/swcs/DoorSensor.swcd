@@ -1,0 +1,61 @@
+package ApplicationLayer.ApplicationPackage
+
+// To use the Interface DigitalServiceRead, which is used by IoHwAb
+import ArcCore.Services.IoHwAb.*
+/*
+ * To use the Interface defined in Interface.swcd (in this case the 
+ * DoorInterface)
+ */
+import ApplicationLayer.Interface.*
+// Import so that the Implementation can reach the InternalBehavior
+import DoorSensor.DoorSensorBehavior
+
+//Definition of the SWC
+component sensorActuator DoorSensor {
+	ports {
+		// For receiving input over DIO from IoHwAb
+		client DoorSwitchSignal requires DigitalServiceRead
+		// For sending received DIO signal onto the InteriorLightManager
+		sender DoorStatus provides DoorInterface
+	}
+}
+
+// InternalBehavior for the SWC DoorSensor (a SWC must have an InternalBehavior) 
+internalBehavior supportsMultipleInstantiation DoorSensorBehavior for DoorSensor {
+	// To be able to use our dataTypeMappings as defined in Interface.swcd
+	dataTypeMappings {
+		TypeMappings
+	}
+	
+	runnable DoorSensorMain[0.0] {
+		/*
+		 * Naming the Runnable, which is the name of the C-function we later 
+		 * must implement
+		 */
+		symbol "doorSensorMain"
+		/*
+		 * Giving the Runnable access to send the parameter status over the 
+		 * port sender port DoorStatus
+		 */
+		dataWriteAccess DoorStatus.status
+		/*
+		 * Giving the Runnable access to invoke the function Read (defined in 
+		 * IoHwAb) over the port DoorSwitchSignal
+		 */
+		serverCallPoint synchronous DoorSwitchSignal.Read
+		/*
+		 * Creates a timingEvent with the name doorSensorMainEvent, which 
+		 * will be connected to an OSTask in the RTE Editor
+		 */
+		timingEvent 0.1 as doorSensorMainEvent
+	}
+}
+
+/*
+ * Implementation of the InternalBehavior DoorSensorBehavior (an 
+ * InternalBehavior must have an Implementation)
+ */
+implementation DoorSensorImplementation for DoorSensorBehavior {
+	language c
+	codeDescriptor "src"
+}

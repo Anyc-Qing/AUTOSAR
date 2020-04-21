@@ -1,0 +1,19 @@
+
+#if defined(__CWCC__)
+#define ORIGIN	origin
+#define LENGTH	length
+#define RAM	sram
+#define FLASH flash
+#elif defined(__DCC__)
+#define ORIGIN	origin
+#define LENGTH	length
+#define RAM	sram
+#define FLASH flash
+#else
+#define RAM ram(RW)
+#define FLASH flash(R)
+#endif
+ 
+FLASH : ORIGIN = 0x00000000, LENGTH = 2M
+RAM  : ORIGIN = 0x08000000, LENGTH = 160K
+

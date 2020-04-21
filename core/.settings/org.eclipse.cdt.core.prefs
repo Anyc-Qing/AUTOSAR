@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+environment/project/0.1424151661/BOARDDIR/delimiter=;
+environment/project/0.1424151661/BOARDDIR/operation=remove
+environment/project/0.1424151661/BOARDDIR/value=
+environment/project/0.1424151661/PATH/delimiter=;
+environment/project/0.1424151661/PATH/operation=replace
+environment/project/0.1424151661/PATH/value=${eclipse_home}/msys/bin;C\:\\devtools\\HIGHTEC\\licensemanager
+environment/project/0.1424151661/PCLINT/delimiter=;
+environment/project/0.1424151661/PCLINT/operation=replace
+environment/project/0.1424151661/PCLINT/value=/c/devtools/lint/lint-nt.exe
+environment/project/0.1424151661/append=true
+environment/project/0.1424151661/appendContributed=true

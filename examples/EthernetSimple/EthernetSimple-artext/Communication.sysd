@@ -1,0 +1,16 @@
+package EthernetSimple.Communication
+
+systemSignal Rx01dataSSig
+systemSignal Tx01dataSSig
+
+iSignal for Rx01dataSSig as Rx01dataISig
+iSignal for Tx01dataSSig as Tx01dataISig
+
+iSignalPdu Rx01dataIPdu {
+	iSignalIPduMapping for Rx01dataISig as Rx01dataMapping
+}
+
+iSignalPdu Tx01dataIPdu {
+	iSignalIPduMapping for Tx01dataISig as Tx01dataMapping
+}
+

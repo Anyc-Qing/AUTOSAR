@@ -1,0 +1,76 @@
+// create package for SWC Blinker
+package SwcReader
+import Interfaces.*
+import HelloWorld_Generic.Services.IoHwAb.*
+import HelloWorld_Generic.Services.BswM.*
+import HelloWorld_Generic.Services.Os.*
+import AUTOSAR.Services.EcuM.*
+import AUTOSAR.Services.Det.*
+import ArcCore.Services.IoHwAb.*
+import AUTOSAR.Services.Dlt.*
+import AUTOSAR.Services.Dem.*
+import AUTOSAR.Services.WdgM.*
+import AUTOSAR.Services.Os.*
+import HelloWorld_Generic.Services.FiM.*
+
+component application SwcReaderType {
+	ports {
+		client OsCounter requires OsService
+		receiver ReceiverPort requires BasicSRInterface
+		client Blinker requires DigitalServiceWrite
+		client AnalogReader requires AnalogServiceRead
+		sender ResultPort provides BasicSRInterface
+		sender AdcResult provides BasicSRInterface2
+		client PWMWriter requires PwmServiceSetDuty
+		receiver Mode requires EcuM_CurrentMode
+		client RunControl requires EcuM_StateRequest
+		client Det requires DETService
+		client Dlt requires DLTService
+		client Dem_TestEvent requires DiagnosticMonitor 
+		
+		client WdgM_LocalSup requires WdgM_LocalSupervision
+		receiver WdgM_LocalMode requires WdgM_LocalMode
+		sender WdgM_StateReq provides WdgMModeRequestInterface
+		client FiM_FID1_Inhibition requires FunctionInhibition
+	}
+}
+
+// define component internal behavior for the RTE. It is a part of the component type hand must therefore extend the ComponentTypes package
+internalBehavior SwcReaderBehavior for SwcReaderType {
+ 	dataTypeMappings {
+		EcuMFixedTypeMappings
+		WdgMTypeMappings
+	}
+	runnable SwcReaderRunnable [0.0] {
+		symbol "swcReaderRunnable"
+		dataReadAccess ReceiverPort.* 
+		dataWriteAccess ResultPort.data1
+		dataWriteAccess AdcResult.data1
+		serverCallPoint synchronous OsCounter.GetCounterValue
+		serverCallPoint synchronous OsCounter.GetElapsedValue
+		serverCallPoint synchronous Blinker.Write as BlinkerCallPoint
+		serverCallPoint synchronous AnalogReader.Read as AnalogCallPoint
+		serverCallPoint synchronous Det.ReportError
+		serverCallPoint synchronous PWMWriter.Set as PWMCallPoint
+		serverCallPoint synchronous Dlt.SendLogMessage
+		serverCallPoint synchronous Dem_TestEvent.SetEventStatus
+		serverCallPoint synchronous WdgM_LocalSup.CheckpointReached
+		serverCallPoint synchronous RunControl.ReleaseRUN
+		serverCallPoint synchronous FiM_FID1_Inhibition.GetFunctionPermission
+		modeSwitchEvent entry WdgM_LocalMode.currentMode.SUPERVISION_FAILED as localModeEvent
+		dataWriteAccess WdgM_StateReq.*
+		timingEvent 0.1
+	}
+	runnable Init [0.0] {
+		symbol "swcReaderInit"
+		serverCallPoint synchronous RunControl.RequestRUN
+		modeSwitchEvent exit Mode.currentMode.STARTUP as InitEvent
+	}
+}
+
+// component implementation describes how the SWC is implemented.
+// It may be located in a separate package if there exists more than one type of implementation
+implementation SwcReaderImpl for SwcReaderType.SwcReaderBehavior {
+	language c
+	codeDescriptor "src"
+}

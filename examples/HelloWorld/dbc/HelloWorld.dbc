@@ -1,0 +1,49 @@
+VERSION ""
+
+
+NS_ :
+
+BS_:
+
+BU_: Vector__XXX
+
+BO_ 1 Ecu01: 8 Vector__XXX
+SG_ Adc_signal : 32|32@1- (1,0) [-2147483648|2147483647] "" Vector__XXX
+SG_ txsignal01 : 0|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+
+
+BO_ 2 Tester01: 8 Vector__XXX
+SG_ rxsignal01 : 0|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+
+
+BO_ 17 MemRequest: 8 Vector__XXX
+SG_ CmdType : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ BlockType : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ Data : 23|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+
+
+BO_ 16 MemResponse: 8 Vector__XXX
+SG_ Status : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ BlockType : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+SG_ Data : 23|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -3.4E+038 3.4E+038;
+
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+
+BA_ "BusType" "CAN";
+
+BA_ "GenSigStartValue" SG_ 1 Adc_signal 0;
+BA_ "GenSigStartValue" SG_ 1 txsignal01 0;
+BA_ "GenSigStartValue" SG_ 2 rxsignal01 0;
+BA_ "GenSigStartValue" SG_ 17 CmdType 0;
+BA_ "GenSigStartValue" SG_ 17 BlockType 0;
+BA_ "GenSigStartValue" SG_ 17 Data 0;
+BA_ "GenSigStartValue" SG_ 16 Status 0;
+BA_ "GenSigStartValue" SG_ 16 BlockType 0;
+BA_ "GenSigStartValue" SG_ 16 Data 0;
+
+

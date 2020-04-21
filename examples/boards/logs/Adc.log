@@ -1,0 +1,10 @@
+
+=== Adc ===
+
+-Validating module Adc...
+
+-Generating module Adc...
+		Adc.mk
+		Adc_Cfg.h
+		Adc_Cfg.c
+Adc done.

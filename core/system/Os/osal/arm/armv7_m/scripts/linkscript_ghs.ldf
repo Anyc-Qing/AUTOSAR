@@ -1,0 +1,116 @@
+/* 
+ * Copyright (C) ArcCore AB <contact@arccore.com>
+ *
+ * CM3 startup variables: 
+ * _sidata - Start of .data in flash 
+ * _sdata  - start address of .data in RAM
+ * _edata  - end address of .data  in RAM
+ * _sbss   - start address of .bss
+ * _ebss   - end address of .bss
+ * _etext  - ?
+ */
+
+MEMORY
+{
+#include "memory_mcu.ldf"
+}
+
+SECTIONS
+{
+#if defined(CFG_TRAVEO)
+	.bootrom_markers : {
+        KEEP(*(.bootrom_markers))
+    } > L_FLASH_CODE_2
+#endif	
+    .int_vecs ALIGN(4):
+    {
+        KEEP(*(.int_vecs))
+    } > L_FLASH_CODE_0
+
+    .text ALIGN(4) :
+	{
+    	*(.text)
+    	"*(.text.*)"
+
+    	/* ST/ARM special variable to initialize .data */
+    	_etext = .;
+	} > L_FLASH_CODE_0
+
+	/* Read-only data section. */
+	.rodata ALIGN(4) :	{ 
+		*(.rodata)
+		"*(.rodata.*)"
+	} > L_FLASH_CODE_0
+
+    .init_array  ALIGN(4)   :
+    {
+      _init_array_start = .;
+      KEEP (*(.init_array ))
+      _init_array_end = .;
+    } > L_FLASH_CODE_0
+  
+	.data ALIGN(4) :	 {
+		_sdata = ALIGN(4); 
+		*(.data) 
+		"*(.data.*)"
+		_edata = ALIGN(4);		
+	} > L_SRAM_0 
+	
+	.ROM.data ROM(.data) : > L_FLASH_CODE_0
+
+	.bss ALIGN(4): {
+		_sbss = .; 
+		*(.bss)
+		"*(.bss.*)" 
+		_ebss = .; 
+	} 	> L_SRAM_0
+	
+	.init_stack ALIGN(16) (NOLOAD) : 
+	{	
+		. = . + 400; 	
+		_estack	= .; 
+	} > L_SRAM_0
+
+	.msp_stack ALIGN(16) (NOLOAD) : 
+	{	
+	    _smspstack	= .;
+		. = . + 4096; 	
+		_emspstack	= .; 
+	} > L_SRAM_0
+
+	.ram_no_init ALIGN(16) (NOLOAD) : {
+		_sno_init_ram = .;
+		_eno_init_ram = .;
+	} > L_SRAM_0
+	
+	.ramlog         : > .
+	.calibration    : > .  
+	.syscall 	   	: > .
+	
+	PROVIDE(_heap_start = .);
+	_sidata = ADDR(.ROM.data);
+		
+	_esram_0 = (L_SRAM_0_ORIGIN + L_SRAM_0_LENGTH);	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

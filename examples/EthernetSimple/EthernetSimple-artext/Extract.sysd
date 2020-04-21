@@ -1,0 +1,48 @@
+package EthernetSimple
+
+import EthernetSimple.TopLevelComposition
+import EthernetSimple_Generic.Services.ComM.ComMImpl
+import EthernetSimple.TopLevelComposition.comM
+import EthernetSimple_Generic.Services.Dcm.DcmImpl
+import EthernetSimple.TopLevelComposition.dcm
+import EthernetSimple_Generic.Services.Dlt.DltImpl
+import EthernetSimple.TopLevelComposition.dlt
+import EthernetSimple_Generic.Services.BswM.BswMComponentImpl
+import EthernetSimple.TopLevelComposition.bswm
+import EthernetSimple_mpc5748g_mpc574xg_mb_Ecu.Services.EcuM.EcuMFixedImpl
+import EthernetSimple.TopLevelComposition.ecuM
+import EthernetSimple_mpc5748g_mpc574xg_mb_Ecu.Services.IoHwAb.IoHwAbImpl
+import EthernetSimple.TopLevelComposition.ioHwAb
+import SwcReader.SwcReaderImpl
+import EthernetSimple.TopLevelComposition.SwcReader
+import SwcWriter.SwcWriterImpl
+import EthernetSimple.TopLevelComposition.SwcWriter
+import SwcReader.SwcReaderType.AdcResult
+import Interfaces.BasicSRInterface.data1
+import EthernetSimple.Communication.Rx01dataSSig
+import SwcWriter.SwcWriterType.SenderPort
+import EthernetSimple.Communication.Tx01dataSSig
+import SwcReader.SwcReaderType.ReceiverPort
+import EthernetSimple.TopLevelComposition.Tx01
+import EthernetSimple.TopLevelComposition.Rx01
+
+system EthernetSimple {
+	rootComposition TopLevelComposition
+	
+	mapping as ImplementationMappings {
+		implMap ComMImpl to comM as comMMapping		
+		implMap DltImpl to dlt as dltMapping
+		implMap BswMComponentImpl to bswm as bswMMapping
+		implMap EcuMFixedImpl to ecuM as ecuMMapping
+		implMap IoHwAbImpl to ioHwAb as ioHwAbMapping
+		implMap SwcReaderImpl to SwcReader as SwcReaderMapping
+		implMap SwcWriterImpl to SwcWriter as SwcWriterMapping
+	}
+	
+	mapping as SignalMappings {
+		
+		signalMap outerPort Tx01.data2 to Tx01dataSSig		
+		signalMap outerPort Rx01.data1 to Rx01dataSSig
+		
+	}
+}

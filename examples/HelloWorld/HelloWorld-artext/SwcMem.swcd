@@ -1,0 +1,65 @@
+package SwcMem
+
+import Interfaces.*
+import AUTOSAR.Services.NvM.*
+import AUTOSAR.Services.EcuM.*
+import HelloWorld_Generic.Services.NvM.*
+import HelloWorld_Generic.Services.NvM.NvMNotifyJobFinished
+import SwcMemType.SwcMemBehavior
+
+component application SwcMemType {
+	ports {
+		receiver SwcMemRx requires MemoryCmdIf
+		sender SwcMemTx provides MemoryResIf
+		
+		server JobFinishedPIM1 provides NvMNotifyJobFinished
+		server JobFinishedPIM2 provides NvMNotifyJobFinished
+		
+		client ServicePIM1 requires NvMService
+		client ServicePIM2 requires NvMService
+		
+		receiver Mode requires EcuM_CurrentMode
+	}
+}
+
+internalBehavior SwcMemBehavior for SwcMemType {
+ 	dataTypeMappings {
+		EcuMFixedTypeMappings
+	}
+
+	perInstanceMemory PIM1 "PIM1Type" "uint32"
+	perInstanceMemory PIM2 "PIM2Type" "uint32"
+
+	runnable Init [0.0] {
+		symbol "SwcMem_Init"
+		modeSwitchEvent exit Mode.currentMode.STARTUP as InitEvent
+	}
+	
+	runnable Main [0.0] {
+		symbol "SwcMem_MainFunction"
+		dataReceivedEvent SwcMemRx.command as SwcMemCmdEvent
+		
+		dataSendPoint SwcMemTx.*
+		dataReadAccess SwcMemRx.*
+		
+		serverCallPoint synchronous ServicePIM1.SetRamBlockStatus
+		
+		serverCallPoint synchronous ServicePIM2.ReadBlock
+		serverCallPoint synchronous ServicePIM2.WriteBlock
+	}
+	
+	runnable JobFinishedPIM1 [0.0] {
+		symbol "SwcMem_JobFinishedPIM1"
+		operationInvokedEvent JobFinishedPIM1.JobFinished		
+	}
+	
+	runnable JobFinishedPIM2 [0.0] {
+		symbol "SwcMem_JobFinishedPIM2"
+		operationInvokedEvent JobFinishedPIM2.JobFinished		
+	}	
+}
+
+implementation SwcMemImpl for SwcMemType.SwcMemBehavior {
+	language c
+	codeDescriptor "src"
+}

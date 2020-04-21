@@ -1,0 +1,59 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+  
+########################################################
+# Hidden parameters in SoAdGeneral
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SoAdIPv6AddressEnabled
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SoAdRoutingGroupMax   
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SoAdSoConMax     
+
+########################################################
+# Hidden parameters in SoAdPduRoute
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SoAdTxPduId
+
+########################################################
+# Hidden parameters in SoAdSocketRouteDest
+######################################################## 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SoAdRxPduId  
+  
+########################################################
+# Hidden parameters in SoAdRoutingGroup
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SoAdRoutingGroupId
+
+########################################################
+# Hidden parameters in SoAdSocketConnectionGroup
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SoAdSocketTpRxBufferMin
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SoAdResourceManagementEnable
+
+########################################################
+# Hidden parameters in SoAdSocketConnection
+######################################################## 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SoAdSocketId 
+  
+########################################################
+# Hidden parameters in SoAdSocketTcp
+######################################################## 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SoAdSocketTcpImmediateTpTxConfirmation
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SoAdSocketTcpTxQuota   
+  
+
+    

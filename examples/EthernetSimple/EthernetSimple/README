@@ -1,0 +1,109 @@
+INTRODUCTION
+
+EthernetSimple is a small ArcCore project of how to use Ethernet belongings 
+and Communication clusters in an ArcCore solution environment using 
+LWIP TCP/IP stack that has been developed by Adam Dunkels (CNA) at the 
+Swedish Institute of Computer Science.
+
+The focus of the project is to 
+   # use an ASR application over RTE to communicate over Ethernet cluster (UDP)
+   # use DLT (TCP)
+   # use DoIP (TCP) - Temporarily unavailable due to migration of stack to higher AUTOSAR version
+   # use XCP over IP (TCP and UDP)
+   # use stress test and measure throughput 
+   
+   
+
+   Also this project internally at ArcCore used for    
+Integration/Breakdown/release verification tests
+
+
+How to use:
+   Required : an UDP tool (ask for it) or use over own tool
+              FBENCH tool for the throughput measurement (http://fnet.sourceforge.net/manual/quick_start_benchmark.html )
+   
+   Compile the corresponding project depending up on the MCU you have,
+   Currently the project is supported for Zc702(Zynq), MPC5777M ,STM3210C, Jacinto6 MPC5777C and MPC5748G boards
+   
+   Connect the Ethernet Cable to your PC which is configured with a static IP address,
+   Configure as 192.168.0.5 to match existing configuration of the project    
+   
+   
+   Open windows command processor and Send ping command (over ICMP - Internet Control Message Protocol) 
+   to the configured board IP address 192.168.0.10. 
+   192.168.0.10 should be able to echo back for the ping commands.
+   This verifies shortly Ethernet connection and Ethernet MCAL configuration inside the project.
+   
+   Open the UDP tool Set the Target IP address to 192.168.0.10, set the port as 1234, neglect SA and TA.
+   Write non zero 4 byte in the Message box ex: 12345678 (tool takes it as hex Value directly) and 
+   now the board should be able to echo back with same message continuosly (in  Received box).
+   Write a Zero value (at least 2 digits) in Message box ex: 00 and the board now on should be able 
+   to send 4 byte ADC value in Received Message box continuosly until you send again a non zero byte Message.
+   This verifies whole sequence of using RTE application over UDP.
+   LED1 will toggle on any change of command is received at the board side
+   LED2 will toggle on any output on the board side.
+   
+   To use DLT, Open the DLT Viewer and configure to use it via TCP (use the address 192.168.0.10 and the port as 999) and connect
+   DLTviewer should be able connect and receives continuos demo message from an SWC
+   
+   Set the Target IP address to 192.168.0.10,Configure SA box in the tool as 0e80, TA box as 1001, Port as 13400.
+   And send Diagnosis commands over TCP and the board should be able to respond back accordingly.
+   UDP tool is sometimes not able to capture consecutive TCP responses depending on the timing. 
+   Verify on any other Ethernet packet capture tool.
+      
+   Ex:
+   
+    Activate routing request by RouteActivation box and send TCP message
+     (or) this command 02fd0005000000070e800000
+   
+    Send a DOIP command  02fd8001000000060e8010011001
+       1Response should be  02fd80020000000510010e8000
+       2Response should be  02fd800100000006100100005001                             
+      
+    DIDs 0x0101,0x0102, 0x0103 are configured to read from an application callouts.   
+       Send a DOIP command  02fd8001000000070e801001220101 
+       1Response should be  02fd80020000000510010e8000
+       2Response should be  02fd80010000000b1001000062010101020304
+       
+       Send correspondingly 02fd8001000000070e801001220102 and 02fd8001000000070e801001220103 same way.
+         
+   This confirms shortly DCM, DOIP and TCP connections 
+   
+   Set the Target IP address to 192.168.0.10,configure port as 13400 (neglect SA and TA.), send XCP commands.
+   And Board should be able to respond back accordingly.
+   This Confirms shortly XCP over IP. 
+   XCP test is not available for STM3210C board due to lack of RAM.  
+   
+   
+   Throughput/Stress test - TCP Sending
+   
+   Download FBENCH tool 
+   Open FBENCH tool, use TCP IPV4 Sending (TCP client - sending data)
+   configure Remote IP address as "192.168.0.10", Remote Port as "111", 
+   set the number of iterations minimum 25 for the best calculation
+   And try to measure the throughput, throughput should ideally be starting from variable 20-50 Mbps for the current board settings
+   except for MPC board which has low bandwidth configuration 
+   
+   
+Notice: Diagnosis Test over TCP is currently not available since DoIP module the system made obsolete since the migration of the
+        stack from AUTOSAR 4.0.3 version to 4.2.X version
+        If you get in to Ethernet link problems with the test PC, please try to check if DET error Id TCPIP_E_ARC_TRCV_INIT_STATE_FAILED 
+        in TCPIP module is set and try verifying your connection set up.
+
+
+
+  
+ ****** PENDING ******
+DoIP integration  
+No-Communication state / sleep mode handling 
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+// extend the already existing ComponentTypes package
+package SwcWriter
+import Interfaces.*
+import EthernetSimple.Services.IoHwAb.*
+import EthernetSimple_Generic.Services.BswM.ComMModeRequestInterface
+import ArcCore.Services.IoHwAb.DigitalServiceWrite
+import AUTOSAR.Services.EcuM.EcuM_CurrentMode
+import AUTOSAR.Services.EcuM.EcuMFixedTypeMappings
+
+component application SwcWriterType {
+	ports {
+		receiver InputPort requires BasicSRInterface1
+		sender SenderPort provides BasicSRInterface2
+		client Blinker requires DigitalServiceWrite
+		sender ComMControl provides ComMModeRequestInterface
+		receiver Mode requires EcuM_CurrentMode 
+	}
+}
+
+// define component internal behavior for the RTE. It is a part of the component type hand must therefore extend the ComponentTypes package
+internalBehavior SwcWriterBehavior for SwcWriterType {
+	dataTypeMappings {
+		EcuMFixedTypeMappings
+	}
+	runnable SwcWriterRunnable [0.0] {
+		symbol "swcWriterRunnable"		
+		dataReadAccess InputPort.data1
+		dataWriteAccess SenderPort.data2
+		serverCallPoint synchronous Blinker.Write as Blinker2CallPoint
+		timingEvent 1.0
+	}
+	runnable Init [0.0] {
+		symbol "SwcWriterInit"	
+		dataWriteAccess ComMControl.requestedMode
+		modeSwitchEvent exit Mode.currentMode.STARTUP as InitEvent
+	}
+}
+
+// component implementation describes how the SWC is implemented.
+// It may be located in a separate package if there exists more than one type of implementation
+implementation SwcWriterImpl for SwcWriterType.SwcWriterBehavior {
+	language c
+	codeDescriptor "src"
+}
+

@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-1.xsd">
+   <!-- AUTOSAR ECU Configuration Parameter Definition -->
+   <!--
+    Document Owner:                 AUTOSAR
+    Document Responsibility:        AUTOSAR
+    Document Identification Number: 289
+    Document Classification:        Standard
+    Document Status:                Final
+    Part of AUTOSAR Standard:       Classic Platform
+    Part of AUTOSAR Release:        4.3.0
+    -->
+   <!-- Generated on Tue Nov 29 20:42:58 CET 2016 -->
+   <!-- MMT:        3.5.0 -->
+   <!-- Meta-Model: D:\Jenkins\jobs\CP_BuildMetamodelArtifacts\ws\01_Sources\MMOD_MetaModel_059\cleaned\AUTOSAR_MMOD_MetaModel.eap -->
+   <!--
+Disclaimer
+
+This specification and the material contained in it, as released by AUTOSAR, is
+for the purpose of information only. AUTOSAR and the companies that have
+contributed to it shall not be liable for any use of the specification.
+
+The material contained in this specification is protected by copyright and
+other types of Intellectual Property Rights. The commercial exploitation of the
+material contained in this specification requires a license to such
+Intellectual Property Rights.
+
+This specification may be utilized or reproduced without any modification, in
+any form or by any means, for informational purposes only. For any other
+purpose, no part of the specification may be utilized or reproduced, in any
+form or by any means, without permission in writing from the publisher.
+
+The AUTOSAR specifications have been developed for automotive applications
+only. They have neither been developed, nor tested for non-automotive
+applications.
+
+The word AUTOSAR and the AUTOSAR logo are registered trademarks.
+
+
+
+Advice for users
+
+AUTOSAR specifications may contain exemplary items (exemplary reference models,
+"use cases", and/or references to exemplary technical solutions, devices,
+processes or software).
+
+Any such exemplary items are contained in the specifications for illustration
+purposes only, and they themselves are not part of the AUTOSAR Standard.
+Neither their presence in such specifications, nor any later documentation of
+AUTOSAR conformance of products actually implementing such exemplary items,
+imply that intellectual property rights covering such exemplary items are
+licensed under the same rules as applicable to the AUTOSAR Standard.
+
+    -->
+   <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <REVISION-LABEL>4.3.0</REVISION-LABEL>
+        <ISSUED-BY>AUTOSAR</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+   <AR-PACKAGES>
+    <AR-PACKAGE UUID="ECUC:AUTOSAR">
+      <SHORT-NAME>ArcCore</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="ECUC:ECUCDEFS">
+          <SHORT-NAME>EcucDefs</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Generic</SHORT-NAME>
+              <ELEMENTS>
+                <ECUC-MODULE-DEF UUID="ECUC:6f8dbcae-995f-4506-b84b-0be0f7a3fdc8">
+                  <SHORT-NAME>LinTp</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Configuration of the LIN Transport Protocol.</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <DOC-REVISIONS>
+                      <DOC-REVISION>
+                        <REVISION-LABEL>4.3.0</REVISION-LABEL>
+                        <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                      </DOC-REVISION>
+                    </DOC-REVISIONS>
+                  <SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00425</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-SUPPORT"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-SUPPORT@5/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                  
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  
+                  <SUPPORTED-CONFIG-VARIANTS>
+                    <SUPPORTED-CONFIG-VARIANT>VARIANT-LINK-TIME</SUPPORTED-CONFIG-VARIANT>
+                    <SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+                    <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                  </SUPPORTED-CONFIG-VARIANTS>
+                  <CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:507bfde0-7d43-44d2-ba6d-7c896dc3a960">
+                      <SHORT-NAME>LinTpGeneral</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Container that holds all LIN transport protocol general parameters.</L-2>
+                      </DESC>
+                      <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00617</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG></SDGS></ADMIN-DATA>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:722f06a2-90c9-43e7-844d-c869657b44e8">
+                          <SHORT-NAME>LinTpChangeParameterApi</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This parameter, if set to true, enables the LinTp_ChangeParameterRequest Api for this Module.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00638</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:bc909b41-a1bb-4fca-9f1a-77f667a29850">
+                          <SHORT-NAME>LinTpVersionInfoApi</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Switches the LinTp_GetVersionInfo function ON or OFF.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00068</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:28592dff-ba46-4041-afc5-c7c2bebdbede">
+                      <SHORT-NAME>LinTpGlobalConfig</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container contains the global configuration parameters of the LinTp.</L-2>
+                      </DESC>
+                      <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00056</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG></SDGS></ADMIN-DATA>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUC:890a3d1a-3e8d-49b5-8790-f58e75209c9e">
+                          <SHORT-NAME>LinTpMaxNumberOfRespPendingFrames</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Configures the maximum number of allowed response pending frames.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00624</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUC:d4861e1b-9b60-464c-8723-6da1a7a274f1">
+                          <SHORT-NAME>LinTpMaxRxNSduCnt</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Maximum number of NSdus. This parameter is needed only in case of post-build loadable implementation using static memory allocation.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00635</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUC:4f30cd97-09e6-48d1-9065-0d7eeec2c2c5">
+                          <SHORT-NAME>LinTpMaxTxNSduCnt</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Maximum number of NSdus. This parameter is needed only in case of post-build loadable implementation using static memory allocation.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00636</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUC:f5f9d77d-0657-40f0-802f-8c889a6c248a">
+                          <SHORT-NAME>LinTpP2Max</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">P2*max timeout when a response pending frame is expected in seconds.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00622</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@4/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@6/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">Note that the minimum value of LinTpP2Max shall be more than or equal to the value of LinTpP2Timing.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX INTERVAL-TYPE="CLOSED">2</MAX>
+                          <MIN INTERVAL-TYPE="CLOSED">0.05</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUC:7224db3b-049b-4739-a1de-40d00a6c61c5">
+                          <SHORT-NAME>LinTpP2Timing</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Definition of the P2max timeout observation parameter in seconds.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00625</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX INTERVAL-TYPE="CLOSED">0.5</MAX>
+                          <MIN INTERVAL-TYPE="CLOSED">0.05</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                      </PARAMETERS>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:3b714729-b20a-4cd1-a2b2-fe456f2b166f">
+                          <SHORT-NAME>LinTpChannelConfig</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container contains the channel specific configuration parameters of LinTp.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00071</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@5/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          
+                          
+                          <PARAMETERS>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:623b4adc-f857-4db4-8df2-6a4239c3ea12">
+                              <SHORT-NAME>LinTpDropNotRequestedNad</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Configures if TP Frames of not requested LIN-Slaves are dropped or not.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00072</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@4/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@6/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">TRUE: Drop TP Frames of not requested LIN-Slaves
+                                                FALSE: Keep TP Frames of not requested LIN-Slaves</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:a4f81595-1b5d-411a-b67c-12813b6e908e">
+                              <SHORT-NAME>LinTpScheduleChangeDiag</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables or disables the call of BswM_LinTp_RequestMode() to diagnostic request/response schedule.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00070</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@4/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@6/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">false: BswM is not called
+                                                true: BswM is called</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:d77322dd-3025-4b05-aed5-eadd5e1cfec3">
+                              <SHORT-NAME>LinTpChannelRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Index of the channel this LinTp channel belongs to.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00073</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:36e83088-e486-4dad-a4f7-aadafe50dfbe">
+                          <SHORT-NAME>LinTpRxNSdu</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container exists once for each received N-SDU on any channel the node is connected to. This N-SDU produces meta data items of type LIN_NAD_8.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00428</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@5/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          
+                          
+                          <PARAMETERS>
+                            <ECUC-FLOAT-PARAM-DEF UUID="ECUC:afea2bb4-341b-478e-b5c3-85c660cf88be">
+                              <SHORT-NAME>LinTpNcr</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Value in seconds of the N_Cr timeout. N_Cr is the time until reception of the next Consecutive Frame N_PDU.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00632</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX INTERVAL-TYPE="CLOSED">1</MAX>
+                              <MIN INTERVAL-TYPE="CLOSED">0</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:a260e374-b6ba-43eb-97ad-f35f03b2df6c">
+                              <SHORT-NAME>LinTpRxNSduId</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">The identifier of the Transport Protocol message. This ID will be used by upper layers to call LinTp_ChangeParameter and LinTp_CancelReceive.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00061</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:7d1d4df7-f790-4e69-a075-cbd01e2453a9">
+                              <SHORT-NAME>LinTpRxNSduNad</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">A N-SDU transported on LIN is identified using the NAD for the specific slave.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00062</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:50174cd9-703b-4f07-9f44-7d0cff4acef2">
+                              <SHORT-NAME>LinTpRxNSduChannelRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Index of the channel this N-SDU belongs to.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00060</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                            <ECUC-REFERENCE-DEF UUID="ECUC:c5020b6e-1867-43c2-8ac6-d986c14c95d8">
+                              <SHORT-NAME>LinTpRxNSduPduRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to the global PDU</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00063</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">ECU</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:0f57fcb7-8212-43f3-b93d-775bbe842ee5">
+                          <SHORT-NAME>LinTpTxNSdu</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container exists once for each transmitted N-SDU on any channel the node is connected to. This N-SDU consumes meta data items of type LIN_NAD_8.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00511</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@5/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          
+                          
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:2341e503-9be7-4507-a014-35749034fa28">
+                              <SHORT-NAME>LinTpMaxBufReq</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter defines the maximum number of times the LinTp should request upper layer for the Tx Buffer. It is also used to limit the number of retries for PduR_LinTpCopyTxData when no timer is active.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00637</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-FLOAT-PARAM-DEF UUID="ECUC:53caf4f4-f8d1-4a6c-b58b-ba5b6587c1a8">
+                              <SHORT-NAME>LinTpNas</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Value in seconds of the N_As timeout. N_As is the time for transmission of a LIN frame (any N_PDU) on the part of the sender.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00633</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX INTERVAL-TYPE="CLOSED">1</MAX>
+                              <MIN INTERVAL-TYPE="CLOSED">0</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                            <ECUC-FLOAT-PARAM-DEF UUID="ECUC:8e2477c2-4d97-4bce-ad06-edbe632f95db">
+                              <SHORT-NAME>LinTpNcs</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Value in seconds of the performance requirement of N_Cs. N_Cs is the time which elapses between the transmit request of a CF N-PDU until the transmit request of the next CF N-PDU.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00634</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX INTERVAL-TYPE="CLOSED">Inf</MAX>
+                              <MIN INTERVAL-TYPE="CLOSED">0</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:e6fac2a8-b8d9-48c7-a221-b0d95b1a6dbb">
+                              <SHORT-NAME>LinTpTxNSduId</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">The identifier of the Transport Protocol message. This ID will be the one that is communicated with upper layers.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00065</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:68bd9442-1566-4238-a020-64413a564106">
+                              <SHORT-NAME>LinTpTxNSduNad</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">A N-SDU transported on LIN is identified using the NAD for the specific slave.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00066</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:cf97bb02-8432-4030-a195-bfa294ac463d">
+                              <SHORT-NAME>LinTpTxNSduChannelRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Index of the channel this N-SDU belongs to.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00064</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                            <ECUC-REFERENCE-DEF UUID="ECUC:fc9777f3-1e35-44c4-863c-26936aa20382">
+                              <SHORT-NAME>LinTpTxNSduPduRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to the global PDU</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="RELATED-TRACE-ITEM-REF"><SD GID="_mixed">ECUC_LinTp_00067</SD><SD GID="DEST">TRACEABLE</SD></SDG><SD GID="_path">RELATED-TRACE-ITEM-REF@3/</SD><SD GID="_target">org.artop.aal.autosar422</SD></SDG><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">ECU</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </CONTAINERS>
+                </ECUC-MODULE-DEF>
+              </ELEMENTS>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>Implementation</SHORT-NAME>
+                  <ELEMENTS>
+                    <BSW-IMPLEMENTATION UUID="">
+                      <SHORT-NAME>LinTp</SHORT-NAME>
+                      <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                      <SW-VERSION>1.0.0</SW-VERSION>
+                      <USED-CODE-GENERATOR>communication::LinIf::gen::LinTp::main</USED-CODE-GENERATOR>
+                      <VENDOR-ID>60</VENDOR-ID>
+                      <AR-RELEASE-VERSION>4.3.0</AR-RELEASE-VERSION>
+                      <VENDOR-API-INFIX />
+                      <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                        <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/Generic/LinTp</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                      </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    </BSW-IMPLEMENTATION>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

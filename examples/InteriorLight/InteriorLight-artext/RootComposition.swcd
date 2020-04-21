@@ -1,0 +1,43 @@
+package ApplicationLayer.CompositionPackage
+
+import ApplicationLayer.ApplicationPackage.*
+
+import BSWConfiguration.Services.IoHwAb.IoHwAb
+import BSWConfiguration.Services.EcuM.EcuM
+import BSWConfiguration.Services.Det.Det
+import BSWConfiguration.Services.BswM.BswM
+import BSWConfiguration.Services.ComM.ComM
+
+composition RootComposition {
+	prototype LightActuator frontLightActuator
+
+	prototype DoorSensor rightDoorSensor
+	prototype DoorSensor leftDoorSensor
+	prototype InteriorLightManager lightManager
+	prototype ModeManager modeManager
+
+	prototype IoHwAb ioHwAb
+	prototype EcuM ecuM
+	prototype BswM bswM
+	prototype ComM comM
+	ports {
+		provides lightManager.LightStatusOnCommMedia LightStatus
+		requires lightManager.RearDoorStatus DoorStatus
+	}
+	
+	// Ecu Abstraction/Sensor and Actuators
+	connect ioHwAb.Digital_FrontLight to frontLightActuator.DigitalLight
+	connect ioHwAb.Digital_FrontDoorRight to rightDoorSensor.DoorSwitchSignal
+	connect ioHwAb.Digital_FrontDoorLeft to leftDoorSensor.DoorSwitchSignal
+	
+	// Light Logic
+	connect lightManager.FrontLightStatus to frontLightActuator.InteriorLightStatus
+	connect rightDoorSensor.DoorStatus to lightManager.RightDoorStatus
+	connect leftDoorSensor.DoorStatus to lightManager.LeftDoorStatus
+
+	// Mode Manager
+	connect modeManager.ComMControl to bswM.modeRequestPort_SwcStartCommunication
+	connect ecuM.SR_User to modeManager.RunControl
+	connect ecuM.currentMode to modeManager.Mode
+}
+

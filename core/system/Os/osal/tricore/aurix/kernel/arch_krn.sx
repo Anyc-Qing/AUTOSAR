@@ -1,0 +1,401 @@
+/*-------------------------------- Arctic Core ------------------------------
+ * Copyright (C) 2013, ArcCore AB, Sweden, www.arccore.com.
+ * Contact: <contact@arccore.com>
+ * 
+ * You may ONLY use this file:
+ * 1)if you have a valid commercial ArcCore license and then in accordance with  
+ * the terms contained in the written license agreement between you and ArcCore, 
+ * or alternatively
+ * 2)if you follow the terms found in GNU General Public License version 2 as 
+ * published by the Free Software Foundation and appearing in the file 
+ * LICENSE.GPL included in the packaging of this file or here 
+ * <http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
+ *-------------------------------- Arctic Core -----------------------------*/
+
+#define _ASSEMBLER_
+#include "asm_offset.h"
+#include "arch_offset.h"
+
+.section .text,"ax",@progbits
+
+
+
+/**
+ * Os_ArchSetStackPointer
+ * @req ARC_SWS_OSAL_00002
+ */
+    .global Os_ArchSetStackPointer
+    .type Os_ArchSetStackPointer,  @function
+Os_ArchSetStackPointer:
+	ret
+
+/**
+ * Os_ArchGetStackPtr
+ */
+    .global Os_ArchGetStackPtr
+    .type Os_ArchGetStackPtr,  @function
+Os_ArchGetStackPtr:
+	mov.aa	%a4,%a10
+	ret
+
+/**
+ * Os_ArchSetSpAndCall
+ * @req ARC_SWS_OSAL_00001
+ *
+ * @param a4 Pointer to the stack
+ * @param a5 Pointer to the function to call
+ */
+ 	.global Os_ArchSetSpAndCall
+ 	.type Os_ArchSetSpAndCall,  @function
+Os_ArchSetSpAndCall:
+	mov.aa %a4,%a10
+	calli  %a5
+noMore:	
+	j noMore
+
+	/* 
+	 * Os_ArchSwapContext
+	 * @req ARC_SWS_OSAL_00003
+     *	 
+	 * @param a4 - PCB for old task
+	 * @param a5 - PCB for new task
+	 */
+	 
+    .global Os_ArchSwapContext
+    .type Os_ArchSwapContext,  @function
+Os_ArchSwapContext:
+    .global Os_ArchSwapContextTo
+    .type Os_ArchSwapContextTo,  @function
+    
+    /* Save lower context */
+    svlcx
+
+	/* Store pcxi as context on stack */
+	mfcr	%d5,$pcxi
+	sub.a   %a10,04
+	st.w	[%a10],%d5 	
+    
+	/* store our stack in old PCB */
+	st.a    [%a4]PCB_STACK_CURR_P,%a10
+
+	/* flow down */ 
+    
+/* @req ARC_SWS_OSAL_00004 */
+Os_ArchSwapContextTo:
+
+	/* Get stack for new task */
+	ld.a   %a10,[%a5]PCB_STACK_CURR_P
+#if defined(OS_SC3_ASM)
+	/* save the old PCB address and move new PCB to a4 so to pass new PCB to  Os_MMSetUserMode function as argument */
+	mov.aa %a14,%a4
+	mov.aa %a4,%a5
+	call 	Os_MMSetUserMode
+	/* moving back old PCB to a4 */
+	mov.aa %a4,%a14
+#endif
+	/* Set new current task */ 
+	movh.a %a6, hi:Os_Sys
+	lea %a6,[%a6]lo:Os_Sys
+	st.a  [%a6]SYS_CURR_PCB_P,%a5 	    	
+
+	mfcr	%d4, $pcxi
+
+	/* Get the context from stack */
+	ld.w   %d5,[%a10]
+	mtcr   $pcxi, %d5
+	isync
+
+	/* If old task == NULL then we need to free the context that have 
+	 * been marked with 0 */
+	jnz.a 	%a4, no_free
+
+	call 	Os_ArchFree
+
+no_free:
+
+	/* Clear PSW.CDC since it traps otherwise. the real CDC will be restored 
+	 *  by the upper context */	
+	mfcr   %d5, $psw
+	andn   %d5,%d5,0x3f
+	mtcr   $psw, %d5    
+	
+	/* Pop Lower */
+	rslcx
+	
+	/* Pop Upper */
+	rfe
+	
+		
+#if defined(OS_SC3_ASM) || defined(OS_SC4_ASM) 
+/**
+ * Os_ArchSysCall_4_P1
+ */
+    .global Os_ArchSysCall_4_P1
+    .type Os_ArchSysCall_4_P1,  @function
+Os_ArchSysCall_4_P1:
+    /* The function arguments, a4,d4,d5,d6
+     * which will be directly supplied to Trap_SystemCall 
+     * by the lower context */
+    /* Index argument is now in d6, need to copy to d7 for Syscall call */
+    mov %d7, %d6
+    /* the syscall instruction needs a constant argument, but this will not be used in functionality, currently the argument is a dummy */  
+	SYSCALL 7
+	ret
+/**
+ * Os_ArchSysCall_4_P2
+ */
+    .global Os_ArchSysCall_4_P2
+    .type Os_ArchSysCall_4_P2,  @function
+Os_ArchSysCall_4_P2:
+    /* The function arguments, d4,a4,d5,d6
+     * which will be directly supplied to Trap_SystemCall 
+     * by the lower context */
+    /* Index argument is now in d6, need to copy to d7 for Syscall call */
+    mov %d7, %d6
+    /* the syscall instruction needs a constant argument, but this will not be used in functionality, currently the argument is a dummy */  
+	SYSCALL 7
+	ret
+/**
+ * Os_ArchSysCall_4_P2_3
+ */
+    .global Os_ArchSysCall_4_P2_3
+    .type Os_ArchSysCall_4_P2_3,  @function
+Os_ArchSysCall_4_P2_3:
+    /* The function arguments, d4,a4,a5,d5
+     * which will be directly supplied to Trap_SystemCall 
+     * by the lower context */
+    /* Index argument is now in d6, need to copy to d7 for Syscall call */
+    mov %d7, %d5
+    /* the syscall instruction needs a constant argument, but this will not be used in functionality, currently the argument is a dummy */  
+	SYSCALL 7
+	ret
+	
+/**
+ * Os_ArchSysCall_4_S_P_S
+ * arg1 - Pointer
+ * arg2 - Scalar
+ */
+    .global Os_ArchSysCall_4_S_P_S
+    .type Os_ArchSysCall_4_S_P_S,  @function
+Os_ArchSysCall_4_S_P_S:
+    /* The function arguments, d4,a4,d5
+     * which will be directly supplied to Trap_SystemCall 
+     * by the lower context */
+    /* Index argument is now in d6, need to copy to d7 for Syscall call */
+    mov %d7, %d6
+    /* the syscall instruction needs a constant argument, but this will not be used in functionality, currently the argument is a dummy */  
+	SYSCALL 7
+	ret
+	
+
+/**
+ * Os_ArchSysCall_4_S_P_P
+ * arg1 - Scalar
+ * arg2 - Pointer
+ * arg3 - Pointer
+ */
+    .global Os_ArchSysCall_4_S_P_P
+    .type Os_ArchSysCall_4_S_P_P,  @function
+Os_ArchSysCall_4_S_P_P:
+    /* The function arguments, d4,a4,a5
+     * which will be directly supplied to Trap_SystemCall 
+     * by the lower context */
+    /* Index argument is now in d5, need to copy to d7 for Syscall call */
+    mov %d7, %d5
+    /* the syscall instruction needs a constant argument, but this will not be used in functionality, currently the argument is a dummy */  
+	SYSCALL 7
+	ret
+
+/**
+ * Os_ArchSysCall_4_S_P_S_S
+ * arg1,d4 - Scalar
+ * arg2    - Pointer
+ * arg3,d5 - Scalar
+ * arg4,d6 - Scalar
+ */
+    .global Os_ArchSysCall_4_S_P_S_S
+    .type Os_ArchSysCall_4_S_P_S_S,  @function
+Os_ArchSysCall_4_S_P_S_S:
+    /* The function arguments, d4,a4,d5,d6
+     * which will be directly supplied to Trap_SystemCall 
+     * by the lower context */
+    /* Index argument is now in d7 */
+    /* the syscall instruction needs a constant argument, but this will not be used in functionality, currently the argument is a dummy */  
+	SYSCALL 7
+	ret
+
+	
+/**
+ * Os_ArchSysCall_4
+ */
+    .global Os_ArchSysCall_4
+    .type Os_ArchSysCall_4,  @function
+Os_ArchSysCall_4:
+    /* The function arguments, d4,d5,d6,d7 
+     * which will be directly supplied to Trap_SystemCall 
+     * by the lower context */
+    /* the syscall instruction needs a constant argument, but this will not be used in functionality, currently the argument is a dummy */  
+	SYSCALL 8 
+	ret
+
+/**
+ * Trap_SystemCall
+ */
+    .global Trap_SystemCall
+    .type Trap_SystemCall,  @function 
+Trap_SystemCall:
+
+	/* Check for internal core trap first */
+	jltz	  %d7,core_trap			/* value below 0 */	
+	
+	/* validate the index range */
+	ge        %d15, %d7, SYS_CALL_CNT_ASM
+	jnz       %d15, syscall_exit
+
+	/* when index value is valid */
+	mfcr      %d15, $pcxi
+	/* extract PIE bit */
+	extr.u    %d15, %d15, 21, 01 	
+	and       %d9, %d15, 255
+	/* get icr */
+	mfcr      %d15, $icr
+	/* replace the icr.ie with pcxi.pie  */
+	ins.t     %d15, %d15, 15, %d9, 00
+	mtcr      $icr, %d15
+	isync
+
+	/* call os service */
+	movh      %d15, hi:Os_ServiceList
+	addi      %d9, %d15, lo:Os_ServiceList		
+	mov       %d15, %d7 /* get the index */
+	sh        %d15, 02  /* multiply the address size */
+	add       %d15, %d9
+	jz        %d15, syscall_exit /* null check */
+	mov.a     %a15, %d15
+	ld.a      %a15, [%a15]
+	calli     %a15 /* calling Os_ServiceList[index] */
+
+	/* Index 0 to 6 might change IE value */
+	mov       %d15, %d7
+	jge       %d15, 07, syscall_exit
+	/* when index value is valid */
+	mfcr      %d15, $icr
+
+	/* extract IE bit */
+	extr.u    %d15, %d15, 15, 01	
+	and       %d1, %d15, 255
+
+	/* get icr */
+	mfcr      %d15, $pcxi
+	/* replace the pcxi.pie with ice.ie */ 
+	ins.t     %d15, %d15, 21, %d1, 00	
+	mtcr      $pcxi, %d15
+	isync
+
+syscall_exit:
+	rfe
+
+	/* Internal OS trap
+	 * d4 - arg1  
+	 * d5 - arg2
+	 * d6 - arg2
+	 * d7 - index 
+	 */
+core_trap:
+	/* We need to change PSW in saved upper context super privileged mode.
+	 */  
+	abss	%d7,%d7
+	jeq		%d7,1,to_priv_mode
+
+	movh      %d15, hi:Os_TrapList
+	addi      %d9, %d15, lo:Os_TrapList		
+	mov       %d15, %d7 /* get the index */
+	sh        %d15, 02  /* multiply the address size */
+	add       %d15, %d9
+
+	mov.a     %a15, %d15
+	ld.a      %a15, [%a15]
+	calli     %a15 	
+	rfe
+
+	/* Priviledged mode 
+	 */
+to_priv_mode:	 
+	mfcr    %d4, $pcxi				/* grap pcxi */
+	call	Os_ArchToPrivilegedMode
+
+	rfe
+
+/**
+  * void Os_ArchCallIsrEntry( OsAppVarType *aP, void (*func)(void))
+  * a4 - OsAppVarType *aP
+  * a5 - void (*func)(void)
+  * a6 - OsAppVarType *paP
+  * 
+  * @req ARC_SWS_OSAL_00010
+  */
+    .global Os_ArchCallIsrEntry
+    .type Os_ArchCallIsrEntry,  @function 
+Os_ArchCallIsrEntry:
+
+	// .. upper context autosaved by hw (a[10]->a[15] and d[8]->d[15]) 
+	// ..a[10] is stack pointer
+
+	/* Setup MMU for user mode */
+	
+	sub.a	%a10,12			/* Save argument registers */
+	st.a	[%a10]0,%a4
+	st.a	[%a10]4,%a5
+	st.a	[%a10]8,%a6
+	
+	st.a    [%a6]APP_SAVED_INT_STACK,%a10 		/* Save stack on preemted application */
+	
+	call	Os_MMSetApplUserMode
+
+	ld.a	%a4,[%a10]0		/* restore argument registers */
+	ld.a	%a5,[%a10]4
+	ld.a	%a6,[%a10]8
+	add.a	%a10,4		
+	add.a	%a10,4
+
+	/* Load application interrupt stack */		
+	ld.w   %d8, [%a4]APP_INT_NEST_CNT	
+	jge	   %d8,2,on_app_int_stack		// nestCnt > 1	
+	ld.a   %a10,[%a4]APP_INT_STACK		// load interrupt stack 
+	j		not_saved_stack
+on_app_int_stack:
+	ld.a   %a10,[%a4]APP_SAVED_INT_STACK		// load interrupt stack 
+not_saved_stack:	
+	
+	/* Enable interrupts and swap to user mode */
+	enable                  // Enable ICR.IE bit 
+	/* Set PSW.PRS=1 and PSW.IO=User-1 mode */
+	mfcr   %d5, $psw	
+	mov    %d15, lo:0xc3ff	// & 0xffffc3ff
+	and    %d15, %d5
+	mov	   %d5, lo:0x1400	// | 0x00001400	
+	or	   %d15,%d5 	
+	mtcr   $psw, %d15
+
+	// Call entry	
+	calli     %a5
+
+	/* 
+	 * Back to privileged mode 
+	 */	 
+	 mov    %d7,lo:0xffff	// arg -1 
+	 SYSCALL 8 
+	 disable                // Disable ICR.IE bit
+	 ret
+	 
+	 
+#endif	
+/* EI interrupt handler 
+ * HW set registers are 
+ * - IEPC
+ * - EIPSW
+ * - EIIC - Exception cause code. */ 
+    
+    .global _Irq_Handler
+    .type _Irq_Handler,  @function 
+_Irq_Handler:

@@ -1,0 +1,10 @@
+
+=== Dem ===
+
+-Validating module Dem...
+	 -Configuration contains events with destination PRIMARY_MEMORY. NvM block DemPriEventBlock should be configured (ortherwise data will not be stored). [ /HelloWorld_Generic/Dem/DemGeneral ]
+	 -Dem is configured to store a subset of UDS status bit for all events. NvM block DemUDSStatusBitBlock should be configured (ortherwise data will not be stored). [ /HelloWorld_Generic/Dem/DemGeneral ]
+
+-Generating module Dem...
+	No license to generate module Dem: No license found for feature "com.arccore.product.feature.a4.core.dem" (21) 
+Dem done.

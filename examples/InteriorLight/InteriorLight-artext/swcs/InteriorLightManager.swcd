@@ -1,0 +1,42 @@
+package ApplicationLayer.ApplicationPackage
+
+import ApplicationLayer.Interface.*
+import InteriorLightManager.InteriorLightManagerBehaviour
+
+component application InteriorLightManager {
+	ports {
+		// CAN Communication 
+		receiver RearDoorStatus requires DataInterface
+	
+		receiver RightDoorStatus requires DoorInterface
+		receiver LeftDoorStatus requires DoorInterface
+		
+		sender FrontLightStatus provides LightInterface
+		sender LightStatusOnCommMedia provides DataInterface
+	}
+}
+
+internalBehavior InteriorLightManagerBehaviour for InteriorLightManager {
+	dataTypeMappings {
+		TypeMappings
+	}
+	
+	runnable InteriorLightManagerMain [0.0] {
+		symbol "interiorLightManagerMain"
+		
+		dataReadAccess RearDoorStatus.message
+		
+		dataReadAccess RightDoorStatus.status
+		dataReadAccess LeftDoorStatus.status
+		
+		dataWriteAccess FrontLightStatus.status
+		dataWriteAccess LightStatusOnCommMedia.message
+
+		timingEvent 0.1 as interiorLightManagerMainEvent
+	}
+}
+
+implementation InteriorLightManagerImpl for InteriorLightManagerBehaviour {
+	language c
+	codeDescriptor "src"
+}

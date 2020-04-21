@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/com.arccore.corebuilder.arm.toolchain.1539382806/BOARDDIR/delimiter=;
+environment/project/com.arccore.corebuilder.arm.toolchain.1539382806/BOARDDIR/operation=replace
+environment/project/com.arccore.corebuilder.arm.toolchain.1539382806/BOARDDIR/value=mpc5604b_xpc560b
+environment/project/com.arccore.corebuilder.arm.toolchain.1539382806/DISTRONAME/delimiter=;
+environment/project/com.arccore.corebuilder.arm.toolchain.1539382806/DISTRONAME/operation=append
+environment/project/com.arccore.corebuilder.arm.toolchain.1539382806/DISTRONAME/value=HelloWorld_LIB_${BOARDDIR}
+environment/project/com.arccore.corebuilder.arm.toolchain.1539382806/append=true
+environment/project/com.arccore.corebuilder.arm.toolchain.1539382806/appendContributed=true

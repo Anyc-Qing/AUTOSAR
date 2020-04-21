@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>LedBlinkerApplicationLayer</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>CompositionPackage</SHORT-NAME>
+          <ELEMENTS>
+            <COMPOSITION-SW-COMPONENT-TYPE UUID="c41d3a3b-b666-3546-bdc1-a88293934c24">
+              <SHORT-NAME>RootComposition</SHORT-NAME>
+              <COMPONENTS>
+                <SW-COMPONENT-PROTOTYPE UUID="89ba2500-0540-3f73-be27-8d51d9b762e9">
+                  <SHORT-NAME>ledBlinkerSWC</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/LedBlinkerApplicationLayer/ApplicationPackage/LedBlinkerSWC</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE UUID="3be39d9c-f683-30b8-9790-1be5d88a1739">
+                  <SHORT-NAME>serviceIoHwAb</SHORT-NAME>
+                  <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/LedBlinkerBSWConfiguration/Services/IoHwAb/IoHwAb</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+              </COMPONENTS>
+              <CONNECTORS>
+                <ASSEMBLY-SW-CONNECTOR UUID="47bb7041-37ce-3f69-815f-da1576f7d89b">
+                  <SHORT-NAME>DIO1</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/LedBlinkerApplicationLayer/CompositionPackage/RootComposition/serviceIoHwAb</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/IoHwAb/IoHwAb/Digital_LED1</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/LedBlinkerApplicationLayer/CompositionPackage/RootComposition/ledBlinkerSWC</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/LedBlinkerApplicationLayer/ApplicationPackage/LedBlinkerSWC/Digital_LED1</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+              </CONNECTORS>
+            </COMPOSITION-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>ApplicationPackage</SHORT-NAME>
+          <ELEMENTS>
+            <APPLICATION-SW-COMPONENT-TYPE UUID="45924c34-ee84-3a06-ae6a-8e456164c40d">
+              <SHORT-NAME>LedBlinkerSWC</SHORT-NAME>
+              <PORTS>
+                <R-PORT-PROTOTYPE UUID="71ffc745-4a56-3e41-8110-66f37135cb92">
+                  <SHORT-NAME>Digital_LED1</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ArcCore/Services/IoHwAb/DigitalServiceWrite</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="85d0d788-3301-3f5e-9b13-f450da2dfd16">
+                  <SHORT-NAME>LedBlinkerSWCBehaviour</SHORT-NAME>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="b0578023-d14f-4b40-a5ab-0d8d4a905fef">
+                      <SHORT-NAME>LedBlinkerSWCMain_timingEvent_0_1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerApplicationLayer/ApplicationPackage/LedBlinkerSWC/LedBlinkerSWCBehaviour/LedBlinkerSWCMain</START-ON-EVENT-REF>
+                      <PERIOD>0.1</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="5be5f012-1f33-3b24-aba1-99b5a54515ab">
+                      <SHORT-NAME>LedBlinkerSWCMain</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SERVER-CALL-POINTS>
+                        <SYNCHRONOUS-SERVER-CALL-POINT UUID="9cac3a40-1746-32a5-baa9-f710ff0dca9e">
+                          <SHORT-NAME>LED1CallPoint</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/LedBlinkerApplicationLayer/ApplicationPackage/LedBlinkerSWC/Digital_LED1</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ArcCore/Services/IoHwAb/DigitalServiceWrite/Write</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                          <TIMEOUT>0.0</TIMEOUT>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                      </SERVER-CALL-POINTS>
+                      <SYMBOL>ledBlinkerSWCMain</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </APPLICATION-SW-COMPONENT-TYPE>
+            <SWC-IMPLEMENTATION UUID="2c183a61-a843-38aa-8c59-8ba4e3dee651">
+              <SHORT-NAME>LedBlinkerSWCImpl</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE UUID="bb6a98d4-4ede-3af1-9dc9-203f0293a829">
+                  <SHORT-NAME>src</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                      <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <RESOURCE-CONSUMPTION UUID="2aef2d53-dee4-39e7-8e11-42a4d8394e44">
+                <SHORT-NAME>resourceConsumption</SHORT-NAME>
+              </RESOURCE-CONSUMPTION>
+              <VENDOR-ID>0</VENDOR-ID>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/LedBlinkerApplicationLayer/ApplicationPackage/LedBlinkerSWC/LedBlinkerSWCBehaviour</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcuExtract</SHORT-NAME>
+          <ELEMENTS>
+            <SYSTEM UUID="140fdc3d-542b-4e88-ae8e-852a193d8c7c">
+              <SHORT-NAME>LedBlinkerEcuExtract</SHORT-NAME>
+              <CATEGORY>ECU_EXTRACT</CATEGORY>
+              <MAPPINGS>
+                <SYSTEM-MAPPING UUID="479fae8f-703d-439c-b66e-a01b3723828b">
+                  <SHORT-NAME>ImplementationMappings</SHORT-NAME>
+                  <SW-IMPL-MAPPINGS>
+                    <SWC-TO-IMPL-MAPPING UUID="e032b50e-9564-4978-9af9-d45536e3bb5c">
+                      <SHORT-NAME>MySWCMap</SHORT-NAME>
+                      <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/LedBlinkerApplicationLayer/ApplicationPackage/LedBlinkerSWCImpl</COMPONENT-IMPLEMENTATION-REF>
+                      <COMPONENT-IREFS>
+                        <COMPONENT-IREF>
+                          <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/LedBlinkerApplicationLayer/EcuExtract/LedBlinkerEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                          <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/LedBlinkerApplicationLayer/CompositionPackage/RootComposition/ledBlinkerSWC</TARGET-COMPONENT-REF>
+                        </COMPONENT-IREF>
+                      </COMPONENT-IREFS>
+                    </SWC-TO-IMPL-MAPPING>
+                    <SWC-TO-IMPL-MAPPING UUID="11bbb444-5710-4098-8ecc-b2a7a1af6c0e">
+                      <SHORT-NAME>IoHwAbMap</SHORT-NAME>
+                      <COMPONENT-IMPLEMENTATION-REF DEST="SWC-IMPLEMENTATION">/LedBlinkerBSWConfiguration/Services/IoHwAb/IoHwAbImpl</COMPONENT-IMPLEMENTATION-REF>
+                      <COMPONENT-IREFS>
+                        <COMPONENT-IREF>
+                          <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/LedBlinkerApplicationLayer/EcuExtract/LedBlinkerEcuExtract/RootSwComposition</CONTEXT-COMPOSITION-REF>
+                          <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/LedBlinkerApplicationLayer/CompositionPackage/RootComposition/serviceIoHwAb</TARGET-COMPONENT-REF>
+                        </COMPONENT-IREF>
+                      </COMPONENT-IREFS>
+                    </SWC-TO-IMPL-MAPPING>
+                  </SW-IMPL-MAPPINGS>
+                </SYSTEM-MAPPING>
+              </MAPPINGS>
+              <ROOT-SOFTWARE-COMPOSITIONS>
+                <ROOT-SW-COMPOSITION-PROTOTYPE UUID="cb7b29d8-4dd3-496f-8982-0c02f8009d42">
+                  <SHORT-NAME>RootSwComposition</SHORT-NAME>
+                  <SOFTWARE-COMPOSITION-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/LedBlinkerApplicationLayer/CompositionPackage/RootComposition</SOFTWARE-COMPOSITION-TREF>
+                </ROOT-SW-COMPOSITION-PROTOTYPE>
+              </ROOT-SOFTWARE-COMPOSITIONS>
+              <SYSTEM-VERSION>1</SYSTEM-VERSION>
+            </SYSTEM>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>LedBlinkerBSWConfiguration</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>Services</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Os</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="ee32b44c-96b6-39a7-a7b0-a6bf4d8d3609">
+                  <SHORT-NAME>Os</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="5f337ae5-8fcc-3d3f-b548-db46fc989933">
+                      <SHORT-NAME>OsService_OsRteCounter</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/Os/OsService</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="57583d98-8975-3ae0-8696-43678d36ad43">
+                      <SHORT-NAME>OsBehavior</SHORT-NAME>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="8e3a60d0-b1e2-485b-8a85-8bcad2842b00">
+                          <SHORT-NAME>GetCounterValue_OsService_OsRteCounter_GetCounterValue</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerBSWConfiguration/Services/Os/Os/OsBehavior/GetCounterValue</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/Os/Os/OsService_OsRteCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/Os/OsService/GetCounterValue</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="55b063bc-c181-47a6-b700-1f4510e432c4">
+                          <SHORT-NAME>GetElapsedValue_OsService_OsRteCounter_GetElapsedValue</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerBSWConfiguration/Services/Os/Os/OsBehavior/GetElapsedValue</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/Os/Os/OsService_OsRteCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/Os/OsService/GetElapsedValue</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>CounterType</SHORT-LABEL>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Services/Os/CounterType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/Os/Os/OsService_OsRteCounter</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="669c8528-d4a5-35a7-a085-b80ec09e0bdb">
+                          <SHORT-NAME>GetCounterValue</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Os_GetCounterValue</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="1d4235d2-c843-30ad-b8e0-77399daaf686">
+                          <SHORT-NAME>GetElapsedValue</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Os_GetElapsedValue</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="51fb95ea-342d-3714-b02c-746c0644ab4d">
+                  <SHORT-NAME>OsImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="d932eb9a-be0b-367b-b89d-2d1299f64382">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="ec7a68fd-24bb-3a3f-bf13-3bd3440a7f99">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/LedBlinkerBSWConfiguration/Services/Os/Os/OsBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>IoHwAb</SHORT-NAME>
+              <ELEMENTS>
+                <ECU-ABSTRACTION-SW-COMPONENT-TYPE UUID="74a6119b-de76-336b-a75f-9e7d09fe0a9b">
+                  <SHORT-NAME>IoHwAb</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="155b67b8-fdf9-365f-a17f-d6e71516afcc">
+                      <SHORT-NAME>Digital_LED1</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ArcCore/Services/IoHwAb/DigitalServiceWrite</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="52aeb96c-5aa8-3a26-a73a-58cefcd5cbff">
+                      <SHORT-NAME>IoHwAbBehavior</SHORT-NAME>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="a5bf827e-a601-4410-98a9-885a8c606dde">
+                          <SHORT-NAME>DigitalWrite_Digital_LED1_Write</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerBSWConfiguration/Services/IoHwAb/IoHwAb/IoHwAbBehavior/DigitalWrite</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/IoHwAb/IoHwAb/Digital_LED1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ArcCore/Services/IoHwAb/DigitalServiceWrite/Write</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>IoHwAb_SignalType_</SHORT-LABEL>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ArcCore/Services/IoHwAb/IoHwAb_SignalType_</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/IoHwAb/IoHwAb/Digital_LED1</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="ff98a7bd-6e97-3fa5-9fdc-5869be1f8c1b">
+                          <SHORT-NAME>DigitalWrite</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_Digital_Write</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </ECU-ABSTRACTION-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="e4ef3556-11e7-30d7-b1ab-65535e712af0">
+                  <SHORT-NAME>IoHwAbImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="1fc1ff14-a130-3d75-a025-f6cec78bca0a">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="08f15e5b-2050-3eb0-8961-836a921f98c3">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/LedBlinkerBSWConfiguration/Services/IoHwAb/IoHwAb/IoHwAbBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>Det</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="71ec56a5-53c8-3f05-8708-0f53aa603f93">
+                  <SHORT-NAME>Det</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="cf398b06-6955-3939-a639-8812a02d7b72">
+                      <SHORT-NAME>DetBehavior</SHORT-NAME>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="d1e73097-7e49-358c-9d5a-ec90d595d83a">
+                          <SHORT-NAME>ReportError</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Det_ReportError</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="9b3181f5-9ef2-3c5b-81f5-9238ec6cf702">
+                  <SHORT-NAME>DetImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="e9d014b2-2f07-3e9c-80d7-10787d0ac81e">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="02a2b5e3-568e-39eb-9139-0dd947b8ac27">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/LedBlinkerBSWConfiguration/Services/Det/Det/DetBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>EcuM</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="1f4ec9c9-a4bc-303c-9ecb-41876b3845c3">
+                  <SHORT-NAME>EcuM</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="6e567d8b-1854-3de6-829d-ce3724a69c92">
+                      <SHORT-NAME>SR_User</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_StateRequest</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="4aae7708-f8a2-3da4-a33f-0e8a40f7c71a">
+                      <SHORT-NAME>currentMode</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_CurrentMode</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="7389308e-7d82-3893-b6e9-ae470f1b3bfb">
+                      <SHORT-NAME>shutdownTarget</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_ShutdownTarget</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="176639a4-c3ce-3a52-bbfe-a0e0758d2be2">
+                      <SHORT-NAME>bootTarget</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR/Services/EcuM/EcuM_BootTarget</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="48e851b2-36d3-3999-8dc2-f196128e1502">
+                      <SHORT-NAME>EcuMFixedBehavior</SHORT-NAME>
+                      <DATA-TYPE-MAPPING-REFS>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR/Services/EcuM/EcuMFixedTypeMappings</DATA-TYPE-MAPPING-REF>
+                      </DATA-TYPE-MAPPING-REFS>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="66cd2e0b-b845-4761-9efc-e191c42027b6">
+                          <SHORT-NAME>RequestRUN_SR_User_RequestRUN</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/RequestRUN</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/SR_User</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/RequestRUN</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="16d5b7d4-9486-452c-9887-08f6f7961733">
+                          <SHORT-NAME>ReleaseRUN_SR_User_ReleaseRUN</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/ReleaseRUN</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/SR_User</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/ReleaseRUN</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="aff5a2ef-ce4f-4811-a8b0-e45f49383335">
+                          <SHORT-NAME>RequestPOSTRUN_SR_User_RequestPOSTRUN</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/RequestPOSTRUN</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/SR_User</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/RequestPOSTRUN</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="a8adcebb-c1b8-425c-9ee8-e3de58aec46d">
+                          <SHORT-NAME>ReleasePOSTRUN_SR_User_ReleasePOSTRUN</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/ReleasePOSTRUN</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/SR_User</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_StateRequest/ReleasePOSTRUN</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="f561d279-75e3-4b45-bb09-40275752a130">
+                          <SHORT-NAME>SelectShutdownTarget_shutdownTarget_SelectShutdownTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/SelectShutdownTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_ShutdownTarget/SelectShutdownTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="45a8fee6-1521-4ae9-b6a5-1a9f3a8a10c4">
+                          <SHORT-NAME>GetShutdownTarget_shutdownTarget_GetShutdownTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/GetShutdownTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_ShutdownTarget/GetShutdownTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="143093ec-dc23-435b-ba8e-821fcee00e41">
+                          <SHORT-NAME>GetLastShutdownTarget_shutdownTarget_GetLastShutdownTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/GetLastShutdownTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/shutdownTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_ShutdownTarget/GetLastShutdownTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="40995c1a-77c8-4d92-90e3-cb66c491e501">
+                          <SHORT-NAME>SelectBootTarget_bootTarget_SelectBootTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/SelectBootTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/bootTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_BootTarget/SelectBootTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="17da27eb-7858-409c-a350-e29a0dfce939">
+                          <SHORT-NAME>GetBootTarget_bootTarget_GetBootTarget</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior/GetBootTarget</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/bootTarget</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR/Services/EcuM/EcuM_BootTarget/GetBootTarget</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <SHORT-LABEL>EcuM_UserType</SHORT-LABEL>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR/Services/EcuM/EcuM_UserType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/SR_User</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="b419e77c-3c06-37a5-ade9-5cb0b91a4ff5">
+                          <SHORT-NAME>EcuM_MainFunction</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <MODE-SWITCH-POINTS>
+                            <MODE-SWITCH-POINT UUID="fc3654d4-7c34-3c14-aa22-150a842393f6">
+                              <SHORT-NAME>modeSwitchPoint_EcuM_MainFunction_currentMode_currentMode</SHORT-NAME>
+                              <MODE-GROUP-IREF>
+                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/currentMode</CONTEXT-P-PORT-REF>
+                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR/Services/EcuM/EcuM_CurrentMode/currentMode</TARGET-MODE-GROUP-REF>
+                              </MODE-GROUP-IREF>
+                            </MODE-SWITCH-POINT>
+                          </MODE-SWITCH-POINTS>
+                          <SYMBOL>EcuM_MainFunction</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="8e9f0aca-1976-328e-ab0a-71ab75f02603">
+                          <SHORT-NAME>RequestRUN</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_RequestRUN</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="8ddd21eb-9bda-3fda-a59b-cf396ac98f73">
+                          <SHORT-NAME>ReleaseRUN</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_ReleaseRUN</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="c4becc96-d4d9-3eaa-b909-43bef8411273">
+                          <SHORT-NAME>RequestPOSTRUN</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_RequestPOST_RUN</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="5eb8f0f2-c2e8-3fec-9f01-14a36baa01f3">
+                          <SHORT-NAME>ReleasePOSTRUN</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_ReleasePOST_RUN</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="c373e3f2-53f6-31ab-92cb-799f21bbfc7e">
+                          <SHORT-NAME>SelectShutdownTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_SelectShutdownTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="c7252aaa-77ed-3d90-9206-fbc3f510343f">
+                          <SHORT-NAME>GetShutdownTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_GetShutdownTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="e00bbe48-61ec-33aa-b2a1-bfee624a8d46">
+                          <SHORT-NAME>GetLastShutdownTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_GetLastShutdownTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="7a02f5aa-14f0-31b5-82b6-3647ef063f39">
+                          <SHORT-NAME>SelectBootTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_SelectBootTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="d7eadd3d-3fc7-35e6-b78b-9d3fb1feaf8c">
+                          <SHORT-NAME>GetBootTarget</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>EcuM_GetBootTarget</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="078ccceb-d8fa-3821-b31f-665d8a2ac626">
+                  <SHORT-NAME>EcuMFixedImpl</SHORT-NAME>
+                  <CODE-DESCRIPTORS>
+                    <CODE UUID="74d29289-d5bf-359a-99d1-a6fae3c1ce2e">
+                      <SHORT-NAME>src</SHORT-NAME>
+                      <ARTIFACT-DESCRIPTORS>
+                        <AUTOSAR-ENGINEERING-OBJECT>
+                          <SHORT-LABEL>artifactDescriptor</SHORT-LABEL>
+                          <CATEGORY>artifactDescriptorCategory</CATEGORY>
+                        </AUTOSAR-ENGINEERING-OBJECT>
+                      </ARTIFACT-DESCRIPTORS>
+                    </CODE>
+                  </CODE-DESCRIPTORS>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <RESOURCE-CONSUMPTION UUID="87620c27-65c8-3620-b94f-01d3db363d16">
+                    <SHORT-NAME>resourceConsumption</SHORT-NAME>
+                  </RESOURCE-CONSUMPTION>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/LedBlinkerBSWConfiguration/Services/EcuM/EcuM/EcuMFixedBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

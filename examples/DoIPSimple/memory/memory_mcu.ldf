@@ -1,0 +1,65 @@
+/*
+ * Harmonization of MEMORY section in linkerfiles.
+ *
+ * Description: 
+ *   L_SRAM_0           - Normally the only SRAM
+ *   L_SRAM_1           - Same level as SRAM_0
+ *   L_SRAM_CODE_CORE_0 - Local Code SRAM to core 0
+ *   L_SRAM_DATA_CORE_0 - Local Data SRAM to core 0
+ *   ....
+ *   L_FLASH_CODE_0  - Normally the only code flash
+ *   L_FLASH_DATA_0  - Normally the only data flash
+ *
+ *   L_DDR_0 		 - Normally the only DDR.
+ *
+ *   Example: MCU with one SRAM and Flash
+ *     L_FLASH_CODE_0 : ORIGIN = 0x0 , LENGTH = 0x10000
+ *     L_FLASH_DATA_0 : ORIGIN = 0xffff0000 LENGTH = 0x1000
+ *     L_SRAM_0       : ORIGIN = 0x40000000 , LENGTH = 0x1000
+ *
+ */
+
+#include "compiler.ldf"
+#include "memory_pre.ldf"
+
+// Missing in core memory_pre.ldf
+#define L_SIZE_5M   0x00500000
+#define L_SIZE_576K 0x00090000
+#define L_SIZE_320K 0x00050000
+#define L_SIZE_16K  0x00004000
+
+#if defined(CFG_MPC5748G)
+/* ----------------------------[FLASH]------------------------------------*/
+    // Data sections
+    #define L_FLASH_DATA_0_ORIGIN       0x00F90000 // Ecu Manufacturer data
+    #define L_FLASH_DATA_0_LENGTH       L_SIZE_16K
+    #define L_FLASH_DATA_1_ORIGIN       0x00FC8000 // Pbl part numbers
+    #define L_FLASH_DATA_1_LENGTH       L_SIZE_32K
+    #define L_FLASH_DATA_2_ORIGIN       0x00FD0000 // Nvm block
+    #define L_FLASH_DATA_2_LENGTH       L_SIZE_64K
+    
+    // Code sections
+    #define L_FLASH_CODE_0_ORIGIN       0x00FC0000  // Pbl start vector
+    #define L_FLASH_CODE_0_LENGTH       L_SIZE_32K
+    #define L_FLASH_CODE_1_ORIGIN       0x01000000  // Pbl Code
+    #define L_FLASH_CODE_1_LENGTH       L_SIZE_512K
+    #define L_FLASH_CODE_2_ORIGIN       0x01080000  // Application Code
+    #define L_FLASH_CODE_2_LENGTH       L_SIZE_5M
+    
+/* ----------------------------[RAM]------------------------------------*/
+    #define L_SRAM_0_ORIGIN             0x40000000  // Pbl RAM
+    #define L_SRAM_0_LENGTH             L_SIZE_192K
+    
+    #define L_SRAM_1_ORIGIN             0x40030000  // Sbl Code
+    #define L_SRAM_1_LENGTH             L_SIZE_256K   
+    #define L_SRAM_2_ORIGIN             0x40070000  // Sbl RAM
+    #define L_SRAM_2_LENGTH             L_SIZE_320K
+    
+#else
+#error CPU not supported in linkscript
+#endif
+
+#include "memory_post.ldf"
+
+
+

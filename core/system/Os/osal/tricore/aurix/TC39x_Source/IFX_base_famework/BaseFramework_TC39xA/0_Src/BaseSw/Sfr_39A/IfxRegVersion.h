@@ -1,0 +1,6 @@
+#ifndef IFX_REG_VERSION_H
+#define IFX_REG_VERSION_H
+
+#define IFX_REG_VERSION AURIXPLUS_TS_V1_2
+
+#endif /* IFX_REG_VERSION_H */
